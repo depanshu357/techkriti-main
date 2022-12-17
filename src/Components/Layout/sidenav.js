@@ -29,8 +29,11 @@ import { makeStyles } from "@mui/styles";
 import Grid from "@mui/material/Grid";
 import PermIdentityRoundedIcon from "@mui/icons-material/PermIdentityRounded";
 import UpdateRoundedIcon from "@mui/icons-material/UpdateRounded";
+import { Tab } from "@mui/material";
 import { Container } from "@mui/system";
+// import Stack from "@mui/material";
 import "./sidenav.css";
+import { TabPanelUnstyled } from "@mui/base";
 
 const Sidenav = () => {
   return (
@@ -53,11 +56,14 @@ const Sidenav = () => {
         </Grid>
         <Divider color={"white"} orientation="vertical" flexItem></Divider>
         <Grid item md>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id
-          dignissim justo. Nulla ut facilisis ligula. Interdum et malesuada
-          fames ac ante ipsum primis in faucibus. Sed malesuada lobortis
-          pretium.
-        </Grid>
+          <ul className="horlist">
+            <li><a href="#">jghrug</a></li>
+            <li><a className="mylink" href="#">jghrug</a></li>
+            <li><a className="mylink" href="#">jghrug</a></li>
+            <li><a className="mylink" href="#">jghrug</a></li>
+          </ul>
+          
+          </Grid>
         <Divider color={"white"} orientation="vertical" flexItem></Divider>
         <Grid item md={0.5} sx={{ minWidth: 87 }} className="corners">
           <img src="images/menuBar.png" height={"16px"}></img>
@@ -74,36 +80,15 @@ const Sidenav = () => {
       >
         <Grid item md={0.5} sx={{ minWidth: 91 }} style={{height:"calc(100vh - 129px)",display:"flex",flexDirection:"column",alignItems:"center"}}>
           <br />
-          <br />
-          <br />
-          <img src="images/facebook.png" height={"20px"} width={"11px"}></img>
+          <a href="#"><img src="images/facebook.png" height={"20px"} width={"11px"}></img></a>
           <br></br>
+          <a href="#"><img src="images/twitter.png" height={"17.94px"}></img></a>
           <br></br>
-          <img src="images/twitter.png" height={"17.94px"}></img>
+          <a href="#"><img src="images/youtube.png" height={"24px"}></img></a>
           <br></br>
+          <a href="#"><img src="images/linkedin.png" height={"24px"}></img></a>
           <br></br>
-          <img src="images/youtube.png" height={"24px"}></img>
-          <br></br>
-          <br></br>
-          <img src="images/linkedin.png" height={"24px"}></img>
-          <br></br>
-          <br></br>
-          <img src="images/instagram.png" height={"20px"}></img>
-          {/* <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br> */}
+          <a href="#"><img src="images/instagram.png" height={"20px"}></img></a>
         </Grid>
         <Divider color={"white"} orientation="vertical" flexItem></Divider>
         <Grid item md>
@@ -133,10 +118,12 @@ const Sidenav = () => {
         </Grid>
         <Divider color={"white"} orientation="vertical" flexItem></Divider>
         <Grid item md>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id
-          dignissim justo. Nulla ut facilisis ligula. Interdum et malesuada
-          fames ac ante ipsum primis in faucibus. Sed malesuada lobortis
-          pretium.
+        <ul className="horlist1">
+            <li><a className="mylink" href="http://google.com">jghrug</a></li>
+            <li><a className="mylink" href="#">jghrug</a></li>
+            <li><a className="mylink" href="#">jghrug</a></li>
+            <li><a className="mylink" href="#">jghrug</a></li>
+          </ul>
         </Grid>
         <Divider color={"white"} orientation="vertical" flexItem></Divider>
         <Grid item md={0.5} sx={{ height: 66, minWidth: 87 }} className="corners">
