@@ -13,7 +13,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 // import './styles.css';
 import LogoutIcon from "@mui/icons-material/Logout";
 // import {useAuth} from './AuthContext'
@@ -34,51 +34,57 @@ import { Container } from "@mui/system";
 // import Stack from "@mui/material";
 import "./sidenav.css";
 import { TabPanelUnstyled } from "@mui/base";
+import { useMediaQuery } from "../MediaQuery";
 
 const Sidenav = () => {
+  let isPagebig = useMediaQuery('(min-width:900px)');
+  let isPagesmall = useMediaQuery('(max-width:436px)');
+
   return (
     <>
-      <Grid
-        container
-        bgcolor={"black"}
-        color={"white"}
-        columnGap={0}
-        spacing={0}
-        className="topGrid"
-      >
+      {isPagebig &&
         <Grid
-          item
-          md={0.5}
-          sx={{ minWidth: 91 }}
-        className="corners"
+          container
+          bgcolor={"black"}
+          color={"white"}
+          columnGap={0}
+          spacing={0}
+          className="topGrid"
         >
-          <img src="img/techkriti.svg" height={"45px"}></img>
-        </Grid>
-        <Divider color={"white"} orientation="vertical" flexItem></Divider>
-        <Grid item md>
-          <ul className="horlist">
-            <li><a href="#">jghrug</a></li>
-            <li><a className="mylink" href="#">jghrug</a></li>
-            <li><a className="mylink" href="#">jghrug</a></li>
-            <li><a className="mylink" href="#">jghrug</a></li>
-          </ul>
-          
+          <Grid
+            item
+            md={0.5}
+            sx={{ minWidth: 91 }}
+            className="corners"
+          >
+            <img src="img/techkriti.svg" height={"45px"}></img>
           </Grid>
-        <Divider color={"white"} orientation="vertical" flexItem></Divider>
-        <Grid item md={0.5} sx={{ minWidth: 87 }} className="corners">
-          <img src="images/menuBar.png" height={"16px"}></img>
-        </Grid>
-      </Grid>
-      <Divider></Divider>
-      <Grid
+          <Divider color={"white"} orientation="vertical" flexItem></Divider>
+          <Grid item md>
+            <ul className="horlist">
+              <li><a href="#">jghrug</a></li>
+              <li><a className="mylink" href="#">jghrug</a></li>
+              <li><a className="mylink" href="#">jghrug</a></li>
+              <li><a className="mylink" href="#">jghrug</a></li>
+            </ul>
+
+          </Grid>
+          <Divider color={"white"} orientation="vertical" flexItem></Divider>
+          <Grid item md={0.5} sx={{ minWidth: 87 }} className="corners">
+            <img src="images/menuBar.png" height={"16px"}></img>
+          </Grid>
+        </Grid>}
+
+      {isPagebig && <Divider color={"white"}></Divider>}
+      {isPagebig && <Grid
         container
         bgcolor={"black"}
         color={"white"}
         columnGap={0}
         spacing={0}
-        
+
       >
-        <Grid item md={0.5} sx={{ minWidth: 91 }} style={{height:"calc(100vh - 129px)",display:"flex",flexDirection:"column",alignItems:"center"}}>
+        <Grid item md={0.5} sx={{ minWidth: 91 }} style={{ height: "calc(100vh - 129px)", display: "flex", flexDirection: "column", alignItems: "center" }}>
           <br />
           <a href="#"><img src="images/facebook.png" height={"20px"} width={"11px"}></img></a>
           <br></br>
@@ -92,33 +98,31 @@ const Sidenav = () => {
         </Grid>
         <Divider color={"white"} orientation="vertical" flexItem></Divider>
         <Grid item md>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id
-          dignissim justo. Nulla ut facilisis ligula. Interdum et malesuada
-          fames ac ante ipsum primis in faucibus. Sed malesuada lobortis
-          pretium.
+          <Outlet />
         </Grid>
         <Divider color={"white"} orientation="vertical" flexItem></Divider>
-        <Grid item md={0.5} sx={{ minWidth: 87 }} style={{display:"flex",flexDirection:"column"}}>
+        <Grid item md={0.5} sx={{ minWidth: 87 }} style={{ display: "flex", flexDirection: "column" }}>
           <img src="img/techkriti.svg" height={"45px"}></img>
         </Grid>
-      </Grid>
-      <Divider/>
-      <Grid
+      </Grid>}
+
+      {isPagebig && <Divider color={"white"} />}
+      {isPagebig && <Grid
         container
         bgcolor={"black"}
         color={"white"}
         columnGap={0}
         spacing={0}
-        style={{position:"absolute",bottom:"0"}}
+        style={{ position: "absolute", bottom: "0" }}
       >
-        <Grid item md={0.5} sx={{ minWidth: 91,flexDirection:"column" }} className="corners"  >
-        <img src="images/Vector 5.png" height={"8px"}></img>
-        <img src="images/Vector 4.png" height={"8px"}></img>
-        <img src="images/Vector 3.png" height={"8px"}></img>
+        <Grid item md={0.5} sx={{ minWidth: 91, flexDirection: "column" }} className="corners"  >
+          <img src="images/Vector 5.png" height={"8px"}></img>
+          <img src="images/Vector 4.png" height={"8px"}></img>
+          <img src="images/Vector 3.png" height={"8px"}></img>
         </Grid>
         <Divider color={"white"} orientation="vertical" flexItem></Divider>
         <Grid item md>
-        <ul className="horlist1">
+          <ul className="horlist1">
             <li><a className="mylink" href="http://google.com">jghrug</a></li>
             <li><a className="mylink" href="#">jghrug</a></li>
             <li><a className="mylink" href="#">jghrug</a></li>
@@ -130,7 +134,42 @@ const Sidenav = () => {
           <img src="img/techkriti.svg" height={"45px"}></img>
         </Grid>
         <Divider></Divider>
-      </Grid>
+      </Grid>}
+
+      {isPagesmall && <Grid container
+        bgcolor={"black"}
+        color={"white"}
+        columnGap={0}
+        spacing={0}>
+        <Grid item 
+          sx={{ minWidth: 91 }}
+          className="corners"
+        >
+          <img src="img/techkriti.svg" height={"45px"}></img>
+        </Grid>
+        <Grid item  sx={{ minWidth: 87 }} className="corners">
+            <img src="images/menuBar.png" style={{"marginLeft":"450%"}} height={"16px"}></img>
+          </Grid>
+      </Grid>}
+      {isPagesmall && <Divider color={"white"} borderBottomWidth={"30px"}></Divider>}
+      {isPagesmall && <Grid container>
+        <Grid item width={"100%"}><Outlet/></Grid>
+        </Grid>}
+      {isPagesmall && <Grid container>
+        <Grid item >
+          <ul className="mobilesocial">
+          <li><a href="#"><img src="images/facebook.png" height={"20px"} width={"11px"}></img></a></li>
+          <br></br>
+          <li><a href="#"><img src="images/twitter.png" height={"17.94px"}></img></a></li>
+          <br></br>
+          <li><a href="#"><img src="images/youtube.png" height={"24px"}></img></a></li>
+          <br></br>
+          <li><a href="#"><img src="images/linkedin.png" height={"24px"}></img></a></li>
+          <br></br>
+          <li><a href="#"><img src="images/instagram.png" height={"20px"}></img></a></li>
+          </ul>
+        </Grid>
+        </Grid>}
     </>
   );
 };

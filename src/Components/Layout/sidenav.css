@@ -68,3 +68,38 @@
     border: none;
     background-color: gray;
 }
+
+.mobilesocial{
+    margin-top: 25px;
+    margin-left: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    color: aliceblue;
+    justify-content: space-evenly;
+}
+
+.mobilesocial li{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* @media only screen and (max-width: 436px) {
+    .horlist{
+        display: none;
+    }
+    .horlist1{
+        display: none;
+    }
+    .social{
+        display: none;
+    }
+    #menu{
+        margin-right: 0;
+        margin-left: 55%;
+    }
+    .type{
+        display: none;
+    }
+} */

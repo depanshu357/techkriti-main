@@ -6,7 +6,7 @@ const Layout = ({children}) => {
         <>
         
         <Sidenav/>        
-        <main>{children}</main>
+        {/* <main>{children}</main> */}
         </>
     )
 }

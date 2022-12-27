@@ -1,0 +1,36 @@
+body {
+    background: #000;
+  }
+  
+  .topgrid {
+    padding-top: 1vmin;
+    padding-left: 3vmin;
+  }
+  
+  .main {
+    margin-top: 5%;
+  }
+  
+  .socialLogos img {
+    padding: 2vmin;
+  }
+  
+  .main-text {
+    color: white;
+  }
+  
+  .main-container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+  }
+  
+  .bottom-grid {
+    float: left;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    bottom: 0px;
+    width: 100%;
+  }
