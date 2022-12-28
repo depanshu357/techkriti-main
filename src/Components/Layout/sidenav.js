@@ -13,7 +13,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
-import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
+import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 // import './styles.css';
 import LogoutIcon from "@mui/icons-material/Logout";
 // import {useAuth} from './AuthContext'
@@ -39,7 +39,23 @@ import { useMediaQuery } from "../MediaQuery";
 const Sidenav = () => {
   let isPagebig = useMediaQuery('(min-width:900px)');
   let isPagesmall = useMediaQuery('(max-width:436px)');
+  let location = useLocation();
+  useEffect(() =>{
+    console.log(location.pathname)
+  }, [location]);
 
+  let compe = false;
+  let works = false;
+  let gallery = false;
+  if(location.pathname.includes("competition")){
+    compe = true;
+  }
+  else if(location.pathname.includes("gallery")){
+    gallery = true;
+  }
+  else if(location.pathname.includes("workshops")){
+    works = true;
+  }
   return (
     <>
       {isPagebig &&
@@ -123,10 +139,10 @@ const Sidenav = () => {
         <Divider color={"white"} orientation="vertical" flexItem></Divider>
         <Grid item md>
           <ul className="horlist1">
-            <li><a className="mylink" href="http://google.com">jghrug</a></li>
-            <li><a className="mylink" href="#">jghrug</a></li>
-            <li><a className="mylink" href="#">jghrug</a></li>
-            <li><a className="mylink" href="#">jghrug</a></li>
+            <li><a className="mylink" href={`${compe === true ? "http://google.com" : "http://youtube.com"}`}>jghrug{`${compe === true ? "compe1" : ""}`}</a></li>
+            <li><a className="mylink" href={`${compe === true ? "http://google.com" : "http://youtube.com"}`}>jghrug{`${compe === true ? "compe1" : ""}`}</a></li>
+            <li><a className="mylink" href={`${compe === true ? "http://google.com" : "http://youtube.com"}`}>jghrug{`${compe === true ? "compe1" : ""}`}</a></li>
+            <li><a className="mylink" href={`${compe === true ? "http://google.com" : "http://youtube.com"}`}>jghrug{`${compe === true ? "compe1" : ""}`}</a></li>
           </ul>
         </Grid>
         <Divider color={"white"} orientation="vertical" flexItem></Divider>
