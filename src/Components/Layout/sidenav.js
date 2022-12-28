@@ -172,9 +172,9 @@ const Sidenav = () => {
               <div className="bar is-active"></div>
             </div>
             <a href="#">Home</a>
-            <a href="#">Home</a>
-            <a href="#">Home</a>
-            <a href="#">Home</a>
+            <a href="#">Contact Us</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
           </nav>
         <Grid item 
           sx={{ minWidth: 91 }}
