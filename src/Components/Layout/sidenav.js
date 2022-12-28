@@ -56,6 +56,15 @@ const Sidenav = () => {
   else if(location.pathname.includes("workshops")){
     works = true;
   }
+  const [sidebar, setSidebar] = useState(false);
+  const [display, setDisplay] = useState({ top: '-200px' });
+  const handleHamburger = () => {
+    console.log("clicked ");
+    setDisplay((pre) => {
+      if(sidebar){setSidebar(false);return {top: "-200px"};}
+      else {setSidebar(true);return {top: "0"};}
+    });
+  };
   return (
     <>
       {isPagebig &&
@@ -156,7 +165,17 @@ const Sidenav = () => {
         bgcolor={"black"}
         color={"white"}
         columnGap={0}
-        spacing={0}>
+        spacing={0}
+        sx={{ justifyContent: "space-between" }}>
+          <nav style={display} className="mobile">
+            <div className="hamburger" onClick={handleHamburger} style={{position:"absolute",right:"20px"}}>
+              <div className="bar is-active"></div>
+            </div>
+            <a href="#">Home</a>
+            <a href="#">Home</a>
+            <a href="#">Home</a>
+            <a href="#">Home</a>
+          </nav>
         <Grid item 
           sx={{ minWidth: 91 }}
           className="corners"
@@ -164,7 +183,10 @@ const Sidenav = () => {
           <img src="img/techkriti.svg" height={"45px"}></img>
         </Grid>
         <Grid item  sx={{ minWidth: 87 }} className="corners">
-            <img src="images/menuBar.png" style={{"marginLeft":"450%"}} height={"16px"}></img>
+            {/* <img src="images/menuBar.png" style={{"marginLeft":"450%"}} height={"16px"}></img> */}
+            <button className="hamburger" onClick={handleHamburger}>
+              <div className="bar is-active"></div>
+            </button>
           </Grid>
       </Grid>}
       {isPagesmall && <Divider color={"white"} borderBottomWidth={"30px"}></Divider>}
