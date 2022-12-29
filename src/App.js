@@ -8,6 +8,7 @@ import {
   BrowserRouter as Router, Routes, Route,
 } from "react-router-dom";
 import Sidenav from './Components/Layout/sidenav';
+import Contact from './Components/Contact/Contact';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path='/' element={<Sidenav/>}>
       <Route path='/gallery' element={<CarouselFadeExample/>}></Route>
       <Route path='/competition' element={<Competition/>}></Route>
+      <Route path='/contact-us' element={<Contact/>}></Route>
       </Route>
     </Routes>
     </Router>
