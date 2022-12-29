@@ -14,7 +14,7 @@ export default function Contact({setThemeColor, setLowergridmenu}) {
       Contact Us
     </h1>
     <div>
-    <ul class="grid cs-style-4">
+    <ul className="grid cs-style-4">
 				<li>
 					<figure>
 						<div><img src={a} alt="img05" /></div>

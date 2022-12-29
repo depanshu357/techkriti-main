@@ -21,8 +21,6 @@ function App() {
 	};
 	
 	const setLowergrid = (array) => {
-		console.log("received");
-		console.log(array);
 		setLowergridmenu(array);
 	}
   return (
