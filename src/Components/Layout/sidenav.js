@@ -184,10 +184,10 @@ const Sidenav = ({themeColor, ...props}) => {
               <div className="bar is-active"></div>
             </div>
             </div>
-            <Link  to="/competition">Competitions</Link>
-              <Link to="/workshop">Workshops</Link>
-              <Link to="/gallery">Gallery</Link>
-              <Link to="/contact-us">Contact Us</Link>
+            <Link  to="/competition" onClick={handleHamburger} >Competitions</Link>
+              <Link to="/workshop" onClick={handleHamburger}>Workshops</Link>
+              <Link to="/gallery" onClick={handleHamburger}>Gallery</Link>
+              <Link to="/contact-us" onClick={handleHamburger}>Contact Us</Link>
           </nav>
         <Grid item 
           sx={{ minWidth: 91 }}
