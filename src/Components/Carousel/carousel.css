@@ -25,6 +25,13 @@
 .present{
   display: block;
 }
+
+@media screen and (min-width: 480px){
+  .handleImage img{
+   height:calc(100vh - 129px);
+  }
+
+}
 @keyframes animation1 {
   from {
     opacity: 100%;
