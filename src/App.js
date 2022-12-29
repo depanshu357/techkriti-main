@@ -11,10 +11,15 @@ import Sidenav from './Components/Layout/sidenav';
 
 function App() {
 	const [themeColor, setThemeColor] = useState("#000000");
-
+	const [lowergridmenu, setLowergridmenu] = useState([]);
+	
 	const setTheme = (color) => {
 		setThemeColor(color);
 	};
+	
+	const setLowergrid = (array) => {
+		setLowergridmenu(array);
+	}
   return (
     <>
     <div className="w-100" style={{maxWidth : '100%'}}></div>
@@ -22,7 +27,7 @@ function App() {
       <Routes>
       <Route path='/' element={<Sidenav themeColor={themeColor} />}>
       <Route path='/gallery' element={<CarouselFadeExample/>}></Route>
-      <Route path='/competition' element={<Competition setThemeColor={setTheme} />}></Route>
+      <Route path='/competition' element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
       </Route>
     </Routes>
     </Router>

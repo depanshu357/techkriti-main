@@ -1,15 +1,10 @@
 import React, {useState, useEffect} from "react";
 import { Grid, Button } from "@mui/material";
 import "./styles.css";
-import content from "./content.json";
+import content from "./content1.json";
 
-function Main({setThemeColor}) {
+function Main({setThemeColor, setLowergridmenu}) {
 	const [current, setCurrent] = useState(0);
-	
-	//update color according to current
-	useEffect(() => {
-		setThemeColor(content[current].color);
-	},[current])
 	
 	const competitions = content.map((el) => {
 		return (
@@ -25,6 +20,20 @@ function Main({setThemeColor}) {
 			</div>
 		);
 	});
+	
+	
+	
+	//on mount: set lowergridmenu to what it needs to be
+// 	useEffect(() => {
+// 		setLowergridmenu(lowergridmenu);
+// 	}, []);
+	
+	//update color according to current value of current
+	useEffect(() => {
+		setThemeColor(content[current].color);
+	},[current])
+	
+	
 	
 	const setSlide = (number) => {
 		console.log(number);

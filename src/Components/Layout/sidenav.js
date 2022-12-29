@@ -36,7 +36,7 @@ import "./sidenav.css";
 import { TabPanelUnstyled } from "@mui/base";
 import { useMediaQuery } from "../MediaQuery";
 
-const Sidenav = ({themeColor}) => {
+const Sidenav = ({themeColor, ...props}) => {
 
   let isPagebig = useMediaQuery('(min-width:900px)');
   let isPagesmall = useMediaQuery('(max-width:436px)');
@@ -66,6 +66,8 @@ const Sidenav = ({themeColor}) => {
       else {setSidebar(true);return {top: "0"};}
     });
   };
+  
+  const lowergridmenu = (props.lowergridmenu ? props.lowergridmenu : [{text:"jghrug1", link:""},{text:"jghrug2", link:""},{text:"jghrug3", link:""},{text:"jghrug4", link:""}] );
   
   
   return (
@@ -151,10 +153,11 @@ const Sidenav = ({themeColor}) => {
         <Divider color={"white"} orientation="vertical" flexItem></Divider>
         <Grid item md>
           <ul className="horlist1">
-            <li><a className="mylink" href={`${compe === true ? "http://google.com" : "http://youtube.com"}`}>jghrug{`${compe === true ? "compe1" : ""}`}</a></li>
-            <li><a className="mylink" href={`${compe === true ? "http://google.com" : "http://youtube.com"}`}>jghrug{`${compe === true ? "compe1" : ""}`}</a></li>
-            <li><a className="mylink" href={`${compe === true ? "http://google.com" : "http://youtube.com"}`}>jghrug{`${compe === true ? "compe1" : ""}`}</a></li>
-            <li><a className="mylink" href={`${compe === true ? "http://google.com" : "http://youtube.com"}`}>jghrug{`${compe === true ? "compe1" : ""}`}</a></li>
+            {lowergridmenu.map((el) => {
+            	return (
+            		<li key={el.text}><a className="mylink" href={`/${el.link}`}>{el.text}</a></li>
+            	);
+            })}
           </ul>
         </Grid>
         <Divider color={"white"} orientation="vertical" flexItem></Divider>

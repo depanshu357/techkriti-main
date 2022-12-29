@@ -4,11 +4,11 @@ import Main from "./Main";
 import Bottomgrid from "./Bottomgrid";
 import "./styles.css";
 
-function Competition({setThemeColor}) {
+function Competition({setThemeColor, setLowergridmenu}) {
   return (
     <div>
       {/* <Topgrid /> */}
-      <Main setThemeColor={setThemeColor}/>
+      <Main setThemeColor={setThemeColor} setLowergridmenu={setLowergridmenu}/>
       {/* <Bottomgrid classname="bottom-grid"/> */}
     </div>
   );
