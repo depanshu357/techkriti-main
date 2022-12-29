@@ -16,8 +16,8 @@ function CarouselFadeExample(props) {
     "images/8.jpg",
   ];
   const carousel = {
-    height: "100vh",
-    // width: "100vw",
+    // height: "100vh",
+    width: "100vw",
     margin: "auto",
   };
   const box = {
@@ -71,12 +71,12 @@ function CarouselFadeExample(props) {
           <Carousel fade>
             {address.map((item, index) => (
               <Carousel.Item key={index}>
-                <div >
+                <div className="handleImage">
                   <img
                     className={`d-block w-100`}
                     src={item}
                     alt={{ index } + " slide"}
-                    style={{height:"calc(100vh - 129px)"}}
+                    // style={{height:"calc(100vh - 129px)"}}
                   />
                   <Carousel.Caption>
                     <h3>{index} slide label</h3>
