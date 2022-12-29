@@ -5,14 +5,9 @@ import comps from "./competitions.json";
 import { Link } from "react-router-dom"
 
 function Main({setThemeColor, setLowergridmenu, params, category}) {
-	const [current, setCurrent] = useState(0);
+	let current = 0;
 	
-	useEffect(() => {
-		if (params && content.findIndex((el) => (el.title.toLowerCase() === params))) {
-			setCurrent(content.findIndex((el) => (el.title.toLowerCase().replace(/\s/g, '') === params)));	
-		} else setCurrent(0);
-		setThemeColor(content[current].color)
-	},[params]);
+	
 	
 	let content = [];
 	let competitions = [];
@@ -72,6 +67,12 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
 		}
 	});
 	
+	
+	if (params && content.findIndex((el) => (el.title.toLowerCase() === params))) {
+		current = content.findIndex((el) => (el.title.toLowerCase().replace(/\s/g, '') === params));	
+	} else current = 0;
+	setThemeColor(content[current].color)
+	
 	//on mount: set lowergridmenu to what it needs to be
 	useEffect(() => {
 		setLowergridmenu(lowergridmenu);
@@ -82,14 +83,11 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
 	
 	
 	//update color according to current value of current
-	useEffect(() => {
-		setThemeColor(content[current].color);
-	},[current])
 	
 	
 	
 	const setSlide = (number) => {
-		setCurrent(number);
+		current = number;
 	}
 	
   return (
