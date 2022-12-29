@@ -102,7 +102,7 @@ const Sidenav = ({themeColor, ...props}) => {
           </Grid>
           <Divider color={"white"} orientation="vertical" flexItem></Divider>
           <Grid item md={0.5} sx={{ minWidth: 87 }} className="corners">
-            <img src="images/menuBar.png" height={"16px"}></img>
+           <a href="#"> <img src="images/profile.png" height={"29px"} className="profileIcon"></img> </a>
           </Grid>
         </Grid>}
 
