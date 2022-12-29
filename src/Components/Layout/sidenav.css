@@ -179,3 +179,8 @@
     padding-bottom: 4.9px;
     border-bottom: 4px solid rgb(232, 231, 221);
 }
+
+.mydiv{
+    /* width: 6px; */
+    color: white;
+}

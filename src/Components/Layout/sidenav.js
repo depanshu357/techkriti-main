@@ -72,7 +72,7 @@ const Sidenav = ({themeColor, ...props}) => {
     });
   };
   
-  const lowergridmenu = (props.lowergridmenu.length ? props.lowergridmenu : [{text:"jghrug1", link:""},{text:"jghrug2", link:""},{text:"jghrug3", link:""},{text:"jghrug4", link:""}] );
+  const lowergridmenu = (props.lowergridmenu.length ? props.lowergridmenu : [/*{text:"jghrug1", link:""},{text:"jghrug2", link:""},{text:"jghrug3", link:""},{text:"jghrug4", link:""}*/] );
   
   
   return (
@@ -94,7 +94,7 @@ const Sidenav = ({themeColor, ...props}) => {
           >
             <img src="img/techkriti.svg" height={"45px"}></img>
           </Grid>
-          <Divider color={"white"} orientation="vertical" flexItem></Divider>
+          <Divider className="mydiv" color={"white"} orientation="vertical" flexItem></Divider>
           <Grid item md>
             <ul className="horlist">
               <li><Link className={`mylink-${compe ? "active" : ""}`} to="/competition">Competitions</Link></li>
@@ -104,13 +104,13 @@ const Sidenav = ({themeColor, ...props}) => {
             </ul>
 
           </Grid>
-          <Divider color={"white"} orientation="vertical" flexItem></Divider>
+          <Divider className="mydiv" color={"white"} orientation="vertical" flexItem></Divider>
           <Grid item md={0.5} sx={{ minWidth: 87 }} className="corners">
            <a href="#"> <img src="images/profile.png" height={"29px"} className="profileIcon"></img> </a>
           </Grid>
         </Grid>}
 
-      {isPagebig && <Divider color={"white"}></Divider>}
+      {isPagebig && <Divider className="mydiv" color={"white"}></Divider>}
       {isPagebig && <Grid
         container
         bgcolor={themeColor}
@@ -131,17 +131,17 @@ const Sidenav = ({themeColor, ...props}) => {
           <br></br>
           <a href="#"><img src="images/instagram.png" height={"20px"}></img></a>
         </Grid>
-        <Divider color={"white"} orientation="vertical" flexItem></Divider>
+        <Divider color={"white"} className="mydiv" orientation="vertical" flexItem></Divider>
         <Grid item md>
           <Outlet />
         </Grid>
-        <Divider color={"white"} orientation="vertical" flexItem></Divider>
+        <Divider color={"white"} orientation="vertical" className="mydiv" flexItem></Divider>
         <Grid item md={0.5} sx={{ minWidth: 87 }} style={{ display: "flex", flexDirection: "column" }}>
           {/* <img src="img/techkriti.svg" height={"45px"}></img> */}
         </Grid>
       </Grid>}
 
-      {isPagebig && <Divider color={"white"} />}
+      {isPagebig && <Divider color={"white"} className="mydiv" />}
       {isPagebig && <Grid
         container
         bgcolor={themeColor}
@@ -155,7 +155,7 @@ const Sidenav = ({themeColor, ...props}) => {
           <img src="images/Vector 4.png" height={"8px"}></img>
           <img src="images/Vector 3.png" height={"8px"}></img>
         </Grid>
-        <Divider color={"white"} orientation="vertical" flexItem></Divider>
+        <Divider color={"white"} orientation="vertical" flexItem className="mydiv"></Divider>
         <Grid item md>
           <ul className="horlist1">
             {lowergridmenu.map((el) => {
@@ -165,11 +165,11 @@ const Sidenav = ({themeColor, ...props}) => {
             })}
           </ul>
         </Grid>
-        <Divider color={"white"} orientation="vertical" flexItem></Divider>
+        <Divider color={"white"} className="mydiv" orientation="vertical" flexItem></Divider>
         <Grid item md={0.5} sx={{ height: 66, minWidth: 87 }} className="corners">
           {/* <img src="img/techkriti.svg" height={"45px"}></img> */}
         </Grid>
-        <Divider></Divider>
+        <Divider className="mydiv"></Divider>
       </Grid>}
 
       {isPagesmall && <Grid container
@@ -202,7 +202,7 @@ const Sidenav = ({themeColor, ...props}) => {
             </button>
           </Grid>
       </Grid>}
-      {isPagesmall && <Divider color={"white"} borderBottomWidth={"30px"}></Divider>}
+      {isPagesmall && <Divider className="mydiv" color={"white"} borderBottomWidth={"30px"}></Divider>}
       {isPagesmall && <Grid container>
         <Grid item width={"100%"}><Outlet/></Grid>
         </Grid>}
