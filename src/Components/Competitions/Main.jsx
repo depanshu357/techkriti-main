@@ -3,9 +3,12 @@ import { Grid, Button } from "@mui/material";
 import "./styles.css";
 import content from "./content1.json";
 import comps from "./competitions.json";
+import { Link } from "react-router-dom"
 
-function Main({setThemeColor, setLowergridmenu}) {
+function Main({setThemeColor, setLowergridmenu, params}) {
 	const [current, setCurrent] = useState(0);
+	
+	console.log(params);
 	
 	const competitions = content.map((el) => {
 		return (
@@ -27,7 +30,7 @@ function Main({setThemeColor, setLowergridmenu}) {
 	const lowergridmenu = comps.map((el) => {
 		return {
 			text:el.category,
-			link:""
+			link:`competitions/${el.category.toLowerCase()}`
 		}
 	});
 	
@@ -44,7 +47,6 @@ function Main({setThemeColor, setLowergridmenu}) {
 	
 	
 	const setSlide = (number) => {
-		console.log(number);
 		setCurrent(number);
 	}
 	
@@ -65,7 +67,9 @@ function Main({setThemeColor, setLowergridmenu}) {
 					setSlide(el.index);
 				}}
 			>
+				<Link to={`/competitions/${el.title.toLowerCase().replace(/\s/g, '')}`}>
 				{el.title}
+				</Link>
 			</div>
 		);
 	});

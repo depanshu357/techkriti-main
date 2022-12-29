@@ -15,7 +15,9 @@ function App() {
 	const [lowergridmenu, setLowergridmenu] = useState([]);
 	
 	const setTheme = (color) => {
+		document.body.style.backgroundColor = color;
 		setThemeColor(color);
+		
 	};
 	
 	const setLowergrid = (array) => {
@@ -29,9 +31,19 @@ function App() {
     <Router>
       <Routes>
       <Route path='/' element={<Sidenav themeColor={themeColor} lowergridmenu={lowergridmenu}/>}>
-      	<Route path='/gallery' element={<CarouselFadeExample/>}></Route>
-      	<Route path='/competition' element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
-      	<Route path='/contact-us' element={<Contact/>}></Route>
+      	<Route path='/gallery' element={<CarouselFadeExample setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
+      	<Route path='/competitions/'>
+      		<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category=""/> }></Route>
+      		<Route path="technical/">
+      			<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Technical"/> }></Route>
+      			<Route path=":params" element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Technical"/> }></Route>
+      		</Route>
+      		<Route path="entrepreneurial/">
+      			<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Entrepreneurial"/> }></Route>
+      			<Route path=":params" element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Entrepreneurial"/> }></Route>
+      		</Route>
+      	</Route>
+      	<Route path='/contact-us' element={<Contact setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
       </Route>
     </Routes>
     </Router>
