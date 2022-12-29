@@ -36,9 +36,11 @@ import "./sidenav.css";
 import { TabPanelUnstyled } from "@mui/base";
 import { useMediaQuery } from "../MediaQuery";
 
-const Sidenav = () => {
+const Sidenav = ({themeColor, ...props}) => {
+
   let isPagebig = useMediaQuery('(min-width:900px)');
-  let isPagesmall = useMediaQuery('(max-width:436px)');
+  let isPagesmall = useMediaQuery('(max-width:900px)');
+  // let isPagemedium = useMediaQuery('(min-width:450px)', '(max-width:900px)')
   let location = useLocation();
   useEffect(() =>{
     console.log(location.pathname)
@@ -65,12 +67,16 @@ const Sidenav = () => {
       else {setSidebar(true);return {right: "0",opacity:"1"};}
     });
   };
+  
+  const lowergridmenu = (props.lowergridmenu.length ? props.lowergridmenu : [{text:"jghrug1", link:""},{text:"jghrug2", link:""},{text:"jghrug3", link:""},{text:"jghrug4", link:""}] );
+  
+  
   return (
     <>
       {isPagebig &&
         <Grid
           container
-          bgcolor={"black"}
+          bgcolor={themeColor}
           color={"white"}
           columnGap={0}
           spacing={0}
@@ -87,10 +93,10 @@ const Sidenav = () => {
           <Divider color={"white"} orientation="vertical" flexItem></Divider>
           <Grid item md>
             <ul className="horlist">
-              <li><a href="#">jghrug</a></li>
-              <li><a className="mylink" href="#">jghrug</a></li>
-              <li><a className="mylink" href="#">jghrug</a></li>
-              <li><a className="mylink" href="#">jghrug</a></li>
+              <li><Link className="mylink" to="/competition">Competitions</Link></li>
+              <li><Link className="mylink" to="/workshop">Workshops</Link></li>
+              <li><Link className="mylink" to="/gallery">Gallery</Link></li>
+              <li><Link className="mylink" to="/contact-us">Contact Us</Link></li>
             </ul>
 
           </Grid>
@@ -103,7 +109,7 @@ const Sidenav = () => {
       {isPagebig && <Divider color={"white"}></Divider>}
       {isPagebig && <Grid
         container
-        bgcolor={"black"}
+        bgcolor={themeColor}
         color={"white"}
         columnGap={0}
         spacing={0}
@@ -127,14 +133,14 @@ const Sidenav = () => {
         </Grid>
         <Divider color={"white"} orientation="vertical" flexItem></Divider>
         <Grid item md={0.5} sx={{ minWidth: 87 }} style={{ display: "flex", flexDirection: "column" }}>
-          <img src="img/techkriti.svg" height={"45px"}></img>
+          {/* <img src="img/techkriti.svg" height={"45px"}></img> */}
         </Grid>
       </Grid>}
 
       {isPagebig && <Divider color={"white"} />}
       {isPagebig && <Grid
         container
-        bgcolor={"black"}
+        bgcolor={themeColor}
         color={"white"}
         columnGap={0}
         spacing={0}
@@ -148,21 +154,22 @@ const Sidenav = () => {
         <Divider color={"white"} orientation="vertical" flexItem></Divider>
         <Grid item md>
           <ul className="horlist1">
-            <li><a className="mylink" href={`${compe === true ? "http://google.com" : "http://youtube.com"}`}>jghrug{`${compe === true ? "compe1" : ""}`}</a></li>
-            <li><a className="mylink" href={`${compe === true ? "http://google.com" : "http://youtube.com"}`}>jghrug{`${compe === true ? "compe1" : ""}`}</a></li>
-            <li><a className="mylink" href={`${compe === true ? "http://google.com" : "http://youtube.com"}`}>jghrug{`${compe === true ? "compe1" : ""}`}</a></li>
-            <li><a className="mylink" href={`${compe === true ? "http://google.com" : "http://youtube.com"}`}>jghrug{`${compe === true ? "compe1" : ""}`}</a></li>
+            {lowergridmenu.map((el) => {
+            	return (
+            		<li key={el.text}><a className="mylink" href={`/${el.link}`}>{el.text}</a></li>
+            	);
+            })}
           </ul>
         </Grid>
         <Divider color={"white"} orientation="vertical" flexItem></Divider>
         <Grid item md={0.5} sx={{ height: 66, minWidth: 87 }} className="corners">
-          <img src="img/techkriti.svg" height={"45px"}></img>
+          {/* <img src="img/techkriti.svg" height={"45px"}></img> */}
         </Grid>
         <Divider></Divider>
       </Grid>}
 
       {isPagesmall && <Grid container
-        bgcolor={"black"}
+        bgcolor={themeColor}
         color={"white"}
         columnGap={0}
         spacing={0}
@@ -173,10 +180,10 @@ const Sidenav = () => {
               <div className="bar is-active"></div>
             </div>
             </div>
-            <a href="#">Home</a>
-            <a href="#">Contact Us</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
+            <Link  to="/competition">Competitions</Link>
+              <Link to="/workshop">Workshops</Link>
+              <Link to="/gallery">Gallery</Link>
+              <Link to="/contact-us">Contact Us</Link>
           </nav>
         <Grid item 
           sx={{ minWidth: 91 }}
@@ -210,6 +217,7 @@ const Sidenav = () => {
           </ul>
         </Grid>
         </Grid>}
+        
     </>
   );
 };

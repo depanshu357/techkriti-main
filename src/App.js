@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import CarouselFadeExample from './Components/Carousel/carousel';
 import Layout from './Components/Layout/layout';
@@ -11,15 +11,27 @@ import Sidenav from './Components/Layout/sidenav';
 import Contact from './Components/Contact/Contact';
 
 function App() {
+	const [themeColor, setThemeColor] = useState("#000000");
+	const [lowergridmenu, setLowergridmenu] = useState([]);
+	
+	const setTheme = (color) => {
+		setThemeColor(color);
+	};
+	
+	const setLowergrid = (array) => {
+		console.log("received");
+		console.log(array);
+		setLowergridmenu(array);
+	}
   return (
     <>
     <div className="w-100" style={{maxWidth : '100%'}}></div>
     <Router>
       <Routes>
-      <Route path='/' element={<Sidenav/>}>
-      <Route path='/gallery' element={<CarouselFadeExample/>}></Route>
-      <Route path='/competition' element={<Competition/>}></Route>
-      <Route path='/contact-us' element={<Contact/>}></Route>
+      <Route path='/' element={<Sidenav themeColor={themeColor} lowergridmenu={lowergridmenu}/>}>
+      	<Route path='/gallery' element={<CarouselFadeExample/>}></Route>
+      	<Route path='/competition' element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
+      	<Route path='/contact-us' element={<Contact/>}></Route>
       </Route>
     </Routes>
     </Router>
