@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import CarouselFadeExample from './Components/Carousel/carousel';
 import Layout from './Components/Layout/layout';
@@ -10,14 +10,19 @@ import {
 import Sidenav from './Components/Layout/sidenav';
 
 function App() {
+	const [themeColor, setThemeColor] = useState("#000000");
+
+	const setTheme = (color) => {
+		setThemeColor(color);
+	};
   return (
     <>
     <div className="w-100" style={{maxWidth : '100%'}}></div>
     <Router>
       <Routes>
-      <Route path='/' element={<Sidenav/>}>
+      <Route path='/' element={<Sidenav themeColor={themeColor} />}>
       <Route path='/gallery' element={<CarouselFadeExample/>}></Route>
-      <Route path='/competition' element={<Competition/>}></Route>
+      <Route path='/competition' element={<Competition setThemeColor={setTheme} />}></Route>
       </Route>
     </Routes>
     </Router>

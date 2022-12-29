@@ -36,7 +36,8 @@ import "./sidenav.css";
 import { TabPanelUnstyled } from "@mui/base";
 import { useMediaQuery } from "../MediaQuery";
 
-const Sidenav = () => {
+const Sidenav = ({themeColor}) => {
+
   let isPagebig = useMediaQuery('(min-width:900px)');
   let isPagesmall = useMediaQuery('(max-width:436px)');
   let location = useLocation();
@@ -65,12 +66,14 @@ const Sidenav = () => {
       else {setSidebar(true);return {top: "0"};}
     });
   };
+  
+  
   return (
     <>
       {isPagebig &&
         <Grid
           container
-          bgcolor={"black"}
+          bgcolor={themeColor}
           color={"white"}
           columnGap={0}
           spacing={0}
@@ -103,7 +106,7 @@ const Sidenav = () => {
       {isPagebig && <Divider color={"white"}></Divider>}
       {isPagebig && <Grid
         container
-        bgcolor={"black"}
+        bgcolor={themeColor}
         color={"white"}
         columnGap={0}
         spacing={0}
@@ -134,7 +137,7 @@ const Sidenav = () => {
       {isPagebig && <Divider color={"white"} />}
       {isPagebig && <Grid
         container
-        bgcolor={"black"}
+        bgcolor={themeColor}
         color={"white"}
         columnGap={0}
         spacing={0}
@@ -162,7 +165,7 @@ const Sidenav = () => {
       </Grid>}
 
       {isPagesmall && <Grid container
-        bgcolor={"black"}
+        bgcolor={themeColor}
         color={"white"}
         columnGap={0}
         spacing={0}
