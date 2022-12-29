@@ -93,10 +93,10 @@ const Sidenav = ({themeColor, ...props}) => {
           <Divider color={"white"} orientation="vertical" flexItem></Divider>
           <Grid item md>
             <ul className="horlist">
-              <li><a href="#">jghrug</a></li>
-              <li><a className="mylink" href="#">jghrug</a></li>
-              <li><a className="mylink" href="#">jghrug</a></li>
-              <li><a className="mylink" href="#">jghrug</a></li>
+              <li><Link className="mylink" to="/competition">Competitions</Link></li>
+              <li><Link className="mylink" to="/workshop">Workshops</Link></li>
+              <li><Link className="mylink" to="/gallery">Gallery</Link></li>
+              <li><Link className="mylink" to="/contact-us">Contact Us</Link></li>
             </ul>
 
           </Grid>
@@ -163,7 +163,7 @@ const Sidenav = ({themeColor, ...props}) => {
         </Grid>
         <Divider color={"white"} orientation="vertical" flexItem></Divider>
         <Grid item md={0.5} sx={{ height: 66, minWidth: 87 }} className="corners">
-          <img src="img/techkriti.svg" height={"45px"}></img>
+          {/* <img src="img/techkriti.svg" height={"45px"}></img> */}
         </Grid>
         <Divider></Divider>
       </Grid>}
@@ -180,10 +180,10 @@ const Sidenav = ({themeColor, ...props}) => {
               <div className="bar is-active"></div>
             </div>
             </div>
-            <a href="#">Home</a>
-            <a href="#">Contact Us</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
+            <Link  to="/competition">Competitions</Link>
+              <Link to="/workshop">Workshops</Link>
+              <Link to="/gallery">Gallery</Link>
+              <Link to="/contact-us">Contact Us</Link>
           </nav>
         <Grid item 
           sx={{ minWidth: 91 }}
