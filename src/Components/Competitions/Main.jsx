@@ -73,7 +73,13 @@ function Main({setThemeColor, setLowergridmenu}) {
           			flexBasis:"auto"
           		}}
           	>
+          		<div style={{position:"absolute", left:"auto"}}>
+          		{"<"}
+          		</div>
           		{links}
+          		<div style={{position:"absolute", right:"10vw"}}>
+          		{">"}
+          		</div>
           	</div>
           </div>
           </div>
