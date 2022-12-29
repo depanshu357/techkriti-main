@@ -133,7 +133,7 @@ const Sidenav = ({themeColor, ...props}) => {
         </Grid>
         <Divider color={"white"} orientation="vertical" flexItem></Divider>
         <Grid item md={0.5} sx={{ minWidth: 87 }} style={{ display: "flex", flexDirection: "column" }}>
-          <img src="img/techkriti.svg" height={"45px"}></img>
+          {/* <img src="img/techkriti.svg" height={"45px"}></img> */}
         </Grid>
       </Grid>}
 

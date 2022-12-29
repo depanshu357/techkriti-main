@@ -1,7 +1,6 @@
 import React from "react";
-import Topgrid from "./Topgrid";
+
 import Main from "./Main";
-import Bottomgrid from "./Bottomgrid";
 import "./styles.css";
 
 function Competition({setThemeColor, setLowergridmenu}) {
