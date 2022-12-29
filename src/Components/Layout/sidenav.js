@@ -49,6 +49,7 @@ const Sidenav = ({themeColor, ...props}) => {
   let compe = false;
   let works = false;
   let gallery = false;
+  let contact = false;
   if(location.pathname.includes("competition")){
     compe = true;
   }
@@ -57,6 +58,9 @@ const Sidenav = ({themeColor, ...props}) => {
   }
   else if(location.pathname.includes("workshops")){
     works = true;
+  }
+  else if(location.pathname.includes("contact")){
+    contact = true;
   }
   const [sidebar, setSidebar] = useState(false);
   const [display, setDisplay] = useState({ right: '-100vw',opacity:"0" });
@@ -93,10 +97,10 @@ const Sidenav = ({themeColor, ...props}) => {
           <Divider color={"white"} orientation="vertical" flexItem></Divider>
           <Grid item md>
             <ul className="horlist">
-              <li><Link className="mylink" to="/competition">Competitions</Link></li>
-              <li><Link className="mylink" to="/workshop">Workshops</Link></li>
-              <li><Link className="mylink" to="/gallery">Gallery</Link></li>
-              <li><Link className="mylink" to="/contact-us">Contact Us</Link></li>
+              <li><Link className={`mylink-${compe ? "active" : ""}`} to="/competition">Competitions</Link></li>
+              <li><Link className={`mylink-${works ? "active" : ""}`} to="/workshop">Workshops</Link></li>
+              <li><Link className={`mylink-${gallery ? "active" : ""}`} to="/gallery">Gallery</Link></li>
+              <li><Link className={`mylink-${contact ? "active" : ""}`} to="/contact-us">Contact Us</Link></li>
             </ul>
 
           </Grid>
