@@ -76,7 +76,7 @@ function CarouselFadeExample(props) {
                     className={`d-block w-100`}
                     src={item}
                     alt={{ index } + " slide"}
-                    style={{height:"100vh"}}
+                    style={{height:"calc(100vh - 129px)"}}
                   />
                   <Carousel.Caption>
                     <h3>{index} slide label</h3>
