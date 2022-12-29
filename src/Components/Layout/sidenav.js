@@ -38,7 +38,8 @@ import { useMediaQuery } from "../MediaQuery";
 
 const Sidenav = () => {
   let isPagebig = useMediaQuery('(min-width:900px)');
-  let isPagesmall = useMediaQuery('(max-width:436px)');
+  let isPagesmall = useMediaQuery('(max-width:900px)');
+  // let isPagemedium = useMediaQuery('(min-width:450px)', '(max-width:900px)')
   let location = useLocation();
   useEffect(() =>{
     console.log(location.pathname)
@@ -210,6 +211,7 @@ const Sidenav = () => {
           </ul>
         </Grid>
         </Grid>}
+        
     </>
   );
 };
