@@ -118,7 +118,7 @@
     color: white;
     flex-direction: column;
     width: 100vw;
-    min-height: 45vh;
+    height: 100vh;
     position: absolute;
     top: 00%;
     align-items: center;
@@ -150,6 +150,10 @@
     0 0 0.8rem #13a8fe,
     0 0 2.8rem #1385fe,
     inset 0 0 1.3rem #1390fe;
+}
+
+.profileIcon{
+    cursor: pointer;
 }
 
 /* @media only screen and (max-width: 436px) {
