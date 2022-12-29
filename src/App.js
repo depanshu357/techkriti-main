@@ -8,6 +8,7 @@ import {
   BrowserRouter as Router, Routes, Route,
 } from "react-router-dom";
 import Sidenav from './Components/Layout/sidenav';
+import Contact from './Components/Contact/Contact';
 
 function App() {
 	const [themeColor, setThemeColor] = useState("#000000");
@@ -28,6 +29,7 @@ function App() {
       <Route path='/' element={<Sidenav themeColor={themeColor} />}>
       <Route path='/gallery' element={<CarouselFadeExample/>}></Route>
       <Route path='/competition' element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
+      <Route path='/contact-us' element={<Contact/>}></Route>
       </Route>
     </Routes>
     </Router>

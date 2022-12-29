@@ -58,12 +58,12 @@ const Sidenav = ({themeColor, ...props}) => {
     works = true;
   }
   const [sidebar, setSidebar] = useState(false);
-  const [display, setDisplay] = useState({ top: '-200px' });
+  const [display, setDisplay] = useState({ right: '-100vw',opacity:"0" });
   const handleHamburger = () => {
     console.log("clicked ");
     setDisplay((pre) => {
-      if(sidebar){setSidebar(false);return {top: "-200px"};}
-      else {setSidebar(true);return {top: "0"};}
+      if(sidebar){setSidebar(false);return {right: '-100vw',opacity:"0"};}
+      else {setSidebar(true);return {right: "0",opacity:"1"};}
     });
   };
   
@@ -174,13 +174,15 @@ const Sidenav = ({themeColor, ...props}) => {
         spacing={0}
         sx={{ justifyContent: "space-between" }}>
           <nav style={display} className="mobile">
-            <div className="hamburger" onClick={handleHamburger} style={{position:"absolute",right:"20px"}}>
+            <div style={{width:"100vw",height:"40px"}}>
+            <div className="hamburger" onClick={handleHamburger} style={{position:"absolute",right:"25px",top:"5px"}}>
               <div className="bar is-active"></div>
             </div>
+            </div>
             <a href="#">Home</a>
-            <a href="#">Home</a>
-            <a href="#">Home</a>
-            <a href="#">Home</a>
+            <a href="#">Contact Us</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
           </nav>
         <Grid item 
           sx={{ minWidth: 91 }}
