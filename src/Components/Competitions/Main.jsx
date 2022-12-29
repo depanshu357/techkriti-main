@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { Grid, Button } from "@mui/material";
 import "./styles.css";
 import content from "./content1.json";
+import comps from "./competitions.json";
 
 function Main({setThemeColor, setLowergridmenu}) {
 	const [current, setCurrent] = useState(0);
@@ -23,10 +24,17 @@ function Main({setThemeColor, setLowergridmenu}) {
 	
 	
 	
+	const lowergridmenu = comps.map((el) => {
+		return {
+			text:el.category,
+			link:""
+		}
+	});
+	
 	//on mount: set lowergridmenu to what it needs to be
-// 	useEffect(() => {
-// 		setLowergridmenu(lowergridmenu);
-// 	}, []);
+	useEffect(() => {
+		setLowergridmenu(lowergridmenu);
+	}, []);
 	
 	//update color according to current value of current
 	useEffect(() => {
@@ -52,6 +60,7 @@ function Main({setThemeColor, setLowergridmenu}) {
 					borderRadius:"1px",
 					padding:"5px"
 				}}
+				key={el.title}
 				onClick={() => {
 					setSlide(el.index);
 				}}

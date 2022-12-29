@@ -67,7 +67,7 @@ const Sidenav = ({themeColor, ...props}) => {
     });
   };
   
-  const lowergridmenu = (props.lowergridmenu ? props.lowergridmenu : [{text:"jghrug1", link:""},{text:"jghrug2", link:""},{text:"jghrug3", link:""},{text:"jghrug4", link:""}] );
+  const lowergridmenu = (props.lowergridmenu.length ? props.lowergridmenu : [{text:"jghrug1", link:""},{text:"jghrug2", link:""},{text:"jghrug3", link:""},{text:"jghrug4", link:""}] );
   
   
   return (

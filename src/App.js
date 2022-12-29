@@ -19,6 +19,8 @@ function App() {
 	};
 	
 	const setLowergrid = (array) => {
+		console.log("received");
+		console.log(array);
 		setLowergridmenu(array);
 	}
   return (
@@ -26,10 +28,10 @@ function App() {
     <div className="w-100" style={{maxWidth : '100%'}}></div>
     <Router>
       <Routes>
-      <Route path='/' element={<Sidenav themeColor={themeColor} />}>
-      <Route path='/gallery' element={<CarouselFadeExample/>}></Route>
-      <Route path='/competition' element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
-      <Route path='/contact-us' element={<Contact/>}></Route>
+      <Route path='/' element={<Sidenav themeColor={themeColor} lowergridmenu={lowergridmenu}/>}>
+      	<Route path='/gallery' element={<CarouselFadeExample/>}></Route>
+      	<Route path='/competition' element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
+      	<Route path='/contact-us' element={<Contact/>}></Route>
       </Route>
     </Routes>
     </Router>
