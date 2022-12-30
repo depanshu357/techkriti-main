@@ -24,6 +24,7 @@ import { Container } from "@mui/system";
 import "./sidenav.css";
 import { TabPanelUnstyled } from "@mui/base";
 import { useMediaQuery } from "../MediaQuery";
+import Merchandise from "../Merchandise/Merchandise";
 
 const Sidenav = ({themeColor, ...props}) => {
   // Google login
@@ -88,9 +89,17 @@ const Sidenav = ({themeColor, ...props}) => {
   
   const lowergridmenu = (props.lowergridmenu.length ? props.lowergridmenu : [] );
   
+  const handleMerchandise = (event) => {
+    console.log(event.target);
+    const display = document.getElementsByClassName("popUpDisplay");
+    display[0].classList.remove("MerchandiseClose");
+
+    // event.target.classList.add("mylink-active")
+  }
   
   return (
     <>
+    <Merchandise />
       {isPagebig &&
         <Grid
           container
@@ -115,6 +124,7 @@ const Sidenav = ({themeColor, ...props}) => {
               <li><Link className={`mylink-${works ? "active" : ""}`} to="/workshop">Workshops</Link></li>
               <li><Link className={`mylink-${gallery ? "active" : ""}`} to="/gallery">Gallery</Link></li>
               <li><Link className={`mylink-${contact ? "active" : ""}`} to="/contact-us">Contact Us</Link></li>
+              <li className="merchandise" onClick={handleMerchandise}>Merchandise</li>
             </ul>
 
           </Grid>

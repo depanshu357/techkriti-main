@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import a from './images/1.png';
-export default function Contact() {
+export default function Contact({setThemeColor, setLowergridmenu}) {
 
 	useEffect(() => {
 		setThemeColor("#000"); //on mount: set theme to black

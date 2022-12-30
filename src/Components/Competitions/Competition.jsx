@@ -5,7 +5,8 @@ import "./styles.css";
 import { useParams } from "react-router-dom";
 
 function Competition(props) {
-	const params = useParams();
+	const {params} = useParams();
+	console.log(params);
   return (
     <div>
       {/* <Topgrid /> */}
