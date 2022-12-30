@@ -5,9 +5,8 @@ import comps from "./competitions.json";
 import { Link } from "react-router-dom"
 
 function Main({setThemeColor, setLowergridmenu, params, category}) {
+	
 	let current = 0;
-	
-	
 	
 	let content = [];
 	let competitions = [];
@@ -68,7 +67,8 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
 	});
 	
 	
-	if (params && content.findIndex((el) => (el.title.toLowerCase() === params))) {
+	
+	if (params && content.findIndex((el) => (el.title.toLowerCase().replace(/\s/g, '') === params)) > 0) {
 		current = content.findIndex((el) => (el.title.toLowerCase().replace(/\s/g, '') === params));	
 	} else current = 0;
 	setThemeColor(content[current].color)
