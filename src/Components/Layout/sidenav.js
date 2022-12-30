@@ -89,17 +89,28 @@ const Sidenav = ({themeColor, ...props}) => {
   
   const lowergridmenu = (props.lowergridmenu.length ? props.lowergridmenu : [] );
   
+  const [checked,setChecked]=useState(false)
+
   const handleMerchandise = (event) => {
     console.log(event.target);
     const display = document.getElementsByClassName("popUpDisplay");
     display[0].classList.remove("MerchandiseClose");
-
+    display[0].classList.add("startMerchandise")
+    setChecked(pre=>!pre);
     // event.target.classList.add("mylink-active")
   }
-  
+  const handleMerchandiseofSmallPage = (event) => {
+    console.log(event.target);
+    const display = document.getElementsByClassName("popUpDisplay");
+    display[0].classList.remove("MerchandiseClose");
+    setChecked(pre=>!pre);
+    display[0].classList.add("startMerchandise")
+    display[0].classList.add("smallPage");
+    // event.target.classList.add("mylink-active")
+  }
   return (
     <>
-    <Merchandise />
+    <Merchandise checked={checked} setChecked={setChecked}/>
       {isPagebig &&
         <Grid
           container
@@ -212,6 +223,7 @@ const Sidenav = ({themeColor, ...props}) => {
               <Link to="/workshop" onClick={handleHamburger}>Workshops</Link>
               <Link to="/gallery" onClick={handleHamburger}>Gallery</Link>
               <Link to="/contact-us" onClick={handleHamburger}>Contact Us</Link>
+              <Link to="/" onClick={handleMerchandiseofSmallPage}>Merchandise</Link>
           </nav>
         <Grid item 
           sx={{ minWidth: 91 }}
