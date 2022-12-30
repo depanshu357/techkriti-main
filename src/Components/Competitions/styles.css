@@ -1,8 +1,7 @@
 body {
     background: #000;
-    color:#fff;
-}
-
+  }
+  
 .topgrid {
 padding-top: 1vmin;
 padding-left: 3vmin;
@@ -63,7 +62,7 @@ width: 100%;
 	overflow-y:hidden;
 	grid-column: 1 / 4;
 	grid-row: 2;
-	color:#fff;
+	
 }
 
 .scroll-less {

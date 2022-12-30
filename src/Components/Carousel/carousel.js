@@ -2,14 +2,9 @@ import Carousel from "react-bootstrap/Carousel";
 import "./carousel.css";
 import "bootstrap/dist/css/bootstrap.css";
 import HorizontalBar from "./HorizontalBar";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function CarouselFadeExample(props) {
-	useEffect(() => {
-		props.setThemeColor("#000");
-		props.setLowergridmenu([]);
-	},[]); //set theme color to black, lowergridmenu to empty on mount
-
   const address = [
     "images/1.jpg",
     "images/2.jpg",
