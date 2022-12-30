@@ -190,9 +190,9 @@ const Sidenav = ({themeColor, ...props}) => {
         style={{ position: "absolute", bottom: "0" }}
       >
         <Grid item md={0.5} sx={{ minWidth: 91, flexDirection: "column" }} className="corners" style={{borderRight:"4px solid white"}}>
-          <div class = "scroll-down"></div>
-          <div class = "scroll-down"></div>
-          <div class = "scroll-down"></div>
+          <div className = "scroll-down"></div>
+          <div className = "scroll-down"></div>
+          <div className = "scroll-down"></div>
         </Grid>
         <Divider color={"white"} orientation="vertical" flexItem className="mydiv"></Divider>
         <Grid item md>
