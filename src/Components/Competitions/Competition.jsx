@@ -2,12 +2,15 @@ import React from "react";
 
 import Main from "./Main";
 import "./styles.css";
+import { useParams } from "react-router-dom";
 
-function Competition({setThemeColor, setLowergridmenu}) {
+function Competition(props) {
+	const {params} = useParams();
+	console.log(params);
   return (
     <div>
       {/* <Topgrid /> */}
-      <Main setThemeColor={setThemeColor} setLowergridmenu={setLowergridmenu}/>
+      <Main {...props} params={params} />
       {/* <Bottomgrid classname="bottom-grid"/> */}
     </div>
   );

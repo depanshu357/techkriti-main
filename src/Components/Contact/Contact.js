@@ -1,6 +1,12 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import a from './images/1.png';
-export default function Contact() {
+export default function Contact({setThemeColor, setLowergridmenu}) {
+
+	useEffect(() => {
+		setThemeColor("#000"); //on mount: set theme to black
+		setLowergridmenu([]);
+	},[]);
+
   return (
     <>
     <div className='contact'>
@@ -8,7 +14,7 @@ export default function Contact() {
       Contact Us
     </h1>
     <div>
-    <ul class="grid cs-style-4">
+    <ul className="grid cs-style-4">
 				<li>
 					<figure>
 						<div><img src={a} alt="img05" /></div>

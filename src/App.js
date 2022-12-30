@@ -20,12 +20,11 @@ function App() {
 	const [lowergridmenu, setLowergridmenu] = useState([]);
 	
 	const setTheme = (color) => {
+		document.body.style.backgroundColor = color;
 		setThemeColor(color);
 	};
 	
 	const setLowergrid = (array) => {
-		console.log("received");
-		console.log(array);
 		setLowergridmenu(array);
 	}
   return (
@@ -35,13 +34,23 @@ function App() {
 	<AuthProvider>
       <Routes>
       <Route path='/' element={<Sidenav themeColor={themeColor} lowergridmenu={lowergridmenu}/>}>
-      	<Route path='/gallery' element={<CarouselFadeExample/>}></Route>
-      	<Route path='/competition' element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
-      	<Route path='/contact-us' element={<Contact/>}></Route>
-		  <Route path='/profile' element={<Dashboard/>}></Route>
-		  <Route path='/login' element={<Login/>}></Route>
-		  <Route path='/update' element={<Update/>}></Route>
-		  <Route path='/register/:events' element={<Register/>}></Route>
+      	<Route path='/gallery' element={<CarouselFadeExample setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
+      	<Route path='/competitions/'>
+      		<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category=""/> }></Route>
+      		<Route path="technical/">
+      			<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Technical"/> }></Route>
+      			<Route path=":params" element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Technical"/> }></Route>
+      		</Route>
+      		<Route path="entrepreneurial/">
+      			<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Entrepreneurial"/> }></Route>
+      			<Route path=":params" element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Entrepreneurial"/> }></Route>
+      		</Route>
+      	</Route>
+      	<Route path='/contact-us' element={<Contact setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
+  	    <Route path='/profile' element={<Dashboard/>}></Route>
+	    <Route path='/login' element={<Login/>}></Route>
+	    <Route path='/update' element={<Update/>}></Route>
+	    <Route path='/register/:events' element={<Register/>}></Route>
       </Route>
     </Routes>
 	</AuthProvider>

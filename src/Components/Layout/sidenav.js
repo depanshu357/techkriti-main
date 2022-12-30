@@ -87,7 +87,7 @@ const Sidenav = ({themeColor, ...props}) => {
     });
   };
   
-  const lowergridmenu = (props.lowergridmenu.length ? props.lowergridmenu : [/*{text:"jghrug1", link:""},{text:"jghrug2", link:""},{text:"jghrug3", link:""},{text:"jghrug4", link:""}*/] );
+  const lowergridmenu = (props.lowergridmenu.length ? props.lowergridmenu : [] );
   
   const [checked,setChecked]=useState(false)
 
@@ -131,7 +131,7 @@ const Sidenav = ({themeColor, ...props}) => {
           <Divider className="mydiv" color={"white"} orientation="vertical" flexItem></Divider>
           <Grid item md>
             <ul className="horlist">
-              <li><Link className={`mylink-${compe ? "active" : ""}`} to="/competition">Competitions</Link></li>
+              <li><Link className={`mylink-${compe ? "active" : ""}`} to="/competitions">Competitions</Link></li>
               <li><Link className={`mylink-${works ? "active" : ""}`} to="/workshop">Workshops</Link></li>
               <li><Link className={`mylink-${gallery ? "active" : ""}`} to="/gallery">Gallery</Link></li>
               <li><Link className={`mylink-${contact ? "active" : ""}`} to="/contact-us">Contact Us</Link></li>
@@ -195,7 +195,7 @@ const Sidenav = ({themeColor, ...props}) => {
           <ul className="horlist1">
             {lowergridmenu.map((el) => {
             	return (
-            		<li key={el.text}><a className="mylink" href={`/${el.link}`}>{el.text}</a></li>
+            		<li key={el.text}><Link className="mylink" to={`/${el.link}`}>{el.text}</Link></li>
             	);
             })}
           </ul>
@@ -219,7 +219,7 @@ const Sidenav = ({themeColor, ...props}) => {
               <div className="bar is-active"></div>
             </div>
             </div>
-            <Link  to="/competition" onClick={handleHamburger} >Competitions</Link>
+            <Link  to="/competitions" onClick={handleHamburger} >Competitions</Link>
               <Link to="/workshop" onClick={handleHamburger}>Workshops</Link>
               <Link to="/gallery" onClick={handleHamburger}>Gallery</Link>
               <Link to="/contact-us" onClick={handleHamburger}>Contact Us</Link>
