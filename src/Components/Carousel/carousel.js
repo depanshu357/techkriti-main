@@ -9,7 +9,7 @@ function CarouselFadeExample(props) {
 		props.setThemeColor("#000");
 		props.setLowergridmenu([]);
 	},[]); //set theme color to black, lowergridmenu to empty on mount
-
+	
   const address = [
     "images/1.jpg",
     "images/2.jpg",

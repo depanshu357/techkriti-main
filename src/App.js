@@ -9,7 +9,12 @@ import {
 } from "react-router-dom";
 import Sidenav from './Components/Layout/sidenav';
 import Contact from './Components/Contact/Contact';
-
+import Dashboard from './Components/Dashboard/Dashboard';
+import PrivateRoute from './Components/PrivateRoute';
+import Login from './Components/Login';
+import { AuthProvider } from './context/AuthContext';
+import Update from './Components/Update';
+import Register from './Components/Register';
 function App() {
 	const [themeColor, setThemeColor] = useState("#000000");
 	const [lowergridmenu, setLowergridmenu] = useState([]);
@@ -17,7 +22,6 @@ function App() {
 	const setTheme = (color) => {
 		document.body.style.backgroundColor = color;
 		setThemeColor(color);
-		
 	};
 	
 	const setLowergrid = (array) => {
@@ -27,6 +31,7 @@ function App() {
     <>
     <div className="w-100" style={{maxWidth : '100%'}}></div>
     <Router>
+	<AuthProvider>
       <Routes>
       <Route path='/' element={<Sidenav themeColor={themeColor} lowergridmenu={lowergridmenu}/>}>
       	<Route path='/gallery' element={<CarouselFadeExample setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
@@ -42,8 +47,13 @@ function App() {
       		</Route>
       	</Route>
       	<Route path='/contact-us' element={<Contact setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
+  	    <Route path='/profile' element={<Dashboard/>}></Route>
+	    <Route path='/login' element={<Login/>}></Route>
+	    <Route path='/update' element={<Update/>}></Route>
+	    <Route path='/register/:events' element={<Register/>}></Route>
       </Route>
     </Routes>
+	</AuthProvider>
     </Router>
     </>
   );
