@@ -25,8 +25,9 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
 		competitions = content.map((el) => {
 			return (
 				<div className="main-text">
-				<div style={{display:"flex", justifyContent:"space-between"}} key={el.index}>
+				<div style={{display:"flex", justifyContent:"space-between", margin:"50px"}} key={el.index}>
 					<div style={{maxWidth:"60%"}}>
+					<div style={{margin:"auto"}}>
 					<h1>{el.title}</h1>
 					<p>{el.text}</p>
 					<Button 
@@ -36,7 +37,8 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
 						}}
 					>{explore ? "Close" : "Explore" }</Button>
 					</div>
-					<img src={`images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} />
+					</div>
+					<img src={`/images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} style={{width:"300px"}} />
 				</div>
 				<div style={{display:"flex", flexWrap:"wrap", width:"100%"}}>
 				{explore
