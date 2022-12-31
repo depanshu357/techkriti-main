@@ -65,6 +65,7 @@ const Sidenav = ({themeColor, ...props}) => {
   let works = false;
   let gallery = false;
   let contact = false;
+  let merchandise = false;
   if(location.pathname.includes("competition")){
     compe = true;
   }
@@ -76,6 +77,8 @@ const Sidenav = ({themeColor, ...props}) => {
   }
   else if(location.pathname.includes("contact")){
     contact = true;
+  }else if(location.pathname.includes("merchandise")){
+    merchandise = true;
   }
   const [sidebar, setSidebar] = useState(false);
   const [display, setDisplay] = useState({ right: '-100vw',opacity:"0" });
@@ -110,7 +113,7 @@ const Sidenav = ({themeColor, ...props}) => {
   }
   return (
     <>
-    <Merchandise checked={checked} setChecked={setChecked}/>
+    {/* <Merchandise checked={checked} setChecked={setChecked}/> */}
       {isPagebig &&
         <Grid
           container
@@ -139,7 +142,8 @@ const Sidenav = ({themeColor, ...props}) => {
               <li><Link className={`mylink-${works ? "active" : ""}`} to="/workshop">Workshops</Link></li>
               <li><Link className={`mylink-${gallery ? "active" : ""}`} to="/gallery">Gallery</Link></li>
               <li><Link className={`mylink-${contact ? "active" : ""}`} to="/contact-us">Contact Us</Link></li>
-              <li className="merchandise" onClick={handleMerchandise}>Merchandise</li>
+              <li><Link className={`mylink-${merchandise ? "active" : ""}`} to="/merchandise">Merchandise</Link></li>
+              {/* <li className="merchandise" onClick={handleMerchandise}>Merchandise</li> */}
             </ul>
 
           </Grid>
@@ -227,7 +231,7 @@ const Sidenav = ({themeColor, ...props}) => {
               <Link to="/workshop" onClick={handleHamburger}>Workshops</Link>
               <Link to="/gallery" onClick={handleHamburger}>Gallery</Link>
               <Link to="/contact-us" onClick={handleHamburger}>Contact Us</Link>
-              <Link to="/" onClick={handleMerchandiseofSmallPage}>Merchandise</Link>
+              <Link to="/merchandise" onClick={handleHamburger}>Merchandise</Link>
           </nav>
         <Grid item 
           sx={{ minWidth: 91 }}
