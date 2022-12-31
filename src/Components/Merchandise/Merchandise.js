@@ -42,14 +42,14 @@ const Merchandise = (props) => {
           </div>
           <div className="ImageOfPopUp">
             <div className="ImageCard">
-            <img src="images/Hoodie1.png" alt="#" srcset="" />
+            <img src="/images/Hoodie1.png" alt="#" srcset="" />
             <div className="ImageText">
                 {/* <span>Black Hoodie</span> */}
                 <a href="#">Buy Now</a>
             </div>
             </div>
             <div className="ImageCard">
-            <img src="images/Hoodie1.png" alt="#" srcset="" />
+            <img src="/images/Hoodie1.png" alt="#" srcset="" />
             <div className="ImageText">
                 {/* <span>Black Hoodie</span> */}
                 <a href="#">Buy Now</a>

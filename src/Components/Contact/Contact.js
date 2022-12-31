@@ -1,15 +1,27 @@
-import React, {useEffect} from 'react'
-import a from './images/1.png';
+import React, {useEffect} from "react";
+import a from "./images/rock.jpg";
+import "./contact.css";
+import {
+  FaFacebookF,
+  FaTwitterSquare,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 export default function Contact({setThemeColor, setLowergridmenu}) {
 
 	useEffect(() => {
 		setThemeColor("#000"); //on mount: set theme to black
 		setLowergridmenu([]);
 	},[]);
-
+	
+	const fontstyles = {
+		color: 'white',
+		fontsize: '24px',
+		fontweight: 'bold'
+	}
   return (
-    <>
-    <div className='contact'>
+    <div className="contactBody">
+      {/* <div className='contact'>
     <h1 className="font-contact">
       Contact Us
     </h1>
@@ -78,7 +90,43 @@ export default function Contact({setThemeColor, setLowergridmenu}) {
 			</ul>
     </div>
 
+    </div> */}
+      <div className="container">
+        <div className="card">
+          <div className="content">
+            <div className="imgBx">
+              <img className="contactImage" src={a} alt="img05" />
+            </div>
+            <div className="contentBx">
+              <h3>
+                Safari
+              </h3>
+            </div>
+          </div>
+          <ul className="sci">
+            <li>
+              <a href="#">
+                <FaFacebookF style={fontstyles}/>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FaInstagram />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FaLinkedinIn />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FaTwitterSquare />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    </>
-  )
+  );
 }

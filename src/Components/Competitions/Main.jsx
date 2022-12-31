@@ -27,7 +27,7 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
 				<div className="main-text">
 				<div style={{display:"flex", justifyContent:"space-between", margin:"50px"}} key={el.index}>
 					<div style={{maxWidth:"60%"}}>
-					<div style={{margin:"auto"}}>
+					<div style={{margin:"50px"}}>
 					<h1>{el.title}</h1>
 					<p>{el.text}</p>
 					<Button 
