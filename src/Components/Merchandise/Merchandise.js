@@ -4,6 +4,7 @@ import CloseIcon from '@mui/icons-material/Close';
 // import "./merchandise.css"
 import "./merchandise2.css"
 import Collapse from '@mui/material/Collapse';
+import { style } from '@mui/system';
 
 
 const Merchandise = (props) => {
@@ -31,9 +32,18 @@ const Merchandise = (props) => {
         console.log(display[0]);
       }
 
+      const image = document.getElementsByClassName("image")
       const handleMouseOver =()=> {
-        const image = document.getElementsByClassName("image")
         image[0].style.transform = "scale( 1.2 )"
+      }
+      const handleMouseOut =()=>{
+        image[0].style.transform = "scale( 1 )"
+      }
+      const handleMouseOver1 =()=> {
+        image[1].style.transform = "scale( 1.2 )"
+      }
+      const handleMouseOut1 =()=>{
+        image[1].style.transform = "scale( 1 )"
       }
   return (
     <>
@@ -68,7 +78,7 @@ const Merchandise = (props) => {
                 <img src="images/Hoodie1.png" alt="Hoodie" />
                 </div>
                 <div className="text">
-                <a href="#" onMouseOver={handleMouseOver}>
+                <a href="#" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                   Buy Now
                 </a>
                   </div>
@@ -78,7 +88,7 @@ const Merchandise = (props) => {
                   <img src="images/Hoodie1.png" alt="Jacket" />
                 </div>
                 <div className="text">
-                <a href="#" onMouseOver={handleMouseOver}>
+                <a href="#" onMouseOver={handleMouseOver1} onMouseOut={handleMouseOut1}>
                   Buy Now
                 </a>
                   </div>
