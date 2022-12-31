@@ -74,7 +74,14 @@
     color: #fff;
     letter-spacing: 2px;
     text-align: center;
-    margin: 20px 0 10px;
+    margin: 20px 0 25px;
+}
+
+.container .card .content .contentBx h3 span{
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 .container .card .sci{
@@ -102,3 +109,11 @@
     color: #fff;
     font-size: 24px;
 }
+
+.contactsubheaders{
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    margin: 20px 0 -14px 0;
+    bottom: -15px;
+} 
