@@ -231,7 +231,7 @@ const Sidenav = ({themeColor, ...props}) => {
               <Link to="/workshop" onClick={handleHamburger}>Workshops</Link>
               <Link to="/gallery" onClick={handleHamburger}>Gallery</Link>
               <Link to="/contact-us" onClick={handleHamburger}>Contact Us</Link>
-              <Link to="/" onClick={handleMerchandiseofSmallPage}>Merchandise</Link>
+              <Link to="/merchandise" onClick={handleHamburger}>Merchandise</Link>
           </nav>
         <Grid item 
           sx={{ minWidth: 91 }}
