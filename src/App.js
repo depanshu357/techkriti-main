@@ -10,6 +10,7 @@ import {
 import Sidenav from './Components/Layout/sidenav';
 import Contact from './Components/Contact/Contact';
 import Dashboard from './Components/Dashboard/Dashboard';
+import Dashboard1 from './Components/Dashboard/Dashboard1';
 <<<<<<< HEAD
 import Home from './Components/Home/Home';
 =======
@@ -20,6 +21,7 @@ import Login from './Components/Login';
 import { AuthProvider } from './context/AuthContext';
 import Update from './Components/Update';
 import Register from './Components/Register';
+import Merchandise from './Components/Merchandise/Merchandise';
 <<<<<<< HEAD
 import Workshop from './Components/Workshop/Workshop';
 =======
@@ -46,6 +48,7 @@ function App() {
       <Route path='/' element={<Sidenav themeColor={themeColor} lowergridmenu={lowergridmenu}/>}>
 		<Route path='/' element = {<Home/>}></Route>
       	<Route path='/gallery' element={<CarouselFadeExample setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
+      	<Route path='/merchandise' element={<Merchandise setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
 <<<<<<< HEAD
 		<Route path='/Workshop' element={<Workshop setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
 =======
