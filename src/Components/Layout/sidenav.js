@@ -133,7 +133,7 @@ const Sidenav = ({themeColor, ...props}) => {
             className="corners"
         	borderRight={"4px solid white"}
           >
-            <img src="img/techkriti.svg" height={"45px"}></img>
+            <img src="/img/techkriti.svg" height={"45px"}></img>
           </Grid>
           <Divider className="mydiv" color={"white"} orientation="vertical" flexItem></Divider>
           <Grid item md>
@@ -164,15 +164,15 @@ const Sidenav = ({themeColor, ...props}) => {
       >
         <Grid item md={0.5} sx={{ minWidth: 91 }} style={{ height: "calc(100vh - 129px)", display: "flex", flexDirection: "column", alignItems: "center", borderRight:"4px solid white", paddingBottom:"500px" }}>
           <br />
-          <a href="#"><img src="images/facebook.png" height={"20px"} width={"11px"}></img></a>
+          <a href="#"><img src="/images/facebook.png" height={"20px"} width={"11px"}></img></a>
           <br></br>
-          <a href="#"><img src="images/twitter.png" height={"17.94px"}></img></a>
+          <a href="#"><img src="/images/twitter.png" height={"17.94px"}></img></a>
           <br></br>
-          <a href="#"><img src="images/youtube.png" height={"24px"}></img></a>
+          <a href="#"><img src="/images/youtube.png" height={"24px"}></img></a>
           <br></br>
-          <a href="#"><img src="images/linkedin.png" height={"24px"}></img></a>
+          <a href="#"><img src="/images/linkedin.png" height={"24px"}></img></a>
           <br></br>
-          <a href="#"><img src="images/instagram.png" height={"20px"}></img></a>
+          <a href="#"><img src="/images/instagram.png" height={"20px"}></img></a>
         </Grid>
         <Divider color={"white"} className="mydiv" orientation="vertical" flexItem></Divider>
         <Grid item md>
@@ -180,7 +180,7 @@ const Sidenav = ({themeColor, ...props}) => {
         </Grid>
         <Divider color={"white"} orientation="vertical" className="mydiv" flexItem></Divider>
         <Grid item md={0.5} sx={{ minWidth: 87 }} style={{ display: "flex", flexDirection: "column", borderLeft: "4px solid white" }}>
-          {/* <img src="img/techkriti.svg" height={"45px"}></img> */}
+          {/* <img src="/img/techkriti.svg" height={"45px"}></img> */}
         </Grid>
       </Grid>}
 
@@ -210,7 +210,7 @@ const Sidenav = ({themeColor, ...props}) => {
         </Grid>
         <Divider color={"white"} className="mydiv" orientation="vertical" flexItem></Divider>
         <Grid item md={0.5} sx={{ height: 66, minWidth: 87 }} className="corners">
-          {/* <img src="img/techkriti.svg" height={"45px"}></img> */}
+          {/* <img src="/img/techkriti.svg" height={"45px"}></img> */}
         </Grid>
         <Divider className="mydiv"></Divider>
       </Grid>}
@@ -237,10 +237,10 @@ const Sidenav = ({themeColor, ...props}) => {
           sx={{ minWidth: 91 }}
           className="corners"
         >
-          <img src="img/techkriti.svg" height={"45px"}></img>
+          <img src="/img/techkriti.svg" height={"45px"}></img>
         </Grid>
         <Grid item  sx={{ minWidth: 87 }} className="corners">
-            {/* <img src="images/menuBar.png" style={{"marginLeft":"450%"}} height={"16px"}></img> */}
+            {/* <img src="/images/menuBar.png" style={{"marginLeft":"450%"}} height={"16px"}></img> */}
             <button className="hamburger" onClick={handleHamburger}>
               <div className="bar is-active"></div>
             </button>
@@ -253,15 +253,15 @@ const Sidenav = ({themeColor, ...props}) => {
       {isPagesmall && <Grid container>
         <Grid item >
           <ul className="mobilesocial">
-          <li><a href="#"><img src="images/facebook.png" height={"20px"} width={"11px"}></img></a></li>
+          <li><a href="#"><img src="/images/facebook.png" height={"20px"} width={"11px"}></img></a></li>
           <br></br>
-          <li><a href="#"><img src="images/twitter.png" height={"17.94px"}></img></a></li>
+          <li><a href="#"><img src="/images/twitter.png" height={"17.94px"}></img></a></li>
           <br></br>
-          <li><a href="#"><img src="images/youtube.png" height={"24px"}></img></a></li>
+          <li><a href="#"><img src="/images/youtube.png" height={"24px"}></img></a></li>
           <br></br>
-          <li><a href="#"><img src="images/linkedin.png" height={"24px"}></img></a></li>
+          <li><a href="#"><img src="/images/linkedin.png" height={"24px"}></img></a></li>
           <br></br>
-          <li><a href="#"><img src="images/instagram.png" height={"20px"}></img></a></li>
+          <li><a href="#"><img src="/images/instagram.png" height={"20px"}></img></a></li>
           </ul>
         </Grid>
         </Grid>}
