@@ -3,35 +3,61 @@ import { Grid, Button } from "@mui/material";
 import "./styles.css";
 import content from "./content1.json";
 import comps from "./competitions.json";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 
 function Main({setThemeColor, setLowergridmenu, params, category}) {
-	
+	const [explore, setExplore] = useState(false);
+	const navigate = useNavigate();
 	let current = 0;
-	
 	let content = [];
 	let competitions = [];
 	let links = [];
+	let all_contests = [];
+	for (const category of comps) {
+			for (const contest of category.contests) {
+				all_contests.push(...contest.explore);
+			}
+	}
 	console.log(params);
-	if (category !== "") {
+	
+	if (comps.map((el) => (el.category)).includes(category)) {
 		content = comps.filter((el) => el.category === category)[0].contests;
 		competitions = content.map((el) => {
 			return (
 				<div className="main-text">
-				<div style={{display:"flex", flexDirection:"column", overflow:"auto"}}key={el.index}>
-					<div>
+				<div style={{display:"flex", justifyContent:"space-between"}} key={el.index}>
+					<div style={{maxWidth:"60%"}}>
 					<h1>{el.title}</h1>
 					<p>{el.text}</p>
+					<Button 
+						variant="contained"
+						onClick={() => {
+							setExplore(!explore);
+						}}
+					>{explore ? "Close" : "Explore" }</Button>
 					</div>
-					<Button variant="contained">Explore</Button>
+					<img src={`images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} />
 				</div>
-				<img src={`images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} />
+				<div style={{display:"flex", flexWrap:"wrap", width:"100%"}}>
+				{explore
+						? el.explore.map((contest) => (
+							<div 
+								style={{alignSelf:"flex-start",margin:"10px"}}
+							>
+							<h2>{contest.name}</h2>
+							<p>{contest.about}</p>
+							<Link to={`/competitions/details/${contest.name.toLowerCase().replace(/\s/g, "")}`}><Button variant="contained">Details</Button></Link>
+							<Button variant="contained">Register</Button>
+							</div>))
+						: ""}
+				</div>
 				</div>
 			);
 		});
 		links = content.map((el) => {
 			return (
-				<div 
+				<Link 
+					to={`/competitions/${category.toLowerCase()}/${el.title.toLowerCase().replace(/\s/g, '')}`}
 					style={{
 						cursor:"pointer",
 						marginLeft:"20px",
@@ -42,17 +68,19 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
 						padding:"5px"
 					}}
 					key={el.title}
-					onClick={() => {
-						// setSlide(el.index);
-					}}
 				>
-					<Link to={`/competitions/${category.toLowerCase()}/${el.title.toLowerCase().replace(/\s/g, '')}`}>
-					{el.title}
-					</Link>
-				</div>
+				{el.title}	
+				</Link>
 			);
 		});
-	} else {
+	} else if (category === "Details" && (all_contests.map(el => el.name.toLowerCase().replace(/\s/g, "")).includes(params))) { //path: /competitons/details/params
+		content.push({color:"#000"});
+		let contestobj = all_contests.find(el => (el.name.toLowerCase().replace(/\s/g, "") === params));
+		competitions.push(<div className="main-text">
+		<h1>{contestobj.name}</h1>
+		<h2>{contestobj.about}</h2>
+		</div>);
+	} else { //path: /competitons/ OR /competitions/details/
 		content.push({color:"#000"});
 		competitions.push(<div className="main-text">
 			Lorem Ipsum
@@ -67,7 +95,7 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
 		}
 	});
 		
-	if (params && content.findIndex((el) => (el.title.toLowerCase().replace(/\s/g, '') === params)) > 0) {
+	if (params && (comps.map((el) => (el.category)).includes(category)) && content.findIndex((el) => (el.title.toLowerCase().replace(/\s/g, '') === params)) > 0) {
 		current = content.findIndex((el) => (el.title.toLowerCase().replace(/\s/g, '') === params));	
 	} else current = 0;
 	setThemeColor(content[current].color)
@@ -77,7 +105,9 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
 		setLowergridmenu(lowergridmenu);
 	}, []);
 	
-	
+	useEffect(() => {
+		setExplore(false);
+	},[params, category]);
 	
 	
 	const setSlide = (number) => {
@@ -89,7 +119,8 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
   		<>
           <div className="main-container">
             {competitions[current]}
-          <div className="navigator scroll-less">
+          {comps.map((el) => (el.category)).includes(category)
+          ? <div className="navigator scroll-less">
           	<div
           		style={{
           			display:"inline-flex",
@@ -97,17 +128,16 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
           			flexBasis:"auto"
           		}}
           	>
-          		{category !== "" 
-          			? (<><div style={{position:"absolute", left:"auto"}}>
-          				{"<"}
-          			</div>
-          			{links}
-          			<div style={{position:"absolute", right:"10vw"}}>
+          		<div style={{position:"absolute", left:"auto"}}>
+          			{"<"}
+          		</div>
+          		{links}
+          		<div style={{position:"absolute", right:"10vw"}}>
           			{">"}
-          			</div></>) 
-          			: ""}
+          		</div>
           	</div>
-          </div>
+          	</div>
+          	: ""}
           </div>
         </>
     //     {/* </Grid>

@@ -118,6 +118,9 @@ const Sidenav = ({themeColor, ...props}) => {
           color={"white"}
           columnGap={0}
           spacing={0}
+          borderBottom={"4px solid white"}
+          paddingBottom={0}
+          marginBottom={0}
           className="topGrid"
         >
           <Grid
@@ -125,6 +128,7 @@ const Sidenav = ({themeColor, ...props}) => {
             md={0.5}
             sx={{ minWidth: 91 }}
             className="corners"
+        	borderRight={"4px solid white"}
           >
             <img src="img/techkriti.svg" height={"45px"}></img>
           </Grid>
@@ -152,9 +156,9 @@ const Sidenav = ({themeColor, ...props}) => {
         color={"white"}
         columnGap={0}
         spacing={0}
-
+		
       >
-        <Grid item md={0.5} sx={{ minWidth: 91 }} style={{ height: "calc(100vh - 129px)", display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <Grid item md={0.5} sx={{ minWidth: 91 }} style={{ height: "calc(100vh - 129px)", display: "flex", flexDirection: "column", alignItems: "center", borderRight:"4px solid white", paddingBottom:"500px" }}>
           <br />
           <a href="#"><img src="images/facebook.png" height={"20px"} width={"11px"}></img></a>
           <br></br>
@@ -171,7 +175,7 @@ const Sidenav = ({themeColor, ...props}) => {
           <Outlet />
         </Grid>
         <Divider color={"white"} orientation="vertical" className="mydiv" flexItem></Divider>
-        <Grid item md={0.5} sx={{ minWidth: 87 }} style={{ display: "flex", flexDirection: "column" }}>
+        <Grid item md={0.5} sx={{ minWidth: 87 }} style={{ display: "flex", flexDirection: "column", borderLeft: "4px solid white" }}>
           {/* <img src="img/techkriti.svg" height={"45px"}></img> */}
         </Grid>
       </Grid>}
@@ -185,10 +189,10 @@ const Sidenav = ({themeColor, ...props}) => {
         spacing={0}
         style={{ position: "absolute", bottom: "0" }}
       >
-        <Grid item md={0.5} sx={{ minWidth: 91, flexDirection: "column" }} className="corners"  >
-          <img src="images/Vector 5.png" height={"8px"}></img>
-          <img src="images/Vector 4.png" height={"8px"}></img>
-          <img src="images/Vector 3.png" height={"8px"}></img>
+        <Grid item md={0.5} sx={{ minWidth: 91, flexDirection: "column" }} className="corners" style={{borderRight:"4px solid white"}}>
+          <div className = "scroll-down"></div>
+          <div className = "scroll-down"></div>
+          <div className = "scroll-down"></div>
         </Grid>
         <Divider color={"white"} orientation="vertical" flexItem className="mydiv"></Divider>
         <Grid item md>

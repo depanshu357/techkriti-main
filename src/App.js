@@ -45,6 +45,10 @@ function App() {
       			<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Entrepreneurial"/> }></Route>
       			<Route path=":params" element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Entrepreneurial"/> }></Route>
       		</Route>
+      		<Route path="details/">
+      			<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Details"/> }></Route>
+      			<Route path=":params" element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Details"/> }></Route>
+      		</Route>
       	</Route>
       	<Route path='/contact-us' element={<Contact setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
   	    <Route path='/profile' element={<Dashboard/>}></Route>
