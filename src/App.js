@@ -10,23 +10,17 @@ import {
 import Sidenav from './Components/Layout/sidenav';
 import Contact from './Components/Contact/Contact';
 import Dashboard from './Components/Dashboard/Dashboard';
-import Dashboard1 from './Components/Dashboard/Dashboard1';
-<<<<<<< HEAD
+// import Dashboard1 from './Components/Dashboard/Dashboard1';
 import Home from './Components/Home/Home';
-=======
 import Dashboard1 from './Components/Dashboard/Dashboard1';
->>>>>>> 54731e70e625f5f7c610132d6416e747afdf56ed
 import PrivateRoute from './Components/PrivateRoute';
 import Login from './Components/Login';
 import { AuthProvider } from './context/AuthContext';
 import Update from './Components/Update';
 import Register from './Components/Register';
-import Merchandise from './Components/Merchandise/Merchandise';
-<<<<<<< HEAD
+// import Merchandise from './Components/Merchandise/Merchandise';
 import Workshop from './Components/Workshop/Workshop';
-=======
 import Merchandise from './Components/Merchandise/Merchandise';
->>>>>>> 54731e70e625f5f7c610132d6416e747afdf56ed
 function App() {
 	const [themeColor, setThemeColor] = useState("#000000");
 	const [lowergridmenu, setLowergridmenu] = useState([]);
@@ -49,11 +43,8 @@ function App() {
 		<Route path='/' element = {<Home/>}></Route>
       	<Route path='/gallery' element={<CarouselFadeExample setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
       	<Route path='/merchandise' element={<Merchandise setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
-<<<<<<< HEAD
 		<Route path='/Workshop' element={<Workshop setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
-=======
       	<Route path='/merchandise' element={<Merchandise setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
->>>>>>> 54731e70e625f5f7c610132d6416e747afdf56ed
       	<Route path='/competitions/'>
       		<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category=""/> }></Route>
       		<Route path="technical/">
