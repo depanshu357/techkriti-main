@@ -15,6 +15,7 @@ import Login from './Components/Login';
 import { AuthProvider } from './context/AuthContext';
 import Update from './Components/Update';
 import Register from './Components/Register';
+import Merchandise from './Components/Merchandise/Merchandise';
 function App() {
 	const [themeColor, setThemeColor] = useState("#000000");
 	const [lowergridmenu, setLowergridmenu] = useState([]);
@@ -35,6 +36,7 @@ function App() {
       <Routes>
       <Route path='/' element={<Sidenav themeColor={themeColor} lowergridmenu={lowergridmenu}/>}>
       	<Route path='/gallery' element={<CarouselFadeExample setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
+      	<Route path='/merchandise' element={<Merchandise setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
       	<Route path='/competitions/'>
       		<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category=""/> }></Route>
       		<Route path="technical/">
