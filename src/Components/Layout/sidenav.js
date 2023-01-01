@@ -133,7 +133,7 @@ const Sidenav = ({themeColor, ...props}) => {
             className="corners"
         	borderRight={"4px solid white"}
           >
-            <img src="/img/techkriti.svg" height={"45px"}></img>
+            <Link to='/'><img src="/img/techkriti.svg" height={"45px"}></img></Link>
           </Grid>
           <Divider className="mydiv" color={"white"} orientation="vertical" flexItem></Divider>
           <Grid item md>
@@ -160,9 +160,9 @@ const Sidenav = ({themeColor, ...props}) => {
         color={"white"}
         columnGap={0}
         spacing={0}
-        height={"fit-content"}
+        height={"auto"}
       >
-        <Grid item md={0.5} sx={{ minWidth: 91 }} style={{  display: "flex", flexDirection: "column", alignItems: "center", borderRight:"4px solid white", paddingBottom:"500px" }}>
+        <Grid item md={0.5} sx={{ minWidth: 91 }} style={{  display: "flex", flexDirection: "column", alignItems: "center", borderRight:"4px solid white" }}>
           <br />
           <a href="#"><img className="socialicon" src="/images/facebook.png" height={"20px"} width={"11px"}></img></a>
           <br></br>
@@ -191,7 +191,8 @@ const Sidenav = ({themeColor, ...props}) => {
         color={"white"}
         columnGap={0}
         spacing={0}
-        style={{ position: "absolute", bottom: "0" }}
+        paddingBottom={"10px"}
+        style={{  bottom: "0" }}
       >
         <Grid item md={0.5} sx={{ minWidth: 91, flexDirection: "column" }} className="corners" style={{borderRight:"4px solid white"}}>
           <div className = "scroll-down"></div>
@@ -250,6 +251,18 @@ const Sidenav = ({themeColor, ...props}) => {
       {isPagesmall && <Grid container>
         <Grid item width={"100%"}><Outlet/></Grid>
         </Grid>}
+      {isPagesmall && <Grid container>
+        <Grid item md>
+          <ul className="horlist1">
+            {lowergridmenu.map((el) => {
+            	return (
+            		<li key={el.text}><Link className="mylink" to={`/${el.link}`}>{el.text}</Link></li>
+            	);
+            })}
+          </ul>
+        </Grid>
+        </Grid>}
+
       {isPagesmall && <Grid container>
         <Grid item >
           <ul className="mobilesocial">

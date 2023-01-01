@@ -179,10 +179,10 @@
     }
 } */
 
-.mylink-active{
+/* .mylink-active{
     padding-bottom: 4.9px;
     border-bottom: 4px solid rgb(92, 7, 74);
-}
+} */
 
 .socialicon:hover{
     filter:invert(100%);
