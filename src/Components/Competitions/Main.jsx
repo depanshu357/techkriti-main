@@ -7,7 +7,7 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import Card from "./contestcard";
 
 function Main({setThemeColor, setLowergridmenu, params, category}) {
-	const [explore, setExplore] = useState(false);
+
 	const navigate = useNavigate();
 	let current = 0;
 	let content = [];
@@ -31,29 +31,22 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
 					<div style={{margin:"50px"}}>
 					<h1>{el.title}</h1>
 					<p>{el.text}</p>
-					<Button 
-						variant="contained"
-						onClick={() => {
-							setExplore(!explore);
-						}}
-					>{explore ? "Close" : "Explore" }</Button>
 					</div>
 					</div>
 					<img src={`/images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} style={{width:"300px"}} />
 				</div>
 				<div style={{display:"flex", flexWrap:"wrap", width:"100%"}}>
-				{explore
-						? el.explore.map((contest) => (
-							<div 
-								style={{alignSelf:"flex-start",margin:"10px"}}
-							>
-							{/* <h2>{contest.name}</h2>
-							<p>{contest.about}</p>
-							<Link to={`/competitions/details/${contest.name.toLowerCase().replace(/\s/g, "")}`}><Button variant="contained">Details</Button></Link>
-							<Button variant="contained">Register</Button> */}
-							<Card name={contest.name} title={contest.about}/>
-							</div>))
-						: ""}
+				{el.explore.map((contest) => (
+					<div 
+						style={{alignSelf:"flex-start",margin:"10px"}}
+					>
+					{/* <h2>{contest.name}</h2>
+					<p>{contest.about}</p>
+					<Link to={`/competitions/details/${contest.name.toLowerCase().replace(/\s/g, "")}`}><Button variant="contained">Details</Button></Link>
+					<Button variant="contained">Register</Button> */}
+					<Card name={contest.name} title={contest.about}/>
+					</div>)
+				)}
 				</div>
 				</div>
 			);
@@ -108,11 +101,6 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
 	useEffect(() => {
 		setLowergridmenu(lowergridmenu);
 	}, []);
-	
-	useEffect(() => {
-		setExplore(false);
-	},[params, category]);
-	
 	
 	const setSlide = (number) => {
 		current = number;
