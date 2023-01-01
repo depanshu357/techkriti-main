@@ -115,65 +115,150 @@ const Sidenav = ({themeColor, ...props}) => {
   }
   return (
     <>
-    {/* <Merchandise checked={checked} setChecked={setChecked}/> */}
-      {isPagebig && <>
-        <Grid
-          container
-          bgcolor={themeColor}
-          color={"white"}
-          columnGap={0}
-          spacing={0}
-          borderBottom={"4px solid white"}
-          paddingBottom={0}
-          marginBottom={0}
-          className="topGrid"
-        >
-            <Grid
-				item
-				md={0.5}
-				sx={{ minWidth: 91 }}
-				className="corners"
-				borderRight={"4px solid white"}
-            >
-            	<Link to="/"><img src="/img/techkriti.svg" height={"45px"}></img></Link>
-            </Grid>
-            <Divider className="mydiv" color={"white"} orientation="vertical" flexItem></Divider>
-            <Grid item md>
-            	<ul className="horlist">
-                	<li><Link className={`mylink-${compe ? "active" : ""}`} to="/competitions">Competitions</Link></li>
-                	<li><Link className={`mylink-${works ? "active" : ""}`} to="/workshop">Workshops</Link></li>
-                	<li><Link className={`mylink-${gallery ? "active" : ""}`} to="/gallery">Gallery</Link></li>
-                	<li><Link className={`mylink-${contact ? "active" : ""}`} to="/contact-us">Contact Us</Link></li>
-                	<li><Link className={`mylink-${merchandise ? "active" : ""}`} to="/merchandise">Merchandise</Link></li>
-            	</ul>
-          	</Grid>
-          	<Divider className="mydiv" color={"white"} orientation="vertical" flexItem></Divider>
-          	<Grid 
-          		item 
-          		md={0.5} 
-          		sx={{ minWidth: 87 }} 
-          		style={{borderLeft:"4px solid white"}}
-          		className="corners"
-          	>
-           		<Button> Login </Button>
-          	</Grid>
-        </Grid>
-        <Divider className="mydiv" color={"white"}></Divider>
-        <Grid
-			container
-			bgcolor={themeColor}
-			color={"white"}
-			columnGap={0}
-			spacing={0}
-			height={"auto"}
+{//       {isPagebig && <>
+//         <Grid
+//           container
+//           bgcolor={themeColor}
+//           color={"white"}
+//           columnGap={0}
+//           spacing={0}
+//           borderBottom={"4px solid white"}
+//           paddingBottom={0}
+//           marginBottom={0}
+//           className="topGrid"
+//         >
+//             <Grid
+// 				item
+// 				md={0.5}
+// 				sx={{ minWidth: 91 }}
+// 				className="corners"
+// 				borderRight={"4px solid white"}
+//             >
+//             	<Link to="/"><img src="/img/techkriti.svg" height={"45px"}></img></Link>
+//             </Grid>
+//             <Divider className="mydiv" color={"white"} orientation="vertical" flexItem></Divider>
+//             <Grid item md>
+//             	<ul className="horlist">
+//                 	<li><Link className={`mylink-${compe ? "active" : ""}`} to="/competitions">Competitions</Link></li>
+//                 	<li><Link className={`mylink-${works ? "active" : ""}`} to="/workshop">Workshops</Link></li>
+//                 	<li><Link className={`mylink-${gallery ? "active" : ""}`} to="/gallery">Gallery</Link></li>
+//                 	<li><Link className={`mylink-${contact ? "active" : ""}`} to="/contact-us">Contact Us</Link></li>
+//                 	<li><Link className={`mylink-${merchandise ? "active" : ""}`} to="/merchandise">Merchandise</Link></li>
+//             	</ul>
+//           	</Grid>
+//           	<Divider className="mydiv" color={"white"} orientation="vertical" flexItem></Divider>
+//           	<Grid 
+//           		item 
+//           		md={0.5} 
+//           		sx={{ minWidth: 87 }} 
+//           		style={{borderLeft:"4px solid white"}}
+//           		className="corners"
+//           	>
+//            		<Button> Login </Button>
+//           	</Grid>
+//         </Grid>
+//         <Divider className="mydiv" color={"white"}></Divider>
+//         <Grid
+// 			container
+// 			bgcolor={themeColor}
+// 			color={"white"}
+// 			columnGap={0}
+// 			spacing={0}
+// 			height={"auto"}
+// 		>
+//         	<Grid 
+//         		item 
+//         		md={0.5} 
+//         		sx={{ minWidth: 91 }} 
+//         		style={{ display: "flex", flexDirection: "column", alignItems: "center", borderRight:"4px solid white" }}
+//         	>
+//           		<br />
+//           		<a href="#"><img className="socialicon" src="/images/facebook.png" height={"20px"} width={"11px"}></img></a>
+//           		<br />
+//           		<a href="#"><img className="socialicon" src="/images/twitter.png" height={"17.94px"}></img></a>
+//           		<br />
+//           		<a href="#"><img className="socialicon" src="/images/youtube.png" height={"24px"}></img></a>
+//           		<br />
+//           		<a href="#"><img className="socialicon" src="/images/linkedin.png" height={"24px"}></img></a>
+//           		<br />
+//           		<a href="#"><img className="socialicon" src="/images/instagram.png" height={"20px"}></img></a>
+//         	</Grid>
+//         	<Divider color={"white"} className="mydiv" orientation="vertical" flexItem></Divider>
+//         	<Grid item md>
+//           		<Outlet /> {/*outletoutletoutletoutletoutletoutletoutletoutletoutlet*/}
+//         	</Grid>
+//         	<Divider color={"white"} orientation="vertical" className="mydiv" flexItem></Divider>
+//         	<Grid 
+//         		item 
+//         		md={0.5} 
+//         		sx={{ minWidth: 87 }} 
+//         		style={{ display: "flex", flexDirection: "column", borderLeft: "4px solid white" }}
+//         	>
+//           		{/* <img src="/img/techkriti.svg" height={"45px"}></img> */}
+//         	</Grid>
+//       	</Grid>
+//       	<Divider color={"white"} className="mydiv" />
+//       	<Grid
+// 			container
+// 			bgcolor={themeColor}
+// 			color={"white"}
+// 			columnGap={0}
+// 			spacing={0}
+// 			paddingBottom={"10px"}
+//         	style={{  bottom: "0" }}
+//       	>
+//         	<Grid 
+//         		item 
+//         		md={0.5} 
+//         		sx={{ minWidth: 91, flexDirection: "column" }} 
+//         		className="corners" 
+//         		style={{borderRight:"4px solid white"}}
+//         	>
+//           		<div className = "scroll-down"></div>
+//           		<div className = "scroll-down"></div>
+//           		<div className = "scroll-down"></div>
+//         	</Grid>
+//         	<Divider color={"white"} orientation="vertical" flexItem className="mydiv"></Divider>
+//         	<Grid item md>
+//           		<ul className="horlist1">
+// 					{lowergridmenu.map((el) => {
+// 						return (
+// 							<li key={el.text}><Link className="mylink" to={`/${el.link}`}>{el.text}</Link></li>
+// 						);
+// 					})}
+//           		</ul>
+//         	</Grid>
+//         	<Divider color={"white"} className="mydiv" orientation="vertical" flexItem></Divider>
+//         	<Grid 
+//         		item 
+//         		md={0.5} 
+//         		sx={{ height: 66, minWidth: 87 }} 
+//         		style={{borderLeft:"4px solid white"}}
+//         		className="corners"
+//         	>
+// 				{/* <img src="/img/techkriti.svg" height={"45px"}></img> */}
+//         	</Grid>
+//         	<Divider className="mydiv"></Divider>
+//       	</Grid>
+//         </>}
+}
+	{isPagebig && <>
+		<div
+			className="sidenav-container"
 		>
-        	<Grid 
-        		item 
-        		md={0.5} 
-        		sx={{ minWidth: 91 }} 
-        		style={{ display: "flex", flexDirection: "column", alignItems: "center", borderRight:"4px solid white" }}
-        	>
-          		<br />
+			<div><Link to="/"><img src="/img/techkriti.svg" height={"45px"}></img></Link></div>
+			<div style={{}}>
+				<ul className="horlist">
+					<li><Link className={`mylink-${compe ? "active" : ""}`} to="/competitions">Competitions</Link></li>
+					<li><Link className={`mylink-${works ? "active" : ""}`} to="/workshop">Workshops</Link></li>
+					<li><Link className={`mylink-${gallery ? "active" : ""}`} to="/gallery">Gallery</Link></li>
+					<li><Link className={`mylink-${contact ? "active" : ""}`} to="/contact-us">Contact Us</Link></li>
+					<li><Link className={`mylink-${merchandise ? "active" : ""}`} to="/merchandise">Merchandise</Link></li>
+				</ul>
+			</div>
+			<div className="right"><Button>Login</Button></div>
+			<div style={{display:"flex", flexDirection:"column", justifyContent:"flex-start", alignItems:"center"}}>
+				<br />
           		<a href="#"><img className="socialicon" src="/images/facebook.png" height={"20px"} width={"11px"}></img></a>
           		<br />
           		<a href="#"><img className="socialicon" src="/images/twitter.png" height={"17.94px"}></img></a>
@@ -183,65 +268,32 @@ const Sidenav = ({themeColor, ...props}) => {
           		<a href="#"><img className="socialicon" src="/images/linkedin.png" height={"24px"}></img></a>
           		<br />
           		<a href="#"><img className="socialicon" src="/images/instagram.png" height={"20px"}></img></a>
-        	</Grid>
-        	<Divider color={"white"} className="mydiv" orientation="vertical" flexItem></Divider>
-        	<Grid item md>
-          		<Outlet /> {/*outletoutletoutletoutletoutletoutletoutletoutletoutlet*/}
-        	</Grid>
-        	<Divider color={"white"} orientation="vertical" className="mydiv" flexItem></Divider>
-        	<Grid 
-        		item 
-        		md={0.5} 
-        		sx={{ minWidth: 87 }} 
-        		style={{ display: "flex", flexDirection: "column", borderLeft: "4px solid white" }}
-        	>
-          		{/* <img src="/img/techkriti.svg" height={"45px"}></img> */}
-        	</Grid>
-      	</Grid>
-      	<Divider color={"white"} className="mydiv" />
-      	<Grid
-			container
-			bgcolor={themeColor}
-			color={"white"}
-			columnGap={0}
-			spacing={0}
-			paddingBottom={"10px"}
-        	style={{  bottom: "0" }}
-      	>
-        	<Grid 
-        		item 
-        		md={0.5} 
-        		sx={{ minWidth: 91, flexDirection: "column" }} 
-        		className="corners" 
-        		style={{borderRight:"4px solid white"}}
-        	>
+          	</div>
+			<div>
+				<Outlet />
+			</div>
+			<div className="right"></div>
+			<div style={{flexDirection:"column"}}className="bottom">
+				<div className = "scroll-down"></div>
           		<div className = "scroll-down"></div>
           		<div className = "scroll-down"></div>
-          		<div className = "scroll-down"></div>
-        	</Grid>
-        	<Divider color={"white"} orientation="vertical" flexItem className="mydiv"></Divider>
-        	<Grid item md>
-          		<ul className="horlist1">
+			</div>
+			<div className="bottom">
+				<ul className="horlist1">
 					{lowergridmenu.map((el) => {
 						return (
 							<li key={el.text}><Link className="mylink" to={`/${el.link}`}>{el.text}</Link></li>
 						);
 					})}
           		</ul>
-        	</Grid>
-        	<Divider color={"white"} className="mydiv" orientation="vertical" flexItem></Divider>
-        	<Grid 
-        		item 
-        		md={0.5} 
-        		sx={{ height: 66, minWidth: 87 }} 
-        		style={{borderLeft:"4px solid white"}}
-        		className="corners"
-        	>
-				{/* <img src="/img/techkriti.svg" height={"45px"}></img> */}
-        	</Grid>
-        	<Divider className="mydiv"></Divider>
-      	</Grid>
-        </>}
+			</div>
+			<div className="bottom right"></div>
+		</div>
+	
+	</>}        
+        
+        
+        
       {isPagesmall && <>
       	<Grid 
       	container
