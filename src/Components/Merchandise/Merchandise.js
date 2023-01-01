@@ -74,26 +74,17 @@ const Merchandise = (props) => {
             <div className="topMerchandise">Techkriti Merchandise</div>
             <div className="contentMerchandise">
               <div className="imageBox">
-                <div className="image">
-                <img src="images/Hoodie1.png" alt="Hoodie" />
+                <div className="imageMerch">
+                <img src="images/Hoodie1.png" style={{height:'40vh'}} alt="Hoodie" />
                 </div>
-                <div className="text">
+                <div className="textBuy">
                 <a href="#" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                   Buy Now
                 </a>
                   </div>
               </div>
-              <div className="imageBox">
-                <div className="image">
-                  <img src="images/Hoodie1.png" alt="Jacket" />
-                </div>
-                <div className="text">
-                <a href="#" onMouseOver={handleMouseOver1} onMouseOut={handleMouseOut1}>
-                  Buy Now
-                </a>
-                  </div>
-              </div>
             </div>
+            
           </div>
 
     </>

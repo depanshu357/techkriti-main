@@ -26,27 +26,28 @@ a{
 }
 
 .imageBox{
-    height: 434px;
+    height:60vh;
     background-image: url("./Asset\ 2@4x-8.png");
     background-size: cover;
 }
 
-.image{
-    height: 100%;
-    width: 292px;
+.imageMerch{
+    
+    /* width: 292px; */
+    padding-top: 10%;
     background-size: cover;
     background-repeat: no-repeat;
     transition: all 500ms ease-in-out;
 }
 
-.text{
+.textBuy{
     /* background-image: url("./Asset\ 1@4x-8.png"); */
-    position: relative;
+    /* position: absolute; */
     bottom: 46px;
     height: 45px;
-    left: 7px;
+    /* left: 7px; */
     text-align: center;
-    font-size: 24px;
+    font-size: 38px !important;
     text-decoration: none;
     cursor: pointer;
     transform: all 1s ease-in-out;
