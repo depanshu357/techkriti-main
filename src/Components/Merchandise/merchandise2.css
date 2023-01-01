@@ -4,6 +4,11 @@
     margin: 0;
 }
 
+.merchandise{
+    height: calc("100vh - 100px");
+    height: 81.6vh;
+}   
+
 .textBuy a{
     text-decoration: none;
     color: white;
