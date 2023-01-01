@@ -4,10 +4,21 @@
     margin: 0;
 }
 
-a{
-    text-decoration: none !important;
-    color: white !important;
+.textBuy a{
+    text-decoration: none;
+    color: white;
     transition: all 1s ease-in-out;
+}
+.textBuy a:hover{
+    color: aquamarine;
+}
+.textbuy a:hover + .image{
+    box-shadow: rgba(43, 235, 238, 0.25) 0px 50px 100px -20px, rgba(12, 222, 187, 0.3) 0px 30px 60px -30px, rgba(19, 213, 223, 0.35) 0px -2px 6px 0px inset;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.textBuy a:hover ~ .imageMerch img{
+    transform: scale(1.2);
 }
 
 .topMerchandise{
@@ -23,12 +34,19 @@ a{
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .imageBox{
     height:60vh;
     background-image: url("./Asset\ 2@4x-8.png");
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 5px;
+    box-shadow: 2px ;
 }
 
 .imageMerch{
@@ -51,6 +69,8 @@ a{
     text-decoration: none;
     cursor: pointer;
     transform: all 1s ease-in-out;
+    font-weight: bold;
+    margin-bottom: 7px;
 
 }
 a:hover{

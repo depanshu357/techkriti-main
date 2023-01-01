@@ -16,10 +16,11 @@ function TabPanel(props) {
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
       {...other}
+      className="Dashboardfullscreen"
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+        <Box className="DashboardBox" sx={{ p: 3 ,height:"calc(100% - 84px)",backgroundColor:"rebeccapurple"}}>
+          <Typography sx={{height:"100%"}}>{children}</Typography>
         </Box>
       )}
     </div>
@@ -77,8 +78,8 @@ export default function BasicTabs() {
             sx={{ color: "white" }}
           />
         </Tabs>
-      </Box>
-      <TabPanel value={value} index={0} sx={{ height: "100%", width: "100%" }}>
+      </Box >
+      <TabPanel value={value} index={0} >
         <div className="Dashboard">
           <div className="top"></div>
           <div className="content">
