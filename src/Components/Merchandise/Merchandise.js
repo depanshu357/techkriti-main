@@ -1,39 +1,41 @@
+
 import React, { useState } from 'react'
-// import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from '@mui/icons-material/Close';
 // import "./merchandise.css"
 import "./merchandise2.css"
-// import Collapse from '@mui/material/Collapse';
-// import { style } from '@mui/system';
+import Collapse from '@mui/material/Collapse';
+import { style } from '@mui/system';
 
 
-const Merchandise = () => {
-    // const [checked,setChecked] = useState(false)
-    // const handleMerchandise = (event) => {
-    //     console.log(event.target);
-    //     const display = document.getElementsByClassName("popUpDisplay");
-    //     display[0].classList.remove("MerchandiseClose");
+const Merchandise = (props) => {
+    const [checked,setChecked] = useState(false)
+    const handleMerchandise = (event) => {
+        console.log(event.target);
+        const display = document.getElementsByClassName("popUpDisplay");
+        display[0].classList.remove("MerchandiseClose");
     
-    //     // event.target.classList.add("mylink-active")
-    //   }
+        // event.target.classList.add("mylink-active")
+      }
 
-      // const TimedFunction = () =>{
-      //   const display = document.getElementsByClassName("popUpDisplay");
-      //   display[0].classList.add("MerchandiseClose");
+      const TimedFunction = () =>{
+        const display = document.getElementsByClassName("popUpDisplay");
+        display[0].classList.add("MerchandiseClose");
 
-      // }
+      }
 
-      // const handleMerchandiseClose = (event) =>{
-      //   const display = document.getElementsByClassName("popUpDisplay");
-      //   props.setChecked(pre=>!pre);
-      //   display[0].classList.add("beforeMerchandiseClose");
-      //   setTimeout(TimedFunction,800)
-      //   display[0].classList.remove("smallPage");
-      //   console.log(display[0]);
-      // }
+      const handleMerchandiseClose = (event) =>{
+        const display = document.getElementsByClassName("popUpDisplay");
+        props.setChecked(pre=>!pre);
+        display[0].classList.add("beforeMerchandiseClose");
+        setTimeout(TimedFunction,800)
+        display[0].classList.remove("smallPage");
+        console.log(display[0]);
+      }
 
-      const image = document.getElementsByClassName("image")
+      const image = document.getElementsByClassName("imageMerch")
       const handleMouseOver =()=> {
         image[0].style.transform = "scale( 1.2 )"
+        
       }
       const handleMouseOut =()=>{
         image[0].style.transform = "scale( 1 )"
@@ -73,26 +75,27 @@ const Merchandise = () => {
             <div className="topMerchandise">Techkriti Merchandise</div>
             <div className="contentMerchandise">
               <div className="imageBox">
-                <div className="image">
-                <img src="images/Hoodie1.png" alt="Hoodie" />
+                <div className="imageMerch">
+                <img src="images/Hoodie1.png" style={{height:'40vh'}} alt="Hoodie" />
                 </div>
-                <div className="text">
+                <div className="textBuy">
                 <a href="#" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                   Buy Now
                 </a>
                   </div>
               </div>
               <div className="imageBox">
-                <div className="image">
-                  <img src="images/Hoodie1.png" alt="Jacket" />
+                <div className="imageMerch">
+                <img src="images/Hoodie1.png" style={{height:'40vh'}} alt="Hoodie" />
                 </div>
-                <div className="text">
+                <div className="textBuy">
                 <a href="#" onMouseOver={handleMouseOver1} onMouseOut={handleMouseOut1}>
                   Buy Now
                 </a>
                   </div>
               </div>
             </div>
+            
           </div>
 
     </>
