@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Lato:wght@700&family=Pacifico&family=VT323&family=Work+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans:wght@500&family=Lato:wght@700&family=Pacifico&family=VT323&family=Work+Sans:wght@200&display=swap');
 
 * {
     margin: 0;
@@ -6,7 +7,7 @@
 }
 
 
-.wrapper {
+/* .wrapper {
     background-color: black;
     margin: 0px;
     display: grid;
@@ -64,13 +65,13 @@
 
 .horlist1 {
     margin-top: 12px;
-}
+} */
 
-.horlist1 li a {
+/* .horlist1 li a {
     color: white;
-    text-decoration: none;
+    text-decoration: none; */
     /* border: 2px solid red; */
-}
+/* } */
 
 .horlist1 li a:visited {
     padding: 4px;
@@ -174,7 +175,7 @@
 }
 
 .popUpDisplay {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     position: absolute;
     display: flex;
@@ -193,7 +194,7 @@
 }
 
 .contentPopUpDisplay {
-    width: 600px;
+    width: 545px;
     height: 300px;
     /* background-color: purple; */
     /* opacity: 0.5; */
@@ -204,6 +205,7 @@
     text-align: center;
     padding: 2px 3px;
     margin: 2px 4px;
+    font-family: 'Bebas Neue', cursive;
     /* border: 4px solid red; */
 }
 
@@ -245,7 +247,7 @@
         0 0 92px #13acfe,
         0 0 102px #13acfe,
         0 0 151px #13acfe;
-    font-size: 2.2rem;
+    font-size: 3.2rem;
     animation: pulsate 1.5s infinite alternate;
     border: 0.2rem solid #fff;
     border-radius: 2rem;
@@ -285,6 +287,8 @@
     /* border: 1px solid rgba(83, 83, 83, 0.2); */
     /* background: repeating-linear-gradient(-45deg, #29b8e877, #e1f8f87d 15%, #3cf6e000 20%); */
     border: 2px solid rgb(18, 165, 219);
+    border-radius: 10px;
+    border-bottom: 0px;
 }
 
 

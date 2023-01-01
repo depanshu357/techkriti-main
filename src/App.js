@@ -10,11 +10,13 @@ import {
 import Sidenav from './Components/Layout/sidenav';
 import Contact from './Components/Contact/Contact';
 import Dashboard from './Components/Dashboard/Dashboard';
+import Dashboard1 from './Components/Dashboard/Dashboard1';
 import PrivateRoute from './Components/PrivateRoute';
 import Login from './Components/Login';
 import { AuthProvider } from './context/AuthContext';
 import Update from './Components/Update';
 import Register from './Components/Register';
+import Merchandise from './Components/Merchandise/Merchandise';
 function App() {
 	const [themeColor, setThemeColor] = useState("#000000");
 	const [lowergridmenu, setLowergridmenu] = useState([]);
@@ -51,7 +53,9 @@ function App() {
       		</Route>
       	</Route>
       	<Route path='/contact-us' element={<Contact setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
+      	<Route path='/merchandise' element={<Merchandise setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
   	    <Route path='/profile' element={<Dashboard/>}></Route>
+  	    <Route path='/profile1' element={<Dashboard1 setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
 	    <Route path='/login' element={<Login/>}></Route>
 	    <Route path='/update' element={<Update/>}></Route>
 	    <Route path='/register/:events' element={<Register/>}></Route>
