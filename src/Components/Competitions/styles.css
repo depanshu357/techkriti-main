@@ -83,3 +83,62 @@ width: 100%;
 .scroll-less::-webkit-scrollbar {
 	display:none
 }
+
+.contestcard {
+	position: relative;
+    width: 300px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0 0 0 0,2);
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+	background-image: none;
+}
+
+.contestcard .content {
+	position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0.35;
+    transition: 0.5s;
+    width: 300px;
+    height: 400px;
+	vertical-align: top;
+}
+
+.contestcard:hover .content {
+	opacity: 1;
+}
+
+.contestcard .content .imgBox {
+	border-radius: 15px;
+	width: 280px;
+	height: 280px;
+	overflow: hidden;
+    border: black;
+	border-style: double;
+}
+
+.contestcard .content .contentBx h3 {
+	color: #fff;
+	color: #fff;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 20px 0 25px;
+}
+
+.contestcard .content .contentBx span {
+	font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-align: center
+}
+
+.contestcard .buttonBx {
+	width: auto;
+	height: auto;
+}

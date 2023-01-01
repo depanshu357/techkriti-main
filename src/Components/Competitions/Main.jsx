@@ -4,6 +4,7 @@ import "./styles.css";
 import content from "./content1.json";
 import comps from "./competitions.json";
 import { Link, useParams, useNavigate } from "react-router-dom";
+import Card from "./contestcard";
 
 function Main({setThemeColor, setLowergridmenu, params, category}) {
 	const [explore, setExplore] = useState(false);
@@ -46,10 +47,11 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
 							<div 
 								style={{alignSelf:"flex-start",margin:"10px"}}
 							>
-							<h2>{contest.name}</h2>
+							{/* <h2>{contest.name}</h2>
 							<p>{contest.about}</p>
 							<Link to={`/competitions/details/${contest.name.toLowerCase().replace(/\s/g, "")}`}><Button variant="contained">Details</Button></Link>
-							<Button variant="contained">Register</Button>
+							<Button variant="contained">Register</Button> */}
+							<Card name={contest.name} title={contest.about}/>
 							</div>))
 						: ""}
 				</div>
