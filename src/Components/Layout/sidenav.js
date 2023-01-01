@@ -133,7 +133,7 @@ const Sidenav = ({themeColor, ...props}) => {
 				className="corners"
 				borderRight={"4px solid white"}
             >
-            	<img src="/img/techkriti.svg" height={"45px"}></img>
+            	<Link to="/"><img src="/img/techkriti.svg" height={"45px"}></img></Link>
             </Grid>
             <Divider className="mydiv" color={"white"} orientation="vertical" flexItem></Divider>
             <Grid item md>
@@ -150,6 +150,7 @@ const Sidenav = ({themeColor, ...props}) => {
           		item 
           		md={0.5} 
           		sx={{ minWidth: 87 }} 
+          		style={{borderLeft:"4px solid white"}}
           		className="corners"
           	>
            		<Button> Login </Button>
@@ -162,23 +163,24 @@ const Sidenav = ({themeColor, ...props}) => {
 			color={"white"}
 			columnGap={0}
 			spacing={0}
+			height={"auto"}
 		>
         	<Grid 
         		item 
         		md={0.5} 
         		sx={{ minWidth: 91 }} 
-        		style={{ height: "calc(100vh - 129px)", display: "flex", flexDirection: "column", alignItems: "center", borderRight:"4px solid white", paddingBottom:"500px" }}
+        		style={{ display: "flex", flexDirection: "column", alignItems: "center", borderRight:"4px solid white" }}
         	>
           		<br />
-          		<a href="#"><img src="/images/facebook.png" height={"20px"} width={"11px"}></img></a>
+          		<a href="#"><img className="socialicon" src="/images/facebook.png" height={"20px"} width={"11px"}></img></a>
           		<br />
-          		<a href="#"><img src="/images/twitter.png" height={"17.94px"}></img></a>
+          		<a href="#"><img className="socialicon" src="/images/twitter.png" height={"17.94px"}></img></a>
           		<br />
-          		<a href="#"><img src="/images/youtube.png" height={"24px"}></img></a>
+          		<a href="#"><img className="socialicon" src="/images/youtube.png" height={"24px"}></img></a>
           		<br />
-          		<a href="#"><img src="/images/linkedin.png" height={"24px"}></img></a>
+          		<a href="#"><img className="socialicon" src="/images/linkedin.png" height={"24px"}></img></a>
           		<br />
-          		<a href="#"><img src="/images/instagram.png" height={"20px"}></img></a>
+          		<a href="#"><img className="socialicon" src="/images/instagram.png" height={"20px"}></img></a>
         	</Grid>
         	<Divider color={"white"} className="mydiv" orientation="vertical" flexItem></Divider>
         	<Grid item md>
@@ -201,7 +203,8 @@ const Sidenav = ({themeColor, ...props}) => {
 			color={"white"}
 			columnGap={0}
 			spacing={0}
-			style={{ position: "absolute", bottom: "0" }}
+			paddingBottom={"10px"}
+        	style={{  bottom: "0" }}
       	>
         	<Grid 
         		item 
@@ -225,13 +228,18 @@ const Sidenav = ({themeColor, ...props}) => {
           		</ul>
         	</Grid>
         	<Divider color={"white"} className="mydiv" orientation="vertical" flexItem></Divider>
-        	<Grid item md={0.5} sx={{ height: 66, minWidth: 87 }} className="corners">
+        	<Grid 
+        		item 
+        		md={0.5} 
+        		sx={{ height: 66, minWidth: 87 }} 
+        		style={{borderLeft:"4px solid white"}}
+        		className="corners"
+        	>
 				{/* <img src="/img/techkriti.svg" height={"45px"}></img> */}
         	</Grid>
         	<Divider className="mydiv"></Divider>
       	</Grid>
         </>}
-
       {isPagesmall && <>
       	<Grid 
       	container
@@ -288,6 +296,17 @@ const Sidenav = ({themeColor, ...props}) => {
         	>
         		<Outlet/>
         	</Grid>
+        </Grid>
+        <Grid container>
+        <Grid item md>
+          <ul className="horlist1">
+            {lowergridmenu.map((el) => {
+            	return (
+            		<li key={el.text}><Link className="mylink" to={`/${el.link}`}>{el.text}</Link></li>
+            	);
+            })}
+          </ul>
+        </Grid>
         </Grid>
         <Grid container>
         	<Grid item >

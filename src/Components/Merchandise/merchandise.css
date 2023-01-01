@@ -7,7 +7,7 @@
 }
 
 
-.wrapper {
+/* .wrapper {
     background-color: black;
     margin: 0px;
     display: grid;
@@ -65,13 +65,13 @@
 
 .horlist1 {
     margin-top: 12px;
-}
+} */
 
-.horlist1 li a {
+/* .horlist1 li a {
     color: white;
-    text-decoration: none;
+    text-decoration: none; */
     /* border: 2px solid red; */
-}
+/* } */
 
 .horlist1 li a:visited {
     padding: 4px;
