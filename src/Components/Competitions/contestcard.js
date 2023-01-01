@@ -21,7 +21,7 @@ function Card(props){
                     <Link to={`/competitions/details/${props.name.toLowerCase().replace(/\s/g, "")}`}>
                         <Button variant="contained" style={{margin: "10px"}}>Details</Button>
                     </Link>
-					    <Button variant="contained" style={{margin: "10px"}}>Register</Button>
+					    <Button variant="contained" style={{margin: "10px"}}><Link to={`/register/${props.name}`}>Register</Link></Button>
                 </div>
             </div>
         </div>

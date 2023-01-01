@@ -52,6 +52,7 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
 							<Link to={`/competitions/details/${contest.name.toLowerCase().replace(/\s/g, "")}`}><Button variant="contained">Details</Button></Link>
 							<Button variant="contained">Register</Button> */}
 							<Card name={contest.name} title={contest.about}/>
+							{/* <Button variant="contained"><Link to={`/register/${contest.name}`}>Register</Link></Button> */}
 							</div>))
 						: ""}
 				</div>

@@ -1,5 +1,5 @@
 import React ,{useState,useEffect, useRef} from 'react'
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import {useAuth} from '../context/AuthContext'
 import axios from 'axios';
 import {Form, Alert} from 'react-bootstrap'
@@ -12,11 +12,13 @@ export default function Dashboard() {
     const nameRef = useRef();
     const emailRef = useRef();
     const collegeRef= useRef();
+    const phoneRef = useRef();
 
     const {currentUser,logout} = useAuth();
     const [error, setError] = useState('');
     const [loading,setLoading] = useState(false);
     const [success,setSuccess] = useState('');
+    const navigate = useNavigate();
     const [currentUserInfo,setCurrentUserInfo] = useState({
         email : currentUser.email,
         uid : currentUser.uid, 
@@ -31,12 +33,14 @@ export default function Dashboard() {
             name : nameRef.current.value,
             email : currentUser.email,
             college : collegeRef.current.value,
+            phone: phoneRef.current.value
             
         }).then((response)=>{
            
             setLoading(false)
             console.log(response)
             setSuccess('Profile Updated. Go to Dashboard.')
+            navigate('/profile')
             // navigate('/profile');
 
         }).catch((err)=>{
@@ -65,15 +69,20 @@ export default function Dashboard() {
                 
                     <Form.Label>Name</Form.Label>
                     <TextField sx={{"&:hover": {
-    border: "solid #ced4da",
-  }, input: { color: 'white',borderColor:'white', border: '1px solid #ced4da', } }} margin='normal' size='small'  type="name" inputRef={nameRef} /> 
+                        border: "solid #ced4da",
+                    }, input: { color: 'white',borderColor:'white', border: '1px solid #ced4da', } }} margin='normal' size='small'  type="name" inputRef={nameRef} /> 
               
-                    <Form.Label>College</Form.Label>
+                    <br/><Form.Label>College</Form.Label>
                     <TextField sx={{
                         "&:hover": {
-    border: "solid #ced4da",
-  }, input: { color: 'white',borderColor:'white', border: '1px solid #ced4da', } }} margin='normal' size='small'  type="name" inputRef={collegeRef} required />
-               
+                        border: "solid #ced4da",
+                    }, input: { color: 'white',borderColor:'white', border: '1px solid #ced4da', } }} margin='normal' size='small'  type="name" inputRef={collegeRef} required />
+                    <br/><Form.Label>Phone number</Form.Label>
+                    <TextField sx={{
+                        "&:hover": {
+                        border: "solid #ced4da",
+                    }, input: { color: 'white',borderColor:'white', border: '1px solid #ced4da', } }} margin='normal' size='small'  type="name" inputRef={phoneRef} required />
+                
                     
                     <Form.Control
                         className = "textfield"
