@@ -14,6 +14,16 @@
     align-items: center;
     flex-wrap: wrap;
     position: relative;
+    overflow: auto;
+}
+
+.contactsubheaders{
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin: 10px 10px;
+    text-align: center;
+
 }
 
 .container{
@@ -44,8 +54,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    opacity: 0.5;
+    opacity: 0.35;
     transition: 0.5s;
+    width: 300px;
+    height: 400px;
 }
 
 .container .card:hover .content{
@@ -109,11 +121,3 @@
     color: #fff;
     font-size: 24px;
 }
-
-.contactsubheaders{
-    font-size: 30px;
-    font-weight: 600;
-    color: #fff;
-    margin: 20px 0 -14px 0;
-    bottom: -15px;
-} 
