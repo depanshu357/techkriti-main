@@ -17,15 +17,6 @@
     overflow: auto;
 }
 
-.contactsubheaders{
-    font-size: 20px;
-    font-weight: 600;
-    color: #fff;
-    margin: 10px 10px;
-    text-align: center;
-
-}
-
 .container{
     z-index: 1;
     display: flex;
@@ -33,6 +24,15 @@
     align-items: center;
     flex-wrap: wrap;
     margin: 40px 0;
+    display: grid;
+    grid-template-areas: 
+        'header header header'
+        'main main main';
+}
+
+.container .contactHeader{
+    grid-area: header;
+    text-align: center;
 }
 
 .container .card{

@@ -121,6 +121,7 @@ width: 100%;
 	overflow: hidden;
     border: black;
 	border-style: double;
+	margin-top: 10px;
 }
 
 .contestcard .content .contentBx h3 {

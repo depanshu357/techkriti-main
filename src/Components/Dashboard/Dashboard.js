@@ -1,3 +1,10 @@
+// import * as React from "react";
+import PropTypes from "prop-types";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import "./Dashboard1.css";
 import React ,{useState,useEffect, useRef} from 'react'
 import { Link } from 'react-router-dom';
 import {useAuth} from '../../context/AuthContext'
@@ -6,19 +13,66 @@ import {Form, Alert} from 'react-bootstrap'
 import {useNavigate} from 'react-router-dom'
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import { Avatar, CardContent, Grid, Typography } from '@mui/material';
-// import { Divider } from 'material';
-export default function Dashboard() {
+import { Avatar, CardContent, Grid } from '@mui/material';
+
+
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+}
+
+export default function BasicTabs() {
+
 
     const [error,setError] = useState('');
+    const [team,setTeam] = useState([Object]);
     const {currentUser,logout} = useAuth();
     const photoURL = currentUser.photoURL;
+    const navigate = useNavigate();
     const [currentUserInfo,setCurrentUserInfo] = useState({
         name : "",
         college: "",
         email : currentUser.email,
         uid : currentUser.uid,
+        phone: currentUser.phone,
+        competitions: currentUser.competitions
     })
+
+    // let allTeam;
+    // axios.get(`http://localhost:9000/api/get-team-detail/${currentUser.uid}`).then((response)=>{
+    //     allTeam = response.data
+    //     setTeam(allTeam)
+        
+    // }).catch((e)=>console.log(e))
+    // console.log(team)
     useEffect(()=>{
         axios.post('http://localhost:9000/api/',{
         uid : currentUser.uid,
@@ -31,74 +85,110 @@ export default function Dashboard() {
                 email : response.data.email,
                 uid : response.data.uid,
                 phone : response.data.phone,
-                techid:response.data.techid,
-                points:response.data.points,
-                linkedin: response.data.linkedin,
-                facebook: response.data.facebook,
-                instagram: response.data.instagram
+                competitions: response.data.competitions
+             
             })
         })
         .catch((e)=>console.log(e))
     },[currentUser.uid,currentUser.email])
+    async function handleLogout(){
+      try{
+          setError('');
+          await logout();
+          navigate('/login');
+      } catch{
+          setError('Failed to logout')
+      }
+  }
+  const [value, setValue] = React.useState(0);
+  let techId = ""
+   
+  
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
 
   return (
-    <div>
-            {currentUser.email}
+    
+    <Box sx={{ width: "100%", height: "100%" }}>
+      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="basic tabs example"
+          sx={{ color: "white" }}
+        >
+          <Tab label="Profile" {...a11yProps(0)} sx={{ color: "white" }} />
+          <Tab
+            label="Registered WorkShops"
+            {...a11yProps(1)}
+            sx={{ color: "white" }}
+          />
+          <Tab
+            label="Registerd Competitions"
+            {...a11yProps(2)}
+            sx={{ color: "white" }}
+          />
+        </Tabs>
+      </Box>
+      <TabPanel value={value} index={0} sx={{ height: "100%", width: "100%" }}>
+        <div className="Dashboard">
+        {/* {currentUser.email}
 
             <br/>
-            {currentUser.uid}
-            <div className='resp-profile'>
-    <div className='profile update'>
-    <CardContent className='cardProfile'>
-            <Grid container>
-            <Grid xs={3} style={{paddingTop:10, paddingLeft:10}}>
-            
-                <Avatar alt="name" className='avatar' src={photoURL} sx={{width:150, height:150, marginLeft:'5px'}} />
-                </Grid>
-                <Grid xs style={{padding:50, verticalAlign:'center'}}>
-                {error && <Alert variant ="danger">{error}</Alert>}
-                <h2 className='h2name'>{currentUserInfo.name}</h2>
-                </Grid>
-            </Grid>
-            <Grid container>
-                <Grid xs style={{padding:50}}>
-                {error && <Alert variant ="danger">{error}</Alert>}
-                <div className='row'>
-                <div className='column'>
-                <p className='p-profile'>Email&nbsp;&nbsp;&nbsp;: {currentUserInfo.email} </p> 
-                <p className='p-profile'>Phone&nbsp;&nbsp;&nbsp;: {currentUserInfo.phone} </p>  
-                <p className='p-profile'>College&nbsp;: {currentUserInfo.college} </p>  
-                <p className='p-profile'>Points&nbsp;&nbsp;: {currentUserInfo.points} </p>
-                <p className='p-profile'>TechId&nbsp;&nbsp;: {currentUserInfo.techid} </p>
-                <p className='p-profile'>Linkedin&nbsp;&nbsp;: {currentUserInfo.linkedin} </p>
-                <p className='p-profile'>Facebook&nbsp;&nbsp;: {currentUserInfo.facebook} </p>
-                <p className='p-profile'>Instagram&nbsp;&nbsp;: {currentUserInfo.instagram} </p>
-                </div>
-                {/* <div className='column'>
-                <p >{currentUserInfo.email} </p> 
-                <p>{currentUserInfo.phone} </p>
-                <p>{currentUserInfo.college} </p>  
-                <p>{currentUserInfo.points} </p>
-                <p>{currentUserInfo.techid} </p>
-                </div> */}
-                </div>
-                </Grid>
-            </Grid>
-            <div className="w-100 text-center mt-2">
-            <Button variant='contained' sx={{backgroundColor:'#008b8b'}}><Link style={{textDecoration:'none', color:'#fff'}} to="/update" className="">Update Profile</Link></Button>
-                <Button variant="link" > Log Out</Button>
+            {currentUser.uid} */}
+          <div className="top"></div>
+          <div className="content">
+            <div className="image">
+              <img
+                src={photoURL}
+                alt="default"
+                srcset=""
+              />
             </div>
-            </CardContent>
-    </div>
-    <div className="backto">
-       <Button variant='contained' sx={{backgroundColor:'#008b8b'}}><Link style={{textDecoration:'none', color:'#fff'}} to="/">Back to Dashboard</Link></Button>
-    </div>
-    <div>
-    </div>
-    </div>
-
-    
-    
-    </div>
-  )
+            <div className="text">
+              <h1>
+                Hello <span>{currentUserInfo.name}</span>!!
+              </h1>
+              <div className="info">
+                <span>
+                  <span>techId</span>: {techId} <br />
+                </span>
+                <span>
+                  <span>emailId</span>: {currentUserInfo.email} <br />
+                </span>
+                <span>
+                  <span>phone</span>: {currentUserInfo.phone} <br />
+                </span>
+                <span>
+                  <span>college</span>: {currentUserInfo.college}
+                </span>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+        <div className="w-100 text-center mt-2">
+            <Button variant='contained' sx={{backgroundColor:'#008b8b'}}><Link style={{textDecoration:'none', color:'#fff'}} to="/update" className="">Update Profile</Link></Button>
+                <Button variant="link" onClick={handleLogout}> Log Out</Button>
+            </div>
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        {/* {
+          team.map((a)=>{
+            return(
+            <p>
+            {a.uid}
+            </p>)
+          })
+        } */}
+        {currentUserInfo.competitions}
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        Item Three
+      </TabPanel>
+    </Box>
+  );
 }
