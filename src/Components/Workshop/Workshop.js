@@ -1,10 +1,18 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Card from './Card'
 import { Grid } from '@mui/material';
 import "./card.css";
 
-const Workshop = () => {
+const Workshop = ({setThemeColor, setLowergridmenu}) => {
+
+	useEffect(() => {
+		setThemeColor("#000"); //on mount: set theme to black
+		setLowergridmenu([]);
+	},[]);
+	
   return (
+
+  	
     <>
     <b><h2 className='workhead'>WORKSHOPS</h2></b>
     <div className='cards'>

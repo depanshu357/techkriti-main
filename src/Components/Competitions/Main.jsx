@@ -3,12 +3,13 @@ import { Grid, Button } from "@mui/material";
 import "./styles.css";
 import content from "./content1.json";
 import comps from "./competitions.json";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
 import Card from "./contestcard";
 
 function Main({setThemeColor, setLowergridmenu, params, category}) {
 
 	const navigate = useNavigate();
+	const location = useLocation();
 	let current = 0;
 	let content = [];
 	let competitions = [];
@@ -19,7 +20,6 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
 				all_contests.push(...contest.explore);
 			}
 	}
-	console.log(params);
 	
 	if (comps.map((el) => (el.category)).includes(category)) {
 		content = comps.filter((el) => el.category === category)[0].contests;
@@ -39,6 +39,7 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
 				{el.explore.map((contest) => (
 					<div 
 						style={{alignSelf:"flex-start",margin:"10px"}}
+						key={contest.name}
 					>
 					{/* <h2>{contest.name}</h2>
 					<p>{contest.about}</p>
@@ -85,22 +86,26 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
 	}
 	
 	
-	const lowergridmenu = comps.map((el) => {
-		return {
-			text:el.category,
-			link:`competitions/${el.category.toLowerCase()}`
-		}
-	});
+	
 		
 	if (params && (comps.map((el) => (el.category)).includes(category)) && content.findIndex((el) => (el.title.toLowerCase().replace(/\s/g, '') === params)) > 0) {
 		current = content.findIndex((el) => (el.title.toLowerCase().replace(/\s/g, '') === params));	
 	} else current = 0;
-	setThemeColor(content[current].color)
 
-	//on mount: set lowergridmenu to what it needs to be
+
+
+	//on anything: set lowergridmenu to what it needs to be
 	useEffect(() => {
+		const lowergridmenu = comps.map((el) => {
+			return {
+				text:el.category,
+				link:`competitions/${el.category.toLowerCase()}`
+			}
+		});
 		setLowergridmenu(lowergridmenu);
-	}, []);
+		setThemeColor(content[current].color);
+		console.log("setting lowergridmenu");
+	}, [location]);
 	
 	const setSlide = (number) => {
 		current = number;

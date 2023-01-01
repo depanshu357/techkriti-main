@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import CloseIcon from '@mui/icons-material/Close';
 // import "./merchandise.css"
 import "./merchandise2.css";
@@ -8,6 +8,12 @@ import { style } from '@mui/system';
 
 
 const Merchandise = (props) => {
+
+	useEffect(() => {
+		props.setThemeColor("#000"); //on mount: set theme to black
+		props.setLowergridmenu([]);
+	},[]);
+
     const [checked,setChecked] = useState(false)
     const handleMerchandise = (event) => {
         console.log(event.target);

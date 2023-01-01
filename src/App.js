@@ -39,8 +39,8 @@ function App() {
     <Router>
 	<AuthProvider>
       <Routes>
-      <Route path='/' element={<Sidenav themeColor={themeColor} lowergridmenu={lowergridmenu}/>}>
-		<Route path='/' element = {<Home/>}></Route>
+      <Route path='/' element={<Sidenav themeColor={themeColor} lowergridmenu={lowergridmenu} setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}>
+		<Route path='/' element = {<Home setThemeColor={setTheme} setLowergridmenu={setLowergrid} />}></Route>
       	<Route path='/gallery' element={<CarouselFadeExample setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
       	<Route path='/merchandise' element={<Merchandise setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
 		<Route path='/Workshop' element={<Workshop setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>

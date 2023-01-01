@@ -58,8 +58,10 @@ const Sidenav = ({themeColor, ...props}) => {
   // let isPagemedium = useMediaQuery('(min-width:450px)', '(max-width:900px)')
   let location = useLocation();
   useEffect(() =>{
-    console.log(location.pathname)
+    console.log(location.pathname);
   }, [location]);
+
+
 
   let compe = false;
   let works = false;

@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./home.css"
 
-const Home = () => {
+const Home = ({setThemeColor, setLowergridmenu}) => {
+
+	useEffect(() => {
+		setThemeColor("#000"); //on mount: set theme to black
+		setLowergridmenu([]);
+	},[]);
+	
   return (
     <>
     <div style={{height:"100%"}}>Video aayegi</div>
