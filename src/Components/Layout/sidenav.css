@@ -3,7 +3,6 @@
     padding: 0;
 }
 
-
 .wrapper{
     background-color: black;
     margin: 0px;
@@ -287,4 +286,8 @@
 
 .sidenav-container > .bottom {
 	border-bottom-style:none;
+}
+
+.MuiTab-root {
+	text-transform:none;
 }

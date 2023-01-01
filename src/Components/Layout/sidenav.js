@@ -1,6 +1,5 @@
 // import React from "react";
 import "./sidenav.css";
-import Divider from "@mui/material/Divider";
 import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from '../../context/AuthContext';
 import axios from 'axios'
@@ -9,16 +8,12 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import React, { useState, useEffect } from "react";
 import logo from "./CA_light.png";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import { makeStyles } from "@mui/styles";
-import Grid from "@mui/material/Grid";
 import PermIdentityRoundedIcon from "@mui/icons-material/PermIdentityRounded";
 import UpdateRoundedIcon from "@mui/icons-material/UpdateRounded";
-import { Tab } from "@mui/material";
+import { Tab, Tabs, Button, Menu, MenuItem, Divider, Grid } from "@mui/material";
 import { Container } from "@mui/system";
 // import Stack from "@mui/material";
 import "./sidenav.css";
@@ -63,24 +58,32 @@ const Sidenav = ({themeColor, ...props}) => {
 
 
 
-  let compe = false;
-  let works = false;
-  let gallery = false;
-  let contact = false;
-  let merchandise = false;
-  if(location.pathname.includes("competition")){
-    compe = true;
-  }
-  else if(location.pathname.includes("gallery")){
-    gallery = true;
+//   let compe = false;
+//   let works = false;
+//   let gallery = false;
+//   let contact = false;
+//   let merchandise = false;
+	let tabValue;
+  if(location.pathname.includes("competitions")){
+//     compe = true;
+		tabValue = 0;
   }
   else if(location.pathname.includes("workshops")){
-    works = true;
+//     gallery = true;
+		tabValue = 1;
+  }
+  else if(location.pathname.includes("gallery")){
+//     works = true;
+		tabValue = 2;
   }
   else if(location.pathname.includes("contact")){
-    contact = true;
+//     contact = true;
+		tabValue = 3;
+
   }else if(location.pathname.includes("merchandise")){
-    merchandise = true;
+//     merchandise = true;
+		tabValue = 4;
+
   }
   const [sidebar, setSidebar] = useState(false);
   const [display, setDisplay] = useState({ right: '-100vw',opacity:"0" });
@@ -248,13 +251,21 @@ const Sidenav = ({themeColor, ...props}) => {
 		>
 			<div><Link to="/"><img src="/img/techkriti.svg" height={"45px"}></img></Link></div>
 			<div style={{}}>
-				<ul className="horlist">
-					<li><Link className={`mylink-${compe ? "active" : ""}`} to="/competitions">Competitions</Link></li>
-					<li><Link className={`mylink-${works ? "active" : ""}`} to="/workshop">Workshops</Link></li>
-					<li><Link className={`mylink-${gallery ? "active" : ""}`} to="/gallery">Gallery</Link></li>
-					<li><Link className={`mylink-${contact ? "active" : ""}`} to="/contact-us">Contact Us</Link></li>
-					<li><Link className={`mylink-${merchandise ? "active" : ""}`} to="/merchandise">Merchandise</Link></li>
-				</ul>
+				{// <ul className="horlist">
+// 					<li><Link className={`mylink-${compe ? "active" : ""}`} to="/competitions">Competitions</Link></li>
+// 					<li><Link className={`mylink-${works ? "active" : ""}`} to="/workshop">Workshops</Link></li>
+// 					<li><Link className={`mylink-${gallery ? "active" : ""}`} to="/gallery">Gallery</Link></li>
+// 					<li><Link className={`mylink-${contact ? "active" : ""}`} to="/contact-us">Contact Us</Link></li>
+// 					<li><Link className={`mylink-${merchandise ? "active" : ""}`} to="/merchandise">Merchandise</Link></li>
+// 				</ul>
+				}
+				<Tabs value={tabValue}>
+					<Link to="/competitions"><Tab value={0} label="Competitions" /></Link>
+					<Link to="/workshops"><Tab value={1} label="Workshops" /></Link>
+					<Link to="/gallery"><Tab value={2} label="Gallery" /></Link>
+					<Link to="/contact-us"><Tab value={3} label="Contact Us" /></Link>
+					<Link to="/merchandise"><Tab value={4} label="Merchandise" /></Link>
+				</Tabs>
 			</div>
 			<div className="right"><Button>Login</Button></div>
 			<div style={{display:"flex", flexDirection:"column", justifyContent:"flex-start", alignItems:"center"}}>
@@ -269,7 +280,7 @@ const Sidenav = ({themeColor, ...props}) => {
           		<br />
           		<a href="#"><img className="socialicon" src="/images/instagram.png" height={"20px"}></img></a>
           	</div>
-			<div>
+			<div style={{display:"block", overflow:"auto"}}>
 				<Outlet />
 			</div>
 			<div className="right"></div>
@@ -279,13 +290,19 @@ const Sidenav = ({themeColor, ...props}) => {
           		<div className = "scroll-down"></div>
 			</div>
 			<div className="bottom">
-				<ul className="horlist1">
-					{lowergridmenu.map((el) => {
-						return (
-							<li key={el.text}><Link className="mylink" to={`/${el.link}`}>{el.text}</Link></li>
-						);
-					})}
-          		</ul>
+				{// <ul className="horlist1">
+// 					{lowergridmenu.map((el) => {
+// 						return (
+// 							<li key={el.text}><Link className="mylink" to={`/${el.link}`}>{el.text}</Link></li>
+// 						);
+// 					})}
+//           		</ul>
+          		}
+          		<Tabs style={{width:"90%"}} value={lowergridmenu.findIndex((el) => location.pathname.includes(el.link))}>
+          			{lowergridmenu.map((el) => (
+          				<Link to={`/${el.link}`} key={el.text}><Tab value={lowergridmenu.indexOf(el)} label={el.text} /></Link>
+          			))}
+          		</Tabs>
 			</div>
 			<div className="bottom right"></div>
 		</div>
@@ -319,7 +336,7 @@ const Sidenav = ({themeColor, ...props}) => {
             		</div>
             	</div>
             	<Link  to="/competitions" onClick={handleHamburger} >Competitions</Link>
-              	<Link to="/workshop" onClick={handleHamburger}>Workshops</Link>
+              	<Link to="/workshops" onClick={handleHamburger}>Workshops</Link>
               	<Link to="/gallery" onClick={handleHamburger}>Gallery</Link>
               	<Link to="/contact-us" onClick={handleHamburger}>Contact Us</Link>
               	<Link to="/merchandise" onClick={handleHamburger}>Merchandise</Link>

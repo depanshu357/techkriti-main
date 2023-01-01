@@ -5,6 +5,11 @@ import HorizontalBar from "./HorizontalBar";
 import { useState, useEffect } from "react";
 
 function CarouselFadeExample(props) {
+
+	useEffect(() => {
+		props.setThemeColor("#000");
+		props.setLowergridmenu([]);
+	}, []);
 	
   const address = [
     "images/1.jpg",

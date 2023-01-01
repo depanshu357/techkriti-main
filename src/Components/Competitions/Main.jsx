@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { Grid, Button } from "@mui/material";
+import { Grid, Button, Tab, Tabs } from "@mui/material";
 import "./styles.css";
 import content from "./content1.json";
 import comps from "./competitions.json";
@@ -31,6 +31,7 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
 					<div style={{margin:"50px"}}>
 					<h1>{el.title}</h1>
 					<p>{el.text}</p>
+					<div style={{display:"flex", justifyContent:"space-evenly", width:"50%", backgroundColor:"white", borderRadius:"1000px", color:"black", padding:"10px"}}>Scroll down to see contests<div style={{borderColor:"black"}}className="scroll-down" /></div>
 					</div>
 					</div>
 					<img src={`/images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} style={{width:"300px"}} />
@@ -61,13 +62,11 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
 						marginLeft:"20px",
 						marginRight:"20px",
 						flexShrink:"0",
-						border:"solid 3px",
-						borderRadius:"1px",
 						padding:"5px"
 					}}
 					key={el.title}
 				>
-				{el.title}	
+				<Tab value={content.indexOf(el)} label={el.title} />
 				</Link>
 			);
 		});
@@ -117,23 +116,19 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
           <div className="main-container">
             {competitions[current]}
           {comps.map((el) => (el.category)).includes(category)
-          ? <div className="navigator scroll-less">
-          	<div
+          ? <Tabs
           		style={{
-          			display:"inline-flex",
-          			flexWrap:"nowrap",
-          			flexBasis:"auto"
-          		}}
+          			width:"100%", 
+          			maxHeight: "60px", 
+          			marginLeft:"10px", 
+          			marginRight: "10px", 
+          			borderTop:"solid 1px #fff"
+          		}} 
+          		variant="scrollable" 
+          		value={current}
           	>
-          		<div style={{position:"absolute", left:"auto"}}>
-          			{"<"}
-          		</div>
           		{links}
-          		<div style={{position:"absolute", right:"10vw"}}>
-          			{">"}
-          		</div>
-          	</div>
-          	</div>
+          	</Tabs>
           	: ""}
           </div>
         </>

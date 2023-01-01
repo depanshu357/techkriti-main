@@ -21,6 +21,7 @@ import Register from './Components/Register';
 // import Merchandise from './Components/Merchandise/Merchandise';
 import Workshop from './Components/Workshop/Workshop';
 import Merchandise from './Components/Merchandise/Merchandise';
+import {createTheme, ThemeProvider} from "@mui/material/styles";
 function App() {
 	const [themeColor, setThemeColor] = useState("#000000");
 	const [lowergridmenu, setLowergridmenu] = useState([]);
@@ -33,8 +34,64 @@ function App() {
 	const setLowergrid = (array) => {
 		setLowergridmenu(array);
 	}
+	
+	const theme = createTheme({
+		components:{
+			MuiTab: {
+				styleOverrides:{
+					root:{
+						textTransform:"none",
+						fontSize:"20pt",
+						color:"#fff",
+						opacity:"1",
+					}
+				}
+			}
+		}
+	});
+	
+	const theme1 = createTheme({
+		typography: {
+			fontFamily:"\"Montserrat\",\"Arial\",sans-serif",
+			fontSize:20,
+			htmlFontSize:20,
+			button: {
+				textTransform:"none",
+				fontFamily:"\"Montserrat\",\"Arial\",sans-serif",
+			}
+		},
+		components: {
+			MuiTab: {
+				styleOverrides: {
+					root: {
+						fontSize:"16pt",
+						color:"#fff",
+						opacity:1
+					}
+				}
+			},
+			MuiTabs: {
+				styleOverrides: {
+					root: {
+						height:"100%",
+					},
+					indicator: {
+						backgroundColor:"#fff",
+						height:"100%",
+						opacity:0.5,
+					},
+					scroller: {
+						height:"100%"
+					}
+				}
+			}
+		}
+	});
+	
+	
   return (
     <>
+    <ThemeProvider theme={theme1}>
     <div className="w-100" style={{maxWidth : '100%'}}></div>
     <Router>
 	<AuthProvider>
@@ -43,7 +100,7 @@ function App() {
 		<Route path='/' element = {<Home setThemeColor={setTheme} setLowergridmenu={setLowergrid} />}></Route>
       	<Route path='/gallery' element={<CarouselFadeExample setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
       	<Route path='/merchandise' element={<Merchandise setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
-		<Route path='/Workshop' element={<Workshop setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
+		<Route path='/workshops' element={<Workshop setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
       	<Route path='/merchandise' element={<Merchandise setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
       	<Route path='/competitions/'>
       		<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category=""/> }></Route>
@@ -71,6 +128,7 @@ function App() {
     </Routes>
 	</AuthProvider>
     </Router>
+    </ThemeProvider>
     </>
   );
 }
