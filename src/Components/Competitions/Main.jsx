@@ -4,6 +4,7 @@ import "./styles.css";
 import comps from "./competitions.json";
 import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
 import Card from "./contestcard";
+import EachContest from "./EachContest";
 
 function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 
@@ -88,9 +89,10 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 	} else if (category === "Details" && (all_contests.map(el => el.name.toLowerCase().replace(/\s/g, "")).includes(params))) { //path: /competitons/details/params
 		content.push({color:"#000"});
 		let contestobj = all_contests.find(el => (el.name.toLowerCase().replace(/\s/g, "") === params));
-		competitions.push(<div className="main-text">
-		<h1>{contestobj.name}</h1>
-		<h2>{contestobj.about}</h2>
+		competitions.push(<div className="contestEach">
+		<EachContest compName={contestobj.name} content={contestobj.about}/>
+		{/* <h1>{contestobj.name}</h1>
+		<h2>{contestobj.about}</h2> */}
 		</div>);
 	} else { //path: /competitons/ OR /competitions/details/
 		content.push({color:"#000"});

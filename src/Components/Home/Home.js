@@ -10,12 +10,7 @@ const Home = ({setThemeColor, setLowergridmenu}) => {
 	
   return (
     <>
-    <div style={{}}>Video aayegi</div>
-    <video controls autoplay>
-  <source src="" type="video/mp4" style={{width:"100%"}}></source>
-  <source src="movie.ogg" type="video/ogg"></source>
-  Your browser does not support the video tag.
-</video>
+    <img id = "myVideo" src="background.gif"></img>
 </>
   )
 }

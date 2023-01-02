@@ -13,6 +13,7 @@ export default function Register() {
     const teamNameRef = useRef();
     const {currentUser,logout} = useAuth();
     const params = useParams();
+    const [login, setLogin] = useState();
     const [error, setError] = useState('');
     const [errorM,, setErrorM] = useState('');
     const [loading,setLoading] = useState(false);
@@ -27,8 +28,8 @@ export default function Register() {
 
 
     const [currentUserInfo,setCurrentUserInfo] = useState({
-        email : currentUser.email,
-        uid : currentUser.uid, 
+        email : currentUser ? currentUser.email : "0" ,
+        uid : currentUser ? currentUser.uid : "0", 
     })
 
     var participants = 5;
@@ -54,13 +55,18 @@ export default function Register() {
 
 
      useEffect(()=>{
+        if(currentUser){
         axios.get(`http://localhost:9000/api/competitions/${params.events}/${currentUser.uid}`)
         .then((response)=>{
             console.log(response.data)
             setLoading(response.data)
         })
         .catch((e)=>console.log(e))
+    }   else{
+        setLogin(false)
+    }
     },[])
+
 
 
     
@@ -93,8 +99,7 @@ export default function Register() {
                     <div>
                     <h2 className='mainhead'>Register</h2><br/>
                     <ul><li>{params.events}</li>
-                    <li>{currentUser.uid}</li>
-                    <li>{currentUser.competitions}</li>
+                    
                     </ul>
                     <form style={{marginLeft:"36px"}} onSubmit={handleMember}>
                         <label for="name"> Member Name:</label><br></br>
