@@ -4,4 +4,9 @@
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
+    z-index: -1;
   }
+
+  video::-webkit-media-controls-timeline {
+    display: none;
+}
