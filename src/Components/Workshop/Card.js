@@ -41,8 +41,8 @@ const Card = (props) => {
         <img className='imgcard' src={props.img ? props.img : "images/4.jpg"}></img>
         <p className='title'>{props.title ? props.title : "PYTHON"}</p>
         <div className='buttons'>
-            <div className='buttonr'><Button disabled={loading} className="cardlink" onClick={handleRegister}>REGISTER</Button></div>
-            <div className='buttone'> <Link className="cardlink" to="/">EXPLORE</Link></div>
+            <div className='buttonr'><Button className="cardlink" id="button1" disabled={loading}  onClick={handleRegister}>REGISTER</Button></div>
+            <div className='buttone'> <Button className="cardlink" id = "button2" to="/">EXPLORE</Button></div>
         </div>
     </div>
   )

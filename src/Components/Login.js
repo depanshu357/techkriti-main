@@ -53,7 +53,7 @@ export default function Login() {
   return (
     <div>
     
-        <Button className='button-51 loginbutton' disabled={loading} onClick={handleGoogleLogin} spacing={3} >Signin</Button>
+        <Button className='button-51 loginbutton' disabled={loading} onClick={handleGoogleLogin} spacing={3} >Sign in</Button>
         {/* <Button className='button-49 loginbutton' disabled={loading} onClick={handleFacebookLogin}><FacebookIcon fontSize="large" /></Button> */}
         
         

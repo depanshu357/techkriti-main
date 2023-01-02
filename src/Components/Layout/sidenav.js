@@ -20,6 +20,7 @@ import "./sidenav.css";
 import { TabPanelUnstyled } from "@mui/base";
 import { useMediaQuery } from "../MediaQuery";
 import Merchandise from "../Merchandise/Merchandise";
+import Login from "../Login";
 
 const Sidenav = ({themeColor, ...props}) => {
   // Google login
@@ -267,7 +268,8 @@ const Sidenav = ({themeColor, ...props}) => {
 					<Link to="/merchandise"><Tab value={4} label="Merchandise" /></Link>
 				</Tabs>
 			</div>
-			<div className="right"><Button>Login</Button></div>
+			{/* <div className="right"><Button>Login</Button></div> */}
+			<div className="right"><Login/></div>
 			<div style={{display:"flex", flexDirection:"column", justifyContent:"flex-start", alignItems:"center"}}>
 				<br />
           		<a href="#"><img className="socialicon" src="/images/facebook.png" height={"20px"} width={"11px"}></img></a>
