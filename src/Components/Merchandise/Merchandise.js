@@ -81,9 +81,11 @@ const Merchandise = (props) => {
             <div className="topMerchandise">Techkriti Merchandise</div>
             <div className="contentMerchandise">
               <div className="imageBox">
+                <div className='topOfImageBox'>#Jacket</div>
                 <div className="imageMerch">
-                <img src="images/Hoodie1.png" style={{height:'40vh'}} alt="Hoodie" />
+                <img src="images/Hoodie1.png" style={{height:'40vh'}} alt="Hoodie" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} />
                 </div>
+                <div className="descriptionOfImageBox">Lorem ipsum dolor sit amet.</div>
                 <div className="textBuy">
                 <a href="#" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                   Buy Now
@@ -91,9 +93,11 @@ const Merchandise = (props) => {
                   </div>
               </div>
               <div className="imageBox">
+                <div className="topOfImageBox">#Hoodie</div>
                 <div className="imageMerch">
-                <img src="images/Hoodie1.png" style={{height:'40vh'}} alt="Hoodie" />
+                <img src="images/Hoodie1.png" style={{height:'40vh'}} alt="Hoodie" onMouseOver={handleMouseOver1} onMouseOut={handleMouseOut1}/>
                 </div>
+                <div className="descriptionOfImageBox">Lorem ipsum dolor sit amet.</div>
                 <div className="textBuy">
                 <a href="#" onMouseOver={handleMouseOver1} onMouseOut={handleMouseOut1}>
                   Buy Now
