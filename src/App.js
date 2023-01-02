@@ -22,10 +22,12 @@ import Register from './Components/Register';
 import Workshop from './Components/Workshop/Workshop';
 import Merchandise from './Components/Merchandise/Merchandise';
 import {createTheme, ThemeProvider} from "@mui/material/styles";
+import { useMediaQuery } from "./Components/MediaQuery";
+
 function App() {
 	const [themeColor, setThemeColor] = useState("#000000");
 	const [lowergridmenu, setLowergridmenu] = useState([]);
-	
+	const big = useMediaQuery('(min-width:900px)');
 	const setTheme = (color) => {
 		document.body.style.backgroundColor = color;
 		setThemeColor(color);
@@ -83,6 +85,10 @@ function App() {
 					scroller: {
 						height:"100%"
 					}
+				},
+				defaultProps:{
+					allowScrollButtonsMobile:true,
+					variant:"scrollable",
 				}
 			}
 		}
@@ -96,25 +102,25 @@ function App() {
     <Router>
 	<AuthProvider>
       <Routes>
-      <Route path='/' element={<Sidenav themeColor={themeColor} lowergridmenu={lowergridmenu} setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}>
+      <Route path='/' element={<Sidenav themeColor={themeColor} lowergridmenu={lowergridmenu} setThemeColor={setTheme} setLowergridmenu={setLowergrid} big={big} />}>
 		<Route path='/' element = {<Home setThemeColor={setTheme} setLowergridmenu={setLowergrid} />}></Route>
       	<Route path='/gallery' element={<CarouselFadeExample setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
       	<Route path='/merchandise' element={<Merchandise setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
 		<Route path='/workshops' element={<Workshop setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
       	<Route path='/merchandise' element={<Merchandise setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>
       	<Route path='/competitions/'>
-      		<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category=""/> }></Route>
+      		<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="" big={big}/> }></Route>
       		<Route path="technical/">
-      			<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Technical"/> }></Route>
-      			<Route path=":params" element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Technical"/> }></Route>
+      			<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Technical" big={big} />}></Route>
+      			<Route path=":params" element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Technical" big={big} /> }></Route>
       		</Route>
       		<Route path="entrepreneurial/">
-      			<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Entrepreneurial"/> }></Route>
-      			<Route path=":params" element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Entrepreneurial"/> }></Route>
+      			<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Entrepreneurial" big={big} /> }></Route>
+      			<Route path=":params" element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Entrepreneurial" big={big} /> }></Route>
       		</Route>
       		<Route path="details/">
-      			<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Details"/> }></Route>
-      			<Route path=":params" element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Details"/> }></Route>
+      			<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Details" big={big} /> }></Route>
+      			<Route path=":params" element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Details" big={big} /> }></Route>
       		</Route>
       	</Route>
       	<Route path='/contact-us' element={<Contact setThemeColor={setTheme} setLowergridmenu={setLowergrid}/>}></Route>

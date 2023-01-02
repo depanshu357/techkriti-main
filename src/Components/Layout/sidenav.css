@@ -1,8 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
 .wrapper{
     background-color: black;
     margin: 0px;
@@ -74,14 +69,12 @@
 }
 
 .mobilesocial{
-    margin-top: 25px;
-    margin-left: 100%;
-    text-align: center;
+	width:100%;
     display: flex;
     flex-direction: row;
     list-style: none;
-    color: aliceblue;
     justify-content: space-evenly;
+    padding:0px;
 }
 
 .mobilesocial li{
@@ -184,6 +177,10 @@
     border-bottom: 4px solid rgb(92, 7, 74);
 } */
 
+.socialicon {
+	margin:10px;
+}
+
 .socialicon:hover{
     filter:invert(100%);
     height: 30px;
@@ -258,7 +255,7 @@
 	background-color:#000;
 }
 
-.sidenav-container {
+.sidenav-container-bigpage {
 	width:100%;
 	height:100%;
 	position:absolute;
@@ -269,7 +266,7 @@
 	grid-template-rows: 61px 1fr 66px;
 }
 
-.sidenav-container > div {
+.sidenav-container-bigpage > div {
 	border-style:solid;
 	border-width: 1px;
 	border-color:white;
@@ -280,14 +277,34 @@
 	align-items:center;
 }
 
-.sidenav-container > .right {
+.sidenav-container-bigpage > .right {
 	border-right-style:none;
 }
 
-.sidenav-container > .bottom {
+.sidenav-container-bigpage > .bottom {
 	border-bottom-style:none;
 }
 
-.MuiTab-root {
-	text-transform:none;
+
+.sidenav-container-smallpage {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	display:flex;
+	flex-direction:column;
+	overflow:hidden;
+}
+
+.sidenav-container-smallpage > div {
+	border-top:solid 1px white;
+	height:60px;
+	flex-shrink:0;
+	display:flex;
+	padding:10px;
+}
+
+.sidenav-inner {
+	height:100%;
 }

@@ -48,8 +48,8 @@ const Sidenav = ({themeColor, ...props}) => {
 
   // }
 
-  let isPagebig = useMediaQuery('(min-width:900px)');
-  let isPagesmall = useMediaQuery('(max-width:900px)');
+  let isPagebig = props.big;
+  let isPagesmall = !props.big;
   // let isPagemedium = useMediaQuery('(min-width:450px)', '(max-width:900px)')
   let location = useLocation();
   useEffect(() =>{
@@ -247,7 +247,7 @@ const Sidenav = ({themeColor, ...props}) => {
 }
 	{isPagebig && <>
 		<div
-			className="sidenav-container"
+			className="sidenav-container-bigpage"
 		>
 			<div><Link to="/"><img src="/img/techkriti.svg" height={"45px"}></img></Link></div>
 			<div style={{}}>
@@ -298,7 +298,10 @@ const Sidenav = ({themeColor, ...props}) => {
 // 					})}
 //           		</ul>
           		}
-          		<Tabs style={{width:"90%"}} value={lowergridmenu.findIndex((el) => location.pathname.includes(el.link))}>
+          		<Tabs 
+          			style={{width:"90%"}} 
+          			value={lowergridmenu.findIndex((el) => location.pathname.includes(el.link))}
+          		>
           			{lowergridmenu.map((el) => (
           				<Link to={`/${el.link}`} key={el.text}><Tab value={lowergridmenu.indexOf(el)} label={el.text} /></Link>
           			))}
@@ -312,15 +315,91 @@ const Sidenav = ({themeColor, ...props}) => {
         
         
       {isPagesmall && <>
-      	<Grid 
-      	container
-        bgcolor={themeColor}
-        color={"white"}
-        columnGap={0}
-        spacing={0}
-        sx={{ justifyContent: "space-between" }}
-        >
-          	<nav 
+      	{// <Grid 
+//       	container
+//         bgcolor={themeColor}
+//         color={"white"}
+//         columnGap={0}
+//         spacing={0}
+//         sx={{ justifyContent: "space-between" }}
+//         >
+//           	<nav 
+//           		style={display} 
+//           		className="mobile"
+//           	>
+//             	<div 
+//             		style={{width:"100vw",height:"40px"}}
+//             	>
+//             		<div 
+//             			className="hamburger" 
+//             			onClick={handleHamburger}
+//             			style={{position:"absolute",right:"25px",top:"5px"}}
+//             		>
+//               			<div className="bar is-active"></div>
+//             		</div>
+//             	</div>
+//             	<Link  to="/competitions" onClick={handleHamburger} >Competitions</Link>
+//               	<Link to="/workshops" onClick={handleHamburger}>Workshops</Link>
+//               	<Link to="/gallery" onClick={handleHamburger}>Gallery</Link>
+//               	<Link to="/contact-us" onClick={handleHamburger}>Contact Us</Link>
+//               	<Link to="/merchandise" onClick={handleHamburger}>Merchandise</Link>
+//           	</nav>
+//         	<Grid 
+//         		item 
+//           		sx={{ minWidth: 91 }}
+//           		className="corners"
+//         	>
+//           		<img src="/img/techkriti.svg" height={"45px"}></img>
+//         	</Grid>
+//         	<Grid 
+//         		item  
+//         		sx={{ minWidth: 87 }} 
+//         		className="corners"
+//         	>
+//             	{/* <img src="/images/menuBar.png" style={{"marginLeft":"450%"}} height={"16px"}></img> */}
+//             	<button className="hamburger" onClick={handleHamburger}>
+//               		<div className="bar is-active"></div>
+//             	</button>
+//           	</Grid>
+//       	</Grid>
+//       	<Divider className="mydiv" color={"white"} borderBottomWidth={"30px"}></Divider>
+//       	<Grid container>
+//         	<Grid 
+//         		item 
+//         		width={"100%"}
+//         	>
+//         		<Outlet/>
+//         	</Grid>
+//         </Grid>
+//         <Grid container>
+//         <Grid item md>
+//           <ul className="horlist1">
+//             {lowergridmenu.map((el) => {
+//             	return (
+//             		<li key={el.text}><Link className="mylink" to={`/${el.link}`}>{el.text}</Link></li>
+//             	);
+//             })}
+//           </ul>
+//         </Grid>
+//         </Grid>
+//         <Grid container>
+//         	<Grid item >
+//           		<ul className="mobilesocial">
+//           			<li><a href="#"><img src="/images/facebook.png" height={"20px"} width={"11px"}></img></a></li>
+//           			<br />
+//           			<li><a href="#"><img src="/images/twitter.png" height={"17.94px"}></img></a></li>
+//           			<br />
+//           			<li><a href="#"><img src="/images/youtube.png" height={"24px"}></img></a></li>
+//           			<br />
+//           			<li><a href="#"><img src="/images/linkedin.png" height={"24px"}></img></a></li>
+//           			<br />
+//           			<li><a href="#"><img src="/images/instagram.png" height={"20px"}></img></a></li>
+//           		</ul>
+//         	</Grid>
+//         </Grid>
+        }
+        <div className="sidenav-container-smallpage">
+    		<nav 
           		style={display} 
           		className="mobile"
           	>
@@ -341,47 +420,29 @@ const Sidenav = ({themeColor, ...props}) => {
               	<Link to="/contact-us" onClick={handleHamburger}>Contact Us</Link>
               	<Link to="/merchandise" onClick={handleHamburger}>Merchandise</Link>
           	</nav>
-        	<Grid 
-        		item 
-          		sx={{ minWidth: 91 }}
-          		className="corners"
-        	>
-          		<img src="/img/techkriti.svg" height={"45px"}></img>
-        	</Grid>
-        	<Grid 
-        		item  
-        		sx={{ minWidth: 87 }} 
-        		className="corners"
-        	>
-            	{/* <img src="/images/menuBar.png" style={{"marginLeft":"450%"}} height={"16px"}></img> */}
-            	<button className="hamburger" onClick={handleHamburger}>
+        	<div style={{borderTop:"none", justifyContent:"space-between"}}>
+        		<img src="/img/techkriti.svg" height={"45px"}></img>
+        		<button className="hamburger" onClick={handleHamburger}>
               		<div className="bar is-active"></div>
             	</button>
-          	</Grid>
-      	</Grid>
-      	<Divider className="mydiv" color={"white"} borderBottomWidth={"30px"}></Divider>
-      	<Grid container>
-        	<Grid 
-        		item 
-        		width={"100%"}
-        	>
-        		<Outlet/>
-        	</Grid>
-        </Grid>
-        <Grid container>
-        <Grid item md>
-          <ul className="horlist1">
-            {lowergridmenu.map((el) => {
-            	return (
-            		<li key={el.text}><Link className="mylink" to={`/${el.link}`}>{el.text}</Link></li>
-            	);
-            })}
-          </ul>
-        </Grid>
-        </Grid>
-        <Grid container>
-        	<Grid item >
-          		<ul className="mobilesocial">
+        	</div>
+        	<div style={{display:"block", padding:"0px", height:"auto", flexGrow:1, flexShrink:1, overflow:"auto"}}>
+        		<div className="sidenav-inner">
+        			<Outlet />
+        		</div>
+        	</div>
+        	<div>
+        		<Tabs 
+        			style={{width:"90%"}} 
+        			value={lowergridmenu.findIndex((el) => location.pathname.includes(el.link))}
+        		>
+          			{lowergridmenu.map((el) => (
+          				<Link to={`/${el.link}`} key={el.text}><Tab value={lowergridmenu.indexOf(el)} label={el.text} /></Link>
+          			))}
+          		</Tabs>
+        	</div>
+        	<div>
+        	    <ul className="mobilesocial">
           			<li><a href="#"><img src="/images/facebook.png" height={"20px"} width={"11px"}></img></a></li>
           			<br />
           			<li><a href="#"><img src="/images/twitter.png" height={"17.94px"}></img></a></li>
@@ -392,8 +453,8 @@ const Sidenav = ({themeColor, ...props}) => {
           			<br />
           			<li><a href="#"><img src="/images/instagram.png" height={"20px"}></img></a></li>
           		</ul>
-        	</Grid>
-        </Grid>
+        	</div>
+        </div>
       </>}
         
     </>

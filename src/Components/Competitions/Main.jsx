@@ -6,7 +6,7 @@ import comps from "./competitions.json";
 import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
 import Card from "./contestcard";
 
-function Main({setThemeColor, setLowergridmenu, params, category}) {
+function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 
 	const navigate = useNavigate();
 	const location = useLocation();
@@ -24,14 +24,14 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
 	if (comps.map((el) => (el.category)).includes(category)) {
 		content = comps.filter((el) => el.category === category)[0].contests;
 		competitions = content.map((el) => {
-			return (
+			if (big) return (
 				<div className="main-text">
 				<div style={{display:"flex", justifyContent:"space-between", margin:"50px"}} key={el.index}>
 					<div style={{maxWidth:"60%"}}>
 					<div style={{margin:"50px"}}>
 					<h1>{el.title}</h1>
 					<p>{el.text}</p>
-					<div style={{display:"flex", justifyContent:"space-evenly", width:"50%", backgroundColor:"white", borderRadius:"1000px", color:"black", padding:"10px"}}>Scroll down to see contests<div style={{borderColor:"black"}}className="scroll-down" /></div>
+					<div style={{display:"flex", justifyContent:"space-between", alignItems:"center", backgroundColor:"white", borderRadius:"1000px", color:"black", padding:"10px"}}>Scroll down to see contests<div style={{borderColor:"black", margin:"10px"}} className="scroll-down" /></div>
 					</div>
 					</div>
 					<img src={`/images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} style={{width:"300px"}} />
@@ -52,6 +52,22 @@ function Main({setThemeColor, setLowergridmenu, params, category}) {
 				</div>
 				</div>
 			);
+			else return (<div className="main-text" style={{padding:"20px"}}>
+				<img src={`/images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} style={{width:"300px"}} />
+				<div>
+					<h1>{el.title}</h1>
+					<p>{el.text}</p>
+					<div style={{display:"flex", justifyContent:"space-between", alignItems:"center", backgroundColor:"white", borderRadius:"1000px", color:"black", padding:"10px"}}>Scroll down to see contests<div style={{borderColor:"black", margin:"10px"}} className="scroll-down" /></div>
+				</div>
+				{el.explore.map((contest) => (
+					<div
+						style={{alignSelf:"center",margin:"10px"}}
+						key={contest.name}
+					>
+					<Card name={contest.name} title={contest.about}/>
+					</div>
+				))}
+			</div>);
 		});
 		links = content.map((el) => {
 			return (
