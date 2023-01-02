@@ -1,9 +1,9 @@
 .card{
-    width: 170px;
+    width: 169px;
     height: 250px;
     background: transparent;
     background-image: url("./border.png");
-    
+    border: none;
     /* background-size: 200px 400px; */
 }
 
