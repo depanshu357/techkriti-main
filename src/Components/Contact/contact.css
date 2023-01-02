@@ -17,6 +17,7 @@
     overflow: auto;
     background-image: url("./images/contact\ us.png");
     background-attachment: fixed;
+    background-size: cover;
 }
 
 .container{

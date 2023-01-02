@@ -103,8 +103,6 @@ export default function BasicTabs() {
   }
   const [value, setValue] = React.useState(0);
   let techId = ""
-   
-  
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

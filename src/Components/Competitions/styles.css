@@ -138,4 +138,17 @@ width: 100%;
 
   video::-webkit-media-controls-timeline {
     display: none;
+  }
+.contestEach{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    /* overflow: auto; */
+    background-image: url("../Contact/images/contact\ us.png");
+    background-attachment: fixed;
+    background-size: cover;
 }
