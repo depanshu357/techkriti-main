@@ -96,11 +96,11 @@ export default function Contact({setThemeColor, setLowergridmenu}) {
 		}
 		{Object.entries(contactProps).map(([_, value]) => {
 			return (
-				<div className="container">
+				<div className="container" key={value.heading}>
 					<h1>{value.heading}</h1>
 					<div className="name-cards">
 					{value.members.map(el => (
-						<Card name={el.name} title={value.title} />
+						<Card name={el.name} title={value.title} key={el.name}/>
 					))}
 					</div>
 				</div>

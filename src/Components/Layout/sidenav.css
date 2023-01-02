@@ -275,6 +275,8 @@
 	display:flex;
 	justify-content:center;
 	align-items:center;
+	backdrop-filter:blur(10px);
+	background-color:rgba(255,255,255,0.1);
 }
 
 .sidenav-container-bigpage > .right {
@@ -309,7 +311,8 @@
 	display:block;
 	overflow:auto;
 	position:relative;
-	
+	backdrop-filter:none !important;
+	background-color:rgba(0,0,0,0) !important;
 }
 
 .sidenav-inner-smallpage {
