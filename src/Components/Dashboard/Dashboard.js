@@ -14,6 +14,7 @@ import {useNavigate} from 'react-router-dom'
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { Avatar, CardContent, Grid } from '@mui/material';
+import RegComps from "./RegComps";
 
 
 function TabPanel(props) {
@@ -185,6 +186,7 @@ export default function BasicTabs() {
           })
         } */}
         {currentUserInfo.competitions}
+        <RegComps />
       </TabPanel>
       <TabPanel value={value} index={2}>
         Item Three
