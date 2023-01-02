@@ -306,5 +306,30 @@
 }
 
 .sidenav-inner {
+	display:block;
+	overflow:auto;
+	position:relative;
+	
+}
+
+.sidenav-inner-smallpage {
 	height:100%;
+}
+
+/* 
+.sidenav-inner > * {
+	backdrop-filter:blur(10px);
+	background-color: rgba(255,255,255,0.1);
+}
+ */
+
+.sidenav-outlet-backdrop {
+	width:100%;
+	height:100%;
+	position:absolute;
+	filter:blur(10px);
+}
+
+.MuiTabs-root a {
+	text-decoration:none;
 }

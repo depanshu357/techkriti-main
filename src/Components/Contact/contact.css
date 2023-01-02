@@ -8,34 +8,61 @@
     height: 300px;
 }
 
-.contactBody{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    position: relative;
-    overflow: auto;
-    background-image: url("./images/contact\ us.png");
-    background-attachment: fixed;
+.contact-background {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-image: url("./images/contact\ us.png");
+	z-index:-999;
 }
 
+.contactBody{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    overflow: auto;
+}
+
+/* 
 .container{
     z-index: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     margin: 40px 0;
-    display: grid;
     grid-template-areas: 
         'header header header'
         'main main main';
 }
+ */
 
+.container {
+	width:90%;
+}
+
+.container > * {
+	text-align:center;
+	margin:0;
+}
+
+.container .name-cards {
+	display:flex;
+	justify-content:center;
+	align-items:flex-start;
+	flex-wrap:wrap;
+}
+
+/* 
 .container .contactHeader{
     grid-area: header;
     text-align: center;
 }
+ */
 
 .container .card{
     position: relative;
@@ -48,9 +75,14 @@
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(10px);
+    transition: background 0.3s linear;
 }
 
-.container .card .content{
+.container .card:hover {
+	background: rgba(255, 255, 255, 0.3);
+}
+
+.container .card .card-content{
     position: relative;
     display: flex;
     justify-content: center;
@@ -62,11 +94,11 @@
     height: 400px;
 }
 
-.container .card:hover .content{
+.container .card:hover .card-content{
     opacity: 1;
 }
 
-.container .card .content .imgBx{
+.container .card .card-content .imgBx{
     position: relative;
     width: 150px;
     height: 150px;
@@ -75,7 +107,7 @@
     border: 10px solid rbga(0 0 0 0 0.25);
 }
 
-.container .card .content .imgBx img{
+.container .card .card-content .imgBx img{
     position: absolute;
     top: 0;
     left: 0;
@@ -84,14 +116,14 @@
     object-fit: cover;
 }
 
-.container .card .content .contentBx h3{
+.container .card .card-content .contentBx h3{
     color: #fff;
     letter-spacing: 2px;
     text-align: center;
     margin: 20px 0 25px;
 }
 
-.container .card .content .contentBx h3 span{
+.container .card .card-content .contentBx h3 span{
     font-size: 16px;
     color: #fff;
     letter-spacing: 1px;

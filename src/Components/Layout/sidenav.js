@@ -252,14 +252,6 @@ const Sidenav = ({themeColor, ...props}) => {
 		>
 			<div><Link to="/"><img src="/img/techkriti.svg" height={"45px"}></img></Link></div>
 			<div style={{}}>
-				{// <ul className="horlist">
-// 					<li><Link className={`mylink-${compe ? "active" : ""}`} to="/competitions">Competitions</Link></li>
-// 					<li><Link className={`mylink-${works ? "active" : ""}`} to="/workshop">Workshops</Link></li>
-// 					<li><Link className={`mylink-${gallery ? "active" : ""}`} to="/gallery">Gallery</Link></li>
-// 					<li><Link className={`mylink-${contact ? "active" : ""}`} to="/contact-us">Contact Us</Link></li>
-// 					<li><Link className={`mylink-${merchandise ? "active" : ""}`} to="/merchandise">Merchandise</Link></li>
-// 				</ul>
-				}
 				<Tabs value={tabValue}>
 					<Link to="/competitions"><Tab value={0} label="Competitions" /></Link>
 					<Link to="/workshops"><Tab value={1} label="Workshops" /></Link>
@@ -281,8 +273,11 @@ const Sidenav = ({themeColor, ...props}) => {
           		<br />
           		<a href="#"><img className="socialicon" src="/images/instagram.png" height={"20px"}></img></a>
           	</div>
-			<div style={{display:"block", overflow:"auto"}}>
+			<div className="sidenav-inner" style={{display:"block"}}>
+				{//<div style={{position:"absolute", width:"100%", height:"auto", backdropFilter:"blur(10px)", backgroundColor:"rgba(255,255,255,0.1)", zIndex:-1}}></div>
+				}
 				<Outlet />
+				
 			</div>
 			<div className="right"></div>
 			<div style={{flexDirection:"column"}}className="bottom">
@@ -291,14 +286,6 @@ const Sidenav = ({themeColor, ...props}) => {
           		<div className = "scroll-down"></div>
 			</div>
 			<div className="bottom">
-				{// <ul className="horlist1">
-// 					{lowergridmenu.map((el) => {
-// 						return (
-// 							<li key={el.text}><Link className="mylink" to={`/${el.link}`}>{el.text}</Link></li>
-// 						);
-// 					})}
-//           		</ul>
-          		}
           		<Tabs 
           			style={{width:"90%"}} 
           			value={lowergridmenu.findIndex((el) => location.pathname.includes(el.link))}
@@ -428,7 +415,7 @@ const Sidenav = ({themeColor, ...props}) => {
             	</button>
         	</div>
         	<div style={{display:"block", padding:"0px", height:"auto", flexGrow:1, flexShrink:1, overflow:"auto"}}>
-        		<div className="sidenav-inner">
+        		<div className="sidenav-inner-smallpage">
         			<Outlet />
         		</div>
         	</div>

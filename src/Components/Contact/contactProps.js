@@ -96,7 +96,13 @@ const contactProps = {
         ],
         title: "Head, Show Management"
     },
-
+	snt: {
+		heading: "General Secretary, SnT Council",
+		members:[
+			{name: "Som Tambe"}
+		],
+		title: "General Secretary, Science and Technology Council"
+	},
     festies:{
         heading: "Festival Co-ordinators",
         members: [

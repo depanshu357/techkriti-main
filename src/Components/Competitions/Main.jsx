@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { Grid, Button, Tab, Tabs } from "@mui/material";
 import "./styles.css";
-import content from "./content1.json";
 import comps from "./competitions.json";
 import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
 import Card from "./contestcard";

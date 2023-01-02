@@ -10,7 +10,7 @@ import "../contact.css";
 function Card(props){
     return(
         <div className="card">
-          <div className="content">
+          <div className="card-content">
             <div className="imgBx">
               <img className="contactImage" src={a} alt="img05" />
             </div>

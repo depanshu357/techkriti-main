@@ -47,6 +47,7 @@ function App() {
 						fontSize:"20pt",
 						color:"#fff",
 						opacity:"1",
+						textDecoration:"none"
 					}
 				}
 			}
