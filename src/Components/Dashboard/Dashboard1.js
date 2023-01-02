@@ -19,7 +19,7 @@ function TabPanel(props) {
       className="Dashboardfullscreen"
     >
       {value === index && (
-        <Box className="DashboardBox" sx={{ p: 3 ,height:"calc(100% - 84px)",backgroundColor:"rebeccapurple"}}>
+        <Box className="DashboardBox" sx={{ p: 3 ,height:"calc(100% - 84px)"}}>
           <Typography sx={{height:"100%"}}>{children}</Typography>
         </Box>
       )}
