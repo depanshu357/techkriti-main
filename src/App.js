@@ -21,6 +21,7 @@ import Register from './Components/Register';
 // import Merchandise from './Components/Merchandise/Merchandise';
 import Workshop from './Components/Workshop/Workshop';
 import Merchandise from './Components/Merchandise/Merchandise';
+import WorkshopTemplate from './Components/Workshop/WorkshopTemplate';
 import {createTheme, ThemeProvider} from "@mui/material/styles";
 import { useMediaQuery } from "./Components/MediaQuery";
 
@@ -128,6 +129,7 @@ function App() {
 	    <Route path='/login' element={<Login/>}></Route>
 	    <Route path='/update' element={<Update/>}></Route>
 	    <Route path='/register/:events' element={<Register/>}></Route>
+		<Route path='/workshop/:workName' element={<WorkshopTemplate/>}></Route>
 
       </Route>
 
