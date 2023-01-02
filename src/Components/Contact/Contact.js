@@ -24,7 +24,11 @@ export default function Contact({setThemeColor, setLowergridmenu}) {
 	}
   return (
   	<>
-  	<div className="contact-background"></div>
+  	{/* <div className="contact-background"></div> */}
+	<video autoPlay loop muted playsInline className="contact-background">
+		<source  src="contact us page techkriti.mp4"/>
+		</video>
+
     <div className="contactBody">
     	{// <div className="container">
 // 			<header className="contactHeader">
@@ -101,7 +105,7 @@ export default function Contact({setThemeColor, setLowergridmenu}) {
 					<div className="name-cards">
 					{value.members.map(el => (
 						<Card name={el.name} title={value.title} key={el.name}/>
-					))}
+						))}
 					</div>
 				</div>
 			);
