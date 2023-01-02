@@ -41,7 +41,7 @@ const Card = (props) => {
         <img className='imgcard' src={props.img ? props.img : "images/4.jpg"}></img>
         <p className='title'>{props.name}</p>
         <div className='buttons'>
-            <div className='buttonr'><Button disabled={loading} className="cardlink" onClick={handleRegister}>REGISTER</Button></div>
+            <div className='buttonr'><Button id="button1" disabled={loading} className="cardlink" onClick={handleRegister}>REGISTER</Button></div>
             <div className='buttone'> <Link className="cardlink" to={`/workshop/${props.name}`}>EXPLORE</Link></div>
         </div>
     </div>
