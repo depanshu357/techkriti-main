@@ -7,6 +7,7 @@ import { Grid, Typography } from '@mui/material';
 import axios from 'axios';
 import Button from '@mui/material/Button';
 import { async } from '@firebase/util';
+import './register.css';
 
 export default function Register() {
     const teamNameRef = useRef();
@@ -90,32 +91,36 @@ export default function Register() {
     }
   return (
                     <div>
-                    Register<br/>
-                    {params.events}<br/>
-                    {currentUser.uid}<br/>
-                    {currentUser.competitions}
-                    <form onSubmit={handleMember}>
-                        <input value={mem} onChange={(e) => setMem(e.target.value)} />
-                        <input value={tid} onChange={(e) => setTid(e.target.value)} />
+                    <h2 className='mainhead'>Register</h2><br/>
+                    <ul><li>{params.events}</li>
+                    <li>{currentUser.uid}</li>
+                    <li>{currentUser.competitions}</li>
+                    </ul>
+                    <form style={{marginLeft:"36px"}} onSubmit={handleMember}>
+                        <label for="name"> Member Name:</label><br></br>
+                        <input id='name' value={mem} onChange={(e) => setMem(e.target.value)} /><br></br>
+                        <label for="techid"> Tech ID:</label><br></br>
+                        <input value={tid} id = "techid" onChange={(e) => setTid(e.target.value)} /><br></br>
                         {errorM}
-                        <button>Add member</button>
+                        <br></br><button className='memberbtn'>Add member</button>
                     </form>
+                    <h5 style={{marginLeft:"36px" , marginTop:"8px", marginBottom:"0px", paddingBottom:"0px"}}>Current Members-</h5> 
                     {
                         allData.map((a) => 
-                        <>
-                        <li>{a.mem}</li>
-                        <li>{a.tid}</li>
-                        </>
+                        <ul className='curmem'>
+                        <li className='mem'>Name: {a.mem} <br></br>TechID: {a.tid}</li>
+                        {/* <li>{a.tid}</li> */}
+                        </ul>
                         )
                     }
                     {error}
                     {success}
-                    <Form onSubmit={handleSubmit}>
-                    <Form.Label>team name</Form.Label>
+                    <Form style={{marginLeft:"36px"}} onSubmit={handleSubmit}>
+                    <Form.Label style={{fontSize:"19px", marginTop:"20px", marginRight:"5px"}}>Team name-</Form.Label>
                     <TextField sx={{"&:hover": {
                             border: "solid #ced4da",
-                        }, input: { color: 'white',borderColor:'white', border: '1px solid #ced4da', } }} margin='normal' size='small'  type="name" inputRef={teamNameRef} /> 
-                        <Button disabled={loading} type="submit" className="w-100 mt-3">Update</Button>
+                        }, input: { color: 'white',borderColor:'white', border: '3px solid #ced4da', } }} margin='normal' size='small'  type="name" inputRef={teamNameRef} /> <br></br>
+                        <div><Button style={{color:"white" , fontSize:"16px", textDecoration:"underline", textAlign:"center"}} disabled={loading} type="submit">Update</Button></div>
                         </Form>
                         {loading && 
                         <>already registered</>

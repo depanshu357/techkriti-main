@@ -268,7 +268,6 @@ const Sidenav = ({themeColor, ...props}) => {
 					<Link to="/merchandise"><Tab value={4} label="Merchandise" /></Link>
 				</Tabs>
 			</div>
-			{/* <div className="right"><Button>Login</Button></div> */}
 			<div className="right"><Login/></div>
 			<div style={{display:"flex", flexDirection:"column", justifyContent:"flex-start", alignItems:"center"}}>
 				<br />
