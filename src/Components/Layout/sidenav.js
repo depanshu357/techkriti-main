@@ -121,9 +121,11 @@ const Sidenav = ({themeColor, ...props}) => {
     <>
 	{isPagebig && <>
 		<div
-			className="sidenav-container-bigpage"
+			className={`sidenav-container-bigpage${themeColor === "#000" ? " sidenav-borderfix" : ""}`}
 		>
-			<div><Link to="/"><img src="/img/techkriti.svg" height={"45px"}></img></Link></div>
+			<div>
+				<Link to="/"><img src="/img/techkriti.svg" height={"45px"}></img></Link>
+			</div>
 			<div style={{}}>
 				<Tabs value={tabValue}>
 					<Link to="/competitions"><Tab value={0} label="Competitions" /></Link>
@@ -182,7 +184,7 @@ const Sidenav = ({themeColor, ...props}) => {
           		className="mobile"
           	>
             	<div 
-            		style={{width:"100vw",height:"40px"}}
+            		style={{width:"100vw",height:"40px", paddingTop:"50px"}}
             	>
             		<div 
             			className="hamburger" 
@@ -192,7 +194,9 @@ const Sidenav = ({themeColor, ...props}) => {
               			<div className="bar is-active"></div>
             		</div>
             	</div>
-            	<Link  to="/competitions" onClick={handleHamburger} >Competitions</Link>
+            	<Login />
+            	<Link to="/" onClick={handleHamburger}>Home</Link>
+            	<Link to="/competitions" onClick={handleHamburger} >Competitions</Link>
               	<Link to="/workshops" onClick={handleHamburger}>Workshops</Link>
               	<Link to="/gallery" onClick={handleHamburger}>Gallery</Link>
               	<Link to="/contact-us" onClick={handleHamburger}>Contact Us</Link>
@@ -211,7 +215,7 @@ const Sidenav = ({themeColor, ...props}) => {
         	</div>
         	<div>
         		<Tabs 
-        			style={{width:"90%"}} 
+        			style={{width:"100%"}} 
         			value={lowergridmenu.findIndex((el) => location.pathname.includes(el.link))}
         		>
           			{lowergridmenu.map((el) => (

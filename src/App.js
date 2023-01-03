@@ -40,22 +40,6 @@ function App() {
 	}
 	
 	const theme = createTheme({
-		components:{
-			MuiTab: {
-				styleOverrides:{
-					root:{
-						textTransform:"none",
-						fontSize:"20pt",
-						color:"#fff",
-						opacity:"1",
-						textDecoration:"none"
-					}
-				}
-			}
-		}
-	});
-	
-	const theme1 = createTheme({
 		typography: {
 			fontFamily:"\"Montserrat\",\"Arial\",sans-serif",
 			fontSize:20,
@@ -66,12 +50,26 @@ function App() {
 			}
 		},
 		components: {
+			MuiButton: {
+				styleOverrides: {
+					root : {
+						backgroundColor: "#fff",
+						color: "#000",
+						textDecoration:"none",
+						'&:hover': {
+							backgroundColor:"#bbb",
+						}
+					}
+					
+				}
+			},
 			MuiTab: {
 				styleOverrides: {
 					root: {
 						fontSize:"16pt",
 						color:"#fff",
-						opacity:1
+						opacity:1,
+						padding:"7px"
 					}
 				}
 			},
@@ -87,6 +85,9 @@ function App() {
 					},
 					scroller: {
 						height:"100%"
+					},
+					scrollButtons: {
+						width:"15px"
 					}
 				},
 				defaultProps:{
@@ -100,7 +101,7 @@ function App() {
 	
   return (
     <>
-    <ThemeProvider theme={theme1}>
+    <ThemeProvider theme={theme}>
     <div className="w-100" style={{maxWidth : '100%'}}></div>
     <Router>
 	<Suspense fallback={<div>Loading...</div>}>
@@ -121,6 +122,10 @@ function App() {
       		<Route path="entrepreneurial/">
       			<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Entrepreneurial" big={big} /> }></Route>
       			<Route path=":params" element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Entrepreneurial" big={big} /> }></Route>
+      		</Route>
+      		<Route path="miscellaneous/">
+      			<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Miscellaneous" big={big} /> }></Route>
+      			<Route path=":params" element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Miscellaneous" big={big} /> }></Route>
       		</Route>
       		<Route path="details/">
       			<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Details" big={big} /> }></Route>

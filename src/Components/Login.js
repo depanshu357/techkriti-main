@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
-import {Link, useNavigate} from 'react-router-dom'
-import {Card, Button,Alert} from 'react-bootstrap'
+import React, {useState} from 'react';
+import {Link, useNavigate} from 'react-router-dom';
+import {Card, Alert, Button} from 'react-bootstrap';
 import { useAuth } from '../context/AuthContext';
 // import Grid from '@material-ui/core/Grid'
 // import './styles.css'
@@ -59,7 +59,7 @@ export default function Login() {
   return (
     <div>
 
-         <Button className='' disabled={loading} onClick={handleGoogleLogin} spacing={3} >Sign in</Button>
+         <Button disabled={loading} onClick={handleGoogleLogin} spacing={3} >Sign in</Button>
         {/* <Button className='button-49 loginbutton' disabled={loading} onClick={handleFacebookLogin}><FacebookIcon fontSize="large" /></Button> */}
         {/* {dash && <Link to='/profile'> Dashboard</Link>} */}
     

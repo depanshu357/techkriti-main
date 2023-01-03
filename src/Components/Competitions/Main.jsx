@@ -25,40 +25,51 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 		content = comps.filter((el) => el.category === category)[0].contests;
 		competitions = content.map((el) => {
 			if (big) return (
+				//<div className="main-text">
+// 				<div style={{display:"flex", justifyContent:"space-between", margin:"50px", marginBottom:"0px"}} key={el.index}>
+// 					<div style={{maxWidth:"60%"}}>
+// 					<div style={{margin:"50px"}}>
+// 					<h1>{el.title}</h1>
+// 					<p>{el.text}</p>
+// 					</div>
+// 					</div>
+// 					<img src={`/images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} style={{width:"300px"}} />
+// 				</div>
+// 				<div style={{display:"flex", flexWrap:"wrap", width:"100%"}}>
+// 				{el.explore.map((contest) => (
+// 					<div 
+// 						style={{alignSelf:"flex-start",margin:"10px"}}
+// 						key={contest.name}
+// 					>
+// 					<Card name={contest.name} title={contest.about}/>
+// 					</div>)
+// 				)}
+// 				</div>
+// 				</div>
+				
 				<div className="main-text">
-				<div style={{display:"flex", justifyContent:"space-between", margin:"50px"}} key={el.index}>
-					<div style={{maxWidth:"60%"}}>
-					<div style={{margin:"50px"}}>
-					<h1>{el.title}</h1>
-					<p>{el.text}</p>
-					<div style={{display:"flex", justifyContent:"space-between", alignItems:"center", backgroundColor:"white", borderRadius:"1000px", color:"black", padding:"10px"}}>Scroll down to see contests<div style={{borderColor:"black", margin:"10px"}} className="scroll-down" /></div>
+					<div style={{width: "calc(100% - 400px)", maxWidth:"60%", margin:"50px", marginBottom:"10px"}}>
+						<h1>{el.title}</h1>
+						<p>{el.text}</p>
 					</div>
-					</div>
-					<img src={`/images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} style={{width:"300px"}} />
-				</div>
-				<div style={{display:"flex", flexWrap:"wrap", width:"100%"}}>
-				{el.explore.map((contest) => (
-					<div 
-						style={{alignSelf:"flex-start",margin:"10px"}}
-						key={contest.name}
-					>
-					{/* <h2>{contest.name}</h2>
-					<p>{contest.about}</p>
-					<Link to={`/competitions/details/${contest.name.toLowerCase().replace(/\s/g, "")}`}><Button variant="contained">Details</Button></Link>
-					<Button variant="contained">Register</Button> */}
-					<Card name={contest.name} title={contest.about}/>
-					</div>)
-				)}
-				</div>
+					<img src={`/images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} style={{width:"300px", float:"right"}} />
+					{el.explore.map((contest) => (
+						<div 
+							style={{margin:"10px"}}
+							key={contest.name}
+						>
+						<Card name={contest.name} title={contest.about}/>
+						</div>)
+					)}
 				</div>
 			);
-			else return (<div className="main-text" style={{padding:"20px"}}>
-				<img src={`/images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} style={{width:"300px"}} />
+			else return (<div className="main-text-small" style={{padding:"20px"}}>
 				<div>
 					<h1>{el.title}</h1>
 					<p>{el.text}</p>
-					<div style={{display:"flex", justifyContent:"space-between", alignItems:"center", backgroundColor:"white", borderRadius:"1000px", color:"black", padding:"10px"}}>Scroll down to see contests<div style={{borderColor:"black", margin:"10px"}} className="scroll-down" /></div>
 				</div>
+				<img src={`/images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} style={{width:"300px"}} />
+				<div style={{display:"flex", flexWrap:"wrap", alignSelf:"center", justifyContent:"center"}}>
 				{el.explore.map((contest) => (
 					<div
 						style={{alignSelf:"center",margin:"10px"}}
@@ -67,6 +78,7 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 					<Card name={contest.name} title={contest.about}/>
 					</div>
 				))}
+				</div>
 			</div>);
 		});
 		links = content.map((el) => {
@@ -97,6 +109,7 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 	} else { //path: /competitons/ OR /competitions/details/
 		content.push({color:"#000"});
 		competitions.push(<div className="main-text">
+		    <img id="myVideo" src = "background.gif"></img>
 			Lorem Ipsum
 		</div>);
 	}

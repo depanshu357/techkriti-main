@@ -41,11 +41,27 @@ height: 100%;
 .main-text {
 color: white;
 width:100%;
+/* 
 display:flex;
 flex-direction:column;
 justify-content:space-between;
 align-items:center;
+ */
 overflow:auto;
+}
+
+.main-text-small {
+	color: white;
+	width:100%;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	align-items:center;
+	overflow:auto;
+}
+
+.main-text > * {
+	display:inline-block;
 }
 
 .bottom-grid {
@@ -80,7 +96,9 @@ width: 100%;
 	background-image: none;
 }
 
-.contestcard .content {
+.contestcard .contestcard-content {
+	background-color:rgba(255,255,255,0.25);
+	border-radius:15px;
 	position: relative;
     display: flex;
     justify-content: center;
@@ -93,11 +111,11 @@ width: 100%;
 	vertical-align: top;
 }
 
-.contestcard:hover .content {
+.contestcard:hover .contestcard-content {
 	opacity: 1;
 }
 
-.contestcard .content .imgBox {
+.contestcard .contestcard-content .imgBox {
 	border-radius: 15px;
 	width: 280px;
 	height: 280px;
@@ -107,7 +125,7 @@ width: 100%;
 	margin-top: 10px;
 }
 
-.contestcard .content .contentBx h3 {
+.contestcard .contestcard-content .contentBx h3 {
 	color: #fff;
 	color: #fff;
     letter-spacing: 2px;
@@ -115,7 +133,7 @@ width: 100%;
     margin: 20px 0 25px;
 }
 
-.contestcard .content .contentBx span {
+.contestcard .contestcard-content .contentBx span {
 	font-size: 16px;
     color: #fff;
     letter-spacing: 1px;
