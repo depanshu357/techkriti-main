@@ -96,46 +96,12 @@ export default function Register() {
         })
     }
   return (
-    //                 <div>
-    //                 <h2 className='mainhead'>Register</h2><br/>
-    //                 <ul><li>{params.events}</li>
-                    
-    //                 </ul>
-    //                 <form style={{marginLeft:"36px"}} onSubmit={handleMember}>
-    //                     <label for="name"> Member Name:</label><br></br>
-    //                     <input id='name' value={mem} onChange={(e) => setMem(e.target.value)} /><br></br>
-    //                     <label for="techid"> Tech ID:</label><br></br>
-    //                     <input value={tid} id = "techid" onChange={(e) => setTid(e.target.value)} /><br></br>
-    //                     {errorM}
-    //                     <br></br><button className='memberbtn'>Add member</button>
-    //                 </form>
-    //                 <h5 style={{marginLeft:"36px" , marginTop:"8px", marginBottom:"0px", paddingBottom:"0px"}}>Current Members-</h5> 
-    //                 {
-    //                     allData.map((a) => 
-    //                     <ul className='curmem'>
-    //                     <li className='mem'>Name: {a.mem} <br></br>TechID: {a.tid}</li>
-    //                     {/* <li>{a.tid}</li> */}
-    //                     </ul>
-    //                     )
-    //                 }
-    //                 {error}
-    //                 {success}
-    //                 <Form style={{marginLeft:"36px"}} onSubmit={handleSubmit}>
-    //                 <Form.Label style={{fontSize:"19px", marginTop:"20px", marginRight:"5px"}}>Team name-</Form.Label>
-    //                 <TextField sx={{"&:hover": {
-    //                         border: "solid #ced4da",
-    //                     }, input: { color: 'white',borderColor:'white', border: '3px solid #ced4da', } }} margin='normal' size='small'  type="name" inputRef={teamNameRef} /> <br></br>
-    //                     <div><Button style={{color:"white" , fontSize:"16px", textDecoration:"underline", textAlign:"center"}} disabled={loading} type="submit">Update</Button></div>
-    //                     </Form>
-    //                     {loading && 
-    //                     <>already registered</>
-    //                     }
-    // </div>
+   
     <>
     <div class="main">
     <h2 className='mainhead'>Register</h2>
 
-        <div class="container">
+        <div class="container1">
             <div class="signup-content">
                 <form id="signup-form" className="signup-form" style={{paddingBottom:"0px"}} onSubmit={handleMember}>
                     <h2>{params.events} </h2>
@@ -147,17 +113,9 @@ export default function Register() {
                         <input type="text" class="form-input" name="techid" value={tid} id = "techid" onChange={(e) => setTid(e.target.value)} placeholder="TechID"/>
                     </div>
                     {errorM}
-                    {/* <div class="form-group">
-                        <input type="text" class="form-input" name="password" id="password" placeholder="Password"/>
-                        <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
-                    </div> */}
-                    {/* <div class="form-group">
-                        <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                        <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
-                    </div> */}
+                    
                     <div class="form-group">
-                        {/* <input type="submit" name="submit" id="submit" class="form-submit submit" value="Sign up"/>
-                        <a href="#" class="submit-link submit">Si</a> */}
+                        
                         <button className='memberbtn'>Add member</button>
                             </div>
                         <ul className='curmem'>
