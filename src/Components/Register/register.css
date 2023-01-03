@@ -104,7 +104,7 @@ ul li{
   /* background-position: center center;  */
 }
   
-  .container {
+  .container1 {
     margin-top: 20px;
     margin-bottom: 70px;
     width: 1050px;
@@ -256,7 +256,7 @@ ul li{
           color: #b18757; }
       
       @media screen and (max-width: 992px) {
-        .container {
+        .container1 {
           width: calc( 100% - 30px);
           max-width: 100%;
           margin: 0 auto; }
