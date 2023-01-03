@@ -57,8 +57,10 @@
     font-size: 20px;
     margin-top: 10px;
     color: #69f8f6;
+    font-style: italic;
 
 }
+.topOfImageBox span{text-decoration: underline;}
 .imageMerch{
     /* width: 292px; */
     /* padding-top: 10%; */
