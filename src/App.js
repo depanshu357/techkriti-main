@@ -53,7 +53,7 @@ function App() {
 			MuiButton: {
 				styleOverrides: {
 					root : {
-						backgroundColor: "#fff",
+						// backgroundColor: "#fff",
 						color: "#000",
 						textDecoration:"none",
 						'&:hover': {
