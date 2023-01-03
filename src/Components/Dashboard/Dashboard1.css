@@ -1,104 +1,148 @@
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
 }
-.Dashboard{
+
+.Dashboard {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
+    height: 69vh;
     width: 100%;
+    justify-content: flex-start;
     /* justify-content: center; */
+    /* margin-top: 30px; */
     /* position: absolute; */
 }
-.Dashboardfullscreen{
-    height: calc(100vh - 100px);
-    background: url("https://images.unsplash.com/photo-1624280433509-b01afeaf68e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1915&q=80");
-    
+
+.Dashboardfullscreen {
+    /* height: calc(100vh - 100px); */
+    /* background: url("https://images.unsplash.com/photo-1624280433509-b01afeaf68e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1915&q=80"); */
+    background: url("peakpx\ \(3\).jpg");
+    background-size: 100vw 100vh;
+    background-position: fixed;
+
+
 }
+
+.profileBackground {
+    background: url("peakpx\ \(3\).jpg");
+    background-size: cover;
+    background-position: fixed;
+    /* top: 0; */
+    /* left: 0; */
+    /* height: 100vh; */
+    /* width: 100vw; */
+    /* z-index: -90; */
+}
+
 /* .DashboardBox{
 } */
-.content{
+.content {
     width: 700px;
     height: 350px;
+    margin-top: 50px;
     /* border: 2px solid white; */
     border-radius: 20px;
-    background: rgba( 255, 255, 255, 0.25 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 4px );
--webkit-backdrop-filter: blur( 4px );
-border-radius: 10px;
-border: -4px solid rgba(30, 223, 241, 0.18);
+    /* background: rgba(255, 255, 255, 0.25); */
+    /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+    /* backdrop-filter: blur(4px); */
+    /* -webkit-backdrop-filter: blur(4px); */
+    border-radius: 10px;
+    /* border: -4px solid rgba(30, 223, 241, 0.18); */
     position: absolute;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; 
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    -webkit-backdrop-filter: blur(8px);  /* Safari 9+ */
+backdrop-filter: blur(8px); /* Chrome and Opera */
+box-shadow: inset 0 0 0 200px rgba(255,255,255,0.08);
+    display: flex;
+    flex-direction: column;
+    
 }
-.image{
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    width: 200px;
-    height: 200px;
+
+.image {
+    /* position: absolute; */
+    /* right: 0px; */
+    /* top: 0px; */
+    /* width: 200px; */
+    /* height: 200px; */
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
-.image img{
-    border-radius: 50%;
+
+.image img {
+    /* border-radius: 50%; */
+    border-top-right-radius: 9%;
+    border-bottom-left-radius: 9%;
     /* position: absolute; */
     top: 10px;
     right: 10px;
     width: 150px;
     /* transform: scale(0.3); */
 }
-.text{
-    position: absolute;
-    left: 0;
-    top: 0;
+
+.text {
+    /* position: absolute; */
+    /* left: 0; */
+    /* top: 0; */
     text-align: left;
     height: 100%;
     width: 100%;
+    -webkit-backdrop-filter: blur(8px);  /* Safari 9+ */
+backdrop-filter: blur(8px); /* Chrome and Opera */
+box-shadow: inset 0 0 0 200px rgba(58, 247, 251, 0.08);
 }
-.text h1{
+
+.text h1 {
     margin: 5px 5px;
 }
-.text h1 span{
+
+.text h1 span {
     color: rgb(0, 225, 255);
 }
-.info{
+
+.info {
     position: absolute;
     bottom: 10px;
     font-size: 2rem;
     left: 10px;
 }
-.info span span{
+
+.info span span {
     color: aquamarine;
 }
+
 @media screen and (max-width: 600px) {
-    .content{
+    .content {
         width: 90vw;
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center
+        min-height: 70vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center
     }
-    .text{
+
+    .text {
         position: static;
     }
-    .info{
+
+    .info {
         position: static;
     }
-    .text h1{
+
+    .text h1 {
         text-align: center;
     }
-    .image{
+
+    .image {
         /* margin: 0 calc(45vw - 75px); */
         position: static;
         height: 278px;
     }
-    .image img{
+
+    .image img {
         top: 20px;
     }
 }

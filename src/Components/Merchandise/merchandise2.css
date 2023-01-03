@@ -17,10 +17,10 @@
 .textBuy a:hover{
     color: aquamarine;
 }
-.textbuy a:hover + .image{
+/* .textbuy a:hover + .image{
     box-shadow: rgba(43, 235, 238, 0.25) 0px 50px 100px -20px, rgba(12, 222, 187, 0.3) 0px 30px 60px -30px, rgba(19, 213, 223, 0.35) 0px -2px 6px 0px inset;
     box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
-}
+} */
 
 .textBuy a:hover ~ .imageMerch img{
     transform: scale(1.2);
@@ -100,6 +100,7 @@
     align-items: center;
     margin: 5px 5px;
     box-shadow: 2px ;
+    /* box-shadow: 120px 80px 40px 20px #0ff; */
 }
 .topOfImageBox{
     font-size: 20px;
@@ -115,6 +116,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     transition: all 500ms ease-in-out;
+    /* box-shadow: 120px 80px 40px 20px #0ff; */
 }
 
 .textBuy{
@@ -140,9 +142,10 @@ a:hover{
     transform: scale(1.2);
 }
 
-.image img{
+/* .image img{ */
     /* height: 100%; */
-    width: 250px;
+    /* width: 250px; */
+    /* box-shadow: 120px 80px 40px 20px #0ff; */
     /* position: relative; */
     /* top: 30px; */
-}
+/* } */
