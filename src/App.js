@@ -4,27 +4,27 @@ import './App.css';
 import CarouselFadeExample from './Components/Carousel/carousel';
 import Layout from './Components/Layout/layout';
 import 'bootstrap/dist/css/bootstrap.min.css';
-const Competition = lazy(()=> import( './Components/Competitions/Competition'));
 import {
-  BrowserRouter as Router, Routes, Route,
+	BrowserRouter as Router, Routes, Route,
 } from "react-router-dom";
-const Sidenav = lazy(()=> import( './Components/Layout/sidenav'));
-const Contact = lazy(()=> import( './Components/Contact/Contact'));
 // import Dashboard from './Components/Dashboard/Dashboard';
 // import Dashboard1 from './Components/Dashboard/Dashboard1';
-const Home = lazy(()=> import( './Components/Home/Home'));
-const Dashboard = lazy(()=> import( './Components/Dashboard/Dashboard'));
 import PrivateRoute from './Components/PrivateRoute';
-import Login from './Components/Login';
 import { AuthProvider } from './context/AuthContext';
-import Update from './Components/Update';
-import Register from './Components/Register/Register';
-// import Merchandise from './Components/Merchandise/Merchandise';
-const Workshop = lazy(()=> import( './Components/Workshop/Workshop'));
-const Merchandise = lazy(()=> import( './Components/Merchandise/Merchandise'));
-import WorkshopTemplate from './Components/Workshop/WorkshopTemplate';
 import {createTheme, ThemeProvider} from "@mui/material/styles";
 import { useMediaQuery } from "./Components/MediaQuery";
+const Login =lazy(()=>import( './Components/Login'));
+const Update =lazy(()=>import( './Components/Update'));
+const Register =lazy(()=>import( './Components/Register/Register'));
+// import Merchandise from './Components/Merchandise/Merchandise';
+const WorkshopTemplate =lazy(()=>import( './Components/Workshop/WorkshopTemplate'));
+const Home = lazy(()=> import( './Components/Home/Home'));
+const Competition = lazy(()=> import( './Components/Competitions/Competition'));
+const Sidenav = lazy(()=> import( './Components/Layout/sidenav'));
+const Contact = lazy(()=> import( './Components/Contact/Contact'));
+const Dashboard = lazy(()=> import( './Components/Dashboard/Dashboard'));
+const Workshop = lazy(()=> import( './Components/Workshop/Workshop'));
+const Merchandise = lazy(()=> import( './Components/Merchandise/Merchandise'));
 
 function App() {
 	const [themeColor, setThemeColor] = useState("#000000");
