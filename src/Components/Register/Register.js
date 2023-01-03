@@ -99,6 +99,7 @@ export default function Register() {
    
     <>
     <div class="main">
+    <img src = {require("./bodybgregister.png")} id='myvideo'></img>
     <h2 className='mainhead'>Register</h2>
 
         <div class="container1">

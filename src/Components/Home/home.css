@@ -11,3 +11,58 @@
     display: none;
 }
 
+.home-container {
+  display: flex;
+/*   border:1px solid red; */
+  height: 100%;
+  align-items: center;
+}
+
+svg {
+    display: block;
+    font-size: 10.5em;
+    font-family:"Raleway","Arial",sans-serif !important;
+    font-weight:bold;
+    width: 960px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+
+.home-text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 10px;
+    stroke-dashoffset: 0%;
+    animation: home-stroke-offset 5.5s infinite linear;
+}
+
+.home-text-copy:nth-child(1){
+	stroke: #00ffff;
+	animation-delay: -1s;
+}
+
+.home-text-copy:nth-child(2){
+	stroke: #ffffff;
+	animation-delay: -2s;
+}
+
+.home-text-copy:nth-child(3){
+	stroke: #23ead6;
+	animation-delay: -3s;
+}
+
+.home-text-copy:nth-child(4){
+	stroke: #efefef;
+	animation-delay: -4s;
+}
+
+.home-text-copy:nth-child(5){
+	stroke: #3cfc92;
+	animation-delay: -5s;
+}
+
+@keyframes home-stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}

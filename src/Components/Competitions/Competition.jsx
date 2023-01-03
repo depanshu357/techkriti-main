@@ -9,6 +9,7 @@ function Competition(props) {
   return (
     <>
       <Main {...props} params={params} />
+      
       </>
   );
 }
