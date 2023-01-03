@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Card(props){
     return(
         <div className="contestcard">
-            <div className="content">
+            <div className="contestcard-content">
                 <div className="imgBox">
                     {/* <img className="contactImage" src={props.image} alt="img05"  /> */}
                 </div>
@@ -18,10 +18,8 @@ function Card(props){
                     </h3>
                 </div>
                 <div className="buttonBx">
-                    <Link to={`/competitions/details/${props.name.toLowerCase().replace(/\s/g, "")}`}>
-                        <Button variant="contained" style={{margin: "10px"}}>Details</Button>
-                    </Link>
-					    <Button variant="contained" style={{margin: "10px"}}><Link to={`/register/${props.name}`}>Register</Link></Button>
+                    <Link to={`/competitions/details/${props.name.toLowerCase().replace(/\s/g, "")}`}><Button variant="contained" style={{margin: "10px"}}>Details</Button></Link>
+					    <Link to={`/register/${props.name}`}><Button variant="contained" style={{margin: "10px"}}>Register</Button></Link>
                 </div>
             </div>
         </div>

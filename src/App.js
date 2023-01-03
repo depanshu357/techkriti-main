@@ -1,29 +1,30 @@
 import React, {useState} from 'react';
+import {lazy, Suspense } from 'react';
 import './App.css';
 import CarouselFadeExample from './Components/Carousel/carousel';
 import Layout from './Components/Layout/layout';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Competition from './Components/Competitions/Competition';
 import {
-  BrowserRouter as Router, Routes, Route,
+	BrowserRouter as Router, Routes, Route,
 } from "react-router-dom";
-import Sidenav from './Components/Layout/sidenav';
-import Contact from './Components/Contact/Contact';
 // import Dashboard from './Components/Dashboard/Dashboard';
 // import Dashboard1 from './Components/Dashboard/Dashboard1';
-import Home from './Components/Home/Home';
-import Dashboard from './Components/Dashboard/Dashboard';
 import PrivateRoute from './Components/PrivateRoute';
-import Login from './Components/Login';
 import { AuthProvider } from './context/AuthContext';
-import Update from './Components/Update';
-import Register from './Components/Register/Register';
-// import Merchandise from './Components/Merchandise/Merchandise';
-import Workshop from './Components/Workshop/Workshop';
-import Merchandise from './Components/Merchandise/Merchandise';
-import WorkshopTemplate from './Components/Workshop/WorkshopTemplate';
 import {createTheme, ThemeProvider} from "@mui/material/styles";
 import { useMediaQuery } from "./Components/MediaQuery";
+const Login =lazy(()=>import( './Components/Login'));
+const Update =lazy(()=>import( './Components/Update'));
+const Register =lazy(()=>import( './Components/Register/Register'));
+// import Merchandise from './Components/Merchandise/Merchandise';
+const WorkshopTemplate =lazy(()=>import( './Components/Workshop/WorkshopTemplate'));
+const Home = lazy(()=> import( './Components/Home/Home'));
+const Competition = lazy(()=> import( './Components/Competitions/Competition'));
+const Sidenav = lazy(()=> import( './Components/Layout/sidenav'));
+const Contact = lazy(()=> import( './Components/Contact/Contact'));
+const Dashboard = lazy(()=> import( './Components/Dashboard/Dashboard'));
+const Workshop = lazy(()=> import( './Components/Workshop/Workshop'));
+const Merchandise = lazy(()=> import( './Components/Merchandise/Merchandise'));
 
 function App() {
 	const [themeColor, setThemeColor] = useState("#000000");
@@ -39,22 +40,6 @@ function App() {
 	}
 	
 	const theme = createTheme({
-		components:{
-			MuiTab: {
-				styleOverrides:{
-					root:{
-						textTransform:"none",
-						fontSize:"20pt",
-						color:"#fff",
-						opacity:"1",
-						textDecoration:"none"
-					}
-				}
-			}
-		}
-	});
-	
-	const theme1 = createTheme({
 		typography: {
 			fontFamily:"\"Montserrat\",\"Arial\",sans-serif",
 			fontSize:20,
@@ -65,12 +50,26 @@ function App() {
 			}
 		},
 		components: {
+			MuiButton: {
+				styleOverrides: {
+					root : {
+						backgroundColor: "#fff",
+						color: "#000",
+						textDecoration:"none",
+						'&:hover': {
+							backgroundColor:"#bbb",
+						}
+					}
+					
+				}
+			},
 			MuiTab: {
 				styleOverrides: {
 					root: {
 						fontSize:"16pt",
 						color:"#fff",
-						opacity:1
+						opacity:1,
+						padding:"7px"
 					}
 				}
 			},
@@ -86,6 +85,9 @@ function App() {
 					},
 					scroller: {
 						height:"100%"
+					},
+					scrollButtons: {
+						width:"15px"
 					}
 				},
 				defaultProps:{
@@ -99,9 +101,10 @@ function App() {
 	
   return (
     <>
-    <ThemeProvider theme={theme1}>
+    <ThemeProvider theme={theme}>
     <div className="w-100" style={{maxWidth : '100%'}}></div>
     <Router>
+	<Suspense fallback={<div>Loading...</div>}>
 	<AuthProvider>
       <Routes>
       <Route path='/' element={<Sidenav themeColor={themeColor} lowergridmenu={lowergridmenu} setThemeColor={setTheme} setLowergridmenu={setLowergrid} big={big} />}>
@@ -120,6 +123,10 @@ function App() {
       			<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Entrepreneurial" big={big} /> }></Route>
       			<Route path=":params" element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Entrepreneurial" big={big} /> }></Route>
       		</Route>
+      		<Route path="miscellaneous/">
+      			<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Miscellaneous" big={big} /> }></Route>
+      			<Route path=":params" element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Miscellaneous" big={big} /> }></Route>
+      		</Route>
       		<Route path="details/">
       			<Route index element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Details" big={big} /> }></Route>
       			<Route path=":params" element={<Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Details" big={big} /> }></Route>
@@ -136,6 +143,7 @@ function App() {
 
     </Routes>
 	</AuthProvider>
+	</Suspense>
     </Router>
     </ThemeProvider>
     </>

@@ -8,7 +8,6 @@ function Competition(props) {
 	const {params} = useParams();
   return (
     <>
-    <img id="myVideo" src = "background.gif"></img>
       <Main {...props} params={params} />
       </>
   );
