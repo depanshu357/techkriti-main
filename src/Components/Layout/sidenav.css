@@ -334,3 +334,11 @@
 .sidenav-borderfix > div {
 	border-color: #20b2aa;
 }
+
+.MuiButton-root {
+	text-decoration:none;
+}
+
+a {
+	text-decoration:none !important;
+}
