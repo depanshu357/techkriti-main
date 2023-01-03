@@ -216,7 +216,6 @@
     animation:         fade_move_down 4s ease-in-out infinite;
   }
 
-
   /*animated scroll arrow animation*/
   @-webkit-keyframes fade_move_down {
     0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
@@ -238,17 +237,6 @@
     /* width: 6px; */
     color: white;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 .background {
 	width:100%;
@@ -274,14 +262,14 @@
 .sidenav-container-bigpage > div {
 	border-style:solid;
 	border-width: 1px;
-	border-color:white;
+	border-color:#fff;
 	border-top-style: none;
 	border-left-style: none;
 	display:flex;
 	justify-content:center;
 	align-items:center;
 	backdrop-filter:blur(10px);
-	background-color:rgba(255,255,255,0.1);
+	background-color:rgba(0, 0, 0, 0);
 }
 
 .sidenav-container-bigpage > .right {

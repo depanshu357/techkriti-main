@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react'
 import "./home.css"
+// import Icon from 'react-svg-use'
+
 
 const Home = ({setThemeColor, setLowergridmenu}) => {
 
@@ -10,7 +12,9 @@ const Home = ({setThemeColor, setLowergridmenu}) => {
 	
   return (
     <>
-    <img id = "myVideo" src="background.gif"></img>
+    <img id = "myVideo" src="background.gif">
+    </img>
+  
 </>
   )
 }

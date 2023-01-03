@@ -162,13 +162,13 @@
   
   @keyframes move1 {
     from {
-      transform: translate(-100px, -50px) rotate(-90deg);
-      border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+      transform: translate(-160px, -150px) rotate(-90deg);
+      border-radius: 24% 50% 35% 45% / 17% 56% 14% 53%;
     }
   
     to {
-      transform: translate(500px, 100px) rotate(-10deg);
-      border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+      transform: translate(200px, 50px) rotate(-90deg);
+      border-radius: 26% 24% 33% 67% / 68% 55% 45% 32%;
     }
   }
 
@@ -191,3 +191,63 @@
   .glass-button:hover {
     background-color: rgba(255,255,255,0.2);
   }
+
+  @media (max-width: 768px) {
+    .containerEach{
+      /* background-color: #000; */
+    }
+
+    .cardEach{
+      height: fit-content;
+      margin-top: -90%;
+      width: 130%;
+    }
+
+    .compRegEach{
+      width: 80%;
+      margin-top: 80%;
+      height: fit-content;
+    }
+
+    .compImg{
+      display: none ;
+    }
+
+    .glass-button{
+      margin-top: 5%;
+    }
+
+    .containerLeftEach{
+      /* float: left; */
+      width: 100%;
+      float: none;
+      /* display: inline-block; */
+        
+    }
+
+    .containerRightEach{
+      /* float: right; */
+      width: 0%;
+      /* display: inline-block; */
+      display: none;
+        
+    }
+  
+
+    
+  }
+
+  .containerLeftEach{
+    float: left;
+    width: 70%;
+    display: inline-block;
+      
+  }
+
+  .containerRightEach{
+    float: right;
+    width: 30%;
+    display: inline-block;
+      
+  }
+  
