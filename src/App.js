@@ -17,7 +17,7 @@ import PrivateRoute from './Components/PrivateRoute';
 import Login from './Components/Login';
 import { AuthProvider } from './context/AuthContext';
 import Update from './Components/Update';
-import Register from './Components/Register';
+import Register from './Components/Register/Register';
 // import Merchandise from './Components/Merchandise/Merchandise';
 import Workshop from './Components/Workshop/Workshop';
 import Merchandise from './Components/Merchandise/Merchandise';
