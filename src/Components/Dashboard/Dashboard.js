@@ -139,8 +139,8 @@ export default function BasicTabs() {
             {currentUser.uid} */}
           {/* <div className="top"></div> */}
           <div className="w-100 text-center mt-2" style={{display:"flex",flexDirection:"row-reverse"}}>
-            <Button variant='contained' sx={{backgroundColor:'#008b8b'}}><Link style={{textDecoration:'none', color:'#fff'}} to="/update" className="">Update Profile</Link></Button>
-                <Button variant="link" onClick={handleLogout}> Log Out</Button>
+            <Button variant='contained' sx={{backgroundColor:'#008b8b',margin:"0 5px"}}><Link style={{textDecoration:'none', color:'#fff'}} to="/update" className="">Update Profile</Link></Button>
+            <Button variant="link" onClick={handleLogout}> Log Out</Button>
             </div>
           <div className="content">
             <div className="image">
