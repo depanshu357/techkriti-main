@@ -1,26 +1,27 @@
 import React, {useState} from 'react';
+import {lazy, Suspense } from 'react';
 import './App.css';
 import CarouselFadeExample from './Components/Carousel/carousel';
 import Layout from './Components/Layout/layout';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Competition from './Components/Competitions/Competition';
+const Competition = lazy(()=> import( './Components/Competitions/Competition'));
 import {
   BrowserRouter as Router, Routes, Route,
 } from "react-router-dom";
-import Sidenav from './Components/Layout/sidenav';
-import Contact from './Components/Contact/Contact';
+const Sidenav = lazy(()=> import( './Components/Layout/sidenav'));
+const Contact = lazy(()=> import( './Components/Contact/Contact'));
 // import Dashboard from './Components/Dashboard/Dashboard';
 // import Dashboard1 from './Components/Dashboard/Dashboard1';
-import Home from './Components/Home/Home';
-import Dashboard from './Components/Dashboard/Dashboard';
+const Home = lazy(()=> import( './Components/Home/Home'));
+const Dashboard = lazy(()=> import( './Components/Dashboard/Dashboard'));
 import PrivateRoute from './Components/PrivateRoute';
 import Login from './Components/Login';
 import { AuthProvider } from './context/AuthContext';
 import Update from './Components/Update';
 import Register from './Components/Register/Register';
 // import Merchandise from './Components/Merchandise/Merchandise';
-import Workshop from './Components/Workshop/Workshop';
-import Merchandise from './Components/Merchandise/Merchandise';
+const Workshop = lazy(()=> import( './Components/Workshop/Workshop'));
+const Merchandise = lazy(()=> import( './Components/Merchandise/Merchandise'));
 import WorkshopTemplate from './Components/Workshop/WorkshopTemplate';
 import {createTheme, ThemeProvider} from "@mui/material/styles";
 import { useMediaQuery } from "./Components/MediaQuery";
@@ -102,6 +103,7 @@ function App() {
     <ThemeProvider theme={theme1}>
     <div className="w-100" style={{maxWidth : '100%'}}></div>
     <Router>
+	<Suspense fallback={<div>Loading...</div>}>
 	<AuthProvider>
       <Routes>
       <Route path='/' element={<Sidenav themeColor={themeColor} lowergridmenu={lowergridmenu} setThemeColor={setTheme} setLowergridmenu={setLowergrid} big={big} />}>
@@ -136,6 +138,7 @@ function App() {
 
     </Routes>
 	</AuthProvider>
+	</Suspense>
     </Router>
     </ThemeProvider>
     </>
