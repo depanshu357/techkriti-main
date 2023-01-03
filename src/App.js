@@ -57,7 +57,7 @@ function App() {
 						color: "#000",
 						textDecoration:"none",
 						'&:hover': {
-							backgroundColor:"#bbb",
+							// backgroundColor:"#bbb",
 						}
 					}
 					
