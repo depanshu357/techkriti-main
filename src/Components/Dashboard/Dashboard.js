@@ -109,8 +109,8 @@ export default function BasicTabs() {
   };
 
   return (
-    
-    <Box sx={{ width: "100%", height: "100%" }}>
+    <>
+    <Box sx={{ width: "100%", height: "100%" }} className="Dashboardfullscreen">
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
           value={value}
@@ -137,9 +137,16 @@ export default function BasicTabs() {
 
             <br/>
             {currentUser.uid} */}
-          <div className="top"></div>
+          {/* <div className="top"></div> */}
+          <div className="w-100 text-center mt-2" style={{display:"flex",flexDirection:"row-reverse"}}>
+            <Button variant='contained' sx={{backgroundColor:'#008b8b',margin:"0 5px"}}><Link style={{textDecoration:'none', color:'#fff'}} to="/update" className="">Update Profile</Link></Button>
+            <Button variant="link" onClick={handleLogout}> Log Out</Button>
+            </div>
           <div className="content">
             <div className="image">
+              <h1>
+                Hello <span>{currentUserInfo.name}</span>!!
+              </h1>
               <img
                 src={photoURL}
                 alt="default"
@@ -147,21 +154,18 @@ export default function BasicTabs() {
               />
             </div>
             <div className="text">
-              <h1>
-                Hello <span>{currentUserInfo.name}</span>!!
-              </h1>
               <div className="info">
                 <span>
-                  <span>techId</span>: {techId} <br />
+                  <span>TechId</span>: {techId} <br />
                 </span>
                 <span>
-                  <span>emailId</span>: {currentUserInfo.email} <br />
+                  <span>EmailId</span>: {currentUserInfo.email} <br />
                 </span>
                 <span>
-                  <span>phone</span>: {currentUserInfo.phone} <br />
+                  <span>Phone</span>: {currentUserInfo.phone} <br />
                 </span>
                 <span>
-                  <span>college</span>: {currentUserInfo.college}
+                  <span>College</span>: {currentUserInfo.college}
                 </span>
               </div>
               
@@ -169,10 +173,7 @@ export default function BasicTabs() {
           </div>
           
         </div>
-        <div className="w-100 text-center mt-2">
-            <Button variant='contained' sx={{backgroundColor:'#008b8b'}}><Link style={{textDecoration:'none', color:'#fff'}} to="/update" className="">Update Profile</Link></Button>
-                <Button variant="link" onClick={handleLogout}> Log Out</Button>
-            </div>
+        
       </TabPanel>
       <TabPanel value={value} index={1}>
         {/* {
@@ -190,5 +191,7 @@ export default function BasicTabs() {
         Item Three
       </TabPanel>
     </Box>
+    </>
+
   );
 }

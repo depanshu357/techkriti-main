@@ -77,11 +77,14 @@ const Merchandise = (props) => {
           </div>
           </div>
           </div> */}
+          <video autoPlay loop muted playsInline className="contact-background">
+		<source  src="merchandise background techkriti.mp4"/>
+		</video>
           <div className="merchandise">
             <div className="topMerchandise">Techkriti Merchandise</div>
             <div className="contentMerchandise">
               <div className="imageBox">
-                <div className='topOfImageBox'>#Jacket</div>
+                <div className='topOfImageBox'>#<span>Jacket</span></div>
                 <div className="imageMerch">
                 <img src="images/Hoodie1.png" style={{height:'40vh'}} alt="Hoodie" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} />
                 </div>
@@ -93,7 +96,7 @@ const Merchandise = (props) => {
                   </div>
               </div>
               <div className="imageBox">
-                <div className="topOfImageBox">#Hoodie</div>
+                <div className="topOfImageBox">#<span>Hoodie</span></div>
                 <div className="imageMerch">
                 <img src="images/Hoodie1.png" style={{height:'40vh'}} alt="Hoodie" onMouseOver={handleMouseOver1} onMouseOut={handleMouseOut1}/>
                 </div>
