@@ -41,6 +41,9 @@ function App() {
 	}
 	
 	const theme = createTheme({
+		palette: {
+			mode:"dark",
+		},
 		typography: {
 			fontFamily:"\"Montserrat\",\"Arial\",sans-serif",
 			fontSize:20,
@@ -97,6 +100,22 @@ function App() {
 				defaultProps:{
 					allowScrollButtonsMobile:true,
 					variant:"scrollable",
+				}
+			},
+			MuiInputLabel: {
+				styleOverrides: {
+					root: {
+						color:"#fff"
+					}
+				}
+			},
+			MuiTextField: {
+				styleOverrides: {
+					input: { 
+						color: 'white', 
+						borderColor:'white', 
+						border: '1px solid #ced4da', 
+					}
 				}
 			}
 		}
