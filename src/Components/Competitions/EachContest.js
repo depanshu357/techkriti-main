@@ -12,7 +12,7 @@ function EachContest(props) {
 
   return (
   	<>
-    <div className="page-background each-page-background" style={{}}><div className="blob1"></div></div>
+    <div className="page-background each-page-background" style={{}}><div className="comp-each-blob1"></div></div>
     <div className="comp-each-container">
       <div className="comp-each-card">
       <div className='comp-each-containerLeft'>

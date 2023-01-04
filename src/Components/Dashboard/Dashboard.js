@@ -19,7 +19,6 @@ import RegComps from "./RegComps";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-
   return (
     <div
       role="tabpanel"
@@ -30,7 +29,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          {children}
         </Box>
       )}
     </div>
@@ -50,7 +49,11 @@ function a11yProps(index) {
   };
 }
 
-export default function BasicTabs() {
+export default function BasicTabs(props) {
+	useEffect(() => {
+		props.setThemeColor("#000"); //on mount: set theme to black
+		props.setLowergridmenu([]);
+	},[]);
 
 
     const [error,setError] = useState('');
@@ -110,8 +113,9 @@ export default function BasicTabs() {
 
   return (
     <>
+    <div className="page-background dashboard-page-background"></div>
     <Box sx={{ width: "100%", height: "100%" }} className="Dashboardfullscreen">
-      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+      <Box sx={{ borderBottom: 1, borderColor: "divider", display:"flex" }}>
         <Tabs
           value={value}
           onChange={handleChange}
@@ -120,16 +124,18 @@ export default function BasicTabs() {
         >
           <Tab label="Profile" {...a11yProps(0)} sx={{ color: "white" }} />
           <Tab
-            label="Registered WorkShops"
+            label="Registered Workshops"
             {...a11yProps(1)}
             sx={{ color: "white" }}
           />
           <Tab
-            label="Registerd Competitions"
+            label="Registered Competitions"
             {...a11yProps(2)}
             sx={{ color: "white" }}
           />
         </Tabs>
+        <Button variant='contained' sx={{backgroundColor:'#008b8b',margin:"10px 15px 0 auto"}}><Link style={{textDecoration:'none', color:'#fff'}} to="/update" className="">Update Profile</Link></Button>
+            <Button variant="contained" sx={{backgroundColor:"#e51a16", color:"#fff", margin:"10px 15px 0 0", "&:hover":{backgroundColor:"#bc1714", color:"#fff"}}} onClick={handleLogout}>Log Out</Button>
       </Box>
       <TabPanel value={value} index={0} sx={{ height: "100%", width: "100%" }}>
         <div className="Dashboard">
@@ -139,8 +145,6 @@ export default function BasicTabs() {
             {currentUser.uid} */}
           {/* <div className="top"></div> */}
           <div className="w-100 text-center mt-2" style={{display:"flex",flexDirection:"row-reverse"}}>
-            <Button variant='contained' sx={{backgroundColor:'#008b8b',margin:"0 5px"}}><Link style={{textDecoration:'none', color:'#fff'}} to="/update" className="">Update Profile</Link></Button>
-            <Button variant="link" onClick={handleLogout}> Log Out</Button>
             </div>
           <div className="dashboard-content">
             <div className="dashboard-image">
