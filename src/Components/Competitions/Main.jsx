@@ -114,47 +114,46 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 		content.push({color:"#000"});
 		competitions.push(<div className="main-text">
 		    <img id="myVideo" src = "background.gif"></img>
-			<div class="containercomp">
+			<div className="containercomp">
+			  <div className="contest-main-card">
+				<div className="contest-main-face contest-main-face1">
+				  <div className="contest-main-content">
+					<span className="stars"></span>
+					<h2 className="contest-main-java">Technical</h2>
+					<p className="contest-main-java">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+				  </div>
+				</div>
+				<div className="contest-main-face contest-main-face2">
+				  <h2>01</h2>
+				</div>
+			  </div>
 
-  <div class="card">
-    <div class="face face1">
-      <div class="content">
-        <span class="stars"></span>
-        <h2 class="java">Technical</h2>
-        <p class="java">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
-      </div>
-    </div>
-    <div class="face face2">
-      <h2>01</h2>
-    </div>
-  </div>
+			  <div className="contest-main-card">
+				<div className="contest-main-face contest-main-face1">
+				  <div className="contest-main-content">
+					<span className="stars"></span>
+					<h2 className="contest-main-python">Enterprenurial</h2>
+					<p className="contest-main-python">Python is an interpreted, high-level and general-purpose programming language.</p>
+				  </div>
+				</div>
+				<div className="contest-main-face contest-main-face2">
+				  <h2>02</h2>
+				</div>
+			  </div>
 
-  <div class="card">
-    <div class="face face1">
-      <div class="content">
-        <span class="stars"></span>
-        <h2 class="python">Enterprenurial</h2>
-        <p class="python">Python is an interpreted, high-level and general-purpose programming language.</p>
-      </div>
-    </div>
-    <div class="face face2">
-      <h2>02</h2>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="face face1">
-      <div class="content">
-        <span class="stars"></span>
-        <h2 class="cSharp">Misc</h2>
-        <p class="cSharp">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
-      </div>
-    </div>
-    <div class="face face2">
-      <h2>03</h2>
-    </div>
-  </div>
-</div>
+			  <div className="contest-main-card">
+				<div className="contest-main-face contest-main-face1">
+				  <div className="contest-main-content">
+					<span className="stars"></span>
+					<h2 className="contest-main-cSharp">Misc</h2>
+					<p className="contest-main-cSharp">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+				  </div>
+				</div>
+				<div className="contest-main-face contest-main-face2">
+				  <h2>03</h2>
+				</div>
+			  </div>
+			</div>
 		</div>);
 	}
 	
