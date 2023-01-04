@@ -85,6 +85,7 @@ export default function BasicTabs(props) {
         .then((response)=>{
             setCurrentUserInfo({
                 name : response.data.name,
+                techId: response.data.techId,
                 college: response.data.college,
                 email : response.data.email,
                 uid : response.data.uid,
@@ -105,7 +106,7 @@ export default function BasicTabs(props) {
       }
   }
   const [value, setValue] = React.useState(0);
-  let techId = ""
+  // let techId = ""
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -160,7 +161,7 @@ export default function BasicTabs(props) {
             <div className="dashboard-text">
               <div className="dashboard-info">
                 <span>
-                  <span>TechId</span>: {techId} <br />
+                  <span>TechId</span>: {currentUserInfo.techId} <br />
                 </span>
                 <span>
                   <span>EmailId</span>: {currentUserInfo.email} <br />

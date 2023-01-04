@@ -18,6 +18,7 @@ import Login from './Components/Login';
 import WorkshopTemplate from './Components/Workshop/WorkshopTemplate';
 import {createTheme, ThemeProvider} from "@mui/material/styles";
 import { useMediaQuery } from "./Components/MediaQuery";
+import RegisterWorkshop from './Components/RegisterWorkshop';
 const Competition = lazy(()=> import( './Components/Competitions/Competition'));
 const Workshop = lazy(()=> import( './Components/Workshop/Workshop'));
 const Merchandise = lazy(()=> import( './Components/Merchandise/Merchandise'));
@@ -116,6 +117,8 @@ function App() {
       	<Route path='/merchandise' element={<Suspense fallback={<div>Loading...</div>}><Merchandise setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
 		<Route path='/workshops' element={<Suspense fallback={<div>Loading...</div>}><Workshop setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
       	<Route path='/merchandise' element={<Suspense fallback={<div>Loading...</div>}><Merchandise setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
+		<Route path='/register-w/:workName' element={<RegisterWorkshop setThemeColor={setTheme} setLowergridmenu={setLowergrid} />} />
+
       	<Route path='/competitions/'>
       		<Route index element={<Suspense fallback={<div>Loading...</div>}><Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="" big={big}/></Suspense> }></Route>
       		<Route path="technical/">
