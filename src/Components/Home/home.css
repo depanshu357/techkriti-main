@@ -33,7 +33,7 @@ svg {
     fill: none;
     stroke: white;
     stroke-dasharray: 6% 29%;
-    stroke-width: 10px;
+    stroke-width: 5px;
     stroke-dashoffset: 0%;
     animation: home-stroke-offset 5.5s infinite linear;
 }

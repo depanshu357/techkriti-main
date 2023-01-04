@@ -262,7 +262,7 @@
 .sidenav-container-bigpage > div {
 	border-style:solid;
 	border-width: 1px;
-	border-color: rgba(61, 232, 230, 1);
+	border-color: white;
 	border-top-style: none;
 	border-left-style: none;
 	display:flex;

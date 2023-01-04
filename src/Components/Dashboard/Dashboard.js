@@ -142,8 +142,8 @@ export default function BasicTabs() {
             <Button variant='contained' sx={{backgroundColor:'#008b8b',margin:"0 5px"}}><Link style={{textDecoration:'none', color:'#fff'}} to="/update" className="">Update Profile</Link></Button>
             <Button variant="link" onClick={handleLogout}> Log Out</Button>
             </div>
-          <div className="content">
-            <div className="image">
+          <div className="dashboard-content">
+            <div className="dashboard-image">
               <h1>
                 Hello <span>{currentUserInfo.name}</span>!!
               </h1>
@@ -153,8 +153,8 @@ export default function BasicTabs() {
                 srcset=""
               />
             </div>
-            <div className="text">
-              <div className="info">
+            <div className="dashboard-text">
+              <div className="dashboard-info">
                 <span>
                   <span>TechId</span>: {techId} <br />
                 </span>

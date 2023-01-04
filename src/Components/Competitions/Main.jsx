@@ -24,7 +24,7 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 	if (comps.map((el) => (el.category)).includes(category)) {
 		content = [];
 		content = comps.filter((el) => el.category === category)[0].contests;
-		competitions = [];
+		console.log(content);
 		competitions = content.map((el) => {
 			if (big) return (
 				//<div className="main-text">
@@ -70,7 +70,7 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 					<h1>{el.title}</h1>
 					<p>{el.text}</p>
 				</div>
-				<img src={`/images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} style={{width:"300px"}} />
+				{/*<img src={`/images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} style={{width:"300px"}} />*/}
 				<div style={{display:"flex", flexWrap:"wrap", alignSelf:"center", justifyContent:"center"}}>
 				{el.explore.map((contest) => (
 					<div
@@ -83,6 +83,7 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 				</div>
 			</div>);
 		});
+		console.log(competitions);
 		links = content.map((el) => {
 			return (
 				<Link 

@@ -27,7 +27,7 @@
 
 }
 
-.profileBackground {
+.dashboard-profileBackground {
     background: url("peakpx\ \(3\).jpg");
     background-size: cover;
     background-position: fixed;
@@ -40,7 +40,7 @@
 
 /* .DashboardBox{
 } */
-.content {
+.dashboard-content {
     width: 700px;
     height: 350px;
     margin-top: 50px;
@@ -62,7 +62,7 @@ box-shadow: inset 0 0 0 200px rgba(255,255,255,0.08);
     
 }
 
-.image {
+.dashboard-image {
     /* position: absolute; */
     /* right: 0px; */
     /* top: 0px; */
@@ -73,7 +73,7 @@ box-shadow: inset 0 0 0 200px rgba(255,255,255,0.08);
     justify-content: space-between;
 }
 
-.image img {
+.dashboard-image img {
     /* border-radius: 50%; */
     border-top-right-radius: 9%;
     border-bottom-left-radius: 9%;
@@ -84,7 +84,7 @@ box-shadow: inset 0 0 0 200px rgba(255,255,255,0.08);
     /* transform: scale(0.3); */
 }
 
-.text {
+.dashboard-text {
     /* position: absolute; */
     /* left: 0; */
     /* top: 0; */
@@ -96,27 +96,27 @@ backdrop-filter: blur(8px); /* Chrome and Opera */
 box-shadow: inset 0 0 0 200px rgba(58, 247, 251, 0.08);
 }
 
-.text h1 {
+.dashboard-text h1 {
     margin: 5px 5px;
 }
 
-.text h1 span {
+.dashboard-text h1 span {
     color: rgb(0, 225, 255);
 }
 
-.info {
+.dashboard-info {
     position: absolute;
     bottom: 10px;
     font-size: 2rem;
     left: 10px;
 }
 
-.info span span {
+.dashboard-info span span {
     color: aquamarine;
 }
 
 @media screen and (max-width: 600px) {
-    .content {
+    .dashboard-content {
         width: 90vw;
         min-height: 70vh;
         display: flex;
@@ -124,25 +124,25 @@ box-shadow: inset 0 0 0 200px rgba(58, 247, 251, 0.08);
         align-items: center
     }
 
-    .text {
+    .dashboard-text {
         position: static;
     }
 
-    .info {
+    .dashboard-info {
         position: static;
     }
 
-    .text h1 {
+    .dashboard-text h1 {
         text-align: center;
     }
 
-    .image {
+    .dashboard-image {
         /* margin: 0 calc(45vw - 75px); */
         position: static;
         height: 278px;
     }
 
-    .image img {
+    .dashboard-image img {
         top: 20px;
     }
 }

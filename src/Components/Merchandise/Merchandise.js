@@ -77,7 +77,7 @@ const Merchandise = (props) => {
           </div>
           </div>
           </div> */}
-          <video autoPlay loop muted playsInline className="contact-background">
+          <video autoPlay loop muted playsInline className="merchandise-background">
 		<source  src="merchandise background techkriti.mp4"/>
 		</video>
           <div className="merchandise">
