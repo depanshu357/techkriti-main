@@ -24,7 +24,7 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 	if (comps.map((el) => (el.category)).includes(category)) {
 		content = [];
 		content = comps.filter((el) => el.category === category)[0].contests;
-		competitions = [];
+		console.log(content);
 		competitions = content.map((el) => {
 			if (big) return (
 				//<div className="main-text">
@@ -70,7 +70,7 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 					<h1>{el.title}</h1>
 					<p>{el.text}</p>
 				</div>
-				<img src={`/images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} style={{width:"300px"}} />
+				{/*<img src={`/images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} style={{width:"300px"}} />*/}
 				<div style={{display:"flex", flexWrap:"wrap", alignSelf:"center", justifyContent:"center"}}>
 				{el.explore.map((contest) => (
 					<div
@@ -83,6 +83,7 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 				</div>
 			</div>);
 		});
+		console.log(competitions);
 		links = content.map((el) => {
 			return (
 				<Link 
@@ -104,56 +105,48 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 		content.push({color:"#000"});
 		let contestobj = all_contests.find(el => (el.name.toLowerCase().replace(/\s/g, "") === params));
 		competitions = [];
-		competitions.push(<div className="contestEach">
-		<EachContest compName={contestobj.name} content={contestobj.about}/>
-		{/* <h1>{contestobj.name}</h1>
-		<h2>{contestobj.about}</h2> */}
-		</div>);
+		competitions.push(<EachContest compName={contestobj.name} content={[contestobj.about,"lollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollol","haha","rip"]}/>);
+		
+		
+		
 	} else { //path: /competitons/ OR /competitions/details/
 		content.push({color:"#000"});
 		competitions.push(<div className="main-text">
 		    <img id="myVideo" src = "background.gif"></img>
-			<div class="containercomp">
+			<div className="containercomp">
+			  <div className="contest-main-card">
+				<div className="contest-main-face contest-main-face1">
+				  <div className="contest-main-content">
+					<p className="contest-main" style={{backgroundColor:"#fffc00"}}>Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+				  </div>
+				</div>
+				<div className="contest-main-face contest-main-face2">
+				  <h2>TECHNICAL</h2>
+				</div>
+			  </div>
 
-  <div class="card">
-    <div class="face face1">
-      <div class="content">
-        <span class="stars"></span>
-        <h2 class="java">Technical</h2>
-        <p class="java">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
-      </div>
-    </div>
-    <div class="face face2">
-      <h2>01</h2>
-    </div>
-  </div>
+			  <div className="contest-main-card">
+				<div className="contest-main-face contest-main-face1">
+				  <div className="contest-main-content">
+					<p className="contest-main" style={{backgroundColor:"#00fffc"}}>Python is an interpreted, high-level and general-purpose programming language.</p>
+				  </div>
+				</div>
+				<div className="contest-main-face contest-main-face2">
+				  <h2>ENTREPRENEURIAL</h2>
+				</div>
+			  </div>
 
-  <div class="card">
-    <div class="face face1">
-      <div class="content">
-        <span class="stars"></span>
-        <h2 class="python">Enterprenurial</h2>
-        <p class="python">Python is an interpreted, high-level and general-purpose programming language.</p>
-      </div>
-    </div>
-    <div class="face face2">
-      <h2>02</h2>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="face face1">
-      <div class="content">
-        <span class="stars"></span>
-        <h2 class="cSharp">Misc</h2>
-        <p class="cSharp">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
-      </div>
-    </div>
-    <div class="face face2">
-      <h2>03</h2>
-    </div>
-  </div>
-</div>
+			  <div className="contest-main-card">
+				<div className="contest-main-face contest-main-face1">
+				  <div className="contest-main-content">
+					<p className="contest-main" style={{backgroundColor:"#fc00ff"}}>C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+				  </div>
+				</div>
+				<div className="contest-main-face contest-main-face2">
+				  <h2>MISCELLANEOUS</h2>
+				</div>
+			  </div>
+			</div>
 		</div>);
 	}
 	

@@ -68,8 +68,11 @@ function App() {
 						fontSize:"16pt",
 						color:"#fff",
 						opacity:1,
-						padding:"7px"
-					}
+						padding:"7px",
+						"&.MuiSelected": {
+							color:"#fff !important",
+						}
+					},
 				}
 			},
 			MuiTabs: {

@@ -59,6 +59,7 @@
 	justify-content:center;
 	align-items:flex-start;
 	flex-wrap:wrap;
+    text-decoration-color: #fff;
 }
 
 /* 
@@ -92,7 +93,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    opacity: 0.35;
+    opacity: 1;
     transition: 0.5s;
     width: 300px;
     height: 400px;
@@ -125,6 +126,7 @@
     letter-spacing: 2px;
     text-align: center;
     margin: 20px 0 25px;
+    opacity: 1;
 }
 
 .container .card .card-content .contentBx h3 span{
@@ -158,6 +160,12 @@
 .container .card .sci li a{
     color: #fff;
     font-size: 24px;
+}
+
+.contact-heading{
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 3rem;
 }
 
 @keyframes lights {

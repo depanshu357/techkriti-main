@@ -23,7 +23,7 @@
 
 }
 
-.profileBackground {
+.dashboard-profileBackground {
     background: url("peakpx\ \(3\).jpg");
     background-size: cover;
     background-position: fixed;
@@ -36,9 +36,8 @@
 
 /* .DashboardBox{
 } */
-.dashboardContent {
-    min-width: 600px;
-    max-width: 700px;
+.dashboard-content {
+    width: 700px;
     height: 350px;
     margin-top: 50px;
     /* border: 2px solid white; */
@@ -59,7 +58,7 @@ box-shadow: inset 0 0 0 200px rgba(255,255,255,0.08);
     
 }
 
-.dashboardImage {
+.dashboard-image {
     /* position: absolute; */
     /* right: 0px; */
     /* top: 0px; */
@@ -71,7 +70,7 @@ box-shadow: inset 0 0 0 200px rgba(255,255,255,0.08);
     flex-wrap: wrap;
 }
 
-.dashboardImage img {
+.dashboard-image img {
     /* border-radius: 50%; */
     border-top-right-radius: 9%;
     border-bottom-left-radius: 9%;
@@ -82,11 +81,7 @@ box-shadow: inset 0 0 0 200px rgba(255,255,255,0.08);
     /* transform: scale(0.3); */
 }
 
-.dashboardImage h1{
-    padding: 0 5px;
-}
-
-.dashboardText {
+.dashboard-text {
     /* position: absolute; */
     /* left: 0; */
     /* top: 0; */
@@ -98,17 +93,17 @@ backdrop-filter: blur(8px); /* Chrome and Opera */
 box-shadow: inset 0 0 0 200px rgba(58, 247, 251, 0.08);
 }
 
-.dashboardText h1 {
+.dashboard-text h1 {
     margin: 5px 5px;
 }
 
-.dashboardText h1 span {
+.dashboard-text h1 span {
     color: rgb(0, 225, 255);
 }
 
-.dashboardInfo {
-    /* position: absolute; */
-    /* bottom: 10px; */
+.dashboard-info {
+    position: absolute;
+    bottom: 10px;
     font-size: 2rem;
     /* left: 10px; */
     font-family: 'Orbitron', sans-serif;
@@ -116,12 +111,12 @@ box-shadow: inset 0 0 0 200px rgba(58, 247, 251, 0.08);
     padding: 5px;
 }
 
-.dashboardInfo span span {
+.dashboard-info span span {
     color: aquamarine;
 }
 
 @media screen and (max-width: 600px) {
-    .content {
+    .dashboard-content {
         width: 90vw;
         min-height: 70vh;
         display: flex;
@@ -129,25 +124,25 @@ box-shadow: inset 0 0 0 200px rgba(58, 247, 251, 0.08);
         align-items: center
     }
 
-    .text {
+    .dashboard-text {
         position: static;
     }
 
-    .info {
+    .dashboard-info {
         position: static;
     }
 
-    .text h1 {
+    .dashboard-text h1 {
         text-align: center;
     }
 
-    .image {
+    .dashboard-image {
         /* margin: 0 calc(45vw - 75px); */
         position: static;
         height: 278px;
     }
 
-    .image img {
+    .dashboard-image img {
         top: 20px;
     }
 }

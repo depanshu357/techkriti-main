@@ -2,18 +2,12 @@ import React, {useState} from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import {Card, Alert, Button} from 'react-bootstrap';
 import { useAuth } from '../context/AuthContext';
-// import Grid from '@material-ui/core/Grid'
-// import './styles.css'
-import axios from 'axios'
+import MuiButton from "@mui/material/Button"
+
 export default function Login() {
+
     const {loginWithGoogle,logout, currentUser} = useAuth();
     const [error, setError] = useState('');
-    // const [hide, setHide] = useState(true);
-    // const [dash, setDash] = useState(false)
-    // if(currentUser){
-    // setHide(false)
-    // setDash(true)
-    // }
 
     const [loading,setLoading] = useState(false);
     const navigate = useNavigate();
@@ -59,7 +53,22 @@ export default function Login() {
   return (
     <div>
 
-         <Button disabled={loading} onClick={handleGoogleLogin} spacing={3} >Sign in</Button>
+         <MuiButton 
+         	disabled={loading} 
+         	onClick={handleGoogleLogin} 
+         	spacing={3} 
+         	sx={{
+         		color:"white",
+         		background:"none",
+         		border:"none",
+         		textDecoration:"none",
+         		"&:hover": {
+					color:"white",
+					background:"none",
+					border:"none",
+					textDecoration:"underline"
+         		}
+         	}}>Sign in</MuiButton>
         {/* <Button className='button-49 loginbutton' disabled={loading} onClick={handleFacebookLogin}><FacebookIcon fontSize="large" /></Button> */}
         {/* {dash && <Link to='/profile'> Dashboard</Link>} */}
     

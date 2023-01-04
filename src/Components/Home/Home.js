@@ -15,15 +15,15 @@ const Home = ({setThemeColor, setLowergridmenu}) => {
     	<div class="home-container">
 		  <svg viewBox="0 0 960 300">
 			<symbol id="home-s-text">
-			  <text text-anchor="middle" x="50%" y="80%">TECHKRITI</text>
+			  <text textAnchor="middle" x="50%" y="80%">TECHKRITI</text>
 			</symbol>
 
-			<g class = "home-g-ants">
-			  <use href="#home-s-text" class="home-text-copy"></use>
-			  <use href="#home-s-text" class="home-text-copy"></use>
-			  <use href="#home-s-text" class="home-text-copy"></use>
-			  <use href="#home-s-text" class="home-text-copy"></use>
-			  <use href="#home-s-text" class="home-text-copy"></use>
+			<g className="home-g-ants">
+			  <use href="#home-s-text" className="home-text-copy"></use>
+			  <use href="#home-s-text" className="home-text-copy"></use>
+			  <use href="#home-s-text" className="home-text-copy"></use>
+			  <use href="#home-s-text" className="home-text-copy"></use>
+			  <use href="#home-s-text" className="home-text-copy"></use>
 			</g>
 		  </svg>
 		</div>
