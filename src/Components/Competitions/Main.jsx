@@ -112,7 +112,11 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 	} else { //path: /competitons/ OR /competitions/details/
 		content.push({color:"#000"});
 		competitions.push(<div className="main-text">
-		    <img id="myVideo" src = "background.gif"></img>
+		    <video autoPlay loop muted playsInline className="contact-background">
+		<source  src="https://ik.imagekit.io/vc4stuoufz/0001-0480__2_.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1672862349164"/>
+		{/* <source  src="https://ik.imagekit.io/vc4stuoufz/contact_us_page_techkriti.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1672855066214"/> */}
+		{/* <source  src="contact us page techkriti.mp4"/> */}
+	</video>
 			<div className="containercomp">
 			  <div className="contest-main-card">
 				<div className="contest-main-face contest-main-face1">
