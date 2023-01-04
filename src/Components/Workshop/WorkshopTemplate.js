@@ -14,7 +14,14 @@ const [tab, setTab] = useState(0);
 	const setCurrentTab = (event, newValue) => {
 		setTab(newValue);
 	}
-
+  const handleWorkEachData = () =>{
+    // return "hello"
+    for(let i=0;i<workshopData.length;i++){
+      if(workshopData[i].workName === params.workName)
+      return workshopData[i].main.dataMain
+    }
+  }
+// const handleWorkEachData = "hello"
   return (
     // <div>
     //   <div className="stock-container">
@@ -58,7 +65,7 @@ const [tab, setTab] = useState(0);
         </Tabs>
         <div className="work-each-data">
         	{/* {props.content[tab]} */}
-           {handleWorkEachData}
+           {handleWorkEachData()}
           {/* {workshopData[0].main.dataMain} */}
           
           

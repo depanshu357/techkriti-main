@@ -1,5 +1,10 @@
 *{
     font-family: 'Montserrat', sans-serif;
+    color:#fff;
+}
+
+:root {
+	color-scheme:dark;
 }
 
 .page-background {
@@ -10,5 +15,6 @@
 	left:0;
 	background-attachment: fixed;
 	background-size: cover;
+	background-position: center;
 	z-index:-1;
 }

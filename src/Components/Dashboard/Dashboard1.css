@@ -15,18 +15,24 @@
 .Dashboardfullscreen {
     /* height: calc(100vh - 100px); */
     /* background: url("https://images.unsplash.com/photo-1624280433509-b01afeaf68e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1915&q=80"); */
+/* 
     background: url("peakpx\ \(3\).jpg");
     background-size: 100vw 100vh;
     background-position: fixed;
-    background-blend-mode: lighten;
+ */
+}
 
-
+.dashboard-page-background {
+	background-image: url("peakpx\ \(3\).jpg");
+	
 }
 
 .dashboard-profileBackground {
+/* 
     background: url("peakpx\ \(3\).jpg");
     background-size: cover;
     background-position: fixed;
+ */
     /* top: 0; */
     /* left: 0; */
     /* height: 100vh; */

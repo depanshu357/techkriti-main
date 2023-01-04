@@ -298,6 +298,7 @@
 	flex-shrink:0;
 	display:flex;
 	padding:10px;
+	backdrop-filter:blur(10px);
 }
 
 .sidenav-inner {

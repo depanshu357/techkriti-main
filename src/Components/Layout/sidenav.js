@@ -178,7 +178,7 @@ const Sidenav = ({themeColor, ...props}) => {
         
         
       {isPagesmall && <>
-        <div className="sidenav-container-smallpage">
+        <div className={`sidenav-container-smallpage${themeColor === "#000" ? " sidenav-borderfix" : ""}`}>
     		<nav 
           		style={display} 
           		className="mobile"
@@ -208,7 +208,7 @@ const Sidenav = ({themeColor, ...props}) => {
               		<div className="bar is-active"></div>
             	</button>
         	</div>
-        	<div style={{display:"block", padding:"0px", height:"auto", flexGrow:1, flexShrink:1, overflow:"auto"}}>
+        	<div style={{display:"block", padding:"0px", height:"auto", flexGrow:1, flexShrink:1, overflow:"auto", backdropFilter:"none"}}>
         		<div className="sidenav-inner-smallpage">
         			<Outlet />
         		</div>
