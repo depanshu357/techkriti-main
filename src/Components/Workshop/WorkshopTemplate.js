@@ -1,7 +1,7 @@
 import React from "react";
 import { workshopData } from "./workshopData";
 import { useParams } from "react-router-dom";
-import "./workshopDetails.css"
+import "./workshopDetails.css";
 export default function WorkshopTemplate() {
   const params = useParams();
   return (
@@ -16,7 +16,7 @@ export default function WorkshopTemplate() {
     //   </div>
     // </div>
 
-    <div className="contestEach">
+    <div className="workshopEach">
       <div class="containerEach">
         <div class="cardEach">
           <div style={{ width: "70%", float: "left", display: "inline-block" }}>
@@ -28,19 +28,11 @@ export default function WorkshopTemplate() {
             })}
             <button class="btnEach">Get Started</button>
           </div>
-          <div
-            style={{ width: "30%", float: "right", display: "inline-block" }}
-          >
-          </div>
         </div>
-      </div>
-      <br />
-
-      {/* <div class="compRegEach"> */}
         <center>
           <button class="glass-button">Register</button>{" "}
         </center>
-      {/* </div> */}
+      </div>
     </div>
   );
 }
