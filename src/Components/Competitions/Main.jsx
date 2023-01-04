@@ -105,11 +105,10 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 		content.push({color:"#000"});
 		let contestobj = all_contests.find(el => (el.name.toLowerCase().replace(/\s/g, "") === params));
 		competitions = [];
-		competitions.push(<div className="contestEach">
-		<EachContest compName={contestobj.name} content={contestobj.about}/>
-		{/* <h1>{contestobj.name}</h1>
-		<h2>{contestobj.about}</h2> */}
-		</div>);
+		competitions.push(<EachContest compName={contestobj.name} content={[contestobj.about,"lollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollol","haha","rip"]}/>);
+		
+		
+		
 	} else { //path: /competitons/ OR /competitions/details/
 		content.push({color:"#000"});
 		competitions.push(<div className="main-text">
@@ -118,39 +117,33 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 			  <div className="contest-main-card">
 				<div className="contest-main-face contest-main-face1">
 				  <div className="contest-main-content">
-					<span className="stars"></span>
-					<h2 className="contest-main-java">Technical</h2>
-					<p className="contest-main-java">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+					<p className="contest-main" style={{backgroundColor:"#fffc00"}}>Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
 				  </div>
 				</div>
 				<div className="contest-main-face contest-main-face2">
-				  <h2>01</h2>
+				  <h2>TECHNICAL</h2>
 				</div>
 			  </div>
 
 			  <div className="contest-main-card">
 				<div className="contest-main-face contest-main-face1">
 				  <div className="contest-main-content">
-					<span className="stars"></span>
-					<h2 className="contest-main-python">Enterprenurial</h2>
-					<p className="contest-main-python">Python is an interpreted, high-level and general-purpose programming language.</p>
+					<p className="contest-main" style={{backgroundColor:"#00fffc"}}>Python is an interpreted, high-level and general-purpose programming language.</p>
 				  </div>
 				</div>
 				<div className="contest-main-face contest-main-face2">
-				  <h2>02</h2>
+				  <h2>ENTREPRENEURIAL</h2>
 				</div>
 			  </div>
 
 			  <div className="contest-main-card">
 				<div className="contest-main-face contest-main-face1">
 				  <div className="contest-main-content">
-					<span className="stars"></span>
-					<h2 className="contest-main-cSharp">Misc</h2>
-					<p className="contest-main-cSharp">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+					<p className="contest-main" style={{backgroundColor:"#fc00ff"}}>C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
 				  </div>
 				</div>
 				<div className="contest-main-face contest-main-face2">
-				  <h2>03</h2>
+				  <h2>MISCELLANEOUS</h2>
 				</div>
 			  </div>
 			</div>
