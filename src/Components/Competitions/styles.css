@@ -185,6 +185,7 @@ height: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
+transition: all 0.3s ease-out;
 }
 
 h2 {
@@ -195,7 +196,6 @@ padding: 0;
 .contest-main {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-
 }
 
         /* &.face2 {
