@@ -46,10 +46,14 @@
 }
 
 .mainhead{
+  /* position: fixed; */
     text-align: center;
+    /* margin-left: 35%;
+    margin-bottom: 25px;
+    margin-top: 0; */
     text-decoration: none;
     font-weight: 700;
-    animation: lights 5s 750ms linear infinite;;
+    animation: lights 5s 750ms linear infinite;
 }
 
 ul li{
@@ -90,13 +94,14 @@ ul li{
   font-weight: 600;
   /* font-family: 'Poppins'; */
   margin: 0px;
-  background-image: url("./body-bgregister.jpg");
+  /* background-image: url("./bodybgregister.png"); */
   background-repeat: no-repeat;
   width: 100%;
   height:100%;
   padding: 0px;
-  /* position: fixed; */
-  background-size: 90% auto;
+  /* backgroun; */
+  position: relative;
+  background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
@@ -104,13 +109,22 @@ ul li{
   /* background-position: center center;  */
 }
   
+#myvideo{
+  position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
   .container1 {
     margin-top: 20px;
     margin-bottom: 70px;
     width: 1050px;
     padding-top: 15px;
     padding-bottom: 15px;
-    background-image: url("./container-bgregister.png");
+    background-size: 90% 100%;
+    background-image: url("./container-bg.png");
     background-repeat: no-repeat;
     /* background-size: cover; */
     /* -moz-background-size: cover;
@@ -123,8 +137,9 @@ ul li{
 
     .signup-content {
         width: 500px;
+        /* margin-top: 45px; */
         margin-right: 0px;
-        background: rgba(177, 135, 77, 0.75);
+        background: rgba(95, 171, 195, 0.75);
         float: right; }
       
       .signup-form {
@@ -220,7 +235,7 @@ ul li{
         display: inline-block;
         border: none;
         background: #fff;
-        color: #b18757;
+        color: #55acc6;
         padding: 10px;
         height: 50px;
         box-shadow: 0px 15px 9.9px 0.1px rgba(0, 0, 0, 0.15);

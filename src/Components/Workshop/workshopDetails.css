@@ -1,0 +1,171 @@
+.containerEach {
+  height: 80%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.cardEach {
+  width: 96%;
+  margin-top: -25%;
+  margin-left: 25%;
+  min-height: 250px;
+  background: rgba( 255, 255, 255, 0.15 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 18px );
+  -webkit-backdrop-filter: blur( 18px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-radius: 1rem;
+  padding: 1.5rem;
+  z-index: 2;
+  color: whitesmoke;
+}
+
+.titleEach {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.subtitleEach {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btnEach {
+  background: none;
+  border: none;
+  text-align: center;
+  font-size: 1rem;
+  color: whitesmoke;
+  background-color: #fa709a;
+  padding: 0.8rem 1.8rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.blob {
+  position: absolute;
+  margin-right: 40%;
+  margin-bottom: 30%;
+  width: 50%;
+  height: 60%;
+  background: linear-gradient(
+    180deg,
+    #009F8C 31.77%,
+    #019C89 100%
+  );
+  mix-blend-mode: color-dodge;
+  -webkit-animation: move 25s infinite alternate;
+          animation: move 25s infinite alternate;
+  transition: 3s cubic-bezier(0.07, 0.8, 0.16, 1);
+}
+
+.blob:hover {
+  width: 60%;
+  height: 60%;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  box-shadow:
+    inset 0 0 0 5px rgba(255,255,255, 0.6),
+    inset 100px 100px 0 0px #00566C,
+    inset 200px 200px 0 0px #07a4aa,
+    inset 300px 300px 0 0px #2b86c5;
+}
+.blob1 {
+  position: absolute;
+  margin-right: 40%;
+  margin-bottom: 30%;
+  width: 50%;
+  height: 60%;
+  background: linear-gradient(
+    180deg,
+    #009F8C 31.77%,
+    #019C89 100%
+  );
+  mix-blend-mode: color-dodge;
+  -webkit-animation: move 25s infinite alternate;
+          animation: move 25s infinite alternate;
+  transition: 3s cubic-bezier(0.07, 0.8, 0.16, 1);
+}
+
+.blob1:hover {
+  width: 60%;
+  height: 60%;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  box-shadow:
+    inset 0 0 0 5px rgba(255,255,255, 0.6),
+    inset 100px 100px 0 0px #00566C,
+    inset 200px 200px 0 0px #07a4aa,
+    inset 300px 300px 0 0px #2b86c5;
+}
+
+@-webkit-keyframes move {
+  from {
+    transform: translate(-100px, -50px) rotate(-90deg);
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+  }
+
+  to {
+    transform: translate(500px, 100px) rotate(-10deg);
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translate(-100px, -50px) rotate(-90deg);
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+  }
+
+  to {
+    transform: translate(500px, 100px) rotate(-10deg);
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  }
+}
+
+
+@-webkit-keyframes move1 {
+  from {
+    transform: translate(-50px, -150px) rotate(-70deg);
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+  }
+
+  to {
+    transform: translate(50px, 70px) rotate(-20deg);
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  }
+}
+
+@keyframes move1 {
+  from {
+    transform: translate(-100px, -50px) rotate(-90deg);
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+  }
+
+  to {
+    transform: translate(500px, 100px) rotate(-10deg);
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  }
+}
+
+.glass-button {
+  width: 50%;
+  margin-top: 15%;
+  height: fit-content;
+  background: rgba( 255, 255, 255, 0.15 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 18px );
+  -webkit-backdrop-filter: blur( 18px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-radius: 1rem;
+  padding: 1rem;
+  z-index: 2;
+  color: whitesmoke;
+}
+
+.glass-button:hover {
+  background-color: rgba(255,255,255,0.2);
+}

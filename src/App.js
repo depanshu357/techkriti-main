@@ -11,21 +11,20 @@ import {
 // import Dashboard1 from './Components/Dashboard/Dashboard1';
 import PrivateRoute from './Components/PrivateRoute';
 import { AuthProvider } from './context/AuthContext';
+import Update from './Components/Update';
+import Register from './Components/Register/Register';
+// import Merchandise from './Components/Merchandise/Merchandise';
+import Login from './Components/Login';
+import WorkshopTemplate from './Components/Workshop/WorkshopTemplate';
 import {createTheme, ThemeProvider} from "@mui/material/styles";
 import { useMediaQuery } from "./Components/MediaQuery";
-const Login =lazy(()=>import( './Components/Login'));
-const Update =lazy(()=>import( './Components/Update'));
-const Register =lazy(()=>import( './Components/Register/Register'));
-// import Merchandise from './Components/Merchandise/Merchandise';
-const WorkshopTemplate =lazy(()=>import( './Components/Workshop/WorkshopTemplate'));
-const Home = lazy(()=> import( './Components/Home/Home'));
 const Competition = lazy(()=> import( './Components/Competitions/Competition'));
-const Sidenav = lazy(()=> import( './Components/Layout/sidenav'));
-const Contact = lazy(()=> import( './Components/Contact/Contact'));
-const Dashboard = lazy(()=> import( './Components/Dashboard/Dashboard'));
 const Workshop = lazy(()=> import( './Components/Workshop/Workshop'));
 const Merchandise = lazy(()=> import( './Components/Merchandise/Merchandise'));
-
+const Sidenav = lazy(()=> import( './Components/Layout/sidenav'));
+const Contact = lazy(()=> import( './Components/Contact/Contact'));
+const Home = lazy(()=> import( './Components/Home/Home'));
+const Dashboard = lazy(()=> import( './Components/Dashboard/Dashboard'));
 function App() {
 	const [themeColor, setThemeColor] = useState("#000000");
 	const [lowergridmenu, setLowergridmenu] = useState([]);
@@ -53,11 +52,11 @@ function App() {
 			MuiButton: {
 				styleOverrides: {
 					root : {
-						backgroundColor: "#fff",
+						// backgroundColor: "#fff",
 						color: "#000",
 						textDecoration:"none",
 						'&:hover': {
-							backgroundColor:"#bbb",
+							// backgroundColor:"#bbb",
 						}
 					}
 					
