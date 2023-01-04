@@ -79,6 +79,9 @@
     text-align: center;
     margin-bottom: 5vh;
     animation: lights 5s 750ms linear infinite;
+    max-width: 50vw;
+    margin: auto;
+    margin: 10px auto;
 }
 
 .contentMerchandise{
@@ -149,3 +152,53 @@ a:hover{
     /* position: relative; */
     /* top: 30px; */
 /* } */
+
+@keyframes pulsate {
+
+    100% {
+        text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px #13eafe,
+            0 0 80px #1390fe,
+            0 0 90px #13eafe,
+            0 0 100px #1390fe,
+            0 0 150px #13eafe;
+    }
+    0% {
+        text-shadow:
+            0 0 2px #fff,
+            0 0 4px #fff,
+            0 0 6px #fff,
+            0 0 10px #13eafe,
+            0 0 45px #1390fe,
+            0 0 55px #13eafe,
+            0 0 70px #1390fe,
+            0 0 80px #13eafe;
+    }
+}
+
+.neonText {
+    color: #fff;
+    font-weight: 200;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #13eafe,
+        0 0 82px #13eafe,
+        0 0 92px #13eafe,
+        0 0 102px #13eafe,
+        0 0 151px #13eafe;
+    font-size: 2.2rem;
+    animation: pulsate 1.5s infinite alternate;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    box-shadow: 0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #13eafe,
+        0 0 0.8rem #13eafe,
+        0 0 2.8rem #13eafe,
+        inset 0 0 1.3rem #13eafe;
+}

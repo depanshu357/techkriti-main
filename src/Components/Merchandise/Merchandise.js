@@ -80,8 +80,9 @@ const Merchandise = (props) => {
           <video autoPlay loop muted playsInline className="contact-background">
 		<source  src="merchandise background techkriti.mp4"/>
 		</video>
+          {/* <a href='https://postimg.cc/BX84q71s' target='_blank'><img className='contact-background' src='https://i.postimg.cc/BX84q71s/contact-us-page-techkriti-Adobe-Express.gif' border='0' alt='contact-us-page-techkriti-Adobe-Express'/></a> */}
           <div className="merchandise">
-            <div className="topMerchandise">Techkriti Merchandise</div>
+            <div className="topMerchandise neonText">Techkriti Merchandise</div>
             <div className="contentMerchandise">
               <div className="imageBox">
                 <div className='topOfImageBox'>#<span>Jacket</span></div>
