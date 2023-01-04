@@ -25,8 +25,11 @@ export default function Contact({setThemeColor, setLowergridmenu}) {
   return (
   	<>
   	{/* <div className="contact-background"></div> */}
+	  {/* https://ik.imagekit.io/vc4stuoufz/contact_us_page_techkriti.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1672855066214 */}
 	<video autoPlay loop muted playsInline className="contact-background">
-		<source  src="contact us page techkriti.mp4"/>
+		<source  src="https://ik.imagekit.io/vc4stuoufz/contact_us_page_techkriti.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1672855066214"/>
+		{/* <source  src="https://ik.imagekit.io/vc4stuoufz/contact_us_page_techkriti.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1672855066214"/> */}
+		{/* <source  src="contact us page techkriti.mp4"/> */}
 	</video>
 	<h1 className="contact-heading">Contact Us</h1>
     <div className="contactBody">

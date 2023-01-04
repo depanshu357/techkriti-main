@@ -1,0 +1,302 @@
+.work-each-page-background {
+	background-image: url("../Contact/images/contact\ us.png");
+}
+
+/* 
+.contestEach{
+height: 100vh;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+position: relative;
+overflow: auto;
+}
+
+.containerEach {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+ */
+  
+  
+.work-each-container {
+	width:80%;
+	margin:auto;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	align-items:center;
+}
+
+.work-each-container > * {
+	margin: 10px;
+}
+
+.work-each-card {
+    width: 80%;
+    height:auto;
+    min-height: 250px;
+    flex-shrink:0;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 1rem;
+    padding: 1.5rem;
+    z-index: 2;
+    color: whitesmoke;
+}
+
+.work-each-card > * {
+	margin: 10px;
+}
+
+  /* 
+  description
+  contact
+  FAQ
+  PS Link
+  */
+.work-each-data {
+	width:100%;
+	height:200px;
+	overflow:auto;
+	overflow-wrap:anywhere;
+	margin:10px;
+}
+
+
+  .work-each-RegEach{
+    width: 76%;
+    margin-top: 5%;
+    height: fit-content;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 1rem;
+    padding: 1rem;
+    z-index: 2;
+    color: whitesmoke;
+  }
+  
+  .work-each-workReg {
+  	width:100%;
+  	display:flex;
+  	justify-content:space-evenly;
+  }
+  
+  .work-each-title {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .work-each-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .work-each-btn {
+    background: none;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+    color: whitesmoke;
+    background-color: #fa709a;
+    padding: 0.8rem 1.8rem;
+    border-radius: 2rem;
+    cursor: pointer;
+  }
+  
+  .work-each-blob {
+    position: absolute;
+    margin-right: 40%;
+    margin-bottom: 30%;
+    width: 50%;
+    height: 60%;
+    background: linear-gradient(
+      180deg,
+      #009F8C 31.77%,
+      #019C89 100%
+    );
+    mix-blend-mode: color-dodge;
+    -webkit-animation: work-each-move 25s infinite alternate;
+            animation: work-each-move 25s infinite alternate;
+    transition: 3s cubic-bezier(0.07, 0.8, 0.16, 1);
+  }
+  
+  .work-each-blob:hover {
+    width: 60%;
+    height: 60%;
+    -webkit-filter: blur(30px);
+            filter: blur(30px);
+    box-shadow:
+      inset 0 0 0 5px rgba(255,255,255, 0.6),
+      inset 100px 100px 0 0px #00566C,
+      inset 200px 200px 0 0px #07a4aa,
+      inset 300px 300px 0 0px #2b86c5;
+  }
+  .work-each-blob1 {
+    position: absolute;
+    margin-right: 40%;
+    margin-bottom: 30%;
+    width: 50%;
+    height: 60%;
+    background: linear-gradient(
+      180deg,
+      #009F8C 31.77%,
+      #019C89 100%
+    );
+    mix-blend-mode: color-dodge;
+    -webkit-animation: work-each-move 25s infinite alternate;
+            animation: work-each-move 25s infinite alternate;
+    transition: 3s cubic-bezier(0.07, 0.8, 0.16, 1);
+  }
+  
+  .work-each-blob1:hover {
+    width: 60%;
+    height: 60%;
+    -webkit-filter: blur(30px);
+            filter: blur(30px);
+    box-shadow:
+      inset 0 0 0 5px rgba(255,255,255, 0.6),
+      inset 100px 100px 0 0px #00566C,
+      inset 200px 200px 0 0px #07a4aa,
+      inset 300px 300px 0 0px #2b86c5;
+  }
+  
+  @-webkit-keyframes work-each-move {
+    from {
+      transform: translate(-100px, -50px) rotate(-90deg);
+      border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+    }
+  
+    to {
+      transform: translate(500px, 100px) rotate(-10deg);
+      border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+    }
+  }
+  
+  @keyframes work-each-move {
+    from {
+      transform: translate(-100px, -50px) rotate(-90deg);
+      border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+    }
+  
+    to {
+      transform: translate(500px, 100px) rotate(-10deg);
+      border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+    }
+  }
+
+
+  @-webkit-keyframes work-each-move1 {
+    from {
+      transform: translate(-50px, -150px) rotate(-70deg);
+      border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+    }
+  
+    to {
+      transform: translate(50px, 70px) rotate(-20deg);
+      border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+    }
+  }
+  
+  @keyframes work-each-move1 {
+    from {
+      transform: translate(-160px, -150px) rotate(-90deg);
+      border-radius: 24% 50% 35% 45% / 17% 56% 14% 53%;
+    }
+  
+    to {
+      transform: translate(200px, 50px) rotate(-90deg);
+      border-radius: 26% 24% 33% 67% / 68% 55% 45% 32%;
+    }
+  }
+
+  .work-each-glass-button {
+    display: inline-block;
+    padding: 24px 32px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    /* backdrop-filter: blur(30px); */
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  .work-each-glass-button:hover {
+    background-color: rgba(255,255,255,0.2);
+  }
+
+  @media (max-width: 768px) {
+    .work-each-containerEach{
+      /* background-color: #000; */
+    }
+
+    .work-each-cardEach{
+      height: fit-content;
+      margin-top: -90%;
+      width: 130%;
+    }
+
+    .work-each-workReg{
+      width: 80%;
+      height: fit-content;
+    }
+
+    .work-each-workImg{
+      display: none ;
+    }
+
+    .work-each-glass-button{
+      margin-top: 5%;
+    }
+
+    .work-each-containerLeft{
+      /* float: left; */
+      width: 100%;
+      float: none;
+      /* display: inline-block; */
+        
+    }
+
+    .work-each-containerRight{
+      /* float: right; */
+      width: 0%;
+      /* display: inline-block; */
+      display: none;
+        
+    }
+  
+
+    
+  }
+
+  .work-each-containerLeft{
+    float: left;
+    width: 60%;
+    display: inline-block;
+      
+  }
+
+  .work-each-containerRight{
+    float: right;
+    width: 30%;
+    display: inline-block;
+      
+  }
+  

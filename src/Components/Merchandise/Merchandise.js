@@ -78,10 +78,13 @@ const Merchandise = (props) => {
           </div>
           </div> */}
           <video autoPlay loop muted playsInline className="merchandise-background">
-		<source  src="merchandise background techkriti.mp4"/>
+		{/* <source  src="merchandise background techkriti.mp4"/> */}
+		{/* <source  src="https://ik.imagekit.io/vc4stuoufz/contact_us_page_techkriti.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1672855066214"/> */}
+		<source  src="https://ik.imagekit.io/vc4stuoufz/merchandise_background_techkriti.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1672855205631"/>
 		</video>
+          {/* <a href='https://postimg.cc/BX84q71s' target='_blank'><img className='contact-background' src='https://i.postimg.cc/BX84q71s/contact-us-page-techkriti-Adobe-Express.gif' border='0' alt='contact-us-page-techkriti-Adobe-Express'/></a> */}
           <div className="merchandise">
-            <div className="topMerchandise">Techkriti Merchandise</div>
+            <div className="topMerchandise ">Techkriti Merchandise</div>
             <div className="contentMerchandise">
               <div className="imageBox">
                 <div className='topOfImageBox'>#<span>Jacket</span></div>

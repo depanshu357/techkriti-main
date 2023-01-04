@@ -10,7 +10,12 @@ const Home = ({setThemeColor, setLowergridmenu}) => {
 	
   return (
     <>
-    <img id = "myVideo" src="https://i.postimg.cc/1RTj4BNb/background.gif"></img>
+    {/* <img id = "myVideo" src=""></img> */}
+	<video autoPlay loop muted playsInline className="contact-background">
+		<source  src="https://ik.imagekit.io/vc4stuoufz/0001-0480__2_.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1672862349164"/>
+		{/* <source  src="https://ik.imagekit.io/vc4stuoufz/contact_us_page_techkriti.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1672855066214"/> */}
+		{/* <source  src="contact us page techkriti.mp4"/> */}
+	</video>
     <div className="home-title">
     	<div class="home-container">
 		  <svg viewBox="0 0 960 300">
