@@ -52,7 +52,7 @@ const [tab, setTab] = useState(0);
         </center>
       </div>
     </div> */}
-    <div className="page-background each-page-background" style={{}}><div className="blob1"></div></div>
+    <div className="work-page-background work-each-page-background" style={{}}><div className="work-blob1"></div></div>
     <div className="work-each-container">
       <div className="work-each-card">
       <div className='work-each-containerLeft'>
