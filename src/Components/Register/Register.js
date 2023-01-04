@@ -106,12 +106,12 @@ export default function Register() {
             <div class="signup-content">
                 <form id="signup-form" className="signup-form" style={{paddingBottom:"0px"}} onSubmit={handleMember}>
                     <h2>{params.events} </h2>
-                    <p class="desc">lorem guggyfyfuyfyuffyf<span>"gfytfyfdtydcf"</span></p>
+                    <p class="desc"><span></span></p>
                     <div class="form-group">
                         <input type="text" class="form-input" name="name" id='name' value={mem} onChange={(e) => setMem(e.target.value)} placeholder="Member Name"/>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-input" name="techid" value={tid} id = "techid" onChange={(e) => setTid(e.target.value)} placeholder="TechID"/>
+                        <input type="number" class="form-input" name="techid" value={tid} id = "techid" onChange={(e) => setTid(e.target.value)} placeholder="TechID"/>
                     </div>
                     {errorM}
                     
@@ -129,7 +129,7 @@ export default function Register() {
                         {error}
                         {success}
                 </form>
-                <form className='signup-form' style={{paddingTop: "0px"}}>
+                <form className='signup-form' style={{paddingTop: "0px"}} onSubmit={handleSubmit}>
                     <h4>Team Name</h4>
                 <TextField sx={{"&:hover": {
                             border: "solid #ced4da",

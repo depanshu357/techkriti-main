@@ -3,13 +3,15 @@ import {Link, useNavigate} from 'react-router-dom';
 import {Card, Alert, Button} from 'react-bootstrap';
 import { useAuth } from '../context/AuthContext';
 import MuiButton from "@mui/material/Button"
-
+import DashboardCustomizeIcon from '@mui/icons-material/DashboardCustomize';
 export default function Login() {
 
     const {loginWithGoogle,logout, currentUser} = useAuth();
     const [error, setError] = useState('');
 
     const [loading,setLoading] = useState(false);
+    const [loggedIn, setLoggedIn] = useState(currentUser?true:false)
+  
     const navigate = useNavigate();
     function handleGoogleLogin(e){
         console.log("check")
@@ -52,8 +54,24 @@ export default function Login() {
     // })
   return (
     <div>
-
-         <MuiButton 
+        {loggedIn?<>
+        <Link to="/profile">
+            <MuiButton 
+         	disabled={loading} 
+         	spacing={3} 
+         	sx={{
+         		color:"white",
+         		background:"none",
+         		border:"none",
+         		textDecoration:"none",
+         		"&:hover": {
+					color:"white",
+					background:"none",
+					border:"none",
+					textDecoration:"underline"
+         		}
+         	}}><DashboardCustomizeIcon /></MuiButton></Link></> : 
+        <MuiButton 
          	disabled={loading} 
          	onClick={handleGoogleLogin} 
          	spacing={3} 
@@ -69,6 +87,8 @@ export default function Login() {
 					textDecoration:"underline"
          		}
          	}}>Sign in</MuiButton>
+        }
+         
         {/* <Button className='button-49 loginbutton' disabled={loading} onClick={handleFacebookLogin}><FacebookIcon fontSize="large" /></Button> */}
         {/* {dash && <Link to='/profile'> Dashboard</Link>} */}
     

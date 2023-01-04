@@ -37,11 +37,10 @@ const Card = (props) => {
 
   return (
     <div className='card'>
-    
         <img className='imgcard' src={props.img ? props.img : "images/4.jpg"}></img>
         <p className='title'>{props.name}</p>
         <div className='buttons'>
-            <div className='buttonr'><Button id="button1" disabled={loading} className="cardlink" onClick={handleRegister}>REGISTER</Button></div>
+            <div className='buttonr'><Link to={`/register-w/${props.name}`} id="button1" disabled={loading} className="cardlink">REGISTER</Link></div>
             <div className='buttone'> <Link className="cardlink" to={`/workshop/${props.name}`}>EXPLORE</Link></div>
         </div>
     </div>
