@@ -28,7 +28,7 @@ export default function Contact({setThemeColor, setLowergridmenu}) {
 	<video autoPlay loop muted playsInline className="contact-background">
 		<source  src="contact us page techkriti.mp4"/>
 	</video>
-
+	<h1 className="contact-heading">Contact Us</h1>
     <div className="contactBody">
     	{// <div className="container">
 // 			<header className="contactHeader">
