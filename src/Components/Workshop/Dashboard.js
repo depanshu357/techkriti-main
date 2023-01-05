@@ -14,7 +14,7 @@ import {useNavigate} from 'react-router-dom'
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { Avatar, CardContent, Grid } from '@mui/material';
-import RegComps from "./RegComps";
+import RegComps from "../Dashboard/RegComps";
 
 
 function TabPanel(props) {
