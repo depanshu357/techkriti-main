@@ -138,7 +138,8 @@ const Sidenav = ({themeColor, ...props}) => {
 			<div className="right"><Login/></div>
 			<div style={{display:"flex", flexDirection:"column", justifyContent:"flex-start", alignItems:"center"}}>
 				<br />
-          		<a href="#"><img className="socialicon" src="/images/facebook.png" height={"20px"} width={"11px"}></img></a>
+				
+          		<a href="#"><img className="socialicon facebook" src="/images/facebook.png" height={"24px"} ></img></a>
           		<br />
           		<a href="#"><img className="socialicon" src="/images/twitter.png" height={"17.94px"}></img></a>
           		<br />

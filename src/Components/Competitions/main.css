@@ -1,0 +1,5 @@
+.main-container-card{
+    margin-left: 50px;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+}

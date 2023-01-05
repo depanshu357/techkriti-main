@@ -5,6 +5,7 @@ import comps from "./competitions.json";
 import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
 import Card from "./contestcard";
 import EachContest from "./EachContest";
+import "./main.css"
 
 function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 
@@ -55,14 +56,16 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 						<p>{el.text}</p>
 					</div>
 					<img src={`/images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} style={{width:"300px", float:"right", margin:"20px"}} />
+					<div className="main-container-card">
 					{el.explore.map((contest) => (
 						<div 
 							style={{margin:"10px"}}
 							key={contest.name}
-						>
+							>
 						<Card name={contest.name} title={contest.about}/>
 						</div>)
 					)}
+					</div>
 				</div>
 			);
 			else return (<div className="main-text-small" style={{padding:"20px"}}>
