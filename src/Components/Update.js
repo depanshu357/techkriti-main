@@ -6,9 +6,14 @@ import {Form, Alert} from 'react-bootstrap'
 import {useNavigate} from 'react-router-dom'
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import { Grid, Typography } from '@mui/material';
-export default function Dashboard() {
+import { Grid, Typography, InputLabel } from '@mui/material';
 
+
+export default function Dashboard({setThemeColor, setLowergridmenu}) {
+	useEffect(() => {
+		setThemeColor("#000");
+		setLowergridmenu([]);
+	},[]);
     const nameRef = useRef();
     const emailRef = useRef();
     const collegeRef= useRef();
@@ -51,7 +56,7 @@ export default function Dashboard() {
         
     }
   return (
-    <div>
+    /*<div>
             {currentUser.email}
 
             <br/>
@@ -65,7 +70,9 @@ export default function Dashboard() {
             <Grid>
             {error && <Alert variant ="danger">{error}</Alert>}
             {success && <Alert variant="success">{success}</Alert>}
-            <div><Form onSubmit={handleSubmit}>
+            <div>
+            
+            <Form onSubmit={handleSubmit}>
                 
                     <Form.Label>Name</Form.Label>
                     <TextField sx={{"&:hover": {
@@ -94,19 +101,57 @@ export default function Dashboard() {
                         required
                     /><br />
                 <Button disabled={loading} type="submit" className="w-100 mt-3">Update</Button>
-            </Form><br/></div>
+            </Form>
+            
+            
+            <br/></div>
             </Grid>
             </Grid>
     </div>
     <div className="backto">
        <Button variant='contained' sx={{backgroundColor:'#008b8b'}}><Link style={{textDecoration:'none', color:'#fff'}} to="/">Back to Dashboard</Link></Button>
     </div>
-    <div>
     </div>
-    </div>
-
+    </div>*/
     
-    
-    </div>
+	<div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
+		<div style={{fontSize:"3rem", color:"#6BDFF4"}}>Update Profile</div>
+		<div>User ID: {currentUser.uid}</div>
+		<div style={{margin:"10px"}}></div>
+		{error && <Alert variant ="danger">{error}</Alert>}
+        {success && <Alert variant="success">{success}</Alert>}
+        <div style={{marginTop:"auto"}}>
+            <Form onSubmit={handleSubmit}>  
+		
+				<InputLabel id="name-label" sx={{color:"white"}}>Name:</InputLabel>
+				<TextField sx={{"&:hover": {
+					border: "solid #ced4da",
+				}, input: { color: 'white',borderColor:'white', border: '1px solid #ced4da', } }} margin='normal' size='small' type="name" inputRef={nameRef} labelId="name-label" /> 
+				<br/>
+				<InputLabel id="college-label" sx={{color:"white"}}>College:</InputLabel>
+				<TextField sx={{
+					"&:hover": {
+					border: "solid #ced4da",
+				}, input: { color: 'white', borderColor:'white', border: '1px solid #ced4da', } }} margin='normal' size='small'  type="name" inputRef={collegeRef} required />
+				<br/>
+				<InputLabel id="phone-label" sx={{color:"white"}}>Phone number:</InputLabel>
+				<TextField sx={{
+					"&:hover": {
+					border: "solid #ced4da",
+				}, input: { color: 'white',borderColor:'white', border: '1px solid #ced4da', } }} margin='normal' size='small'  type="name" inputRef={phoneRef} required />
+				<Form.Control
+					className = "textfield"
+					// fullWidth
+					disabled
+					margin='normal'
+					size='small'
+					defaultValue={currentUser.email}
+					required
+				/>
+				<br />
+				<Button disabled={loading} type="submit" className="w-100 mt-3">Update</Button>
+            </Form>
+        </div>
+	</div>
   )
 }

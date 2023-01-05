@@ -41,6 +41,9 @@ function App() {
 	}
 	
 	const theme = createTheme({
+		palette: {
+			mode:"dark",
+		},
 		typography: {
 			fontFamily:"\"Montserrat\",\"Arial\",sans-serif",
 			fontSize:20,
@@ -98,6 +101,22 @@ function App() {
 					allowScrollButtonsMobile:true,
 					variant:"scrollable",
 				}
+			},
+			MuiInputLabel: {
+				styleOverrides: {
+					root: {
+						color:"#fff"
+					}
+				}
+			},
+			MuiTextField: {
+				styleOverrides: {
+					input: { 
+						color: 'white', 
+						borderColor:'white', 
+						border: '1px solid #ced4da', 
+					}
+				}
 			}
 		}
 	});
@@ -141,7 +160,7 @@ function App() {
       	<Route path='/contact-us' element={<Suspense fallback={<div>Loading...</div>}><Contact setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
   	    <Route path='/profile' element={<Suspense fallback={<div>Loading...</div>}><Dashboard setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
 	    <Route path='/login' element={<Suspense fallback={<div>Loading...</div>}><Login setThemeColor={setTheme} /></Suspense>}></Route>
-	    <Route path='/update' element={<Suspense fallback={<div>Loading...</div>}><Update setThemeColor={setTheme} /></Suspense>}></Route>
+	    <Route path='/update' element={<Suspense fallback={<div>Loading...</div>}><Update setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
 	    <Route path='/register/:events' element={<Suspense fallback={<div>Loading...</div>}><Register setThemeColor={setTheme} /></Suspense>}></Route>
 		<Route path='/workshop/:workName' element={<Suspense fallback={<div>Loading...</div>}><WorkshopTemplate setThemeColor={setTheme} /></Suspense>}></Route>
 
