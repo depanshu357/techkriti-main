@@ -5,6 +5,7 @@ import comps from "./competitions.json";
 import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
 import Card from "./contestcard";
 import EachContest from "./EachContest";
+import "./main.css"
 
 function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 
@@ -50,22 +51,21 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 // 				</div>
 				
 				<div className="main-text">
-					<div style={{width: "calc(100% - 550px)", margin:"50px", marginBottom:"10px"}}>
+					<div style={{width: "calc(100% - 450px)", maxWidth:"60%", margin:"50px", marginBottom:"10px"}}>
 						<h1>{el.title}</h1>
 						<p>{el.text}</p>
 					</div>
-					<img src={`/images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} style={{width:"300px", float:"right", margin:"70px"}} />
+					<img src={`/images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} style={{width:"300px", float:"right", margin:"20px"}} />
+					<div className="main-container-card">
 					{el.explore.map((contest) => (
 						<div 
-							style={{
-								margin:"10px",
-								clear:"right"
-							}}
+							style={{margin:"10px"}}
 							key={contest.name}
-						>
+							>
 						<Card name={contest.name} title={contest.about}/>
 						</div>)
 					)}
+					</div>
 				</div>
 			);
 			else return (<div className="main-text-small" style={{padding:"20px"}}>
@@ -115,7 +115,11 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 	} else { //path: /competitons/ OR /competitions/details/
 		content.push({color:"#000"});
 		competitions.push(<div className="main-text">
-		    <img id="myVideo" src = "background.gif"></img>
+		    <video autoPlay loop muted playsInline className="contact-background">
+		<source  src="https://ik.imagekit.io/vc4stuoufz/0001-0480__2_.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1672862349164"/>
+		{/* <source  src="https://ik.imagekit.io/vc4stuoufz/contact_us_page_techkriti.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1672855066214"/> */}
+		{/* <source  src="contact us page techkriti.mp4"/> */}
+	</video>
 			<div className="containercomp">
 			  <div className="contest-main-card">
 				<div className="contest-main-face contest-main-face1">

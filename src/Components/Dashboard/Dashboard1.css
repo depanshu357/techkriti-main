@@ -12,7 +12,7 @@
     /* position: absolute; */
 }
 
-.Dashboardfullscreen {
+/* .Dashboardfullscreen { */
     /* height: calc(100vh - 100px); */
     /* background: url("https://images.unsplash.com/photo-1624280433509-b01afeaf68e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1915&q=80"); */
 /* 
@@ -20,7 +20,7 @@
     background-size: 100vw 100vh;
     background-position: fixed;
  */
-}
+/* } */
 
 .dashboard-page-background {
 	background-image: url("peakpx\ \(3\).jpg");
