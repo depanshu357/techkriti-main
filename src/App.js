@@ -74,9 +74,11 @@ function App() {
 						color:"#fff",
 						opacity:1,
 						padding:"7px",
+						margin:"0 10px 0",
 						"&.Mui-selected": {
 							color:"#fff !important",
 						}
+						
 					},
 				}
 			},
@@ -92,6 +94,12 @@ function App() {
 					},
 					scroller: {
 						height:"100%"
+					},
+					flexContainer:{
+						height:"100%",
+						"& button": {
+							height:"100%"
+						}
 					},
 					scrollButtons: {
 						width:"15px"

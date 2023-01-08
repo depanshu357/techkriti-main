@@ -15,7 +15,15 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { Avatar, CardContent, Grid } from '@mui/material';
 import RegComps from "./RegComps";
+import { styled } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles'; 
 
+
+// const useStyles = makeStyles({
+//   css-19kzrtu : {
+      
+//   }
+// })
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -28,7 +36,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box sx={{ p: 0,height:"calc(100vh - 200px)" }}>
           {children}
         </Box>
       )}
@@ -111,19 +119,19 @@ export default function BasicTabs(props) {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
+  
   return (
     <>
-    <div className="page-background dashboard-page-background"></div>
+    <div className="dashboard-page-background"></div>
     <Box sx={{ width: "100%", height: "100%" }} className="Dashboardfullscreen">
       <Box sx={{ borderBottom: 1, borderColor: "divider", display:"flex" }}>
         <Tabs
           value={value}
           onChange={handleChange}
           aria-label="basic tabs example"
-          sx={{ color: "white" }}
+          sx={{ color: "white" ,height:"100%"}}
         >
-          <Tab label="Profile" {...a11yProps(0)} sx={{ color: "white" }} />
+          <Tab label="Profile" {...a11yProps(0)} sx={{ color: "white",height:"100%" }} />
           <Tab
             label="Registered Workshops"
             {...a11yProps(1)}
@@ -135,18 +143,17 @@ export default function BasicTabs(props) {
             sx={{ color: "white" }}
           />
         </Tabs>
-        <Button variant='contained' sx={{backgroundColor:'#008b8b',margin:"10px 15px 0 auto"}}><Link style={{textDecoration:'none', color:'#fff'}} to="/update" className="">Update Profile</Link></Button>
-            <Button variant="contained" sx={{backgroundColor:"#e51a16", color:"#fff", margin:"10px 15px 0 0", "&:hover":{backgroundColor:"#bc1714", color:"#fff"}}} onClick={handleLogout}>Log Out</Button>
+        
       </Box>
-      <TabPanel value={value} index={0} sx={{ height: "100%", width: "100%" }}>
-        <div className="Dashboard">
+            {/* <div className="dashboard-page-background"></div> */}
+      
+      <TabPanel value={value} index={0} sx={{ height: "100%", width: "100%" }} >        
+      <div className="Dashboard">
         {/* {currentUser.email}
 
             <br/>
             {currentUser.uid} */}
           {/* <div className="top"></div> */}
-          <div className="w-100 text-center mt-2" style={{display:"flex",flexDirection:"row-reverse"}}>
-            </div>
           <div className="dashboard-content">
             <div className="dashboard-image">
               <h1>
@@ -171,14 +178,17 @@ export default function BasicTabs(props) {
                 </span>
                 <span>
                   <span>College</span>: {currentUserInfo.college}
+                </span><span>
+
+            <Button variant='contained' sx={{backgroundColor:'#008b8b',margin:"4px",width:"fit-content"}}><Link style={{textDecoration:'none', color:'#fff'}} to="/update" className="">Update Profile</Link></Button>
+            <Button variant="contained" sx={{backgroundColor:"#e51a16", color:"#fff",width:"fit-content", margin:"4px", "&:hover":{backgroundColor:"#bc1714", color:"#fff"}}} onClick={handleLogout}>Log Out</Button>
                 </span>
               </div>
               
             </div>
-          </div>
-          
+            
         </div>
-        
+          </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
         {/* {
