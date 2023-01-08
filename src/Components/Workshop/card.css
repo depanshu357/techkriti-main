@@ -1,218 +1,226 @@
-.card{
+.card {
   position: relative;
-	padding: 20px 50px;
-  width: 300px;
-  height: 350px;
-	text-decoration: none;
-	color: #fff;
-	font-size: 2em;
-	text-transform: uppercase;
-	font-family: sans-serif;
-	letter-spacing: 4px;
-	overflow: hidden;
-	background: rgba(255,255,255,.1);
-	box-shadow: 0 5px 5px rgba(0,0,0.2);
+  padding: 20px 50px;
+  width: 400px;
+  height: 450px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 5px rgba(0, 0, 0.2);
 }
 
-.card:hover{
+.card:hover {
   transform: translateY(-2%);
 }
 
-.card:before{
-  content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	background: rgba(255,255,255,.1);
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
 }
 
-.card:after{
-  content: '';
-	position: absolute;
-	top: 0;
-	left: -100%;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);
-	transition: 0.5s;
-	transition-delay: 0.5s;
+.card:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+  transition-delay: 0.5s;
 }
 
-.card:hover:after{
-	left: 100%;
+.card:hover:after {
+  left: 100%;
 }
 
-.imgcard{
-    width: 200px;
-    height: 200px;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 10px solid rbga(0 0 0 0 0.25);
-    object-fit: cover;
-    border-radius: 15px;
+.imgcard {
+  width: 300px;
+  height: 300px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 10px solid rbga(0 0 0 0 0.25);
+  object-fit: cover;
+  border-radius: 15px;
 }
 
-.title{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
-    font-size: 22px;
-    color: #fff;
-    font-weight: 600;
+.title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 600;
 }
 
-.buttons{
-    margin-bottom: 0;
-    padding-top: 0;
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 0;
-    color: rgba(61, 232, 230, 1);
-    bottom: 0;
-    /* height: 49px; */
-    /* width: 50%; */
-    /* background-color: aqua; */
+.buttons {
+  margin-bottom: 0;
+  padding-top: 0;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 0;
+  color: rgba(61, 232, 230, 1);
+  bottom: 0;
+  /* height: 49px; */
+  /* width: 50%; */
+  /* background-color: aqua; */
+  justify-content: center;
+  align-items: center;
 }
 
-.buttonr{
-    /* margin-bottom: 0; */
-    padding-left: 20px;
-    padding-top: 8px;
-    height: 30px;
-    font-size: 10px;
-    /* width: 50%; */
+.buttonr {
+  /* margin-bottom: 0; */
+  padding-left: 20px;
+  padding-top: 8px;
+  height: 30px;
+  font-size: 10px;
+  /* width: 50%; */
 }
 
-.buttone{
-    /* margin-bottom: 0; */
-    padding-left: 20px;
-    /* padding-right: auto; */
-    background-color: rgba(61, 232, 230, 0.15);
-    padding-top: 8px;
-    height: 30px;
-    width: 50%;
-    font-size: 10px;
-    margin-right: 0;
-    border-right: 3px solid rgba(61, 232, 230, 1);
-    border-bottom: 3px solid rgba(61, 232, 230, 1);
-    /* background-color:aquamarine; */
+.buttone {
+  /* margin-bottom: 0; */
+  padding-left: 20px;
+  /* padding-right: auto; */
+  background-color: rgba(61, 232, 230, 0.15);
+  padding-top: 8px;
+  height: 30px;
+  width: 50%;
+  font-size: 10px;
+  margin-right: 0;
+  border-right: 3px solid rgba(61, 232, 230, 1);
+  border-bottom: 3px solid rgba(61, 232, 230, 1);
+  /* background-color:aquamarine; */
 }
 
-.cardlink{
-    color: rgba(61, 232, 230, 1);
-    text-decoration: none;
+.cardlink {
+  color: rgba(61, 232, 230, 1);
+  text-decoration: none;
 }
 
 @keyframes lights {
   0% {
     color: hsl(230, 40%, 80%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.2),
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2),
       0 0 0.125em hsla(320, 100%, 60%, 0.3),
       -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
       1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
   }
-  
-  30% { 
+
+  30% {
     color: hsl(230, 80%, 90%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.5),
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
       0 0 0.125em hsla(320, 100%, 60%, 0.5),
       -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
       0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
   }
-  
-  40% { 
+
+  40% {
     color: hsl(230, 100%, 95%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.5),
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
       0 0 0.125em hsla(320, 100%, 90%, 0.5),
       -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
       0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
   }
-  
+
   70% {
     color: hsl(230, 80%, 90%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.5),
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
       0 0 0.125em hsla(320, 100%, 60%, 0.5),
       0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
       -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
   }
-  
+
   100% {
     color: hsl(230, 40%, 80%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.2),
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2),
       0 0 0.125em hsla(320, 100%, 60%, 0.3),
       1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
       -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
   }
-  
 }
 
-.workhead{
-    text-align: center;
-    margin-top: 8px;
-    margin-bottom: 20px;
-    font-weight: 600;
-    font-size: 3.5rem;
-    animation: lights 5s 750ms linear infinite;
-    /* color: rgba(61, 232, 230, 1); */
+.workhead {
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 3.5rem;
+  animation: lights 5s 750ms linear infinite;
+  /* color: rgba(61, 232, 230, 1); */
 }
 
-.cards{
-    display: grid;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    /* margin-bottom: 15px; */
+.cards {
+  display: grid;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: fit-content;
+  /* margin-bottom: 15px; */
 }
 
-@media only screen and (max-width: 1100px) and (min-width: 600px){
-    .cards { grid-template-columns: repeat(2, 1fr);
-    margin-left: 10%; }
+@media only screen and (max-width: 1100px) and (min-width: 600px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
   }
+}
 
-  @media only screen and (max-width: 3000px) and (min-width: 1100px) {
-    .cards { grid-template-columns: repeat(3, 1fr);
-    margin-left: 5%; }
+@media only screen and (max-width: 3000px) and (min-width: 1100px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
   }
+}
 
-  @media only screen and (max-width: 600px) and (min-width: 440px) {
-    .cards { grid-template-columns: repeat(1, 1fr);
-    margin-left: 25%; }
+@media only screen and (max-width: 600px) and (min-width: 440px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;
   }
+}
 
-  @media only screen and (max-width: 440px) and (min-width: 10px){
-    .cards { grid-template-columns: repeat(1, 1fr);
-    margin-left: 11%;
-    }
+@media only screen and (max-width: 440px) and (min-width: 10px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;
   }
+}
 
-  .cardlink{
-    padding: 0 0;
-    font-size: 10px;
-  }
+.cardlink {
+  padding: 0 0;
+  font-size: 10px;
+}
 
-  #button1{
-    padding-top: 0px;
-    padding-left: 0px;
-    font-size: 10px;
-    color: rgba(61, 232, 230, 1);
-    text-decoration: none;
-  }
+#button1 {
+  padding-top: 0px;
+  padding-left: 0px;
+  font-size: 1.1em;
+  color: rgba(61, 232, 230, 1);
+  text-decoration: none;
+}
 
-  #button2{
-    font-size: 10px;
-    padding-left: 0px;
-    padding-top: 0px;
-    padding-bottom: 12px;
-    padding-right: 23px;
-    color: rgba(61, 232, 230, 1);
-    text-decoration: none;
-  }
+#button2 {
+  font-size: 1.1em;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 12px;
+  padding-right: 23px;
+  color: rgba(61, 232, 230, 1);
+  text-decoration: none;
+}
