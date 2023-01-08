@@ -98,9 +98,9 @@ function CarouselFadeExample(props) {
             ))}
           </Carousel>
         </div>
-      <div style={extra} onClick={triggerFade} className={fade?'fades':'unfades'} >
+      {/* <div style={extra} onClick={triggerFade} className={fade?'fades':'unfades'} >
         <HorizontalBar clicked={clicked} />
-      </div>
+      </div> */}
       </div>
     </>
   );
