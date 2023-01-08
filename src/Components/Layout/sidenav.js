@@ -126,7 +126,7 @@ const Sidenav = ({themeColor, ...props}) => {
 			<div>
 				<Link to="/"><img src="/img/techkriti.svg" height={"45px"}></img></Link>
 			</div>
-			<div style={{}}>
+			<div className="div-top-nav-swayam">
 				<Tabs value={tabValue}>
 					<Link to="/competitions"><Tab value={0} label="Competitions" /></Link>
 					<Link to="/workshops"><Tab value={1} label="Workshops" /></Link>
