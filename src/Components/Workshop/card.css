@@ -166,6 +166,8 @@
 .cards{
     display: grid;
     gap: 1rem;
+    align-items: center;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
     /* margin-bottom: 15px; */
