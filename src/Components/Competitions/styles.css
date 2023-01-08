@@ -40,10 +40,11 @@ height: 100%;
 .main-text {
 color: white;
 width:100%;
+display:flex;
+justify-content:space-between;
 /* 
 display:flex;
 flex-direction:column;
-justify-content:space-between;
 align-items:center;
 */
 overflow:auto;
@@ -60,7 +61,7 @@ overflow:auto;
 }
 
 .main-text > * {
-display:inline-block;
+/* display:inline-block; */
 }
 
 .bottom-grid {

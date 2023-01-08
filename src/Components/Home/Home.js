@@ -18,9 +18,9 @@ const Home = ({setThemeColor, setLowergridmenu}) => {
 	</video>
     <div className="home-title">
     	<div class="home-container">
-		  <svg viewBox="0 0 960 300">
+		  <svg viewBox="0 0 1000 300">
 			<symbol id="home-s-text">
-			  <text textAnchor="middle" x="50%" y="80%">TECHKRITI'23</text>
+			  <text textAnchor="middle" x="50%" y="100%"  lengthAdjust="spacingAndGlyphs">TECHKRITI '23</text>
 			</symbol>
 
 			<g className="home-g-ants">
@@ -29,6 +29,7 @@ const Home = ({setThemeColor, setLowergridmenu}) => {
 			  <use href="#home-s-text" className="home-text-copy"></use>
 			  <use href="#home-s-text" className="home-text-copy"></use>
 			  <use href="#home-s-text" className="home-text-copy"></use>
+				
 			</g>
 		  </svg>
 		</div>
