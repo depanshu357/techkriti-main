@@ -19,7 +19,7 @@ const Workshop = ({setThemeColor, setLowergridmenu}) => {
   	
     <>
     <b><h2 className='workhead'>WORKSHOPS</h2></b>
-    <div className='cards'>
+    <div className='workshop-cards'>
         {workshopData.map((data, key) => {
           return (
             <Card name={data.workName} />

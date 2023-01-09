@@ -45,21 +45,13 @@ const [tab, setTab] = useState(0);
               }
             })}
             {/* <button class="btnEach">Get Started</button> */}
-      
-        <center>
-          <button class="glass-button"><Link to={`/register-w/${params.workName}`}>Register</Link></button>{" "}
-        </center>
- 
-    <div className="work-page-background work-each-page-background" style={{}}><div className="work-blob1"></div></div>
+    <div className="page-background work-each-page-background"></div>
     <div className="work-each-container">
       <div className="work-each-card">
       <div className='work-each-containerLeft'>
         <h1 className="work-each-title">Abc</h1>
         <Tabs value={tab} onChange={setCurrentTab}>
         	<Tab value={0} label={"About"}/>
-        	<Tab value={1} label={"Structure"}/>
-        	<Tab value={2} label={"Timeline"}/>
-        	<Tab value={3} label={"FAQs"}/>
         </Tabs>
         <div className="work-each-data">
         	{/* {props.content[tab]} */}
@@ -68,16 +60,16 @@ const [tab, setTab] = useState(0);
           
           
         </div>
-        {/*<p className="work-each-subtitle">Introducing the first ever 5G enabled tablet. You've got a tablet that lets you play harder and work smarter.</p>*/}
-        <button className="work-each-btn">Get Started</button>
+        <button className="work-each-btn"><Link to={`/register-w/${params.workName}`} style={{color:"white"}}>Register</Link></button>
         </div>
         <div className='work-each-containerRight'>
             <img style={{width:"100%", height:'100%', objectFit:"contain"}} className='work-each-workImg' src="comp1.png" />
         </div>
       </div>
-      <div className="work-each-workReg">
-       <button className="work-each-glass-button">Register</button><button className="work-each-glass-button">Problem Statement</button>
-      </div>
+      {// <div className="work-each-workReg">
+//        <button className="work-each-glass-button">Register</button><button className="work-each-glass-button">Problem Statement</button>
+//       </div>
+		}
     </div>
             </>
   );

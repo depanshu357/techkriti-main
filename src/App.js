@@ -142,7 +142,6 @@ function App() {
     <ThemeProvider theme={theme}>
     <div className="w-100" style={{maxWidth : '100%'}}></div>
     <Router>
-	
 	<AuthProvider>
       <Routes>
       <Route path='/' element={<Sidenav themeColor={themeColor} lowergridmenu={lowergridmenu} setThemeColor={setTheme} setLowergridmenu={setLowergrid} big={big} />}>
@@ -152,7 +151,6 @@ function App() {
 		<Route path='/workshops' element={<Suspense fallback={<Loader />}><Workshop setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
       	<Route path='/merchandise' element={<Suspense fallback={<Loader />}><Merchandise setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
 		<Route path='/register-w/:workName' element={<RegisterWorkshop setThemeColor={setTheme} setLowergridmenu={setLowergrid} />} />
-
       	<Route path='/competitions/'>
       		<Route index element={<Suspense fallback={<Loader />}><Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="" big={big}/></Suspense> }></Route>
       		<Route path="technical/">

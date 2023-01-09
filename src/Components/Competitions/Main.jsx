@@ -74,7 +74,7 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 					</div>
 					<div style={{margin:"0 auto 0", width:"calc(44vw - 60px)", display:"flex", flexWrap:"wrap"}}>
 					{el.explore.map((contest) => (
-						<Card name={contest.name} key={contest.name} title={contest.about} />)
+						<Card name={contest.name} key={contest.name} title={contest.cardAbout} />)
 					)}
 					</div>
 					</div>
@@ -106,10 +106,10 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 					to={`/competitions/${category.toLowerCase()}/${el.title.toLowerCase().replace(/\s/g, '')}`}
 					style={{
 						cursor:"pointer",
-						marginLeft:"20px",
-						marginRight:"20px",
+						marginLeft:"5px",
+						marginRight:"5px",
 						flexShrink:"0",
-						padding:"5px"
+						padding:"5px",
 					}}
 					key={el.title}
 				>
@@ -134,21 +134,23 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 		{/* <source  src="contact us page techkriti.mp4"/> */}
 	</video>
 			<div className="containercomp">
+	<Link to="/competitions/technical/">
 			  <div className="contest-main-card">
 				<div className="contest-main-face contest-main-face1">
 				  <div className="contest-main-content">
-					<p className="contest-main" style={{backgroundColor:"#fffc00"}}>Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+					<img className="contest-main-img" style={{backgroundColor:"#fffc00"}} src={require("./images/tech.jpg")}></img>
 				  </div>
 				</div>
 				<div className="contest-main-face contest-main-face2">
 				  <h2>TECHNICAL</h2>
 				</div>
 			  </div>
-
+			</Link>
+			<Link to="/competitions/entrepreneurial">
 			  <div className="contest-main-card">
 				<div className="contest-main-face contest-main-face1">
 				  <div className="contest-main-content">
-					<p className="contest-main" style={{backgroundColor:"#00fffc"}}>Python is an interpreted, high-level and general-purpose programming language.</p>
+					<img className="contest-main-img" style={{backgroundColor:"#00fffc"}} src={require("./images/entrepreneurial.png")}></img>
 				  </div>
 				</div>
 				<div className="contest-main-face contest-main-face2">
@@ -156,16 +158,19 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 				</div>
 			  </div>
 
+			</Link>
+			<Link to="/competitions/miscellaneous">
 			  <div className="contest-main-card">
 				<div className="contest-main-face contest-main-face1">
 				  <div className="contest-main-content">
-					<p className="contest-main" style={{backgroundColor:"#fc00ff"}}>C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+					<img className="contest-main-img" style={{backgroundColor:"#fc00ff"}} src={require("./images/miscellaneous.jpg")}></img>
 				  </div>
 				</div>
 				<div className="contest-main-face contest-main-face2">
 				  <h2>MISCELLANEOUS</h2>
 				</div>
 			  </div>
+			</Link>
 			</div>
 		</div>);
 	}
