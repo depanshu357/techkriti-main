@@ -1,6 +1,6 @@
 import React from "react";
 import { workshopData } from "./workshopData";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./workshopDetails.css";
 import {useState} from 'react';
 import PropTypes from 'prop-types';
@@ -44,14 +44,12 @@ const [tab, setTab] = useState(0);
                 return <h3>{e.main.dataMain}</h3>;
               }
             })}
-            <button class="btnEach">Get Started</button>
-          </div>
-        </div>
+            {/* <button class="btnEach">Get Started</button> */}
+      
         <center>
-          <button class="glass-button">Register</button>{" "}
+          <button class="glass-button"><Link to={`/register-w/${params.workName}`}>Register</Link></button>{" "}
         </center>
-      </div>
-    </div> */}
+ 
     <div className="work-page-background work-each-page-background" style={{}}><div className="work-blob1"></div></div>
     <div className="work-each-container">
       <div className="work-each-card">

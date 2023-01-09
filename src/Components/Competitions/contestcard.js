@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Card(props){
     return(
-        <div className="contestcard">
+        <div className={`contestcard`}>
             <div className="contestcard-content">
                 <div className="imgBox">
                     {/* <img className="contactImage" src={props.image} alt="img05"  /> */}

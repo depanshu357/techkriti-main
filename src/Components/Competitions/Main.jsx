@@ -67,21 +67,18 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 // 					)}
 // 					</div>
 					}
-					<div style={{width:"50%", height:"100%", overflow:"auto"}}>
+					<div style={{width:"60%", height:"100%", overflow:"auto"}}>
 					<div style={{margin:"50px"}}>
 						<h1>{el.title}</h1>
 						<p>{el.text}</p>
 					</div>
+					<div style={{margin:"0 auto 0", width:"calc(44vw - 60px)", display:"flex", flexWrap:"wrap"}}>
 					{el.explore.map((contest) => (
-						<div 
-							style={{margin:"10px 50px 0"}}
-							key={contest.name}
-							>
-						<Card name={contest.name} title={contest.about}/>
-						</div>)
+						<Card name={contest.name} key={contest.name} title={contest.about} />)
 					)}
 					</div>
-					<img style={{width:"calc(50% - 100px)", margin:"50px 50px 25px"}} src={`/images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} />
+					</div>
+					<img style={{width:"calc(40% - 100px)", margin:"50px 50px 25px"}} src={`/images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} />
 				</div>
 			);
 			else return (<div className="main-text-small" style={{padding:"20px"}}>

@@ -54,8 +54,6 @@ export default function Register() {
         
     }
     }
-
-
      useEffect(()=>{
         if(currentUser){
         axios.get(`http://localhost:9000/api/competitions/${params.events}/${currentUser.uid}`)
@@ -68,11 +66,6 @@ export default function Register() {
         setLogin(false)
     }
     },[])
-
-
-
-    
-
     async function handleSubmit(e){
         
         setSuccess('')

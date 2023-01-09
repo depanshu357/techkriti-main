@@ -337,3 +337,8 @@ a {
     /* background:url('./facebook1.png'); */
     /* --clr:rgb(0, 140, 255); */
 /* } */
+.div-top-nav-swayam{
+    align-items: center !important;
+    justify-content: center !important;
+    display: flex !important;
+}
