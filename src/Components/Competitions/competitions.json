@@ -54,11 +54,13 @@
                 "explore": [
                     {
                         "name": "Embeddded",
-                        "about": "Lorem Ipsum"
+                        "about": "Embedded systems design is a productive synergy between hardware and software design. This is the advanced level competition for all the hardcore electronics geeks. As technology advances, it reverses the characteristics of every situation repeatedly. The age of automation is going to be the age of 'Do it Yourself (DIY).' So why not drive the bandwagon rather than jumping on it. For this event, you would be automating some real home appliances such as AC LEDs, etc., making things appropriate for the user.",
+                        "cardAbout": "Content"
                     },
                     {
                         "name": "Electromania",
-                        "about": "Lorem Ipsum"
+                        "about": "Electromania provides you with an amazing opportunity to explore your fascination with video games. In this event, you are required to build your own hand-held gaming device using an 8-bit microcontroller. You are expected to design a led matrix and a joystick for controlling the gaming elements. You shall be judged on various factors such as implementation, User Interface, etc.",
+                        "cardAbout": "Content"
                     }
                 ]
             },
@@ -69,16 +71,24 @@
                 "img": "robogames",
                 "explore": [
                     {
-                        "name": "Robogames",
-                        "about": "Lorem Ipsum"
+                        "name": "Robowars",
+                        "about": "Techkriti’s flagship event Robowars being the ultimate test of engineering excellence, teamwork, strategy, and gaming. Techkriti provides you with a wonderful opportunity to witness robots ripping apart from each other. Each team is expected to come up with a wired/wirelessly controlled robot capable of one on one combat. With pneumatic pincers, mighty armors, nifty axes and more innovative weapons, these merciless mercenaries shall fight for the glory of their makers, upholders of the dignity of their institutions. The law of the jungle, of 'might is right', shall prevail. ",
+                        "cardAbout": "Content"
                     },
                     {
                         "name": "IARC",
-                        "about": "Lorem Ipsum"
+                        "about": "International Autonomous Robotics Challenge (IARC),one of the major events of Techkriti has attracted maximum international participation in Techkriti throughout the years. It also witnessed participation from different countries like Bangladesh, Sri-Lanka, etc in the previous edition of Techkriti,. The problem statement will be based on the concept of the autonomous line-following maze, wall following, wall maze, color detection, and object counting.",
+                        "cardAbout": "Content"
                     },
                     {
                         "name": "Manoeuvre",
-                        "about": "Lorem Ipsum"
+                        "about": "The event requires that the participants construct a 4 wheeled gripper robot with constrained dimensions that could move over various terrains and perform simple tasks such as grabbing and shifting. Gameplay consists of two bots coordinating with each other and transporting and moving the blocks and special objects around and then stacking or arranging them in patterns thus fetching points.",
+                        "cardAbout": "Content"
+                    },
+                    {
+                        "name": "Micromouse",
+                        "about": "Micromouse is an event where amazing things happen such as a mini robot mice solving a 16×16 maze which is made up of a 16×16 grid of cells, each 180 mm square with walls 50 mm high. The mice are completely autonomous robots that must find their way from a predetermined starting position to the central area of the maze unaided. The mouse needs to keep track of where it is, discover walls as it explores, map out the maze and detect when it has reached the goal. Having reached the goal, the mouse will typically perform additional searches of the maze until it has found an optimal route from the start to the finish. Once the optimal route has been found, the mouse will run that route in the shortest possible time.",
+                        "cardAbout": "Content"
                     }
                 ]
             },
@@ -90,11 +100,13 @@
                 "explore": [
                     {
                         "name": "TIC",
-                        "about": "Lorem Ipsum"
+                        "about": "Lorem Ipsum",
+                        "cardAbout": "Content"
                     },
                     {
                         "name": "III",
-                        "about": "Lorem Ipsum"
+                        "about": "Lorem Ipsum",
+                        "cardAbout": "Content"
                     }
                 ]
             },
@@ -106,15 +118,18 @@
                 "explore": [
                     {
                         "name": "Skysparks",
-                        "about": "Lorem Ipsum"
+                        "about": "Sky Sparks provides a platform to compete with different flyers through a series of different rounds doing different maneuvers and presenting their talent in flying like payload dropping, limbo flying and on spot landing. The competition involves RC aircraft with electric motors with more than 300  participants in Sky Sparks in the past, which was sponsored by Boeing and also served as a prelim to the Boeing National Aeromodelling Competition.",
+                        "cardAbout": "Content"
                     },
                     {
                         "name": "Hovermania",
-                        "about": "Lorem Ipsum"
+                        "about": "One of the most interesting competitions is the Hovermania which is a rugby match among hovercrafts. Each team is required to design and fabricate a hovercraft that is lightweight, easily maneuverable, quick and strong. They must throw their opponent off the arena in a match of hovermania. Here is a best chance to put forward your talent in designing the most efficient quick wrestling hovercraft",
+                        "cardAbout": "Content"
                     },
                     {
                         "name": "Multirotor",
-                        "about": "Lorem Ipsum"
+                        "about": "Participants are required to model a multirotor and will be judged on various aspects of a multirotor that is on the expertise of your flying skill, the stability of your bot and the ability to pick and drop payloads. The multirotor should be well fabricated and controls should be highly sophisticated in order to advance further in this competition. A wonderful opportunity to meet some of the top Multi rotor pilots, technicians, inventors and enthusiasts of the country at Take-off, Techkriti. Amaze the audience with your models and make this competition a great success with your performances.",
+                        "cardAbout": "Content"
                     }
                 ]
             }
@@ -131,15 +146,18 @@
                 "explore": [
                     {
                         "name": "Stockism",
-                        "about": "Lorem Ipsum"
+                        "about": "Lorem Ipsum",
+                        "cardAbout": "Content"
                     },
                     {
                         "name": "Upstart Pioneer",
-                        "about": "Lorem Ipsum"
+                        "about": "Lorem Ipsum",
+                        "cardAbout": "Content"
                     },
                     {
                         "name": "Pitch Pioneer",
-                        "about": "Lorem Ipsum"
+                        "about": "Lorem Ipsum",
+                        "cardAbout": "Content"
                     }
                 ]
             },
@@ -151,15 +169,18 @@
                 "explore": [
                     {
                         "name": "Contest 19",
-                        "about": "Lorem Ipsum"
+                        "about": "Lorem Ipsum",
+                        "cardAbout": "Content"
                     },
                     {
                         "name": "Contest 20",
-                        "about": "Lorem Ipsum"
+                        "about": "Lorem Ipsum",
+                        "cardAbout": "Content"
                     },
                     {
                         "name": "Contest 21",
-                        "about": "Lorem Ipsum"
+                        "about": "Lorem Ipsum",
+                        "cardAbout": "Content"
                     }
                 ]
             },
@@ -170,16 +191,29 @@
                 "img": "Entrepreneurial",
                 "explore": [
                     {
-                        "name": "Contest 22",
-                        "about": "Lorem Ipsum"
+                        "name": "Upstart Pioneer",
+                        "about": "The event 'Upstart Pioneer'aims to transform ideas, in the ideation phase into implementation phase-the functioning startup’s. It provides the platform where a startup is encouraged and can find its foundation.It provides a healthy environment to incorporate your ideas. Apart from the  capital, one can attract the attention and advice of the panel and not to forget  the immense networking, informal interaction and feedback from the judges. The contest aims at laying a carpet on the rugged road to establishing a big  company, by providing proper mentorship and guidance. Our vast network of venture capitalists, angel investors, incubation hubs and entrepreneurs who serve as mentors and incubators makes sure one gets connected to the right  people in the industry",
+                        "cardAbout": "Content"
                     },
                     {
-                        "name": "Contest 23",
-                        "about": "Lorem Ipsum"
+                        "name": "Pitch premier",
+                        "about": "Pitch Premier is organized with an  aim to provide participants (essentially students currently pursuing their UG/PG  programs) with an opportunity that can transform their innovation - something  as simple and small scale initiative as their summer project or a research endeavor - into real world entrepreneurial ideas. Through this event, we examine one's ability to evaluate the market, customer needs, and product usability which is important in the entrepreneurial journey. The event also helps evaluate one's plan of action to safeguard the intellectual rights of their product (majorly  by creating entry barrier) and the future research goals associated with the same product or plans to launch parallel products.",
+                        "cardAbout": "Content"
                     },
                     {
-                        "name": "Contest 24",
-                        "about": "Lorem Ipsum"
+                        "name": "Social Track",
+                        "about": "It is a platform to showcase any new venture that has a central focus on addressing challenges faced by society and on creating social values. In this contest entries may include nonprofit, for-profit, or hybrid model business plans. Participants are expected to develop/design a transformative technology solution (innovative, smart and useful app/concept/product) that would be beneficial to ordinary people",
+                        "cardAbout": "Content"
+                    },
+                    {
+                        "name": "Biobuzz",
+                        "about": "It provides a platform where start-ups/ individuals or organizations from the bio-domain can find its foundation. This is your first step to turn ideas on paper into reality. This is a unique chance to seek advice, mentoring, funding and networking. Our judges are successful entrepreneurs, investors, and academia who have immense experience in the respective domain. Winners will get an on-spot incubation opportunity in the state of the art incubation center at IIT Kanpur in addition to equity less funding for the project. Creative business minds in Bio-domain is only the eligibility criteria.",
+                        "cardAbout": "Content"
+                    },
+                    {
+                        "name": "Stockism",
+                        "about": "Stocksim is the real-time simulation of the stock market where you get the chance to experience thrills and frills of the Dalal street. The virtual market price of shares is kept updated in real-time with BSE and NSE along with relevant news updates tipping the scales.",
+                        "cardAbout": "Content"
                     }
                 ]
             },
@@ -191,15 +225,23 @@
                 "explore": [
                     {
                         "name": "Battlefield",
-                        "about": "Lorem Ipsum"
+                        "about": "Participants are given a case study that they are to solve using data analytics tools, techniques, and methodologies after initial shortlisting. The final round would consist of a presentation round. The event focuses on building practical business skill-set and applications of statistical and analytical methods.",
+                        "cardAbout": "Content"
+                    },
+                    {
+                        "name": "Marketing Villa",
+                        "about": "To be a smart marketer you need to understand customer needs better than your competitor does. After all, Marketing is everything a company does to acquire customers and maintain a relationship with them. ‘Marketing Villa’ is back to bring out the smartest and most innovative marketers and gauge their creative acumen through an Ad-making competition.",
+                        "cardAbout": "Content"
                     },
                     {
                         "name": "Best Manager",
-                        "about": "Lorem Ipsum"
+                        "about": "There is no equation to describe the best manager, but we know when we see one, courtesy Buizkriti’s legacy. Communication skills, managerial ability, and level-headedness are a must to ace this, bonus points if you bring in your own USP. As they say, being the best is easy, staying the best is the hardest.",
+                        "cardAbout": "Content"
                     },
                     {
                         "name": "Sub Operati",
-                        "about": "Lorem Ipsum"
+                        "about": "Sup-Operati focuses on testing participants' knowledge of supply chain and operations management. The Sup-Operati is not just a competition, it is way beyond that, it is the actual soul of business events in Techkriti’23, analogous to a business model where operations and supply chain management.",
+                        "cardAbout": "Content"
                     }
                 ]
             }
@@ -209,14 +251,15 @@
         "category": "Miscellaneous",
         "contests": [
             {
-                "title": "Misc Llorem",
+                "title": "Mixed Bowl",
                 "text": "Lorem Ipsum Dolor Sit Amert",
                 "color": "#005555",
                 "img": "mandakani",
                 "explore": [
                     {
-                        "name": "misc contest",
-                        "about": "Lorem Ipsum"
+                        "name": "IORC",
+                        "about": "Indian Open Speedcubing competition is conducted in association with The World Cube Association (WCA) which governs competitions for all such puzzles. The legacy of the Indian Open continues and we present the 12th edition of the competition. It has witnessed many national records being broken since 2008. All results secured in the competition will be uploaded in the WCA Database and each participant will receive their national, continental and global rankings in all the events he/she participates in.",
+                        "cardAbout": "Content"
                     }
                 ]
             }

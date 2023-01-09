@@ -74,7 +74,7 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 					</div>
 					<div style={{margin:"0 auto 0", width:"calc(44vw - 60px)", display:"flex", flexWrap:"wrap"}}>
 					{el.explore.map((contest) => (
-						<Card name={contest.name} key={contest.name} title={contest.about} />)
+						<Card name={contest.name} key={contest.name} title={contest.cardAbout} />)
 					)}
 					</div>
 					</div>
