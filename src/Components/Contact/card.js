@@ -39,7 +39,7 @@ function Card(props){
               </a>
             </li>
             <li>
-              <a href="#" target="_blank">
+              <a href={`mailto:${props.mail}`} target="_blank">
                 <FaMailBulk />
               </a>
             </li>

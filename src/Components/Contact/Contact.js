@@ -30,7 +30,7 @@ export default function Contact({setThemeColor, setLowergridmenu}) {
 		{/* <source  src="https://ik.imagekit.io/vc4stuoufz/contact_us_page_techkriti.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1672855066214"/> */}
 		{/* <source  src="contact us page techkriti.mp4"/> */}
 	</video>
-	<h1 className="contact-heading">Contact Us</h1>
+	<h1 className="contact-heading">Team Techkriti</h1>
     <div className="contactBody">
     	{// <div className="container">
 // 			<header className="contactHeader">
@@ -106,7 +106,7 @@ export default function Contact({setThemeColor, setLowergridmenu}) {
 					<h1 className="head">{value.heading}</h1>
 					<div className="contact-name-cards">
 					{value.members.map(el => (
-						<Card name={el.name} title={value.title} key={el.name} image={el.imgLink} fb={el.fb} linkedIn={el.linkedIn}/>
+						<Card name={el.name} title={value.title} key={el.name} image={el.imgLink} fb={el.fb} linkedIn={el.linkedIn} mail={el.mail}/>
 						))
 					}
 					</div>
