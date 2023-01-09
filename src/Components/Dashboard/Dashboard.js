@@ -217,7 +217,7 @@ export default function BasicTabs(props) {
         <RegComps />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        {/* Item Three */}
       </TabPanel>
     </Box>
     </>

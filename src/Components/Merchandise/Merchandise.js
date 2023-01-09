@@ -85,17 +85,18 @@ const Merchandise = (props) => {
           {/* <a href='https://postimg.cc/BX84q71s' target='_blank'><img className='contact-background' src='https://i.postimg.cc/BX84q71s/contact-us-page-techkriti-Adobe-Express.gif' border='0' alt='contact-us-page-techkriti-Adobe-Express'/></a> */}
           <div className="merchandise">
             <div className="topMerchandise ">Techkriti Merchandise</div>
-            <div className="contentMerchandise">
+            {/* <div className="contentMerchandise">
               <div className="imageBox">
                 <div className='topOfImageBox'>#<span>Jacket</span></div>
                 <div className="imageMerch">
-                <img src="images/Hoodie1.png" style={{height:'40vh'}} alt="Hoodie" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} />
+                <img src="images/Hoodie1.png" style={{height:'40vh'}} alt="Jacket" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} />
                 </div>
                 <div className="descriptionOfImageBox">Lorem ipsum dolor sit amet.</div>
                 <div className="textBuy">
                 <a href="#" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                   Buy Now
                 </a>
+                Jacket
                   </div>
               </div>
               <div className="imageBox">
@@ -107,11 +108,25 @@ const Merchandise = (props) => {
                 <div className="textBuy">
                 <a href="#" onMouseOver={handleMouseOver1} onMouseOut={handleMouseOut1}>
                   Buy Now
+          
                 </a>
+                Hoodie
                   </div>
               </div>
+            </div> */}
+            <div className="merchandise-content">
+
+            <div className="merchandise-image-box">
+                <h1>Hoodie</h1>            
+                
+              <img src="images/Hoodie_mock.png" alt="Hoodie" />
+            </div>
+            <div className="merchandise-image-box">
+                <h1>Merchandise</h1>            
+              <img src="images/Jacket_mock.png" alt="Jacket" style={{filter:"brightness(1.5)"}}/>
             </div>
             
+            </div>
           </div>
 
     </>

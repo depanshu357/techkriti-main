@@ -3,7 +3,7 @@ const contactProps = {
         heading: "Marketing",
         members: [
             {
-                name: "Kshitiz Mittal"
+                name: "Kshitiz Mittal",
             },
             {
                 name: "Utkarsh Srivatava"
