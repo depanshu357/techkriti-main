@@ -2,47 +2,26 @@
     {
         "category": "Technical",
         "contests": [
-            {
-                "title": "Mandakini",
+        	{
+                "title": "Take Off",
                 "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-                "color": "#101B55",
-                "img": "mandakani",
+                "color": "#2C3A4D",
+                "img": "take_off",
                 "explore": [
                     {
-                        "name": "Contest 1",
-                        "about": "Lorem Ipsum"
+                        "name": "Skysparks",
+                        "about": "Sky Sparks provides a platform to compete with different flyers through a series of different rounds doing different maneuvers and presenting their talent in flying like payload dropping, limbo flying and on spot landing. The competition involves RC aircraft with electric motors with more than 300  participants in Sky Sparks in the past, which was sponsored by Boeing and also served as a prelim to the Boeing National Aeromodelling Competition.",
+                        "cardAbout": "Content"
                     },
                     {
-                        "name": "Contest 2",
-                        "about": "Lorem Ipsum"
+                        "name": "Hovermania",
+                        "about": "One of the most interesting competitions is the Hovermania which is a rugby match among hovercrafts. Each team is required to design and fabricate a hovercraft that is lightweight, easily maneuverable, quick and strong. They must throw their opponent off the arena in a match of hovermania. Here is a best chance to put forward your talent in designing the most efficient quick wrestling hovercraft",
+                        "cardAbout": "Content"
                     },
                     {
-                        "name": "Contest 3",
-                        "about": "Lorem Ipsum"
-                    },
-                    {
-                        "name": "Contest 101",
-                        "about": "Lorem Ipsum"
-                    },
-                    {
-                        "name": "Contest 102",
-                        "about": "Lorem Ipsum"
-                    },
-                    {
-                        "name": "Contest 103",
-                        "about": "Lorem Ipsum"
-                    },
-                    {
-                        "name": "Contest 111",
-                        "about": "Lorem Ipsum"
-                    },
-                    {
-                        "name": "Contest 112",
-                        "about": "Lorem Ipsum"
-                    },
-                    {
-                        "name": "Contest 113",
-                        "about": "Lorem Ipsum"
+                        "name": "Multirotor",
+                        "about": "Participants are required to model a multirotor and will be judged on various aspects of a multirotor that is on the expertise of your flying skill, the stability of your bot and the ability to pick and drop payloads. The multirotor should be well fabricated and controls should be highly sophisticated in order to advance further in this competition. A wonderful opportunity to meet some of the top Multi rotor pilots, technicians, inventors and enthusiasts of the country at Take-off, Techkriti. Amaze the audience with your models and make this competition a great success with your performances.",
+                        "cardAbout": "Content"
                     }
                 ]
             },
@@ -111,33 +90,10 @@
                 ]
             },
             {
-                "title": "Take Off",
-                "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-                "color": "#2C3A4D",
-                "img": "take_off",
-                "explore": [
-                    {
-                        "name": "Skysparks",
-                        "about": "Sky Sparks provides a platform to compete with different flyers through a series of different rounds doing different maneuvers and presenting their talent in flying like payload dropping, limbo flying and on spot landing. The competition involves RC aircraft with electric motors with more than 300  participants in Sky Sparks in the past, which was sponsored by Boeing and also served as a prelim to the Boeing National Aeromodelling Competition.",
-                        "cardAbout": "Content"
-                    },
-                    {
-                        "name": "Hovermania",
-                        "about": "One of the most interesting competitions is the Hovermania which is a rugby match among hovercrafts. Each team is required to design and fabricate a hovercraft that is lightweight, easily maneuverable, quick and strong. They must throw their opponent off the arena in a match of hovermania. Here is a best chance to put forward your talent in designing the most efficient quick wrestling hovercraft",
-                        "cardAbout": "Content"
-                    },
-                    {
-                        "name": "Multirotor",
-                        "about": "Participants are required to model a multirotor and will be judged on various aspects of a multirotor that is on the expertise of your flying skill, the stability of your bot and the ability to pick and drop payloads. The multirotor should be well fabricated and controls should be highly sophisticated in order to advance further in this competition. A wonderful opportunity to meet some of the top Multi rotor pilots, technicians, inventors and enthusiasts of the country at Take-off, Techkriti. Amaze the audience with your models and make this competition a great success with your performances.",
-                        "cardAbout": "Content"
-                    }
-                ]
-            },
-            {
                 "title": "Software Corner",
                 "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-                "color": "#2C3A4D",
-                "img": "take_off",
+                "color": "#5F605D",
+                "img": "softcorner",
                 "explore": [
                     {
                         "name": "IOPC",
@@ -158,6 +114,50 @@
                         "name": "IHPC",
                         "about": "High-Performance Computing refers to the practice of aggregating computing power in a way that delivers much higher performance than a typical desktop computer or workstation for solving complex computational problems. It is typically used for solving advanced problems and performing research activities through computer modeling, simulation, and analysis. It involves developing parallel processing algorithms and time-defying calculations. IHPC is an opportunity to harness the power of a supercomputer while sitting comfortably at home. As the event involves problems that take days or months to solve on the ordinary systems, the submissions will be computed on PARAM Yuva supercomputer at IIT Kanpur.",
                         "cardAbout": "Content"
+                    }
+                ]
+            },
+            {
+                "title": "Mandakini",
+                "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+                "color": "#101B55",
+                "img": "mandakani",
+                "explore": [
+                    {
+                        "name": "Contest 1",
+                        "about": "Lorem Ipsum"
+                    },
+                    {
+                        "name": "Contest 2",
+                        "about": "Lorem Ipsum"
+                    },
+                    {
+                        "name": "Contest 3",
+                        "about": "Lorem Ipsum"
+                    },
+                    {
+                        "name": "Contest 101",
+                        "about": "Lorem Ipsum"
+                    },
+                    {
+                        "name": "Contest 102",
+                        "about": "Lorem Ipsum"
+                    },
+                    {
+                        "name": "Contest 103",
+                        "about": "Lorem Ipsum"
+                    },
+                    {
+                        "name": "Contest 111",
+                        "about": "Lorem Ipsum"
+                    },
+                    {
+                        "name": "Contest 112",
+                        "about": "Lorem Ipsum"
+                    },
+                    {
+                        "name": "Contest 113",
+                        "about": "Lorem Ipsum"
                     }
                 ]
             }

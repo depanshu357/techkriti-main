@@ -133,6 +133,7 @@ const Sidenav = ({themeColor, ...props}) => {
 					<Link to="/gallery"><Tab value={2} label="Gallery" /></Link>
 					<Link to="/contact-us"><Tab value={3} label="Contact Us" /></Link>
 					<Link to="/merchandise"><Tab value={4} label="Merchandise" /></Link>
+					<a href="/brochure.pdf" target="_blank"><Tab value={5} label="Brochure" /></a>
 				</Tabs>
 			</div>
 			<div className="right"><Login/></div>
