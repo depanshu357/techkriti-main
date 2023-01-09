@@ -97,20 +97,20 @@ export default function Register() {
     <img src = {require("../Contact/images/contact\ us.png")} id='myvideo'></img>
     <h2 className='mainhead'>Register</h2>
 
-        <div class="container1">
-            <div class="signup-content">
+        <div className="container1">
+            <div className="signup-content">
                 <form id="signup-form" className="signup-form" style={{paddingBottom:"0px"}} onSubmit={handleMember}>
-                    <h2>{params.events} </h2>
-                    <p class="desc"><span></span></p>
-                    <div class="form-group">
-                        <input type="text" class="form-input" name="name" id='name' value={mem} onChange={(e) => setMem(e.target.value)} placeholder="Member Name"/>
+                    <h2 className="register-event-head">{params.events} </h2>
+                    <p className="desc"><span></span></p>
+                    <div className="form-group">
+                        <input type="text" className="form-input" name="name" id='name' value={mem} onChange={(e) => setMem(e.target.value)} placeholder="Member Name"/>
                     </div>
-                    <div class="form-group">
-                        <input type="number" class="form-input" name="techid" value={tid} id = "techid" onChange={(e) => setTid(e.target.value)} placeholder="TechID"/>
+                    <div className="form-group">
+                        <input type="number" className="form-input" name="techid" value={tid} id = "techid" onChange={(e) => setTid(e.target.value)} placeholder="TechID"/>
                     </div>
                     {errorM}
                     
-                    <div class="form-group">
+                    <div className="form-group">
                         
                         <button className='memberbtn'>Add member</button>
                             </div>

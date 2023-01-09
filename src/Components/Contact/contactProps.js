@@ -107,7 +107,7 @@ const contactProps = {
             },
             {
                 name: "Praveen Kumar Swami",
-                imgLink:"praveens.jpg"
+                imgLink:"praveen.jpg"
             }
         ],
         title: "Head, Show Management"
