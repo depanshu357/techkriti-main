@@ -1,7 +1,7 @@
 import React from "react";
 import {
     FaFacebookF,
-    FaTwitterSquare,
+    FaMailBulk,
     FaInstagram,
     FaLinkedinIn,
   } from "react-icons/fa";
@@ -24,23 +24,23 @@ function Card(props){
           </div>
           <ul className="contact-sci">
             <li>
-              <a href="#">
+              <a href={props.fb} target="_blank">
                 <FaFacebookF/>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" target="_blank">
                 <FaInstagram />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href={props.linkedIn} target="_blank">
                 <FaLinkedinIn />
               </a>
             </li>
             <li>
-              <a href="#">
-                <FaTwitterSquare />
+              <a href="#" target="_blank">
+                <FaMailBulk />
               </a>
             </li>
           </ul>
