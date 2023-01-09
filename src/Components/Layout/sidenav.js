@@ -139,15 +139,15 @@ const Sidenav = ({themeColor, ...props}) => {
 			<div style={{display:"flex", flexDirection:"column", justifyContent:"flex-start", alignItems:"center"}}>
 				<br />
 				
-          		<a href="https://www.facebook.com/techkriti.iitk"><img className="socialicon facebook" src="/images/facebook.png" height={"24px"} ></img></a>
+          		<a href="https://www.facebook.com/techkriti.iitk" target={"_blank"}><img className="socialicon facebook" src="/images/facebook.png" height={"24px"} ></img></a>
           		<br />
-          		<a href="https://twitter.com/techkriti_iitk"><img className="socialicon" src="/images/twitter.png" height={"17.94px"}></img></a>
+          		<a href="https://twitter.com/techkriti_iitk" target={"_blank"}><img className="socialicon" src="/images/twitter.png" height={"17.94px"}></img></a>
           		<br />
-          		<a href="https://www.youtube.com/@TechkritiIITKanpur"><img className="socialicon" src="/images/youtube.png" height={"24px"}></img></a>
+          		<a href="https://www.youtube.com/@TechkritiIITKanpur" target={"_blank"}><img className="socialicon" src="/images/youtube.png" height={"24px"}></img></a>
           		<br />
-          		<a href="https://www.linkedin.com/school/techkriti-iitk/"><img className="socialicon" src="/images/linkedin.png" height={"24px"}></img></a>
+          		<a href="https://www.linkedin.com/school/techkriti-iitk/" target={"_blank"}><img className="socialicon" src="/images/linkedin.png" height={"24px"}></img></a>
           		<br />
-          		<a href="https://www.instagram.com/techkriti.iitk/"><img className="socialicon" src="/images/instagram.png" height={"20px"}></img></a>
+          		<a href="https://www.instagram.com/techkriti.iitk/" target={"_blank"}><img className="socialicon" src="/images/instagram.png" height={"20px"}></img></a>
           	</div>
 			<div className="sidenav-inner" style={{display:"block"}}>
 				{//<div style={{position:"absolute", width:"100%", height:"auto", backdropFilter:"blur(10px)", backgroundColor:"rgba(255,255,255,0.1)", zIndex:-1}}></div>
