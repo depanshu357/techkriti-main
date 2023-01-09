@@ -134,21 +134,23 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 		{/* <source  src="contact us page techkriti.mp4"/> */}
 	</video>
 			<div className="containercomp">
+	<Link to="/competitions/technical/">
 			  <div className="contest-main-card">
 				<div className="contest-main-face contest-main-face1">
 				  <div className="contest-main-content">
-					<p className="contest-main" style={{backgroundColor:"#fffc00"}}>Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+					<img className="contest-main-img" style={{backgroundColor:"#fffc00"}} src={require("./images/tech.jpg")}></img>
 				  </div>
 				</div>
 				<div className="contest-main-face contest-main-face2">
 				  <h2>TECHNICAL</h2>
 				</div>
 			  </div>
-
+			</Link>
+			<Link to="/competitions/entrepreneurial">
 			  <div className="contest-main-card">
 				<div className="contest-main-face contest-main-face1">
 				  <div className="contest-main-content">
-					<p className="contest-main" style={{backgroundColor:"#00fffc"}}>Python is an interpreted, high-level and general-purpose programming language.</p>
+					<img className="contest-main-img" style={{backgroundColor:"#00fffc"}} src={require("./images/entrepreneurial.png")}></img>
 				  </div>
 				</div>
 				<div className="contest-main-face contest-main-face2">
@@ -156,16 +158,19 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 				</div>
 			  </div>
 
+			</Link>
+			<Link to="/competitions/miscellaneous">
 			  <div className="contest-main-card">
 				<div className="contest-main-face contest-main-face1">
 				  <div className="contest-main-content">
-					<p className="contest-main" style={{backgroundColor:"#fc00ff"}}>C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+					<img className="contest-main-img" style={{backgroundColor:"#fc00ff"}} src={require("./images/miscellaneous.jpg")}></img>
 				  </div>
 				</div>
 				<div className="contest-main-face contest-main-face2">
 				  <h2>MISCELLANEOUS</h2>
 				</div>
 			  </div>
+			</Link>
 			</div>
 		</div>);
 	}

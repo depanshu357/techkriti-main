@@ -62,9 +62,9 @@ align-items:center;
 overflow:auto;
 }
 
-.main-text > * {
-/* display:inline-block; */
-}
+/* .main-text > * {
+/* display:inline-block; 
+} */
 
 .bottom-grid {
 float: left;
@@ -209,6 +209,8 @@ padding: 0;
 .contest-main {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+  width:auto;
+
 }
 
         /* &.face2 {
@@ -226,6 +228,9 @@ padding: 0;
         
       
     
+.contest-main-img{
+  z-index: -1;
+}
 
 .contest-main-card:hover .contest-main-face.contest-main-face2 {
 height: 60px;
