@@ -50,6 +50,9 @@ function a11yProps(index) {
 }
 
 export default function BasicTabs(props) {
+
+	const navigate = useNavigate();
+	
 	useEffect(() => {
 		props.setThemeColor("#000"); //on mount: set theme to black
 		props.setLowergridmenu([]);
@@ -58,17 +61,24 @@ export default function BasicTabs(props) {
 
     const [error,setError] = useState('');
     const [team,setTeam] = useState([Object]);
+    
     const {currentUser,logout} = useAuth();
-    const photoURL = currentUser.photoURL;
-    const navigate = useNavigate();
+    
+     const photoURL = currentUser?.photoURL;
+    
+    
     const [currentUserInfo,setCurrentUserInfo] = useState({
         name : "",
         college: "",
-        email : currentUser.email,
-        uid : currentUser.uid,
-        phone: currentUser.phone,
-        competitions: currentUser.competitions
+        email : currentUser?.email,
+        uid : currentUser?.uid,
+        phone: currentUser?.phone,
+        competitions: currentUser?.competitions
     })
+    
+    const [value, setValue] = React.useState(0);
+    
+   
 
     // let allTeam;
     // axios.get(`http://localhost:9000/api/get-team-detail/${currentUser.uid}`).then((response)=>{
@@ -79,8 +89,8 @@ export default function BasicTabs(props) {
     // console.log(team)
     useEffect(()=>{
         axios.post('http://localhost:9000/api/',{
-        uid : currentUser.uid,
-        email : currentUser.email,
+        uid : currentUser?.uid,
+        email : currentUser?.email,
         })
         .then((response)=>{
             setCurrentUserInfo({
@@ -95,7 +105,7 @@ export default function BasicTabs(props) {
             })
         })
         .catch((e)=>console.log(e))
-    },[currentUser.uid,currentUser.email])
+    },[currentUser?.uid,currentUser?.email])
     async function handleLogout(){
       try{
           setError('');
@@ -105,7 +115,11 @@ export default function BasicTabs(props) {
           setError('Failed to logout')
       }
   }
-  const [value, setValue] = React.useState(0);
+  
+    if (!currentUser) {
+    	navigate('/login');
+    }
+  
   // let techId = ""
 
   const handleChange = (event, newValue) => {

@@ -26,6 +26,7 @@ const Sidenav = lazy(()=> import( './Components/Layout/sidenav'));
 const Contact = lazy(()=> import( './Components/Contact/Contact'));
 const Home = lazy(()=> import( './Components/Home/Home'));
 const Dashboard = lazy(()=> import( './Components/Dashboard/Dashboard'));
+const NotFound = lazy(() => import("./Components/404.js"));
 function App() {
 	const [themeColor, setThemeColor] = useState("#000000");
 	const [lowergridmenu, setLowergridmenu] = useState([]);
@@ -171,7 +172,7 @@ function App() {
 	    <Route path='/update' element={<Suspense fallback={<div>Loading...</div>}><Update setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
 	    <Route path='/register/:events' element={<Suspense fallback={<div>Loading...</div>}><Register setThemeColor={setTheme} /></Suspense>}></Route>
 		<Route path='/workshop/:workName' element={<Suspense fallback={<div>Loading...</div>}><WorkshopTemplate setThemeColor={setTheme} /></Suspense>}></Route>
-
+		<Route path='*' element={<Suspense fallback={<div></div>}><NotFound setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
       </Route>
 
     </Routes>

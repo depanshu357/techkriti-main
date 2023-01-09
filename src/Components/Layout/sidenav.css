@@ -123,7 +123,7 @@
     opacity: 100%;
     transition: all 1s;
     top: 0;
-    z-index: 2;
+    z-index: 999;
     background: url("https://img.freepik.com/premium-photo/technology-network-background_34629-304.jpg?size=626&ext=jpg&uid=R75559434&ga=GA1.2.2028119472.1669828699");
     background-size: cover;
     
