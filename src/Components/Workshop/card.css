@@ -52,7 +52,7 @@
 
 .workshop-imgcard {
   width: 100%;
-  height: 66.66%;
+  height: 56%;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -63,8 +63,8 @@
 
 .workshop-title {
 	text-align:center;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0px;
+  margin-right: 0px;
   margin-top: 15px;
   font-size: 22px;
   color: #fff;
@@ -213,6 +213,9 @@
   }
 }
 
+
+
+
 @media only screen and (max-width: 440px) and (min-width: 10px) {
   .workshop-cards {
     grid-template-columns: repeat(1, 1fr);
@@ -242,4 +245,14 @@
   padding-right: 23px;
   color: rgba(61, 232, 230, 1);
   text-decoration: none;
+}
+
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
 }
