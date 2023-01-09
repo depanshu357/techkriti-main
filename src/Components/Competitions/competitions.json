@@ -132,6 +132,34 @@
                         "cardAbout": "Content"
                     }
                 ]
+            },
+            {
+                "title": "Software Corner",
+                "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+                "color": "#2C3A4D",
+                "img": "take_off",
+                "explore": [
+                    {
+                        "name": "IOPC",
+                        "about": "A programming contest where each coder whacks his brain to code solutions to the given problems. The contest tests optimization, proficiency, skills & hard work of the teams. It is a 3-hr online coding competition that gathers high international participation. The difficulty level of the problems varies from medium to difficult and the codes can be of C, C++, Pascal, Python, Java, etc.",
+                        "cardAbout": "Content"
+                    },
+                    {
+                        "name": "Chaos",
+                        "about": "Chaos lets you show off your worth as a new age programmer unrestricted by the bounds of languages and time. Teams participating are put through a brain-teasing session where they would be required to code solutions for given problems in a fresh new language whose documentation shall be provided at the time of the competition. The teams are required to understand the API of the new language and code solutions to given problems in that language.",
+                        "cardAbout": "Content"
+                    },
+                    {
+                        "name": "CTF",
+                        "about": "Code golf and golf are on the same line. Code golf is a programming competition based upon the  idea of the golf where the player who completes the course in the fewest strokes wins.. The goal of this competition is to implement a given algorithm correctly with the shortest source code. The creativity and the skills are tested to an extreme level as the only way to win is by having an excellent out of the box idea",
+                        "cardAbout": "Content"
+                    },
+                    {
+                        "name": "IHPC",
+                        "about": "High-Performance Computing refers to the practice of aggregating computing power in a way that delivers much higher performance than a typical desktop computer or workstation for solving complex computational problems. It is typically used for solving advanced problems and performing research activities through computer modeling, simulation, and analysis. It involves developing parallel processing algorithms and time-defying calculations. IHPC is an opportunity to harness the power of a supercomputer while sitting comfortably at home. As the event involves problems that take days or months to solve on the ordinary systems, the submissions will be computed on PARAM Yuva supercomputer at IIT Kanpur.",
+                        "cardAbout": "Content"
+                    }
+                ]
             }
         ]
     },
