@@ -13,7 +13,7 @@ function Card(props){
         <div className="contact-card">
           <div className="contact-card-content">
             <div className="contact-imgBx">
-              <img className="contactImage" src={props.imgLink} alt="img05" />
+              <img className="contactImage" src={`./images/${props.image}`} alt="img05" />
             </div>
             <div className="contact-contentBx">
               <h3>

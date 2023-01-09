@@ -107,8 +107,9 @@ export default function Contact({setThemeColor, setLowergridmenu}) {
 					<h1 className="head">{value.heading}</h1>
 					<div className="contact-name-cards">
 					{value.members.map(el => (
-						<Card name={el.name} title={value.title} key={el.name} imgLink={el.imgLink}/>
-						))}
+						<Card name={el.name} title={value.title} key={el.name} image={el.imgLink}/>
+						))
+					}
 					</div>
 				</div>
 			);

@@ -4,25 +4,32 @@ const contactProps = {
         members: [
             {
                 name: "Kshitiz Mittal",
+                imgLink:"kshitiz.jpeg"
             },
             {
-                name: "Utkarsh Srivatava"
+                name: "Utkarsh Srivatava",
+                imgLink:"utkarsh.jpg"
             }
         ],
-        title: "Head, Marketing"
+        title: "Head, Marketing",
+        imgLink:'kshitiz.jpeg'
     },
 
     publicRel:{
         heading: "Public Relations",
         members: [
             {
-                name: "Aditya Subramanian"
+                name: "Aditya Subramanian",
+                imgLink:"aditya.jpg"
+                
             },
             {
-                name: "Dhvani Jain"
+                name: "Dhvani Jain",
+                imgLink:"dhvani.jpeg"
             },
             {
-                name: "Animesh Tiwari"
+                name: "Animesh Tiwari",
+                imgLink:"animesh.jpg"
             }
         ],
         title: "Head, Public Relations"
@@ -32,10 +39,12 @@ const contactProps = {
         heading: "Events and Competition",
         members: [
             {
-                name: "Anita Waskale"
+                name: "Anita Waskale",
+                imgLink:"anita.jpeg"
             },
             {
-                name: "Sanskar Mittal"
+                name: "Sanskar Mittal",
+                imgLink:"sanskar.jpg"
             }
         ],
         title: "Head, Events and Competition"
@@ -45,7 +54,8 @@ const contactProps = {
         heading: "Web and App",
         members: [
             {
-                name: "Swayam Gupta"
+                name: "Swayam Gupta",
+                imgLink:"swayam.jpg"
             }
         ],
         title: "Head, Web and App"
@@ -55,7 +65,8 @@ const contactProps = {
         heading: "Finance",
         members: [
             {
-                name: "Aryan Garg"
+                name: "Aryan Garg",
+                imgLink:"aryan.jpg"
             }
         ],
         title: "Head, Finance"
@@ -65,7 +76,8 @@ const contactProps = {
         heading: "Media and Publicity",
         members: [
             {
-                name: "Daksh Shrivastava"
+                name: "Daksh Shrivastava",
+                imgLink:"daksh.jpeg"
             }
         ],
         title: "Head, Media and Publicity"
@@ -75,10 +87,12 @@ const contactProps = {
         heading: "Design",
         members: [
             {
-                name: "Sejal Sahu"
+                name: "Sejal Sahu",
+                imgLink:"sejal.jpg"
             },
             {
-                name: "Anupam Anand"
+                name: "Anupam Anand",
+                imgLink:"anupam.jpeg"
             }
         ],
         title: "Head, Design"
@@ -88,10 +102,12 @@ const contactProps = {
         heading: "Show Management",
         members: [
             {
-                name: "Hariom Vediya"
+                name: "Hariom Vediya",
+                imgLink:"hariom.jpg"
             },
             {
-                name: "Praveen Kumar Swami"
+                name: "Praveen Kumar Swami",
+                imgLink:"praveens.jpg"
             }
         ],
         title: "Head, Show Management"
@@ -99,7 +115,9 @@ const contactProps = {
 	snt: {
 		heading: "General Secretary, SnT Council",
 		members:[
-			{name: "Som Tambe"}
+			{name: "Som Tambe",
+            imgLink:"som.JPG"
+        }
 		],
 		title: "General Secretary, Science and Technology Council"
 	},
@@ -107,10 +125,12 @@ const contactProps = {
         heading: "Festival Co-ordinators",
         members: [
             {
-                name: "Devansh Jain"
+                name: "Devansh Jain",
+                imgLink:"devansh.jpeg"
             },
             {
-                name: "Aarjav Jain"
+                name: "Aarjav Jain",
+                imgLink:"aarjav.jpg"
             }
         ],
         title: "Festival Coordinator"

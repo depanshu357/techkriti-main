@@ -41,27 +41,27 @@
 }
 
 .home-text-copy:nth-child(1){
-	stroke: #00ffff;
+	stroke: #70E0D5;
 	animation-delay: -1s;
 }
 
 .home-text-copy:nth-child(2){
-	stroke: #ffffff;
+	stroke: #52B7BB;
 	animation-delay: -2s;
 }
 
 .home-text-copy:nth-child(3){
-	stroke: #23ead6;
+	stroke: #4d8f9c;
 	animation-delay: -3s;
 }
 
 .home-text-copy:nth-child(4){
-	stroke: #efefef;
+	stroke: #215971;
 	animation-delay: -4s;
 }
 
 .home-text-copy:nth-child(5){
-	stroke: #3cfc92;
+	stroke: #1d374b;
 	animation-delay: -5s;
 }
 

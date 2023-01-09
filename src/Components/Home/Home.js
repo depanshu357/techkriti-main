@@ -20,7 +20,7 @@ const Home = ({setThemeColor, setLowergridmenu}) => {
     	<div className="home-container">
 		  <svg viewBox="0 0 1250 150">
 			<symbol id="home-s-text">
-			  <text textAnchor="middle" x="50%" y="90%"  lengthAdjust="spacingAndGlyphs">TECHKRITI '23</text>
+			  <text textAnchor="middle" x="50%" y="90%"  lengthAdjust="spacingAndGlyphs">TECHKRITI'23</text>
 			</symbol>
 
 			<g className="home-g-ants">
