@@ -81,7 +81,34 @@ export default function BasicTabs() {
       </Box >
       <TabPanel value={value} index={0} >
         <div className="Dashboard">
-          <div className="top"></div>
+            <div className="top"></div>
+          <div className="content">
+            <div className="image">
+              <img
+                src="https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg"
+                alt="default"
+                srcset=""
+              />
+            </div>
+            <div className="text">
+              <h1>
+                Hello <span>{name}</span>!!
+              </h1>
+              <div className="info">
+                <span>
+                  <span>techId</span>: {techId} <br />
+                </span>
+                <span>
+                  <span>emailId</span>: {email} <br />
+                </span>
+                <span>
+                  <span>phone</span>: {phoneNumber} <br />
+                </span>
+                <span>
+                  <span>college</span>: {college}
+                </span>
+              </div>
+            </div>
           <div className="content">
             <div className="image">
               <img
@@ -111,6 +138,8 @@ export default function BasicTabs() {
             </div>
           </div>
         </div>
+      </div>
+
       </TabPanel>
       <TabPanel value={value} index={1}>
         Item Two
