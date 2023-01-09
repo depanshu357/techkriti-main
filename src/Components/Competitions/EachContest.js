@@ -20,9 +20,10 @@ function EachContest(props) {
         <h1 className="comp-each-title">{props.compName}</h1>
         <Tabs value={tab} onChange={setCurrentTab}>
         	<Tab value={0} label={"About"}/>
-        	<Tab value={1} label={"Structure"}/>
-        	<Tab value={2} label={"Timeline"}/>
-        	<Tab value={3} label={"FAQs"}/>
+        	{// <Tab value={1} label={"Structure"}/>
+//         	<Tab value={2} label={"Timeline"}/>
+//         	<Tab value={3} label={"FAQs"}/>
+			}
         </Tabs>
         
         <div className="comp-each-data">
