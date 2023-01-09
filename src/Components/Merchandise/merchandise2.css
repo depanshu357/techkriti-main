@@ -250,6 +250,9 @@ a:hover {
 .merchandise-image-box h1{
     margin-top: 10px;
 }
+.merchandise-image-box h3{
+    text-align: center;
+}
 
 .merchandise-image-box img {
     border-top:1px solid white;

@@ -58,7 +58,15 @@ const Sidenav = ({themeColor, ...props}) => {
   }, [location]);
 
 
+const handleInstagram=()=>{
+	// let element = document.getElementsByClassName("instagram-svg");
+	// element[0].style.opacity = 0;
+}
+const handleInstagramOut=()=>{
+	// let element = document.getElementsByClassName("instagram-svg");
+	// element[0].style.opacity = 1;
 
+}
 //   let compe = false;
 //   let works = false;
 //   let gallery = false;
@@ -138,16 +146,34 @@ const Sidenav = ({themeColor, ...props}) => {
 			<div className="right"><Login/></div>
 			<div style={{display:"flex", flexDirection:"column", justifyContent:"flex-start", alignItems:"center"}}>
 				<br />
-				
-          		<a href="https://www.facebook.com/techkriti.iitk" target={"_blank"}><img className="socialicon facebook" src="/images/facebook.png" height={"24px"} ></img></a>
+				<span className="facebook-box">
+          		<a href="https://www.facebook.com/techkriti.iitk" target={"_blank"}><img className="facebook-svg" src="/images/facebook.svg" height={"34px"} ></img></a>
+				</span>
+				<br />
+          		{/* <a href="https://www.facebook.com/techkriti.iitk" target={"_blank"}><img className="socialicon facebook" src="/images/facebook.png" height={"24px"} ></img></a>
+				<br /> */}
+				<span className="twitter-box">
+          		<a href="https://twitter.com/techkriti_iitk" target={"_blank"}> <img className="twitter-svg" src="/images/twitter.svg" alt="" srcset="" height={"34px"} /></a>
+				</span>
           		<br />
-          		<a href="https://twitter.com/techkriti_iitk" target={"_blank"}><img className="socialicon" src="/images/twitter.png" height={"17.94px"}></img></a>
+          		{/* <a href="https://twitter.com/techkriti_iitk" target={"_blank"}><img className="socialicon" src="/images/twitter.png" height={"17.94px"}></img></a>
+          		<br /> */}
+				<span className="youtube-box">
+          		<a href="https://www.youtube.com/@TechkritiIITKanpur" target={"_blank"}><img className="youtube-svg" src="/images/youtube.svg" height={"34px"}></img></a>
+				</span>
           		<br />
-          		<a href="https://www.youtube.com/@TechkritiIITKanpur" target={"_blank"}><img className="socialicon" src="/images/youtube.png" height={"24px"}></img></a>
+          		{/* <a href="https://www.youtube.com/@TechkritiIITKanpur" target={"_blank"}><img className="socialicon" src="/images/youtube.png" height={"24px"}></img></a>
+          		<br /> */}
+				<span className="linkedin-box">
+          		<a href="https://www.linkedin.com/school/techkriti-iitk/" target={"_blank"}><img className="linkedin-svg" src="/images/linkedin.svg" height={"34px"}></img></a>
+				</span>
+          		{/* <a href="https://www.linkedin.com/school/techkriti-iitk/" target={"_blank"}><img className="socialicon" src="/images/linkedin.png" height={"24px"}></img></a>
+          		<br /> */}
           		<br />
-          		<a href="https://www.linkedin.com/school/techkriti-iitk/" target={"_blank"}><img className="socialicon" src="/images/linkedin.png" height={"24px"}></img></a>
-          		<br />
-          		<a href="https://www.instagram.com/techkriti.iitk/" target={"_blank"}><img className="socialicon" src="/images/instagram.png" height={"20px"}></img></a>
+				<span className="instagram-box" onMouseOver={handleInstagram} onMouseOut={handleInstagramOut}>
+          		<a href="https://www.instagram.com/techkriti.iitk/" target={"_blank"}><img className="instagram-svg" src="/images/instagram.svg" height={"34px"}></img></a>
+				</span>
+          		{/* <a href="https://www.instagram.com/techkriti.iitk/" target={"_blank"}><img className="socialicon" src="/images/instagram.png" height={"20px"}></img></a> */}
           	</div>
 			<div className="sidenav-inner" style={{display:"block"}}>
 				{//<div style={{position:"absolute", width:"100%", height:"auto", backdropFilter:"blur(10px)", backgroundColor:"rgba(255,255,255,0.1)", zIndex:-1}}></div>
