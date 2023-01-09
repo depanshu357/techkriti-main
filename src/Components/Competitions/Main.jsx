@@ -106,10 +106,10 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 					to={`/competitions/${category.toLowerCase()}/${el.title.toLowerCase().replace(/\s/g, '')}`}
 					style={{
 						cursor:"pointer",
-						marginLeft:"20px",
-						marginRight:"20px",
+						marginLeft:"5px",
+						marginRight:"5px",
 						flexShrink:"0",
-						padding:"5px"
+						padding:"5px",
 					}}
 					key={el.title}
 				>
