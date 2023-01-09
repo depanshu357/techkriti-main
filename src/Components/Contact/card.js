@@ -5,16 +5,17 @@ import {
     FaInstagram,
     FaLinkedinIn,
   } from "react-icons/fa";
-import a from "../images/rock.jpg";
-import "../contact.css";
+import a from "./images/rock.jpg";
+import "./contact.css";
+
 function Card(props){
     return(
-        <div className="card">
-          <div className="card-content">
-            <div className="imgBx">
+        <div className="contact-card">
+          <div className="contact-card-content">
+            <div className="contact-imgBx">
               <img className="contactImage" src={a} alt="img05" />
             </div>
-            <div className="contentBx">
+            <div className="contact-contentBx">
               <h3>
                 {props.name}
                 <br />
@@ -22,7 +23,7 @@ function Card(props){
               </h3>
             </div>
           </div>
-          <ul className="sci">
+          <ul className="contact-sci">
             <li>
               <a href="#">
                 <FaFacebookF/>

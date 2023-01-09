@@ -18,7 +18,7 @@
   align-items: center;
 }
 
-svg {
+.home-container svg {
     display: block;
     font-size: 10.5em;
     font-family:"Raleway","Arial",sans-serif !important;

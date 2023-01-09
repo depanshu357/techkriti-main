@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import a from "./images/rock.jpg";
 import "./contact.css";
-import Card from "./Card/card";
+import Card from "./card.js";
 import contactProps from "./contactProps";
 import {
   FaFacebookF,
@@ -103,9 +103,9 @@ export default function Contact({setThemeColor, setLowergridmenu}) {
 		}
 		{Object.entries(contactProps).map(([_, value]) => {
 			return (
-				<div className="container" key={value.heading}>
+				<div className="contact-container" key={value.heading}>
 					<h1 className="head">{value.heading}</h1>
-					<div className="name-cards">
+					<div className="contact-name-cards">
 					{value.members.map(el => (
 						<Card name={el.name} title={value.title} key={el.name}/>
 						))}

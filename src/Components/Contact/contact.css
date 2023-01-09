@@ -21,8 +21,8 @@
 .contactBody{
     display: flex;
     flex-direction:column;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
     position: relative;
     overflow: auto;
     
@@ -32,7 +32,7 @@
   }
 
 /* 
-.container{
+.contact-container{
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -45,16 +45,16 @@
 }
  */
 
-.container {
+.contact-container {
 	width:90%;
 }
 
-.container > * {
+.contact-container > * {
 	text-align:center;
 	margin:0;
 }
 
-.container .name-cards {
+.contact-container .contact-name-cards {
 	display:flex;
 	justify-content:center;
 	align-items:flex-start;
@@ -63,13 +63,13 @@
 }
 
 /* 
-.container .contactHeader{
+.contact-container .contactHeader{
     grid-area: header;
     text-align: center;
 }
  */
 
-.container .card{
+.contact-container .contact-card{
     position: relative;
     width: 300px;
     height: 400px;
@@ -83,11 +83,11 @@
     transition: background 0.3s linear;
 }
 
-.container .card:hover {
+.contact-container .contact-card:hover {
 	background: rgba(255, 255, 255, 0.3);
 }
 
-.container .card .card-content{
+.contact-container .contact-card .contact-card-content{
     position: relative;
     display: flex;
     justify-content: center;
@@ -99,11 +99,11 @@
     height: 400px;
 }
 
-.container .card:hover .card-content{
+.contact-container .contact-card:hover .contact-card-content{
     opacity: 1;
 }
 
-.container .card .card-content .imgBx{
+.contact-container .contact-card .contact-card-content .contact-imgBx{
     position: relative;
     width: 150px;
     height: 150px;
@@ -112,7 +112,7 @@
     border: 10px solid rbga(0 0 0 0 0.25);
 }
 
-.container .card .card-content .imgBx img{
+.contact-container .contact-card .contact-card-content .contact-imgBx img{
     position: absolute;
     top: 0;
     left: 0;
@@ -121,7 +121,7 @@
     object-fit: cover;
 }
 
-.container .card .card-content .contentBx h3{
+.contact-container .contact-card .contact-card-content .contact-contentBx h3{
     color: #fff;
     letter-spacing: 2px;
     text-align: center;
@@ -129,21 +129,21 @@
     opacity: 1;
 }
 
-.container .card .card-content .contentBx h3 span{
+.contact-container .contact-card .contact-card-content .contact-contentBx h3 span{
     font-size: 16px;
     color: #fff;
     letter-spacing: 1px;
     text-align: center;
 }
 
-.container .card .sci{
+.contact-container .contact-card .contact-sci{
     position: absolute;
     bottom: 50px;
     display: flex;
     left: 30px;
 }
 
-.container .card .sci li{
+.contact-container .contact-card .contact-sci li{
     list-style: none;
     margin: 0 10px;
     transform: translateY(40px);
@@ -152,12 +152,12 @@
     transition-delay: 0.1s
 }
 
-.container .card:hover .sci li{
+.contact-container .contact-card:hover .contact-sci li{
     transform: translateY(20px);
     opacity: 1;
 }
 
-.container .card .sci li a{
+.contact-container .contact-card .contact-sci li a{
     color: #fff;
     font-size: 24px;
 }
