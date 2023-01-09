@@ -1,4 +1,4 @@
-@keyframes lights {
+ @keyframes lights {
   0% {
     color: hsl(230, 40%, 80%);
     text-shadow:
@@ -49,9 +49,9 @@
   /* position: fixed; */
     text-align: center;
     /* margin-left: 35%;
-    margin-bottom: 25px;
-    margin-top: 0; */
-    text-decoration: none;
+    margin-bottom: 25px;*/
+    margin-top: 0; 
+     text-decoration: none;
     font-weight: 700;
     animation: lights 5s 750ms linear infinite;
 }
@@ -64,10 +64,10 @@ ul li{
     padding: 5px;
     font-weight: 650;
     text-decoration: none;
-}
+} 
 
-.curmem{
-    /* margin-left: 200px; */
+ .curmem{
+    /* margin-left: 200px;*/ 
     margin-top: 1px;
     padding-top: 0px;
     display: flex;
@@ -82,37 +82,37 @@ ul li{
     padding-top: 0px;
     font-size: 10px;
     text-align: center;
-}
+} 
 
 
 
-.main {
-    /* position: relative;  */
-    font-size: 14px;
+ .main { 
+     position: relative;  
+     font-size: 14px;
   line-height: 1.8;
   color: #fff;
-  font-weight: 600;
+  font-weight: 600; 
   /* font-family: 'Poppins'; */
-  margin: 0px;
+  /* margin: 0px; */
   /* background-image: url("./bodybgregister.png"); */
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat;*/
   width: 100%;
   height:100%;
-  padding: 0px;
+  padding: 0px; 
   /* backgroun; */
-  position: relative;
+  /* position: relative;
   background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
-  -ms-background-size: cover;
+  -ms-background-size: cover; */
   /* background-position: center center;  */
-}
+ } 
   
 #myvideo{
   position: fixed;
-    right: 0;
-    bottom: 0;
+    top:0;
+    left:0;
     min-width: 100%;
     min-height: 100%;
     z-index: -1;
@@ -120,29 +120,38 @@ ul li{
   .container1 {
     margin-top: 20px;
     margin-bottom: 70px;
+    margin-left: 0px;
     width: 1050px;
+    display: flex;
+    justify-content: space-around;
     padding-top: 15px;
     padding-bottom: 15px;
-    background-size: 90% 100%;
-    background-image: url("./container-bg.png");
-    background-repeat: no-repeat;
+    background-size: 90% 100%; 
+    
+    /* background-image: url("./container-bg.png"); */
+    /* background-repeat: no-repeat; */
     /* background-size: cover; */
     /* -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover; */
-    background-position: center center;
+    /* background-position: center center;*/
     z-index: 45;
     overflow: hidden; }
 
     .signup-content {
-        width: 500px;
+        width: 500px; 
         /* margin-top: 45px; */
         margin-right: 0px;
-        background: rgba(95, 171, 195, 0.75);
+        border-radius: 5%;
+    border:1px solid rgba( 255, 255, 255, 0.15 );
+        background: rgba( 255, 255, 255, 0.15 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 18px );
         float: right; }
       
       .signup-form {
+        margin-left: 0px;
         padding: 24px 20px 6px 55px; }
       
       .form-group {
@@ -157,7 +166,7 @@ ul li{
         display: block;
         color: #fff;
         font-weight: bold;
-        /* font-family: 'Poppins'; */
+        /* font-family: 'Poppins';*/ 
         font-size: 14px;
         padding: 3px 0; }
         input::-webkit-input-placeholder {
@@ -288,4 +297,5 @@ ul li{
       
         .signup-form {
           padding: 54px 30px 36px 30px; } }
-      
+       
+

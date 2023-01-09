@@ -9,6 +9,8 @@ import Button from '@mui/material/Button';
 import { async } from '@firebase/util';
 import './register.css';
 
+
+
 export default function Register() {
     const teamNameRef = useRef();
     const {currentUser,logout} = useAuth();
@@ -99,7 +101,7 @@ export default function Register() {
    
     <>
     <div class="main">
-    <img src = {require("./bodybgregister.png")} id='myvideo'></img>
+    <img src = {require("../Contact/images/contact\ us.png")} id='myvideo'></img>
     <h2 className='mainhead'>Register</h2>
 
         <div class="container1">
@@ -134,7 +136,7 @@ export default function Register() {
                 <TextField sx={{"&:hover": {
                             border: "solid #ced4da",
                          }, input: { color: 'white',borderColor:'white', border: '3px solid #ced4da', } }} margin='normal' size='small'  type="name" inputRef={teamNameRef} /> <br></br>
-                         <div><Button className='memberbtn' style={{color:"white" , fontSize:"16px", textAlign:"center"}} disabled={loading} type="submit">Register</Button></div>
+                         <div><Button className='memberbtn' style={{color:"white" , fontSize:"16px", textAlign:"center", backgroundColor:"#6B6B6B"}} disabled={loading} type="submit">Register</Button></div>
                 </form>
                 {loading && 
                          <>already registered</>
@@ -143,6 +145,7 @@ export default function Register() {
         </div>
 
     </div>
+
     </>
   )
 }

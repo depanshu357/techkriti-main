@@ -69,38 +69,34 @@ function RegisterWorkshop({setThemeColor, setLowergridmenu}) {
   
       }
   return (
-//     <div>
-//     <div >
-//         class <br/> {params.workName}
-//             <form onSubmit={handleRegister}>
-//                 <label>
-//                     city
-//                 <input />
-//                 </label><br/>
-//                 <label>
-//                     phone number if female
-//                     <input />
-//                 </label>{loading? <>paynow</> : <Button type='submit'>Register for workshop</Button>}
-//                 
-//             </form>
-//     </div>
-//     </div>
-	<div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
-		<div style={{fontSize:"3rem", color:"#6BDFF4"}}>Register</div>
-		<div style={{fontSize:"2rem"}}> You are registering for the {params.workName} workshop.</div>
-		<form onSubmit={handleRegister}>
-			<InputLabel>Phone number:</InputLabel>
-			<TextField error={formData.phone !== "" && (formData.phone.match(/[^0-9]/g) || formData.phone.length < 10 || formData.phone.length > 11)} value={formData.phone} onChange={handlePhoneChange} required/>
-			<div>{formData.phone !== "" && (formData.phone.match(/[^0-9]/g) || formData.phone.length < 10 || formData.phone.length > 11) ? "Please enter a valid phone number." : ""}</div>
-			<br />
-			<InputLabel>City where you live:</InputLabel>
-			<TextField value={formData.city} onChange={handleCityChange} required/>
-			<br />
-			<br />
-			{loading ? <Button>Pay Now</Button> : <Button type="submit">Submit registration</Button>}
-		</form>
-	</div>
-  )
+    
+  
+  <div class="main">
+    <img src = {require("./Contact/images/contact\ us.png")} id='myvideo'></img>
+    <h2 className='mainhead'>Register</h2>
+
+        <div class="container1">
+            <div class="signup-content">
+                <form id="signup-form" className="signup-form" style={{paddingBottom:"10px"}} onSubmit={handleRegister}>
+                    <h2>{params.workName} </h2>
+                    <p class="desc"><span></span></p>
+                    <div class="form-group">
+                    <InputLabel>Phone number:</InputLabel>
+			<TextField error={formData.phone !== "" && (formData.phone.match(/[^0-9]/g) || formData.phone.length < 10 || formData.phone.length > 11)} value={formData.phone} onChange={handlePhoneChange} required  />
+	 		<div>{formData.phone !== "" && (formData.phone.match(/[^0-9]/g) || formData.phone.length < 10 || formData.phone.length > 11) ? "Please enter a valid phone number." : ""}</div>
+	 		</div>
+      <div class="form-group">
+	 		<InputLabel>City where you live:</InputLabel>
+	 		<TextField value={formData.city} onChange={handleCityChange} required/>
+	 		<br />
+                    </div>
+     		{loading ? <Button>Pay Now</Button> : <Button type="submit">Submit registration</Button>}
+        
+            </form>        
+        </div>
+    </div>
+</div>
+  );
 }
 
 RegisterWorkshop.propTypes = {}
