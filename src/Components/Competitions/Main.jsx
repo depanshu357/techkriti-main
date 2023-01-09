@@ -93,7 +93,7 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 						style={{alignSelf:"center",margin:"10px"}}
 						key={contest.name}
 					>
-					<Card name={contest.name} title={contest.about}/>
+					<Card name={contest.name}/>
 					</div>
 				))}
 				</div>
@@ -142,7 +142,7 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 				  </div>
 				</div>
 				<div className="contest-main-face contest-main-face2">
-				  <h2>TECHNICAL</h2>
+				  <h2 className="contest-main-h2">TECHNICAL</h2>
 				</div>
 			  </div>
 			</Link>
@@ -154,7 +154,7 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 				  </div>
 				</div>
 				<div className="contest-main-face contest-main-face2">
-				  <h2>ENTREPRENEURIAL</h2>
+				  <h2 className="contest-main-h2">ENTREPRENEURIAL</h2>
 				</div>
 			  </div>
 
@@ -167,7 +167,7 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 				  </div>
 				</div>
 				<div className="contest-main-face contest-main-face2">
-				  <h2>MISCELLANEOUS</h2>
+				  <h2 className="contest-main-h2">MISCELLANEOUS</h2>
 				</div>
 			  </div>
 			</Link>

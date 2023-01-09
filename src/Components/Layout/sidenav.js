@@ -134,15 +134,14 @@ const handleInstagramOut=()=>{
 			<div>
 				<Link to="/"><img src="/img/techkriti.svg" height={"45px"}></img></Link>
 			</div>
-			<div className="div-top-nav-swayam">
 				<Tabs value={tabValue}>
 					<Link to="/competitions"><Tab value={0} label="Competitions" /></Link>
 					<Link to="/workshops"><Tab value={1} label="Workshops" /></Link>
 					<Link to="/gallery"><Tab value={2} label="Gallery" /></Link>
 					<Link to="/contact-us"><Tab value={3} label="Contact Us" /></Link>
 					<Link to="/merchandise"><Tab value={4} label="Merchandise" /></Link>
+					<a href="/brochure.pdf" target="_blank"><Tab value={5} label="Brochure" /></a>
 				</Tabs>
-			</div>
 			<div className="right"><Login/></div>
 			<div style={{display:"flex", flexDirection:"column", justifyContent:"flex-start", alignItems:"center"}}>
 				<br />
@@ -240,7 +239,7 @@ const handleInstagramOut=()=>{
         			<Outlet />
         		</div>
         	</div>
-        	<div>
+        	<div style={{padding:"0"}}>
         		<Tabs 
         			style={{width:"100%"}} 
         			value={lowergridmenu.findIndex((el) => location.pathname.includes(el.link))}

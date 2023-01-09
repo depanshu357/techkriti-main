@@ -18,7 +18,15 @@ const [tab, setTab] = useState(0);
     // return "hello"
     for(let i=0;i<workshopData.length;i++){
       if(workshopData[i].workName === params.workName)
-      return workshopData[i].main.dataMain
+      return workshopData[i].heading;
+    }
+  }
+
+  const handletextEachData = () =>{
+    // return "hello"
+    for(let i=0;i<workshopData.length;i++){
+      if(workshopData[i].workName === params.workName)
+      return workshopData[i].dataMain;
     }
   }
 // const handleWorkEachData = "hello"
@@ -49,13 +57,13 @@ const [tab, setTab] = useState(0);
     <div className="work-each-container">
       <div className="work-each-card">
       <div className='work-each-containerLeft'>
-        <h1 className="work-each-title">Abc</h1>
+        <h1 className="work-each-title">{handleWorkEachData()}</h1>
         <Tabs value={tab} onChange={setCurrentTab}>
         	<Tab value={0} label={"About"}/>
         </Tabs>
         <div className="work-each-data">
         	{/* {props.content[tab]} */}
-           {handleWorkEachData()}
+           {handletextEachData()}
           {/* {workshopData[0].main.dataMain} */}
           
           

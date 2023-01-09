@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './comps.css';
 import comp from './images/comp1.png';
 import {Tabs, Tab} from "@mui/material"
+import {Link} from "react-router-dom";
 function EachContest(props) {
 	const [tab, setTab] = useState(0);
 	
@@ -30,14 +31,15 @@ function EachContest(props) {
         	{props.content[tab]}
         </div>
         {/*<p className="comp-each-subtitle">Introducing the first ever 5G enabled tablet. You've got a tablet that lets you play harder and work smarter.</p>*/}
-        <button className="comp-each-btn">Get Started</button>
+        <button className="comp-each-btn"><Link to={`/register/${props.compName}`} style={{color:"white"}}>Register</Link></button>
         </div>
         <div className='comp-each-containerRight'>
             <img style={{width:"100%", height:'100%', objectFit:"contain"}} className='comp-each-compImg' src={comp} />
         </div>
       </div>
       <div className="comp-each-compReg">
-       <button className="comp-each-glass-button">Register</button><button className="comp-each-glass-button">Problem Statement</button>
+       {//<button className="comp-each-glass-button">Register</button>
+       }<button className="comp-each-glass-button">Problem Statement</button>
       </div>
     </div>
     </>

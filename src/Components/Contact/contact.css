@@ -153,7 +153,7 @@
 }
 
 .contact-container .contact-card:hover .contact-sci li{
-    transform: translateY(20px);
+    transform: translateY(30px);
     opacity: 1;
 }
 

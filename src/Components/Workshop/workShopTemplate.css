@@ -268,7 +268,7 @@ overflow: auto;
 
     .work-each-containerLeft{
       /* float: left; */
-      width: 100%;
+      width: 90% !important;
       float: none;
       /* display: inline-block; */
         

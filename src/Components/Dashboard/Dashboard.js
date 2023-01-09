@@ -138,7 +138,7 @@ export default function BasicTabs(props) {
     <>
     <div className="dashboard-page-background"></div>
     <Box sx={{ width: "100%", height: "100%" }} className="Dashboardfullscreen">
-      <Box sx={{ borderBottom: 1, borderColor: "divider", display:"flex" }}>
+      <Box sx={{ borderBottom: 1, borderColor: "#20b2aa", display:"flex", height:"55px" }}>
         <Tabs
           value={value}
           onChange={handleChange}

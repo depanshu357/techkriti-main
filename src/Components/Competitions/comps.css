@@ -2,6 +2,54 @@
 	background-image: url("../Contact/images/contact\ us.png");
 }
 
+@media (max-width: 768px) {
+.comp-each-containerEach{
+  /* background-color: #000; */
+}
+
+.comp-each-cardEach{
+  height: fit-content;
+  margin-top: -90%;
+  width: 130%;
+}
+
+.comp-each-compReg{
+  width: 80%;
+  height: fit-content;
+}
+
+.comp-each-compImg{
+  display: none ;
+}
+
+.comp-each-glass-button{
+  margin-top: 5%;
+}
+
+.comp-each-containerLeft{
+  /* float: left; */
+  width: 90% !important;
+  float: none;
+  /* display: inline-block; */
+	
+}
+
+.comp-each-containerRight{
+  /* float: right; */
+  width: 0%;
+  /* display: inline-block; */
+  display: none;
+}
+
+.comp-each-containerLeft {
+	width:90%;
+}
+
+
+
+}
+
+
 /* 
 .contestEach{
 height: 100vh;
@@ -242,51 +290,6 @@ overflow: auto;
   .comp-each-glass-button:hover {
     background-color: rgba(255,255,255,0.2);
   }
-
-  @media (max-width: 768px) {
-    .comp-each-containerEach{
-      /* background-color: #000; */
-    }
-
-    .comp-each-cardEach{
-      height: fit-content;
-      margin-top: -90%;
-      width: 130%;
-    }
-
-    .comp-each-compReg{
-      width: 80%;
-      height: fit-content;
-    }
-
-    .comp-each-compImg{
-      display: none ;
-    }
-
-    .comp-each-glass-button{
-      margin-top: 5%;
-    }
-
-    .comp-each-containerLeft{
-      /* float: left; */
-      width: 100%;
-      float: none;
-      /* display: inline-block; */
-        
-    }
-
-    .comp-each-containerRight{
-      /* float: right; */
-      width: 0%;
-      /* display: inline-block; */
-      display: none;
-        
-    }
-  
-
-    
-  }
-
   .comp-each-containerLeft{
     float: left;
     width: 60%;
