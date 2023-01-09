@@ -1,5 +1,4 @@
 import React, {useEffect} from "react";
-import a from "./images/rock.jpg";
 import "./contact.css";
 import Card from "./card.js";
 import contactProps from "./contactProps";

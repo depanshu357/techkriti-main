@@ -5,7 +5,6 @@ import {
     FaInstagram,
     FaLinkedinIn,
   } from "react-icons/fa";
-import a from "./images/rock.jpg";
 import "./contact.css";
 
 function Card(props){
