@@ -120,10 +120,12 @@ const Merchandise = (props) => {
                 <h1>Hoodie</h1>            
                 
               <img src="images/Hoodie_mock.png" alt="Hoodie" />
+              <h3>GALACTIC BLACK HOODIE</h3>
             </div>
             <div className="merchandise-image-box">
-                <h1>Merchandise</h1>            
+                <h1>Jacket</h1>            
               <img src="images/Jacket_mock.png" alt="Jacket" style={{filter:"brightness(1.5)"}}/>
+              <h3>OYNX STEEL JACKET</h3>
             </div>
             
             </div>
