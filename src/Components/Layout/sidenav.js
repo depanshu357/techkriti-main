@@ -195,7 +195,7 @@ const Sidenav = ({themeColor, ...props}) => {
               			<div className="bar is-active"></div>
             		</div>
             	</div>
-            	<Login />
+            	<div onClick={handleHamburger}><Login /></div>
             	<Link to="/" onClick={handleHamburger}>Home</Link>
             	<Link to="/competitions" onClick={handleHamburger} >Competitions</Link>
               	<Link to="/workshops" onClick={handleHamburger}>Workshops</Link>

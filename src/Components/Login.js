@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import {Card, Alert, Button} from 'react-bootstrap';
 import { useAuth } from '../context/AuthContext';
@@ -52,6 +52,11 @@ export default function Login() {
     // axios.post('http://localhost:3001/',{
     //     uid : currentUser.uid
     // })
+    
+    useEffect(() => {
+    	setLoggedIn(currentUser?true:false);
+    },[currentUser]);
+    
   return (
     <div>
         {loggedIn?<>
@@ -70,8 +75,8 @@ export default function Login() {
 					border:"none",
 					textDecoration:"underline"
          		}
-         	}}><DashboardCustomizeIcon /></MuiButton></Link></> : 
-        <MuiButton 
+         	}}><DashboardCustomizeIcon /></MuiButton></Link></>
+        :<MuiButton 
          	disabled={loading} 
          	onClick={handleGoogleLogin} 
          	spacing={3} 

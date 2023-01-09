@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import {lazy, Suspense } from 'react';
+import React, {useState, useEffect, lazy, Suspense } from 'react';
 import './App.css';
 import CarouselFadeExample from './Components/Carousel/carousel';
 import Layout from './Components/Layout/layout';
@@ -27,6 +26,11 @@ const Contact = lazy(()=> import( './Components/Contact/Contact'));
 const Home = lazy(()=> import( './Components/Home/Home'));
 const Dashboard = lazy(()=> import( './Components/Dashboard/Dashboard'));
 const NotFound = lazy(() => import("./Components/404.js"));
+
+function Loader() {
+	return (<div style={{width:"100%", height:"100%", display:"flex"}}><div className="suspense-fallback-loader"></div></div>);
+}
+
 function App() {
 	const [themeColor, setThemeColor] = useState("#000000");
 	const [lowergridmenu, setLowergridmenu] = useState([]);
@@ -86,7 +90,8 @@ function App() {
 			MuiTabs: {
 				styleOverrides: {
 					root: {
-						height:"100%",
+						width:"100%",
+						height:"100%"
 					},
 					indicator: {
 						backgroundColor:"#fff",
@@ -98,6 +103,7 @@ function App() {
 					},
 					flexContainer:{
 						height:"100%",
+						justifyContent:"space-between",
 						"& button": {
 							height:"100%"
 						}
@@ -140,38 +146,38 @@ function App() {
 	<AuthProvider>
       <Routes>
       <Route path='/' element={<Sidenav themeColor={themeColor} lowergridmenu={lowergridmenu} setThemeColor={setTheme} setLowergridmenu={setLowergrid} big={big} />}>
-		<Route path='/' element = {<Suspense fallback={<div>Loading...</div>}><Home setThemeColor={setTheme} setLowergridmenu={setLowergrid} /></Suspense>}></Route>
-      	<Route path='/gallery' element={<Suspense fallback={<div>Loading...</div>}><CarouselFadeExample setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
-      	<Route path='/merchandise' element={<Suspense fallback={<div>Loading...</div>}><Merchandise setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
-		<Route path='/workshops' element={<Suspense fallback={<div>Loading...</div>}><Workshop setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
-      	<Route path='/merchandise' element={<Suspense fallback={<div>Loading...</div>}><Merchandise setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
+		<Route path='/' element = {<Suspense fallback={<Loader />}><Home setThemeColor={setTheme} setLowergridmenu={setLowergrid} /></Suspense>}></Route>
+      	<Route path='/gallery' element={<Suspense fallback={<Loader />}><CarouselFadeExample setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
+      	<Route path='/merchandise' element={<Suspense fallback={<Loader />}><Merchandise setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
+		<Route path='/workshops' element={<Suspense fallback={<Loader />}><Workshop setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
+      	<Route path='/merchandise' element={<Suspense fallback={<Loader />}><Merchandise setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
 		<Route path='/register-w/:workName' element={<RegisterWorkshop setThemeColor={setTheme} setLowergridmenu={setLowergrid} />} />
 
       	<Route path='/competitions/'>
-      		<Route index element={<Suspense fallback={<div>Loading...</div>}><Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="" big={big}/></Suspense> }></Route>
+      		<Route index element={<Suspense fallback={<Loader />}><Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="" big={big}/></Suspense> }></Route>
       		<Route path="technical/">
-      			<Route index element={<Suspense fallback={<div>Loading...</div>}><Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Technical" big={big} /></Suspense>}></Route>
-      			<Route path=":params" element={<Suspense fallback={<div>Loading...</div>}><Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Technical" big={big} /></Suspense> }></Route>
+      			<Route index element={<Suspense fallback={<Loader />}><Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Technical" big={big} /></Suspense>}></Route>
+      			<Route path=":params" element={<Suspense fallback={<Loader />}><Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Technical" big={big} /></Suspense> }></Route>
       		</Route>
       		<Route path="entrepreneurial/">
-      			<Route index element={<Suspense fallback={<div>Loading...</div>}><Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Entrepreneurial" big={big} /></Suspense> }></Route>
-      			<Route path=":params" element={<Suspense fallback={<div>Loading...</div>}><Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Entrepreneurial" big={big} /></Suspense> }></Route>
+      			<Route index element={<Suspense fallback={<Loader />}><Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Entrepreneurial" big={big} /></Suspense> }></Route>
+      			<Route path=":params" element={<Suspense fallback={<Loader />}><Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Entrepreneurial" big={big} /></Suspense> }></Route>
       		</Route>
       		<Route path="miscellaneous/">
-      			<Route index element={<Suspense fallback={<div>Loading...</div>}><Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Miscellaneous" big={big} /></Suspense> }></Route>
-      			<Route path=":params" element={<Suspense fallback={<div>Loading...</div>}><Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Miscellaneous" big={big} /></Suspense> }></Route>
+      			<Route index element={<Suspense fallback={<Loader />}><Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Miscellaneous" big={big} /></Suspense> }></Route>
+      			<Route path=":params" element={<Suspense fallback={<Loader />}><Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Miscellaneous" big={big} /></Suspense> }></Route>
       		</Route>
       		<Route path="details/">
-      			<Route index element={<Suspense fallback={<div>Loading...</div>}><Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Details" big={big} /> </Suspense>}></Route>
-      			<Route path=":params" element={<Suspense fallback={<div>Loading...</div>}><Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Details" big={big} /></Suspense> }></Route>
+      			<Route index element={<Suspense fallback={<Loader />}><Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Details" big={big} /> </Suspense>}></Route>
+      			<Route path=":params" element={<Suspense fallback={<Loader />}><Competition setThemeColor={setTheme} setLowergridmenu={setLowergrid} category="Details" big={big} /></Suspense> }></Route>
       		</Route>
       	</Route>
-      	<Route path='/contact-us' element={<Suspense fallback={<div>Loading...</div>}><Contact setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
-  	    <Route path='/profile' element={<Suspense fallback={<div>Loading...</div>}><Dashboard setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
-	    <Route path='/login' element={<Suspense fallback={<div>Loading...</div>}><Login setThemeColor={setTheme} /></Suspense>}></Route>
-	    <Route path='/update' element={<Suspense fallback={<div>Loading...</div>}><Update setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
-	    <Route path='/register/:events' element={<Suspense fallback={<div>Loading...</div>}><Register setThemeColor={setTheme} /></Suspense>}></Route>
-		<Route path='/workshop/:workName' element={<Suspense fallback={<div>Loading...</div>}><WorkshopTemplate setThemeColor={setTheme} /></Suspense>}></Route>
+      	<Route path='/contact-us' element={<Suspense fallback={<Loader />}><Contact setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
+  	    <Route path='/profile' element={<Suspense fallback={<Loader />}><Dashboard setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
+	    <Route path='/login' element={<Suspense fallback={<Loader />}><Login setThemeColor={setTheme} /></Suspense>}></Route>
+	    <Route path='/update' element={<Suspense fallback={<Loader />}><Update setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
+	    <Route path='/register/:events' element={<Suspense fallback={<Loader />}><Register setThemeColor={setTheme} /></Suspense>}></Route>
+		<Route path='/workshop/:workName' element={<Suspense fallback={<Loader />}><WorkshopTemplate setThemeColor={setTheme} /></Suspense>}></Route>
 		<Route path='*' element={<Suspense fallback={<div></div>}><NotFound setThemeColor={setTheme} setLowergridmenu={setLowergrid}/></Suspense>}></Route>
       </Route>
 

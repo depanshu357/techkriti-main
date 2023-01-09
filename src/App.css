@@ -1,12 +1,27 @@
-
 @font-face {
   font-family: BlackPast;
   src: local("BlackPast"),
   url("./Components/Contact/BlackpastDemo-vm2l9.ttf") format("truetype");
 }
 
+.suspense-fallback-loader {
+	width:100px;
+	height:100px;
+	margin:auto;
+	border-radius:50%;
+	border: 20px dashed white;
+	animation: 1s suspense-loader-anim linear infinite;
+}
+
+@keyframes suspense-loader-anim {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
 /* CONTACT US CSS */
 
+/* 
 .font-contact{
   
   font-family: "BlackPast";
@@ -15,7 +30,9 @@
 .contact{
   margin-top: 1%;
   text-align: center;
+ */
   /* background: url(https://postimg.cc/DW6Qv7tJ) no-repeat 0 0; */
+/* 
 }
 
 .grid {
@@ -73,6 +90,7 @@
 	background: #ed4e6e;
 	color: #fff;
 }
+ */
 
 /* Individual Caption Styles */
 

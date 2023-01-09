@@ -67,7 +67,7 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 // 					)}
 // 					</div>
 					}
-					<div style={{width:"60%", height:"100%", overflow:"auto"}}>
+					<div className="scroll-less" style={{width:"60%", height:"100%", overflow:"auto"}}>
 					<div style={{margin:"50px"}}>
 						<h1>{el.title}</h1>
 						<p>{el.text}</p>
@@ -78,7 +78,7 @@ function Main({setThemeColor, setLowergridmenu, params, category, big}) {
 					)}
 					</div>
 					</div>
-					<img style={{width:"calc(40% - 100px)", margin:"50px 50px 25px"}} src={`/images/${el.img}.svg`} alt={`Illustration for the ${el.title} competition`} />
+					<img style={{width:"calc(40% - 100px)", margin:"50px 50px 25px", objectFit:"contain"}} src={`/images/${el.img}.png`} alt={`Illustration for the ${el.title} competition`} />
 				</div>
 			);
 			else return (<div className="main-text-small" style={{padding:"20px"}}>
