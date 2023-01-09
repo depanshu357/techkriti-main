@@ -13,6 +13,7 @@ function EachContest(props) {
   return (
   	<>
     <div className="page-background each-page-background" style={{}}></div>
+    <div className="comp-each-blob1"></div>
     <div className="comp-each-container">
       <div className="comp-each-card">
       <div className='comp-each-containerLeft'>
@@ -23,7 +24,7 @@ function EachContest(props) {
         	<Tab value={2} label={"Timeline"}/>
         	<Tab value={3} label={"FAQs"}/>
         </Tabs>
-        <div className="comp-each-blob1"></div>
+        
         <div className="comp-each-data">
         	{props.content[tab]}
         </div>
