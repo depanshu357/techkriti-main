@@ -19,7 +19,7 @@ const Workshop = ({setThemeColor, setLowergridmenu}) => {
   	
     <>
     <img id='myVideo' src={require("./back.jpg")}></img>
-    <b><h2 className='workhead'>WORKSHOPS</h2></b>
+    <b><h2 className='workhead'>Workshops</h2></b>
     <div className='workshop-cards'>
         {workshopData.map((data, key) => {
           return (
